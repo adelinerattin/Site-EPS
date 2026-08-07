@@ -696,9 +696,16 @@ a.card:focus-visible {
 }
 
 /* ============================================================
-   10. FICHES ACTIVITE DEPLIABLES (details / summary)
+   10. FICHES DEPLIABLES (details / summary)
+   ------------------------------------------------------------
+   Deux usages du meme composant visuel :
+   - ".activity-card" : une activite sportive (pages niveau-XX.html)
+   - ".info-card"      : une rubrique d'information (pages
+     eps-generale.html et prof-principal-6e.html), pour eviter
+     d'empiler tout le texte sur une seule page.
    ============================================================ */
-.activity-card {
+.activity-card,
+.info-card {
   background: var(--color-white);
   border: 1px solid var(--color-border);
   border-left: 6px solid var(--color-navy);
@@ -707,7 +714,8 @@ a.card:focus-visible {
   overflow: hidden;
 }
 
-.activity-card summary {
+.activity-card summary,
+.info-card summary {
   cursor: pointer;
   list-style: none;
   padding: var(--space-md);
@@ -719,15 +727,19 @@ a.card:focus-visible {
   font-weight: 800;
 }
 
-.activity-card summary::-webkit-details-marker {
+.activity-card summary::-webkit-details-marker,
+.info-card summary::-webkit-details-marker {
   display: none;
 }
 
-.activity-card summary h3 {
+.activity-card summary h3,
+.info-card summary h2,
+.info-card summary h3 {
   margin: 0;
 }
 
-.activity-card__toggle {
+.activity-card__toggle,
+.info-card__toggle {
   font-family: var(--font-mono);
   font-size: 1.4rem;
   color: var(--color-navy);
@@ -741,17 +753,58 @@ a.card:focus-visible {
   justify-content: center;
 }
 
-.activity-card[open] .activity-card__toggle {
+.activity-card[open] .activity-card__toggle,
+.info-card[open] .info-card__toggle {
   transform: rotate(45deg);
 }
 
-.activity-card summary:hover .activity-card__toggle {
+.activity-card summary:hover .activity-card__toggle,
+.info-card summary:hover .info-card__toggle {
   background: var(--color-yellow);
   border-color: var(--color-yellow);
 }
 
-.activity-card__body {
+.activity-card__body,
+.info-card__body {
   padding: 0 var(--space-md) var(--space-md);
+}
+
+/* Groupe thematique de plusieurs info-card (ex. "Mes outils numeriques") */
+.info-group {
+  margin-bottom: var(--space-lg);
+}
+
+.info-group h2 {
+  margin-bottom: var(--space-sm);
+}
+
+/* Navigation rapide en haut de page : une puce par rubrique,
+   pour y acceder directement sans tout faire defiler. */
+.quick-nav {
+  list-style: none;
+  margin: 0 0 var(--space-lg);
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.quick-nav a {
+  display: inline-block;
+  background: var(--color-white);
+  border: 2px solid var(--color-border);
+  color: var(--color-navy);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.45em 0.9em;
+  border-radius: 999px;
+}
+
+.quick-nav a:hover,
+.quick-nav a:focus-visible {
+  border-color: var(--color-orange);
+  background: var(--color-chalk);
 }
 
 .rubrique {

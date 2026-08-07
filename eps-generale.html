@@ -48,135 +48,190 @@
     <section class="section">
       <div class="container">
 
-        <!-- ============================================================
-             ORGANISATION ET REGLES DE FONCTIONNEMENT
-             ============================================================ -->
-        <article id="organisation">
-          <h2>Organisation et règles de fonctionnement du cours d'EPS</h2>
-          <p>
-            <!-- MODIFIER ICI : décrivez l'organisation concrète de vos cours -->
-            Chaque cours d'EPS dure en général 2 heures. Les élèves se changent dans les vestiaires
-            avant et après le cours, se déplacent en groupe classe jusqu'à l'installation sportive,
-            et se rassemblent au point d'appel donné par le professeur en début de séance.
-          </p>
-          <ul>
-            <li>Appel effectué en tenue de sport, au lieu et à l'heure indiqués par le professeur.</li>
-            <li>Respect des autres élèves, du matériel et des installations sportives.</li>
-            <li>Écoute des consignes de sécurité avant chaque activité.</li>
-            <li>Rangement du matériel en fin de séance, avec l'aide des élèves.</li>
-          </ul>
-        </article>
-
-        <hr class="lane-divider">
+        <!-- Navigation rapide : un clic ouvre directement la rubrique visee -->
+        <ul class="quick-nav">
+          <li><a href="#organisation">Organisation du cours</a></li>
+          <li><a href="#reglement">Règlement EPS</a></li>
+          <li><a href="#association-sportive">Association sportive (AS)</a></li>
+          <li><a href="#tenue">Tenue exigée</a></li>
+          <li><a href="#dispense">Modalités de dispense</a></li>
+        </ul>
 
         <!-- ============================================================
-             REGLEMENT EPS
+             CHAQUE RUBRIQUE EST UNE FICHE DEPLIABLE (".info-card")
+             Cliquez sur le titre pour l'ouvrir/la fermer. Pour ajouter
+             une rubrique, copiez un bloc <details class="info-card">
+             entier et donnez-lui un id unique (utilise par le menu
+             rapide ci-dessus et par les liens venant d'autres pages).
              ============================================================ -->
-        <article id="reglement">
-          <h2>Règlement EPS</h2>
-          <p>
-            <!-- MODIFIER ICI : reprenez ici (ou en lien) votre règlement EPS d'établissement -->
-            Le règlement EPS complète le règlement intérieur du collège. Il précise les règles de
-            vie propres aux cours d'éducation physique et sportive.
-          </p>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr><th>Règle</th><th>Détail</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>Ponctualité</td><td>Présence sur le lieu de rassemblement à l'heure indiquée.</td></tr>
-                <tr><td>Tenue</td><td>Tenue de sport obligatoire (voir rubrique dédiée ci-dessous).</td></tr>
-                <tr><td>Objets de valeur</td><td>À déposer selon la procédure de l'établissement, sous la responsabilité de l'élève.</td></tr>
-                <tr><td>Sécurité</td><td>Aucun bijou pendant la pratique, cheveux longs attachés.</td></tr>
-                <tr><td>Absence de matériel</td><td>Participation possible sous une forme adaptée (arbitrage, observation, aide à l'organisation).</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p><a class="btn btn--outline" href="#">Télécharger le règlement EPS complet (PDF à ajouter)</a></p>
-        </article>
 
-        <hr class="lane-divider">
-
-        <!-- ============================================================
-             FICHE AS (ASSOCIATION SPORTIVE)
-             ============================================================ -->
-        <article id="association-sportive">
-          <h2>Fiche AS (association sportive)</h2>
-          <p>
-            <!-- MODIFIER ICI : informations sur l'AS du collège -->
-            L'association sportive (AS) du collège permet de pratiquer des activités physiques et
-            sportives en dehors des heures de cours, souvent le mercredi après-midi, encadrée par
-            les professeurs d'EPS.
-          </p>
-          <ul>
-            <li><strong>Jour et horaire :</strong> [à compléter]</li>
-            <li><strong>Lieu de rendez-vous :</strong> [à compléter]</li>
-            <li><strong>Activités proposées cette année :</strong> [à compléter]</li>
-            <li><strong>Coût de la licence :</strong> [à compléter]</li>
-          </ul>
-          <p><a class="btn btn--outline" href="#">Télécharger la fiche d'inscription AS (à ajouter)</a></p>
-        </article>
-
-        <hr class="lane-divider">
-
-        <!-- ============================================================
-             TENUE EXIGEE
-             ============================================================ -->
-        <article id="tenue">
-          <h2>Tenue exigée</h2>
-          <p>Pour pratiquer en toute sécurité, la tenue suivante est obligatoire :</p>
-          <ul>
-            <li>Short, jogging ou legging de sport</li>
-            <li>Tee-shirt ou sweat de sport</li>
-            <li>Chaussures de sport fermées et lacées, différentes des chaussures de ville</li>
-            <li>Une bouteille d'eau</li>
-            <li>Cheveux longs attachés, aucun bijou (montre, bracelet, boucles d'oreilles pendantes...)</li>
-          </ul>
-          <div class="callout callout--info">
-            <h3>À savoir</h3>
-            <p>En cas d'oubli répété de tenue, l'élève peut être signalé aux familles et à la vie scolaire selon les modalités prévues par le règlement intérieur.</p>
-          </div>
-        </article>
-
-        <hr class="lane-divider">
-
-        <!-- ============================================================
-             MODALITES DE DISPENSE
-             ============================================================ -->
-        <article id="dispense">
-          <h2>Modalités de dispense</h2>
-
-          <h3>Dispense ponctuelle</h3>
-          <p>
-            Pour une gêne passagère (petit bobo, fatigue, indisposition...), un mot rédigé et signé
-            par les parents ou le responsable légal suffit. Il doit être présenté au professeur
-            d'EPS en début de séance.
-          </p>
-
-          <h3>Inaptitude de longue durée</h3>
-          <p>
-            Pour une inaptitude de plus de 3 mois, un certificat médical établi par un médecin est
-            obligatoire. Il doit préciser, si possible, les capacités préservées de l'élève afin
-            d'adapter sa participation au cours (arbitrage, observation, tâches d'organisation...).
-          </p>
-
-          <div class="callout callout--neutral">
-            <h3>Mot type de dispense ponctuelle — à recopier et faire signer par la famille</h3>
-            <p style="font-family:var(--font-mono); font-size:0.85rem; background:var(--color-white); padding:1rem; border-radius:8px; border:1px dashed var(--color-border);">
-              Je soussigné(e) [nom du responsable légal], demande à ce que mon enfant [nom, prénom],
-              élève en classe de [classe], soit dispensé(e) de la pratique de l'EPS le [date],
-              pour le motif suivant : [motif].<br><br>
-              Fait à [ville], le [date].<br>
-              Signature :
+        <!-- ORGANISATION ET REGLES DE FONCTIONNEMENT -->
+        <details class="info-card" id="organisation">
+          <summary>
+            <h2>Organisation et règles de fonctionnement du cours d'EPS</h2>
+            <span class="info-card__toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="info-card__body">
+            <p>
+              <!-- MODIFIER ICI : décrivez l'organisation concrète de vos cours -->
+              Chaque cours d'EPS dure en général 2 heures. Les élèves se changent dans les vestiaires
+              avant et après le cours, se déplacent en groupe classe jusqu'à l'installation sportive,
+              et se rassemblent au point d'appel donné par le professeur en début de séance.
             </p>
+            <ul>
+              <li>Appel effectué en tenue de sport, au lieu et à l'heure indiqués par le professeur.</li>
+              <li>Respect des autres élèves, du matériel et des installations sportives.</li>
+              <li>Écoute des consignes de sécurité avant chaque activité.</li>
+              <li>Rangement du matériel en fin de séance, avec l'aide des élèves.</li>
+            </ul>
           </div>
+        </details>
 
-          <div class="callout callout--success">
-            <h3>Bon à savoir</h3>
-            <p>Même dispensé(e) de pratique, un élève reste tenu d'assister au cours d'EPS, sauf avis contraire de l'infirmerie ou de la vie scolaire.</p>
+        <!-- REGLEMENT EPS -->
+        <details class="info-card" id="reglement">
+          <summary>
+            <h2>Règlement EPS</h2>
+            <span class="info-card__toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="info-card__body">
+            <p>
+              <!-- MODIFIER ICI : reprenez ici (ou en lien) votre règlement EPS d'établissement -->
+              Le règlement EPS complète le règlement intérieur du collège. Il précise les règles de
+              vie propres aux cours d'éducation physique et sportive.
+            </p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Règle</th><th>Détail</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Ponctualité</td><td>Présence sur le lieu de rassemblement à l'heure indiquée.</td></tr>
+                  <tr><td>Tenue</td><td>Tenue de sport obligatoire (voir rubrique dédiée ci-dessous).</td></tr>
+                  <tr><td>Objets de valeur</td><td>À déposer selon la procédure de l'établissement, sous la responsabilité de l'élève.</td></tr>
+                  <tr><td>Sécurité</td><td>Aucun bijou pendant la pratique, cheveux longs attachés.</td></tr>
+                  <tr><td>Absence de matériel</td><td>Participation possible sous une forme adaptée (arbitrage, observation, aide à l'organisation).</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p><a class="btn btn--outline" href="#">Télécharger le règlement EPS complet (PDF à ajouter)</a></p>
           </div>
-        </article>
+        </details>
+
+        <!-- FICHE AS (ASSOCIATION SPORTIVE) -->
+        <details class="info-card" id="association-sportive">
+          <summary>
+            <h2>Fiche AS (association sportive)</h2>
+            <span class="info-card__toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="info-card__body">
+            <p>
+              L'association sportive (AS) du collège permet de pratiquer des activités physiques et
+              sportives en dehors des heures de cours, sur la pause méridienne, encadrée par les
+              professeurs d'EPS.
+            </p>
+
+            <!-- MODIFIER CHAQUE ANNEE : jours, activités, enseignants -->
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Jour</th><th>Activité</th><th>Encadrant</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Lundi</td><td>Futsal</td><td>Mme Rattin</td></tr>
+                  <tr><td>Lundi</td><td>Basket féminin</td><td>M. Allard</td></tr>
+                  <tr><td>Mardi</td><td>Rugby Flag</td><td>Mme Baup</td></tr>
+                  <tr><td>Mardi</td><td>Futsal</td><td>Mme Rattin</td></tr>
+                  <tr><td>Jeudi</td><td>Handball féminin</td><td>Mme Baup</td></tr>
+                  <tr><td>Jeudi</td><td>Futsal féminin</td><td>Mme Rattin</td></tr>
+                  <tr><td>Vendredi</td><td>Basket</td><td>M. Allard</td></tr>
+                  <tr><td>Vendredi</td><td>Rugby Flag</td><td>Mme Baup</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <ul>
+              <li><strong>Horaire :</strong> 13h–13h50 (pause méridienne)</li>
+              <li><strong>Lieu :</strong> plateau sportif du collège</li>
+            </ul>
+
+            <div class="callout callout--info">
+              <h3>Comment s'inscrire ?</h3>
+              <ul class="mb-0">
+                <li>Remplir la feuille d'inscription et la rendre à l'enseignant responsable de l'activité choisie.</li>
+                <li>Payer la cotisation annuelle : <strong>30 €</strong> (–50 % pour la 2<sup>e</sup> inscription au sein d'une même famille).</li>
+                <li>Faire signer le règlement de l'AS au dos de la feuille d'inscription (élève <strong>et</strong> responsable légal).</li>
+              </ul>
+            </div>
+
+            <p>
+              L'adhésion permet de pratiquer autant d'activités que souhaité et de participer aux
+              compétitions scolaires du mercredi après-midi (facultatif), avec transport en car et
+              encadrement par les professeurs d'EPS.
+            </p>
+
+            <p><a class="btn btn--outline" href="#">Télécharger la fiche d'inscription AS (à ajouter)</a></p>
+          </div>
+        </details>
+
+        <!-- TENUE EXIGEE -->
+        <details class="info-card" id="tenue">
+          <summary>
+            <h2>Tenue exigée</h2>
+            <span class="info-card__toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="info-card__body">
+            <p>Pour pratiquer en toute sécurité, la tenue suivante est obligatoire :</p>
+            <ul>
+              <li>Short, jogging ou legging de sport</li>
+              <li>Tee-shirt ou sweat de sport</li>
+              <li>Chaussures de sport fermées et lacées, différentes des chaussures de ville</li>
+              <li>Une bouteille d'eau</li>
+              <li>Cheveux longs attachés, aucun bijou (montre, bracelet, boucles d'oreilles pendantes...)</li>
+            </ul>
+            <div class="callout callout--info">
+              <h3>À savoir</h3>
+              <p>En cas d'oubli répété de tenue, l'élève peut être signalé aux familles et à la vie scolaire selon les modalités prévues par le règlement intérieur.</p>
+            </div>
+          </div>
+        </details>
+
+        <!-- MODALITES DE DISPENSE -->
+        <details class="info-card" id="dispense">
+          <summary>
+            <h2>Modalités de dispense</h2>
+            <span class="info-card__toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="info-card__body">
+            <h3>Dispense ponctuelle</h3>
+            <p>
+              Pour une gêne passagère (petit bobo, fatigue, indisposition...), un mot rédigé et signé
+              par les parents ou le responsable légal suffit. Il doit être présenté au professeur
+              d'EPS en début de séance.
+            </p>
+
+            <h3>Inaptitude de longue durée</h3>
+            <p>
+              Pour une inaptitude de plus de 3 mois, un certificat médical établi par un médecin est
+              obligatoire. Il doit préciser, si possible, les capacités préservées de l'élève afin
+              d'adapter sa participation au cours (arbitrage, observation, tâches d'organisation...).
+            </p>
+
+            <div class="callout callout--neutral">
+              <h3>Mot type de dispense ponctuelle — à recopier et faire signer par la famille</h3>
+              <p style="font-family:var(--font-mono); font-size:0.85rem; background:var(--color-white); padding:1rem; border-radius:8px; border:1px dashed var(--color-border);">
+                Je soussigné(e) [nom du responsable légal], demande à ce que mon enfant [nom, prénom],
+                élève en classe de [classe], soit dispensé(e) de la pratique de l'EPS le [date],
+                pour le motif suivant : [motif].<br><br>
+                Fait à [ville], le [date].<br>
+                Signature :
+              </p>
+            </div>
+
+            <div class="callout callout--success">
+              <h3>Bon à savoir</h3>
+              <p>Même dispensé(e) de pratique, un élève reste tenu d'assister au cours d'EPS, sauf avis contraire de l'infirmerie ou de la vie scolaire.</p>
+            </div>
+          </div>
+        </details>
 
       </div>
     </section>

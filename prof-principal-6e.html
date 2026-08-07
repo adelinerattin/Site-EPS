@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mon entrée en 6e — Espace EPS</title>
-  <meta name="description" content="Espace dédié à la vie de collégien en 6e : ENT, mail, emploi du temps, sac, devoirs, leçons, contacts utiles, absences.">
+  <meta name="description" content="Espace dédié à la vie de collégien en 6e : ENT, Pronote, mail, emploi du temps, sac, cartes, téléphone, devoirs, contacts utiles, absences.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -48,186 +48,404 @@
     <section class="section">
       <div class="container">
 
+        <!-- Navigation rapide : un clic ouvre directement la rubrique visee.
+             Si vous ajoutez une rubrique plus bas, pensez a ajouter sa puce ici. -->
+        <ul class="quick-nav">
+          <li><a href="#ent">ENT et Pronote</a></li>
+          <li><a href="#mail">Envoyer un mail</a></li>
+          <li><a href="#emploi-du-temps">Emploi du temps</a></li>
+          <li><a href="#sac">Faire son sac</a></li>
+          <li><a href="#cartes">Mes cartes</a></li>
+          <li><a href="#telephone">Téléphone portable</a></li>
+          <li><a href="#deplacements">Se déplacer</a></li>
+          <li><a href="#devoirs">Organiser ses devoirs</a></li>
+          <li><a href="#apprendre-lecon">Apprendre une leçon</a></li>
+          <li><a href="#contacts">Contacts utiles</a></li>
+          <li><a href="#absence-retard">Absence / retard</a></li>
+          <li><a href="#documents-rentree">Documents de rentrée</a></li>
+        </ul>
+
         <!-- ============================================================
-             SE CONNECTER A L'ENT
+             CHAQUE RUBRIQUE EST UNE FICHE DEPLIABLE (".info-card"),
+             regroupee par thème (".info-group") pour ne pas surcharger
+             la page. Pour ajouter une rubrique : copiez un bloc
+             <details class="info-card"> entier dans le groupe concerné,
+             donnez-lui un id unique, et ajoutez sa puce dans le menu
+             rapide ci-dessus.
              ============================================================ -->
-        <article id="ent">
-          <h2>Se connecter à l'ENT</h2>
-          <p>
-            <!-- MODIFIER ICI : nom et lien de l'ENT de l'établissement -->
-            L'ENT (Espace Numérique de Travail) est l'outil que vous utiliserez tous les jours pour
-            consulter votre emploi du temps, vos notes, vos devoirs et communiquer avec vos professeurs.
-          </p>
-          <ol>
-            <li>Rendez-vous sur le site de l'ENT : <a href="#">lien de l'ENT à ajouter</a>.</li>
-            <li>Saisissez votre identifiant et votre mot de passe (donnés en début d'année).</li>
-            <li>En cas d'oubli de mot de passe, contactez [personne ressource à préciser].</li>
-          </ol>
-          <div class="callout callout--info">
-            <h3>Important</h3>
-            <p>Ne communiquez jamais votre mot de passe à un(e) camarade. Déconnectez-vous après chaque utilisation sur un ordinateur partagé.</p>
-          </div>
-        </article>
+
+        <!-- ================= GROUPE 1 : OUTILS NUMERIQUES ================= -->
+        <div class="info-group">
+          <h2>Mes outils numériques</h2>
+
+          <details class="info-card" id="ent">
+            <summary>
+              <h3>Se connecter à l'ENT et à Pronote</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <p>
+                <!-- MODIFIER ICI si le nom de l'ENT ou l'academie change -->
+                L'ENT (Espace Numérique de Travail) et Pronote sont les deux outils que vous utiliserez
+                tous les jours pour suivre votre scolarité et communiquer avec le collège.
+              </p>
+
+              <h4>Première connexion à l'ENT</h4>
+              <ol>
+                <li>Aller sur <a href="https://simone-veil-verdun.mon-ent-occitanie.fr">simone-veil-verdun.mon-ent-occitanie.fr</a> (ou taper « ENT Verdun sur Garonne » dans un moteur de recherche).</li>
+                <li>Cliquer sur « Se connecter ».</li>
+                <li>Sélectionner l'espace « Élève ou parent », puis « de l'Académie de Toulouse », puis « Valider ».</li>
+                <li>Sur le portail EduConnect, choisir le profil « Élève ».</li>
+                <li>Saisir l'identifiant et le mot de passe <strong>provisoire</strong> donnés par le collège à la rentrée.</li>
+                <li>Choisir son nouveau mot de passe définitif (voir la formule ci-dessous).</li>
+              </ol>
+
+              <div class="callout callout--neutral">
+                <h4 class="mt-0">Comment choisir son mot de passe définitif ?</h4>
+                <p class="mb-0">
+                  Initiale du prénom en majuscule + nom de famille en minuscule (seulement la 1<sup>re</sup> partie
+                  si le nom est composé) + année de naissance + un point d'exclamation.<br>
+                  <strong>Exemple :</strong> pour Nicolas Dumont-Pellier, né en 2014 → <code>Ndumont2014!</code>
+                </p>
+              </div>
+
+              <div class="callout callout--info">
+                <p class="mb-0">⚠️ Notez votre identifiant et votre mot de passe dans votre agenda, comme demandé par le collège. Ne les communiquez jamais à un(e) camarade.</p>
+              </div>
+
+              <p>
+                <!-- MODIFIER ICI : le code de session pour les ordinateurs du collège est volontairement
+                     absent de cette page publique. Communiquez-le aux familles par un autre moyen
+                     (papier, ENT, réunion). -->
+                Les codes de connexion aux <strong>ordinateurs du collège</strong> sont différents de ceux de
+                l'ENT : ils vous ont été communiqués séparément (fiche papier distribuée à la rentrée).
+              </p>
+
+              <h4>À quoi sert l'ENT ?</h4>
+              <ul>
+                <li><strong>La messagerie</strong> : pour écrire à un professeur ou à un adulte du collège — en s'adressant au bon interlocuteur et à des heures raisonnables.</li>
+                <li><strong>Le cahier de texte / l'espace des classes</strong> : ce qui a été fait en cours et les ressources mises en ligne par les enseignants.</li>
+              </ul>
+              <div class="callout callout--info">
+                <p class="mb-0">⚠️ C'est <strong>l'agenda papier</strong> qui fait foi pour les devoirs à faire (voir la rubrique « Organiser ses devoirs »).</p>
+              </div>
+
+              <h4>À quoi sert Pronote ?</h4>
+              <ul class="mb-0">
+                <li>Consulter l'emploi du temps.</li>
+                <li>Consulter les absences et les retards, et les justifier.</li>
+                <li>Consulter le carnet virtuel (observations, sanctions, encouragements).</li>
+                <li>Consulter les notes, compétences et bulletins trimestriels.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="info-card" id="mail">
+            <summary>
+              <h3>Envoyer un mail, y compris avec une pièce jointe</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <p>Savoir écrire un mail correct à un adulte est une compétence essentielle au collège. Pensez à toujours vous adresser au bon interlocuteur, et à des heures raisonnables.</p>
+              <ol>
+                <li><strong>Objet :</strong> résumez le sujet en quelques mots (ex. "Absence du 12/09 - Classe 6eA").</li>
+                <li><strong>Formule de politesse d'ouverture :</strong> "Bonjour Madame/Monsieur [Nom],"</li>
+                <li><strong>Corps du message :</strong> expliquez clairement votre demande, en phrases complètes.</li>
+                <li><strong>Formule de politesse de fin :</strong> "Cordialement," suivi de votre prénom, nom et classe.</li>
+                <li><strong>Pièce jointe :</strong> cliquez sur l'icône « trombone » ou « joindre un fichier », puis sélectionnez le document sur votre appareil avant d'envoyer.</li>
+              </ol>
+              <div class="callout callout--success">
+                <h4 class="mt-0">Astuce</h4>
+                <p class="mb-0">Relisez toujours votre mail avant de l'envoyer : objet renseigné, orthographe vérifiée, pièce jointe bien ajoutée.</p>
+              </div>
+            </div>
+          </details>
+        </div>
 
         <hr class="lane-divider">
 
-        <!-- ============================================================
-             ENVOYER UN MAIL (AVEC PIECE JOINTE)
-             ============================================================ -->
-        <article id="mail">
-          <h2>Envoyer un mail, y compris avec une pièce jointe</h2>
-          <p>Savoir écrire un mail correct à un adulte est une compétence essentielle au collège.</p>
-          <ol>
-            <li><strong>Objet :</strong> résumez le sujet en quelques mots (ex. "Absence du 12/09 - Classe 6eA").</li>
-            <li><strong>Formule de politesse d'ouverture :</strong> "Bonjour Madame/Monsieur [Nom],"</li>
-            <li><strong>Corps du message :</strong> expliquez clairement votre demande, en phrases complètes.</li>
-            <li><strong>Formule de politesse de fin :</strong> "Cordialement," suivi de votre prénom, nom et classe.</li>
-            <li><strong>Pièce jointe :</strong> cliquez sur l'icône « trombone » ou « joindre un fichier », puis sélectionnez le document sur votre appareil avant d'envoyer.</li>
-          </ol>
-          <div class="callout callout--success">
-            <h3>Astuce</h3>
-            <p>Relisez toujours votre mail avant de l'envoyer : objet renseigné, orthographe vérifiée, pièce jointe bien ajoutée.</p>
-          </div>
-        </article>
+        <!-- ================= GROUPE 2 : VIE QUOTIDIENNE AU COLLEGE ================= -->
+        <div class="info-group">
+          <h2>Ma vie quotidienne au collège</h2>
+
+          <details class="info-card" id="emploi-du-temps">
+            <summary>
+              <h3>Lire son emploi du temps</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <p>Votre emploi du temps est disponible sur Pronote. Voici comment le lire :</p>
+              <ul>
+                <li>Chaque colonne représente un jour de la semaine.</li>
+                <li>Chaque ligne représente un créneau horaire.</li>
+                <li>Chaque case indique : la matière, le nom du professeur, la salle.</li>
+                <li>Une case vide ou grisée peut correspondre à une heure de permanence.</li>
+              </ul>
+
+              <h4>Quelques créneaux particuliers</h4>
+              <ul>
+                <li><strong>Heure de vie de classe :</strong> environ une fois toutes les 2 semaines, le mardi de 11h30 à 12h30. Élection des délégués, préparation des conseils de classe, cohésion de groupe...</li>
+                <li><strong>Devoirs faits :</strong> un créneau d'accompagnement au travail personnel, pour apprendre petit à petit à travailler en autonomie sur l'année.</li>
+                <li><strong>Groupes de besoin (maths / français) :</strong> la classe est répartie en groupes, différents en maths et en français. Un changement de groupe est possible jusqu'à 3 fois dans l'année, décidé par les enseignants concernés.</li>
+              </ul>
+
+              <div class="callout callout--info">
+                <p class="mb-0">Certains cours peuvent être modifiés (absence de professeur, sortie scolaire...). Prenez l'habitude de consulter votre emploi du temps sur Pronote la veille pour le lendemain.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="info-card" id="sac">
+            <summary>
+              <h3>Faire son sac</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <p>Préparer son cartable la veille au soir évite les oublis et le stress du matin.</p>
+              <ol>
+                <li>Regarder les cours du lendemain sur Pronote : quel matériel faut-il en fonction des matières ?</li>
+                <li>Sortir les cahiers/classeurs et manuels des matières prévues.</li>
+                <li>Vérifier sa trousse (stylos, crayon, gomme, colle, calculatrice si besoin).</li>
+                <li>Vérifier son agenda.</li>
+                <li>Vérifier que les <strong>2 cartes</strong> (carte de collégien et carte de cantine) sont bien dans le sac.</li>
+                <li>Vérifier si vous avez cours d'EPS : ajouter votre tenue de sport et une bouteille d'eau.</li>
+                <li>S'organiser dans son travail personnel : planifier à l'avance plutôt que d'attendre la veille.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details class="info-card" id="cartes">
+            <summary>
+              <h3>Mes cartes : collégien et cantine</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <h4>La carte de collégien</h4>
+              <p>À avoir toujours sur soi. Elle permet :</p>
+              <ul>
+                <li>de gérer les entrées et sorties au portail du collège ;</li>
+                <li>d'accéder à son emploi du temps (salles, horaires) et au règlement intérieur.</li>
+              </ul>
+              <p class="mb-0">En cas de perte, une nouvelle carte sera facturée.</p>
+
+              <hr class="lane-divider">
+
+              <h4>La carte de cantine</h4>
+              <p>Elle est nominative et doit être conservée pendant toute la scolarité au collège.</p>
+              <ul class="mb-0">
+                <li>En cas de <strong>perte</strong> : en racheter une auprès du secrétariat (environ 6 €).</li>
+                <li>En cas d'<strong>oubli</strong> : l'élève mange à la fin du service.</li>
+                <li>4 oublis = 1 heure de retenue.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="info-card" id="telephone">
+            <summary>
+              <h3>Le téléphone portable</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <div class="callout callout--info">
+                <p class="mb-0">L'utilisation du téléphone portable est <strong>strictement interdite</strong> dans l'enceinte du collège, y compris dans les couloirs, ainsi que lors des sorties et activités pédagogiques à l'extérieur.</p>
+              </div>
+              <ul>
+                <li>Le téléphone et les objets connectés doivent être <strong>éteints</strong> (pas seulement en silencieux) durant toute la journée scolaire.</li>
+                <li>En cas de besoin urgent de contacter un responsable légal, s'adresser au bureau du CPE.</li>
+                <li>En cas de non-respect de cette règle : confiscation de l'appareil, qui est éteint et conservé au bureau du CPE en attendant sa restitution.</li>
+              </ul>
+              <p class="mb-0">Le plus simple reste de laisser son téléphone à la maison.</p>
+            </div>
+          </details>
+
+          <details class="info-card" id="deplacements">
+            <summary>
+              <h3>Se déplacer et sortir du collège</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <h4>Dans le collège</h4>
+              <p>Les déplacements se font toujours :</p>
+              <ul>
+                <li>en rang, par deux ;</li>
+                <li>dans le silence ;</li>
+                <li>les escaliers se montent à droite.</li>
+              </ul>
+
+              <h4>Les régimes de sortie</h4>
+              <p>Chaque élève se voit attribuer un régime de sortie en début d'année (indiqué sur Pronote et/ou la carte de collégien) :</p>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr><th>Régime</th><th>Ce que ça signifie</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Pastille rouge (transport en commun)</td><td>Présence obligatoire de 8h20 à 17h ; sortie possible selon l'emploi du temps habituel en début et fin de journée.</td></tr>
+                    <tr><td>Pastille rouge (sans transport en commun)</td><td>Présence obligatoire 8h20–11h30 (ou 12h30) et 13h45–17h pour les externes ; 8h20–17h pour les demi-pensionnaires.</td></tr>
+                    <tr><td>Pastille jaune</td><td>Sortie possible selon l'emploi du temps habituel, en début et fin de journée.</td></tr>
+                    <tr><td>Pastille verte</td><td>Sortie possible selon l'emploi du temps du jour, même en cas de modification.</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="mb-0">En cas de doute sur son propre régime de sortie, se renseigner auprès de la vie scolaire.</p>
+            </div>
+          </details>
+        </div>
 
         <hr class="lane-divider">
 
-        <!-- ============================================================
-             LIRE SON EMPLOI DU TEMPS
-             ============================================================ -->
-        <article id="emploi-du-temps">
-          <h2>Lire son emploi du temps</h2>
-          <p>Votre emploi du temps est disponible sur l'ENT. Voici comment le lire :</p>
-          <ul>
-            <li>Chaque colonne représente un jour de la semaine.</li>
-            <li>Chaque ligne représente un créneau horaire.</li>
-            <li>Chaque case indique : la matière, le nom du professeur, la salle.</li>
-            <li>Une case vide ou grisée peut correspondre à une heure de permanence.</li>
+        <!-- ================= GROUPE 3 : TRAVAIL PERSONNEL ================= -->
+        <div class="info-group">
+          <h2>Mon travail personnel</h2>
+
+          <details class="info-card" id="devoirs">
+            <summary>
+              <h3>Organiser ses devoirs</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <ul>
+                <li>Notez systématiquement vos devoirs dans votre <strong>agenda</strong> dès qu'ils sont donnés.</li>
+                <li>Répartissez vos devoirs sur plusieurs jours plutôt que de tout faire la veille.</li>
+                <li>Faites d'abord les devoirs à rendre le plus tôt, puis les leçons à apprendre.</li>
+                <li>Faites une courte pause entre deux matières pour rester concentré(e).</li>
+              </ul>
+
+              <div class="callout callout--info">
+                <p class="mb-0">⚠️ C'est l'agenda qui fait foi pour les devoirs à faire — le créneau « Devoirs faits » de l'emploi du temps vous aide à apprendre à travailler seul(e), progressivement sur l'année.</p>
+              </div>
+
+              <h4>Ce qui est attendu d'un(e) élève de 6e</h4>
+              <ul class="mb-0">
+                <li>Être présent(e) et ponctuel(le).</li>
+                <li>Avoir un comportement respectueux et une attitude positive, en classe et en dehors.</li>
+                <li>Avoir tout son matériel.</li>
+                <li>Avoir fait ses devoirs, appris ses leçons, rattrapé ses absences (grâce aux binômes de classe).</li>
+                <li>Avoir des résultats correspondant à son niveau.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="info-card" id="apprendre-lecon">
+            <summary>
+              <h3>Apprendre une leçon (méthode)</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <ol>
+                <li><strong>Je relis</strong> ma leçon une première fois en entier, sans rien apprendre par cœur.</li>
+                <li><strong>Je repère</strong> les mots-clés, les définitions et les dates ou formules importantes.</li>
+                <li><strong>Je me teste</strong> : je cache la leçon et j'essaie de la réciter ou de l'écrire de mémoire.</li>
+                <li><strong>Je vérifie</strong> ce que je n'ai pas su, et je le relis une nouvelle fois.</li>
+                <li><strong>Je recommence</strong> le lendemain (la révision espacée est plus efficace qu'une seule longue session).</li>
+              </ol>
+              <div class="callout callout--success">
+                <h4 class="mt-0">Exemple concret</h4>
+                <p class="mb-0">Je lis → je cache → je répète à voix haute → je m'entraîne à écrire les mots nouveaux. Pour vérifier, je peux aussi expliquer ma leçon à quelqu'un en donnant mes propres exemples.</p>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <hr class="lane-divider">
+
+        <!-- ================= GROUPE 4 : BESOIN D'AIDE ================= -->
+        <div class="info-group">
+          <h2>Besoin d'aide ?</h2>
+
+          <details class="info-card" id="contacts">
+            <summary>
+              <h3>Contacts utiles</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <!-- MODIFIER CHAQUE ANNEE : l'equipe change parfois d'une annee sur l'autre -->
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr><th>Personne</th><th>Pour quoi faire</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Professeure principale : Mme Rattin</td><td>Questions générales sur la scolarité, l'orientation, la vie de la classe.</td></tr>
+                    <tr><td>CPE : Mme Topin</td><td>Absences, retards, problèmes de vie scolaire, conflits, téléphone confisqué.</td></tr>
+                    <tr><td>Infirmière : Mme Antier</td><td>Malaise, blessure, questions de santé.</td></tr>
+                    <tr><td>Psychologue de l'Éducation nationale : Mme Vincenot</td><td>Orientation, difficultés personnelles.</td></tr>
+                    <tr><td>Assistante sociale : Mme Basile</td><td>Difficultés familiales ou sociales.</td></tr>
+                    <tr><td>Assistants d'éducation (vie scolaire)</td><td>Carnet de correspondance, mots des parents, objets trouvés, surveillance au quotidien.</td></tr>
+                    <tr><td>Secrétariat : Mme Gobé, Mme Michon</td><td>Cartes de cantine, papiers administratifs.</td></tr>
+                    <tr><td>Cheffe d'établissement : Mme Rosoli</td><td>Questions générales sur le fonctionnement du collège.</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>Le collège compte aussi deux structures animées avec les élèves : l'<a href="eps-generale.html#association-sportive">association sportive (AS)</a>, pour le sport en dehors des cours, et le <strong>foyer socio-éducatif (FSE)</strong>, qui anime la vie du collège (clubs, sorties, événements).</p>
+
+              <div class="callout callout--info">
+                <h4 class="mt-0">Numéros utiles en cas de besoin</h4>
+                <ul class="mb-0">
+                  <li><strong>3018</strong> — numéro national contre le harcèlement (« Non au harcèlement »)</li>
+                  <li><strong>119</strong> — Allô Enfance en Danger</li>
+                </ul>
+              </div>
+            </div>
+          </details>
+
+          <details class="info-card" id="absence-retard">
+            <summary>
+              <h3>Gérer une absence ou un retard</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <h4>En cas d'absence</h4>
+              <ol>
+                <li>Les parents préviennent l'établissement dès que possible (téléphone, Pronote ou mail).</li>
+                <li>À votre retour, présentez le mot d'absence signé par vos parents à la vie scolaire (ou justifiez-la directement sur Pronote).</li>
+                <li>Rattrapez les cours manqués : demandez le travail fait à votre binôme de classe, ou consultez le cahier de texte / l'espace des classes sur l'ENT.</li>
+              </ol>
+
+              <h4>En cas de retard</h4>
+              <ol>
+                <li>Présentez-vous à la vie scolaire avant de rejoindre votre cours.</li>
+                <li>Un billet de retard vous sera remis pour être présenté au professeur.</li>
+                <li>En cas de retards répétés, un mot sera transmis à vos parents.</li>
+              </ol>
+
+              <div class="callout callout--info">
+                <p class="mb-0">Une absence ou un retard doit toujours être justifié. En cas de doute, adressez-vous à la vie scolaire ou à votre professeure principale.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="info-card" id="documents-rentree">
+            <summary>
+              <h3>Documents à rendre en début d'année</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <p>Chaque rentrée, quelques documents sont à compléter, signer et rapporter rapidement au collège :</p>
+              <ul>
+                <li>L'attestation d'assurance scolaire (responsabilité civile + individuelle accident).</li>
+                <li>La fiche de renseignements et la carte de collégien, complétées et signées.</li>
+                <li>Le coupon attestant la prise de connaissance du règlement intérieur.</li>
+                <li>Les documents spécifiques aux éventuelles sorties scolaires de début d'année.</li>
+              </ul>
+              <p class="mb-0">
+                <!-- MODIFIER CHAQUE ANNEE : les dates precises changent -->
+                Les dates précises pour rapporter chaque document sont communiquées chaque année par le
+                collège via Pronote, l'ENT et le carnet de correspondance.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <div class="callout callout--success">
+          <h3 class="mt-0">Quelques conseils pour bien débuter au collège</h3>
+          <ul class="mb-0">
+            <li><strong>Pose des questions :</strong> il n'y a pas de questions bêtes — ta question peut aider d'autres camarades de la classe.</li>
+            <li><strong>Ne reste pas seul(e) :</strong> en cas de problème, parles-en toujours à un adulte (professeure principale, infirmière, CPE, assistant d'éducation...).</li>
+            <li><strong>Donne-toi du temps :</strong> le collège, ça s'apprend petit à petit, pas besoin de tout savoir dès le premier jour.</li>
           </ul>
-          <div class="callout callout--info">
-            <h3>À vérifier chaque semaine</h3>
-            <p>Certains cours peuvent être modifiés (absence de professeur, sortie scolaire...). Prenez l'habitude de consulter votre emploi du temps la veille pour le lendemain.</p>
-          </div>
-        </article>
-
-        <hr class="lane-divider">
-
-        <!-- ============================================================
-             FAIRE SON SAC
-             ============================================================ -->
-        <article id="sac">
-          <h2>Faire son sac</h2>
-          <p>Préparer son sac la veille au soir évite les oublis et le stress du matin.</p>
-          <ol>
-            <li>Consultez votre emploi du temps du lendemain sur l'ENT.</li>
-            <li>Sortez les cahiers/classeurs et manuels des matières prévues.</li>
-            <li>Vérifiez votre trousse (stylos, crayon, gomme, colle, calculatrice si besoin).</li>
-            <li>Vérifiez si vous avez cours d'EPS : ajoutez votre tenue de sport et une bouteille d'eau.</li>
-            <li>Ajoutez votre agenda, votre carnet de correspondance et de quoi manger si besoin (goûter).</li>
-          </ol>
-        </article>
-
-        <hr class="lane-divider">
-
-        <!-- ============================================================
-             ORGANISER SES DEVOIRS
-             ============================================================ -->
-        <article id="devoirs">
-          <h2>Organiser ses devoirs</h2>
-          <ul>
-            <li>Notez systématiquement vos devoirs dans votre agenda ou sur l'ENT, dès qu'ils sont donnés.</li>
-            <li>Répartissez vos devoirs sur plusieurs jours plutôt que de tout faire la veille.</li>
-            <li>Faites d'abord les devoirs à rendre le plus tôt, puis les leçons à apprendre.</li>
-            <li>Faites une courte pause entre deux matières pour rester concentré(e).</li>
-          </ul>
-          <div class="callout callout--success">
-            <h3>Méthode simple</h3>
-            <p>Chaque soir : je relis mon agenda → je fais les devoirs écrits → j'apprends mes leçons → je prépare mon sac pour le lendemain.</p>
-          </div>
-        </article>
-
-        <hr class="lane-divider">
-
-        <!-- ============================================================
-             APPRENDRE UNE LECON (METHODE)
-             ============================================================ -->
-        <article id="apprendre-lecon">
-          <h2>Apprendre une leçon (méthode)</h2>
-          <ol>
-            <li><strong>Je relis</strong> ma leçon une première fois en entier, sans rien apprendre par cœur.</li>
-            <li><strong>Je repère</strong> les mots-clés, les définitions et les dates ou formules importantes.</li>
-            <li><strong>Je me teste</strong> : je cache la leçon et j'essaie de la réciter ou de l'écrire de mémoire.</li>
-            <li><strong>Je vérifie</strong> ce que je n'ai pas su, et je le relis une nouvelle fois.</li>
-            <li><strong>Je recommence</strong> le lendemain (la révision espacée est plus efficace qu'une seule longue session).</li>
-          </ol>
-        </article>
-
-        <hr class="lane-divider">
-
-        <!-- ============================================================
-             CONTACTS UTILES
-             ============================================================ -->
-        <article id="contacts">
-          <h2>Contacts utiles</h2>
-          <p>Selon votre besoin, voici qui contacter et comment :</p>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr><th>Personne</th><th>Pour quoi faire</th><th>Comment la joindre</th></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>CPE (Conseiller Principal d'Éducation)</td>
-                  <td>Absences, retards, problèmes de vie scolaire, conflits</td>
-                  <td><!-- MODIFIER ICI -->[bureau / horaires / contact à compléter]</td>
-                </tr>
-                <tr>
-                  <td>Infirmerie</td>
-                  <td>Malaise, blessure, questions de santé</td>
-                  <td><!-- MODIFIER ICI -->[bureau / horaires / contact à compléter]</td>
-                </tr>
-                <tr>
-                  <td>Vie scolaire</td>
-                  <td>Carnet de correspondance, mots des parents, objets trouvés</td>
-                  <td><!-- MODIFIER ICI -->[bureau / horaires / contact à compléter]</td>
-                </tr>
-                <tr>
-                  <td>Professeur principal</td>
-                  <td>Questions générales sur la scolarité, l'orientation, la classe</td>
-                  <td><!-- MODIFIER ICI -->[nom / email à compléter]</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </article>
-
-        <hr class="lane-divider">
-
-        <!-- ============================================================
-             GERER UNE ABSENCE OU UN RETARD
-             ============================================================ -->
-        <article id="absence-retard">
-          <h2>Gérer une absence ou un retard</h2>
-
-          <h3>En cas d'absence</h3>
-          <ol>
-            <li>Les parents préviennent l'établissement dès que possible (téléphone, ENT ou mail).</li>
-            <li>À votre retour, présentez le mot d'absence signé par vos parents à la vie scolaire.</li>
-            <li>Rattrapez les cours manqués : demandez le travail fait à un(e) camarade ou consultez l'ENT.</li>
-          </ol>
-
-          <h3>En cas de retard</h3>
-          <ol>
-            <li>Présentez-vous à la vie scolaire avant de rejoindre votre cours.</li>
-            <li>Un billet de retard vous sera remis pour être présenté au professeur.</li>
-            <li>En cas de retards répétés, un mot sera transmis à vos parents.</li>
-          </ol>
-
-          <div class="callout callout--info">
-            <h3>À retenir</h3>
-            <p>Une absence ou un retard doit toujours être justifié. En cas de doute, adressez-vous à la vie scolaire ou à votre professeur principal.</p>
-          </div>
-        </article>
+        </div>
 
       </div>
     </section>

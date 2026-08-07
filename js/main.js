@@ -3,10 +3,28 @@
    ------------------------------------------------------------
    - Ouverture / fermeture du menu hamburger sur mobile
    - Mise en surbrillance du lien de navigation de la page en cours
+   - Ouverture automatique d'une fiche <details> visee par une ancre
    Ce fichier est charge sur CHAQUE page via <script src="js/main.js" defer>.
    ============================================================ */
 
+/* Ouvre une fiche activity-card / info-card si on arrive sur son ancre
+   (#id) : au chargement de la page (lien venant d'une autre page), ET
+   quand on clique un lien d'ancre sur la page elle-meme (ex. menu
+   rapide "quick-nav"), qui ne recharge pas la page. */
+function openDetailsFromHash() {
+  if (!window.location.hash) return;
+  var targetEl = document.getElementById(window.location.hash.slice(1));
+  var targetDetails = targetEl && targetEl.closest ? targetEl.closest("details") : null;
+  if (targetDetails) {
+    targetDetails.open = true;
+  }
+}
+
+window.addEventListener("hashchange", openDetailsFromHash);
+
 document.addEventListener("DOMContentLoaded", function () {
+  openDetailsFromHash();
+
   /* --- Menu hamburger ------------------------------------- */
   var navToggle = document.querySelector(".nav-toggle");
   var mainNav = document.querySelector(".main-nav");
