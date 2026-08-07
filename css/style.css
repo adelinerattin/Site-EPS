@@ -19,6 +19,7 @@
    12. Alertes / encarts (info, succes, alerte)
    13. Tableaux (referentiels)
    14. Utilitaires
+   15. Page d'accueil : navigation "pages" dans le hero + presentation
    ============================================================ */
 
 
@@ -39,6 +40,7 @@
   --color-green-light: #e6f4ec;   /* vert tres clair : fond des messages de succes */
   --color-coral: #e8543f;         /* corail : alertes / informations importantes */
   --color-coral-light: #fdece8;   /* corail tres clair : fond des messages d'alerte */
+  --color-orange: #e8871e;        /* orange "ballon" : clin d'oeil au logo de l'AS, accent secondaire */
   --color-chalk: #f7f5ef;         /* fond clair "craie" pour le contenu */
   --color-white: #ffffff;
   --color-ink: #1a1e27;           /* couleur du texte courant (presque noir) */
@@ -271,6 +273,19 @@ li {
   color: var(--color-navy);
   font-size: 1rem;
   flex-shrink: 0;
+}
+
+/* Logo de l'association sportive, affiche dans l'en-tete de chaque page.
+   Le fichier image se trouve dans assets/logo-as-badge.jpg — remplacez-le
+   par le logo de votre propre etablissement si besoin (meme nom de fichier
+   pour ne rien avoir a changer dans les pages HTML). */
+.site-logo__mark--img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-orange);
+  background: var(--color-chalk);
 }
 
 /* Bouton hamburger (visible seulement sur mobile/tablette) */
@@ -1027,4 +1042,129 @@ tbody tr:nth-child(even) {
 
 .breadcrumb a {
   color: var(--color-navy);
+}
+
+/* ============================================================
+   15. PAGE D'ACCUEIL : NAVIGATION "PAGES" DANS LE HERO + PRESENTATION
+   ------------------------------------------------------------
+   Composant "hero-nav" : une rangee de boutons (une par page du
+   site) affichee dans la zone hero. Cliquer sur un bouton affiche,
+   juste en dessous, un panneau qui resume le contenu de cette page
+   (sous-rubriques, activites) avec un lien vers la page complete.
+   Voir js/hero-nav.js pour la logique.
+   ============================================================ */
+.hero-nav {
+  margin-top: var(--space-lg);
+}
+
+.hero-nav__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.hero-nav__tab {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.7em 1.2em;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.12s ease;
+}
+
+.hero-nav__tab:hover {
+  border-color: var(--color-yellow);
+  transform: translateY(-1px);
+}
+
+.hero-nav__tab[aria-selected="true"] {
+  background: var(--color-yellow);
+  border-color: var(--color-yellow);
+  color: var(--color-navy);
+}
+
+.hero-nav__panels {
+  margin-top: var(--space-md);
+}
+
+.hero-nav__panel {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+}
+
+.hero-nav__panel[hidden] {
+  display: none;
+}
+
+.hero-nav__panel h3 {
+  color: var(--color-white);
+  margin-bottom: 0.6em;
+}
+
+.hero-nav__chips {
+  list-style: none;
+  margin: 0 0 var(--space-sm);
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.hero-nav__chips a {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.4em 0.85em;
+  border-radius: 999px;
+}
+
+.hero-nav__chips a:hover,
+.hero-nav__chips a:focus-visible {
+  border-color: var(--color-orange);
+  background: rgba(232, 135, 30, 0.25);
+}
+
+.hero-nav__meta {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: #cfd6ea;
+  margin-bottom: var(--space-md);
+}
+
+/* Cartes de presentation rapide ("Ce que vous allez trouver ici") */
+.feature-card {
+  text-align: left;
+}
+
+.feature-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-chalk);
+  border: 2px solid var(--color-orange);
+  font-size: 1.4rem;
+  margin-bottom: var(--space-sm);
+}
+
+.feature-card h3 {
+  margin-bottom: 0.4em;
+}
+
+.feature-card p {
+  margin-bottom: 0;
+  color: var(--color-ink-soft);
+  font-size: 0.95rem;
 }
