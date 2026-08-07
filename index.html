@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espace EPS — Accueil</title>
+  <meta name="description" content="Site de ressources EPS pour les élèves du collège : règlement, activités par niveau, quiz et vie de collégien.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
+  <!-- ============================================================
+       EN-TETE ET NAVIGATION (identique sur toutes les pages)
+       ============================================================ -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-logo" href="index.html">
+        <span class="site-logo__mark" aria-hidden="true">EPS</span>
+        Espace EPS du collège
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span class="visually-hidden">Ouvrir le menu</span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+        <ul class="main-nav__list">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="eps-generale.html">EPS générale</a></li>
+          <li><a href="niveau-6e.html">6e</a></li>
+          <li><a href="niveau-5e.html">5e</a></li>
+          <li><a href="niveau-4e.html">4e</a></li>
+          <li><a href="niveau-3e.html">3e</a></li>
+          <li><a href="prof-principal-6e.html">Prof principal 6e</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ============================================================
+         HERO / PRESENTATION DU SITE
+         ============================================================ -->
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Collège — Tarn-et-Garonne (82)</p>
+        <h1>Bienvenue sur l'Espace EPS</h1>
+        <p class="lede">
+          Ce site rassemble toutes les ressources qui complètent vos cours d'EPS :
+          règlement, règles d'arbitrage, vidéos de démonstration, lexique, quiz
+          d'entraînement et référentiels d'évaluation, classés par niveau et par activité.
+        </p>
+        <p>
+          <a class="btn btn--primary" href="#recherche">Chercher une activité</a>
+          <a class="btn btn--on-dark" href="eps-generale.html">Règlement &amp; organisation</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HUB D'ACCES RAPIDE
+         ============================================================ -->
+    <section class="section">
+      <div class="container">
+        <h2>Accès rapide</h2>
+        <p class="lede">Choisissez votre page : les règles générales de l'EPS, votre niveau, ou l'espace spécial 6e.</p>
+
+        <div class="hub-grid">
+          <a class="card card--niveau" href="eps-generale.html">
+            <span class="dossard" aria-hidden="true" style="font-size:1.1rem;">EPS</span>
+            <span>
+              <h3>EPS générale</h3>
+              <p>Règlement, tenue, association sportive, dispenses.</p>
+            </span>
+          </a>
+
+          <a class="card card--niveau" href="niveau-6e.html">
+            <span class="dossard" aria-hidden="true">6e</span>
+            <span>
+              <h3>Niveau 6e</h3>
+              <p>7 activités : triathlon, handball, ultimate, CO, badminton, danse, tennis de table.</p>
+            </span>
+          </a>
+
+          <a class="card card--niveau" href="niveau-5e.html">
+            <span class="dossard" aria-hidden="true">5e</span>
+            <span>
+              <h3>Niveau 5e</h3>
+              <p>Handball, ultimate, biathlon, badminton, tennis de table.</p>
+            </span>
+          </a>
+
+          <a class="card card--niveau" href="niveau-4e.html">
+            <span class="dossard" aria-hidden="true">4e</span>
+            <span>
+              <h3>Niveau 4e</h3>
+              <p>Boxe française, rugby flag, badminton, basket-ball, relais vitesse.</p>
+            </span>
+          </a>
+
+          <a class="card card--niveau" href="niveau-3e.html">
+            <span class="dossard" aria-hidden="true">3e</span>
+            <span>
+              <h3>Niveau 3e</h3>
+              <p>Boxe française, rugby flag, badminton double, basket-ball, relais, cross training.</p>
+            </span>
+          </a>
+
+          <a class="card card--niveau" href="prof-principal-6e.html">
+            <span class="dossard" aria-hidden="true" style="font-size:1rem;">PP</span>
+            <span>
+              <h3>Professeur principal 6e</h3>
+              <p>ENT, emploi du temps, sac, devoirs, contacts utiles.</p>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="lane-divider container">
+
+    <!-- ============================================================
+         FILTRE / RECHERCHE
+         ------------------------------------------------------------
+         Toutes les activites des 4 niveaux sont listees ci-dessous
+         sous forme de cartes. Le JavaScript (js/filter.js) filtre
+         ces cartes selon le texte tape, le niveau et l'activite
+         choisis. Pour ajouter une nouvelle activite, il suffit
+         d'ajouter une carte ".resource-card" au format identique.
+         ============================================================ -->
+    <section class="section section--tight" id="recherche">
+      <div class="container">
+        <h2>Trouver une ressource</h2>
+        <p class="lede">Recherchez par mot-clé, filtrez par niveau et/ou par activité.</p>
+
+        <form class="filter-bar" role="search" onsubmit="return false;">
+          <div class="filter-field">
+            <label for="filter-search">Mot-clé</label>
+            <input type="search" id="filter-search" placeholder="Ex. handball, arbitrage...">
+          </div>
+          <div class="filter-field">
+            <label for="filter-niveau">Niveau</label>
+            <select id="filter-niveau">
+              <option value="tous">Tous les niveaux</option>
+              <option value="6e">6e</option>
+              <option value="5e">5e</option>
+              <option value="4e">4e</option>
+              <option value="3e">3e</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="filter-activite">Activité</label>
+            <select id="filter-activite">
+              <option value="tous">Toutes les activités</option>
+              <option value="badminton">Badminton</option>
+              <option value="basket">Basket-ball</option>
+              <option value="biathlon">Biathlon</option>
+              <option value="boxe-francaise">Boxe française</option>
+              <option value="course-orientation">Course d'orientation</option>
+              <option value="cross-training">Cross training</option>
+              <option value="danse">Danse</option>
+              <option value="handball">Handball</option>
+              <option value="relais-vitesse">Relais vitesse</option>
+              <option value="rugby-flag">Rugby flag</option>
+              <option value="tennis-table">Tennis de table</option>
+              <option value="triathlon">Triathlon athlétique</option>
+              <option value="ultimate">Ultimate</option>
+            </select>
+          </div>
+          <button type="button" class="filter-reset" id="filter-reset">Réinitialiser</button>
+        </form>
+
+        <p class="filter-count" id="filter-count" aria-live="polite">23 ressources affichées</p>
+
+        <div class="resource-grid">
+          <!-- ==================== NIVEAU 6e ==================== -->
+          <a class="resource-card" href="niveau-6e.html#triathlon-athletique-6e" data-niveau="6e" data-activite="triathlon" data-search="triathlon athlétique 6e course saut lancer">
+            <span class="dossard dossard--sm" aria-hidden="true">6e</span>
+            <span><span class="resource-card__title">Triathlon athlétique</span><span class="resource-card__meta">6e</span></span>
+          </a>
+          <a class="resource-card" href="niveau-6e.html#handball-6e" data-niveau="6e" data-activite="handball" data-search="handball 6e sport collectif">
+            <span class="dossard dossard--sm" aria-hidden="true">6e</span>
+            <span><span class="resource-card__title">Handball</span><span class="resource-card__meta">6e</span></span>
+          </a>
+          <a class="resource-card" href="niveau-6e.html#ultimate-6e" data-niveau="6e" data-activite="ultimate" data-search="ultimate 6e frisbee">
+            <span class="dossard dossard--sm" aria-hidden="true">6e</span>
+            <span><span class="resource-card__title">Ultimate</span><span class="resource-card__meta">6e</span></span>
+          </a>
+          <a class="resource-card" href="niveau-6e.html#course-orientation-6e" data-niveau="6e" data-activite="course-orientation" data-search="course d'orientation CO 6e carte boussole">
+            <span class="dossard dossard--sm" aria-hidden="true">6e</span>
+            <span><span class="resource-card__title">Course d'orientation</span><span class="resource-card__meta">6e</span></span>
+          </a>
+          <a class="resource-card" href="niveau-6e.html#badminton-6e" data-niveau="6e" data-activite="badminton" data-search="badminton simple demi-terrain 6e raquette">
+            <span class="dossard dossard--sm" aria-hidden="true">6e</span>
+            <span><span class="resource-card__title">Badminton (1/2 terrain)</span><span class="resource-card__meta">6e</span></span>
+          </a>
+          <a class="resource-card" href="niveau-6e.html#danse-6e" data-niveau="6e" data-activite="danse" data-search="danse 6e artistique chorégraphie">
+            <span class="dossard dossard--sm" aria-hidden="true">6e</span>
+            <span><span class="resource-card__title">Danse</span><span class="resource-card__meta">6e</span></span>
+          </a>
+          <a class="resource-card" href="niveau-6e.html#tennis-table-6e" data-niveau="6e" data-activite="tennis-table" data-search="tennis de table ping pong 6e raquette">
+            <span class="dossard dossard--sm" aria-hidden="true">6e</span>
+            <span><span class="resource-card__title">Tennis de table</span><span class="resource-card__meta">6e</span></span>
+          </a>
+
+          <!-- ==================== NIVEAU 5e ==================== -->
+          <a class="resource-card" href="niveau-5e.html#handball-5e" data-niveau="5e" data-activite="handball" data-search="handball 5e sport collectif">
+            <span class="dossard dossard--sm" aria-hidden="true">5e</span>
+            <span><span class="resource-card__title">Handball</span><span class="resource-card__meta">5e</span></span>
+          </a>
+          <a class="resource-card" href="niveau-5e.html#ultimate-5e" data-niveau="5e" data-activite="ultimate" data-search="ultimate 5e frisbee">
+            <span class="dossard dossard--sm" aria-hidden="true">5e</span>
+            <span><span class="resource-card__title">Ultimate</span><span class="resource-card__meta">5e</span></span>
+          </a>
+          <a class="resource-card" href="niveau-5e.html#biathlon-5e" data-niveau="5e" data-activite="biathlon" data-search="biathlon 5e course tir laser">
+            <span class="dossard dossard--sm" aria-hidden="true">5e</span>
+            <span><span class="resource-card__title">Biathlon</span><span class="resource-card__meta">5e</span></span>
+          </a>
+          <a class="resource-card" href="niveau-5e.html#badminton-5e" data-niveau="5e" data-activite="badminton" data-search="badminton simple demi-terrain 5e raquette">
+            <span class="dossard dossard--sm" aria-hidden="true">5e</span>
+            <span><span class="resource-card__title">Badminton (1/2 terrain)</span><span class="resource-card__meta">5e</span></span>
+          </a>
+          <a class="resource-card" href="niveau-5e.html#tennis-table-5e" data-niveau="5e" data-activite="tennis-table" data-search="tennis de table ping pong 5e raquette">
+            <span class="dossard dossard--sm" aria-hidden="true">5e</span>
+            <span><span class="resource-card__title">Tennis de table</span><span class="resource-card__meta">5e</span></span>
+          </a>
+
+          <!-- ==================== NIVEAU 4e ==================== -->
+          <a class="resource-card" href="niveau-4e.html#boxe-francaise-4e" data-niveau="4e" data-activite="boxe-francaise" data-search="boxe française savate 4e combat">
+            <span class="dossard dossard--sm" aria-hidden="true">4e</span>
+            <span><span class="resource-card__title">Boxe française</span><span class="resource-card__meta">4e</span></span>
+          </a>
+          <a class="resource-card" href="niveau-4e.html#rugby-flag-4e" data-niveau="4e" data-activite="rugby-flag" data-search="rugby flag 4e sport collectif">
+            <span class="dossard dossard--sm" aria-hidden="true">4e</span>
+            <span><span class="resource-card__title">Rugby flag</span><span class="resource-card__meta">4e</span></span>
+          </a>
+          <a class="resource-card" href="niveau-4e.html#badminton-4e" data-niveau="4e" data-activite="badminton" data-search="badminton simple grand terrain 4e raquette">
+            <span class="dossard dossard--sm" aria-hidden="true">4e</span>
+            <span><span class="resource-card__title">Badminton (grand terrain)</span><span class="resource-card__meta">4e</span></span>
+          </a>
+          <a class="resource-card" href="niveau-4e.html#basket-4e" data-niveau="4e" data-activite="basket" data-search="basket-ball 4e sport collectif">
+            <span class="dossard dossard--sm" aria-hidden="true">4e</span>
+            <span><span class="resource-card__title">Basket-ball</span><span class="resource-card__meta">4e</span></span>
+          </a>
+          <a class="resource-card" href="niveau-4e.html#relais-vitesse-4e" data-niveau="4e" data-activite="relais-vitesse" data-search="relais vitesse 2x40m 4e athlétisme témoin">
+            <span class="dossard dossard--sm" aria-hidden="true">4e</span>
+            <span><span class="resource-card__title">Relais vitesse 2x40m</span><span class="resource-card__meta">4e</span></span>
+          </a>
+
+          <!-- ==================== NIVEAU 3e ==================== -->
+          <a class="resource-card" href="niveau-3e.html#boxe-francaise-3e" data-niveau="3e" data-activite="boxe-francaise" data-search="boxe française savate 3e combat">
+            <span class="dossard dossard--sm" aria-hidden="true">3e</span>
+            <span><span class="resource-card__title">Boxe française</span><span class="resource-card__meta">3e</span></span>
+          </a>
+          <a class="resource-card" href="niveau-3e.html#rugby-flag-3e" data-niveau="3e" data-activite="rugby-flag" data-search="rugby flag 3e sport collectif">
+            <span class="dossard dossard--sm" aria-hidden="true">3e</span>
+            <span><span class="resource-card__title">Rugby flag</span><span class="resource-card__meta">3e</span></span>
+          </a>
+          <a class="resource-card" href="niveau-3e.html#badminton-3e" data-niveau="3e" data-activite="badminton" data-search="badminton double 3e raquette">
+            <span class="dossard dossard--sm" aria-hidden="true">3e</span>
+            <span><span class="resource-card__title">Badminton (double)</span><span class="resource-card__meta">3e</span></span>
+          </a>
+          <a class="resource-card" href="niveau-3e.html#basket-3e" data-niveau="3e" data-activite="basket" data-search="basket-ball 3e sport collectif">
+            <span class="dossard dossard--sm" aria-hidden="true">3e</span>
+            <span><span class="resource-card__title">Basket-ball</span><span class="resource-card__meta">3e</span></span>
+          </a>
+          <a class="resource-card" href="niveau-3e.html#relais-vitesse-3e" data-niveau="3e" data-activite="relais-vitesse" data-search="relais vitesse 3x40m 3e athlétisme témoin">
+            <span class="dossard dossard--sm" aria-hidden="true">3e</span>
+            <span><span class="resource-card__title">Relais vitesse 3x40m</span><span class="resource-card__meta">3e</span></span>
+          </a>
+          <a class="resource-card" href="niveau-3e.html#cross-training-3e" data-niveau="3e" data-activite="cross-training" data-search="cross training 3e renforcement musculaire">
+            <span class="dossard dossard--sm" aria-hidden="true">3e</span>
+            <span><span class="resource-card__title">Cross training</span><span class="resource-card__meta">3e</span></span>
+          </a>
+        </div>
+
+        <p class="filter-empty" id="filter-empty" hidden>Aucune ressource ne correspond à votre recherche.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       PIED DE PAGE (identique sur toutes les pages)
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>
+        <h2>Contact</h2>
+        <p>
+          <!-- MODIFIER ICI : vos coordonnées -->
+          [Nom du professeur] — Professeure d'EPS<br>
+          Collège [Nom du collège], Tarn-et-Garonne (82)<br>
+          <a href="mailto:prenom.nom@ac-toulouse.fr">prenom.nom@ac-toulouse.fr</a>
+        </p>
+      </div>
+      <div>
+        <h2>Liens rapides</h2>
+        <ul>
+          <li><a href="eps-generale.html">Règlement EPS</a></li>
+          <li><a href="prof-principal-6e.html">Vie de collégien (6e)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container site-footer__bottom">
+      Site pédagogique statique — © [Année scolaire] [Nom du collège].
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/filter.js" defer></script>
+</body>
+</html>

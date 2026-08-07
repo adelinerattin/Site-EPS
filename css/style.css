@@ -1,0 +1,1030 @@
+/* ============================================================
+   SITE EPS — FEUILLE DE STYLE PARTAGEE
+   ------------------------------------------------------------
+   Ce fichier est utilise par TOUTES les pages du site.
+   Il est organise en grandes zones reperables par les titres
+   ci-dessous (recherchez "====" pour naviguer rapidement).
+
+   1. Variables (couleurs, polices, espacements)
+   2. Reinitialisation de base + accessibilite
+   3. Typographie generale
+   4. Mise en page (conteneurs, grilles)
+   5. En-tete (header) + navigation + menu hamburger
+   6. Pied de page (footer)
+   7. Composants : boutons, badges "dossard", cartes
+   8. Separateurs "ligne de couloir" (pointilles)
+   9. Filtre / recherche (page d'accueil)
+   10. Fiches activite depliables (details/summary)
+   11. Quiz interactif
+   12. Alertes / encarts (info, succes, alerte)
+   13. Tableaux (referentiels)
+   14. Utilitaires
+   ============================================================ */
+
+
+/* ============================================================
+   1. VARIABLES
+   ------------------------------------------------------------
+   Pour changer les couleurs du site entier, il suffit de
+   modifier les valeurs ci-dessous.
+   ============================================================ */
+:root {
+  /* Couleurs principales */
+  --color-navy: #0a1f44;          /* bleu marine profond : couleur principale */
+  --color-navy-light: #14336b;    /* bleu marine plus clair (survols, degrades) */
+  --color-navy-soft: #1c2c52;     /* bleu marine attenue (fonds de blocs sombres) */
+  --color-yellow: #ffd23f;        /* jaune "sifflet" : accent / boutons d'action */
+  --color-yellow-dark: #e6ad00;   /* jaune fonce (survol des boutons) */
+  --color-green: #2e7d4f;         /* vert : validation / reussite */
+  --color-green-light: #e6f4ec;   /* vert tres clair : fond des messages de succes */
+  --color-coral: #e8543f;         /* corail : alertes / informations importantes */
+  --color-coral-light: #fdece8;   /* corail tres clair : fond des messages d'alerte */
+  --color-chalk: #f7f5ef;         /* fond clair "craie" pour le contenu */
+  --color-white: #ffffff;
+  --color-ink: #1a1e27;           /* couleur du texte courant (presque noir) */
+  --color-ink-soft: #4a5164;      /* texte secondaire / legendes */
+  --color-border: #dcd8cc;        /* bordures discretes sur fond clair */
+
+  /* Typographies */
+  /* Police "tableau de scores" : condensee, forte, pour les titres et numeros.
+     Pile de polices systeme (aucun chargement externe requis).
+     Astuce : pour un rendu encore plus "stade", vous pouvez importer une police
+     Google Fonts comme "Oswald" ou "Bebas Neue" et la placer en tete de liste ici. */
+  --font-display: "Arial Narrow", "Helvetica Neue Condensed", "Roboto Condensed", Impact, sans-serif;
+  /* Police de texte courant, lisible sur mobile */
+  --font-body: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* Police "chronometre" pour les petits labels / metadonnees */
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+  /* Espacements (echelle simple) */
+  --space-xs: 0.4rem;
+  --space-sm: 0.8rem;
+  --space-md: 1.6rem;
+  --space-lg: 2.4rem;
+  --space-xl: 4rem;
+
+  /* Divers */
+  --radius: 10px;
+  --radius-lg: 18px;
+  --shadow-card: 0 2px 10px rgba(10, 31, 68, 0.1);
+  --shadow-card-hover: 0 6px 20px rgba(10, 31, 68, 0.18);
+  --header-height: 64px;
+  --max-width: 1100px;
+}
+
+/* ============================================================
+   2. REINITIALISATION DE BASE + ACCESSIBILITE
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 12px); /* evite que le header sticky cache les ancres */
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: var(--color-chalk);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-navy);
+}
+
+/* Focus clavier toujours visible (accessibilite) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--color-yellow);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Lien d'evitement : permet aux lecteurs d'ecran / clavier de sauter le menu */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--color-yellow);
+  color: var(--color-navy);
+  font-weight: 700;
+  padding: var(--space-sm) var(--space-md);
+  z-index: 1000;
+  border-radius: 0 0 8px 0;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================================
+   3. TYPOGRAPHIE GENERALE
+   ============================================================ */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--color-navy);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  margin: 0 0 var(--space-sm);
+  text-transform: uppercase;
+}
+
+h1 { font-size: clamp(1.9rem, 5vw, 3rem); }
+h2 { font-size: clamp(1.5rem, 4vw, 2.1rem); }
+h3 { font-size: clamp(1.15rem, 3vw, 1.5rem); text-transform: none; }
+h4 { font-size: 1.05rem; text-transform: none; letter-spacing: 0; }
+
+p {
+  margin: 0 0 var(--space-md);
+}
+
+ul, ol {
+  margin: 0 0 var(--space-md);
+  padding-left: 1.3em;
+}
+
+li {
+  margin-bottom: 0.35em;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  color: var(--color-coral);
+  font-weight: 700;
+}
+
+.lede {
+  font-size: 1.1rem;
+  color: var(--color-ink-soft);
+  max-width: 60ch;
+}
+
+/* ============================================================
+   4. MISE EN PAGE
+   ============================================================ */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.section {
+  padding: var(--space-xl) 0;
+}
+
+.section--tight {
+  padding: var(--space-lg) 0;
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .grid--2 { grid-template-columns: repeat(2, 1fr); }
+  .grid--3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 900px) {
+  .grid--4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ============================================================
+   5. EN-TETE + NAVIGATION + MENU HAMBURGER
+   ============================================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  background: var(--color-navy);
+  border-bottom: 3px solid var(--color-yellow);
+}
+
+.site-header__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-white);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.site-logo__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--color-yellow);
+  color: var(--color-navy);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* Bouton hamburger (visible seulement sur mobile/tablette) */
+.nav-toggle {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: 2px solid var(--color-yellow);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-toggle__bar {
+  width: 20px;
+  height: 2px;
+  background: var(--color-white);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.main-nav {
+  position: absolute;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  background: var(--color-navy);
+  border-bottom: 3px solid var(--color-yellow);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+
+.main-nav.is-open {
+  max-height: 480px;
+}
+
+.main-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: var(--space-sm) var(--space-md) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.main-nav__list a {
+  display: block;
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.7rem 0.6rem;
+  border-radius: 8px;
+}
+
+.main-nav__list a:hover,
+.main-nav__list a:focus-visible {
+  background: var(--color-navy-light);
+}
+
+.main-nav__list a[aria-current="page"] {
+  color: var(--color-navy);
+  background: var(--color-yellow);
+}
+
+/* A partir d'une largeur "tablette large", le menu redevient horizontal */
+@media (min-width: 860px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .main-nav {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    background: transparent;
+    border-bottom: none;
+  }
+
+  .main-nav__list {
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  .main-nav__list a {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* ============================================================
+   6. PIED DE PAGE
+   ============================================================ */
+.site-footer {
+  background: var(--color-navy);
+  color: var(--color-white);
+  margin-top: var(--space-xl);
+}
+
+.site-footer__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+  display: grid;
+  gap: var(--space-md);
+}
+
+@media (min-width: 700px) {
+  .site-footer__inner {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+}
+
+.site-footer h2 {
+  color: var(--color-white);
+  font-size: 1.1rem;
+}
+
+.site-footer a {
+  color: var(--color-yellow);
+}
+
+.site-footer__meta {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: #b9c2da;
+}
+
+.site-footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: #8f9ac2;
+}
+
+/* ============================================================
+   7. COMPOSANTS : BOUTONS, BADGES "DOSSARD", CARTES
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.75em 1.3em;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn--primary {
+  background: var(--color-yellow);
+  color: var(--color-navy);
+}
+
+.btn--primary:hover {
+  background: var(--color-yellow-dark);
+}
+
+.btn--outline {
+  background: transparent;
+  border-color: var(--color-navy);
+  color: var(--color-navy);
+}
+
+.btn--outline:hover {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+.btn--on-dark {
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+
+.btn--on-dark:hover {
+  background: var(--color-white);
+  color: var(--color-navy);
+}
+
+/* Badge circulaire numerote façon "dossard de course".
+   Element signature du site, utilise pour les 4 niveaux. */
+.dossard {
+  --dossard-color: var(--color-navy);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: var(--dossard-color);
+  color: var(--color-white);
+  border: 3px solid var(--color-yellow);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-card);
+}
+
+.dossard--sm {
+  width: 44px;
+  height: 44px;
+  font-size: 1.05rem;
+  border-width: 2px;
+}
+
+.dossard--lg {
+  width: 96px;
+  height: 96px;
+  font-size: 2.1rem;
+}
+
+/* Carte generique (accueil, hub) */
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+a.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+a.card:hover,
+a.card:focus-visible {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.card--niveau {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.card--niveau h3 {
+  margin: 0 0 0.2rem;
+}
+
+.card--niveau p {
+  margin: 0;
+  color: var(--color-ink-soft);
+  font-size: 0.92rem;
+}
+
+/* Carte "hub" en tete de page d'accueil */
+.hub-grid {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 700px) {
+  .hub-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ============================================================
+   8. SEPARATEURS "LIGNE DE COULOIR" (façon piste d'athletisme)
+   ============================================================ */
+.lane-divider {
+  border: none;
+  height: 0;
+  margin: var(--space-lg) 0;
+  border-top: 4px dashed var(--color-navy);
+  opacity: 0.18;
+}
+
+.lane-divider--yellow {
+  border-top-color: var(--color-yellow);
+  opacity: 0.6;
+}
+
+.lane-divider--on-dark {
+  border-top-color: var(--color-white);
+  opacity: 0.25;
+}
+
+/* ============================================================
+   9. FILTRE / RECHERCHE (page d'accueil)
+   ============================================================ */
+.filter-bar {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  display: grid;
+  gap: var(--space-sm);
+  box-shadow: var(--shadow-card);
+}
+
+@media (min-width: 700px) {
+  .filter-bar {
+    grid-template-columns: 2fr 1fr 1fr auto;
+    align-items: end;
+  }
+}
+
+.filter-field label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-ink-soft);
+  margin-bottom: 0.3rem;
+}
+
+.filter-field input,
+.filter-field select {
+  width: 100%;
+  padding: 0.65em 0.8em;
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  background: var(--color-chalk);
+  color: var(--color-ink);
+}
+
+.filter-field input:focus,
+.filter-field select:focus {
+  border-color: var(--color-navy);
+  outline: none;
+}
+
+.filter-reset {
+  background: transparent;
+  border: 2px solid var(--color-navy);
+  color: var(--color-navy);
+  border-radius: 8px;
+  padding: 0.65em 1em;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.filter-reset:hover {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+.filter-count {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+  margin: var(--space-md) 0 var(--space-sm);
+}
+
+.resource-grid {
+  display: grid;
+  gap: var(--space-sm);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .resource-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1000px) {
+  .resource-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.resource-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-sm) var(--space-md);
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.resource-card:hover,
+.resource-card:focus-visible {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.resource-card__title {
+  font-weight: 700;
+  color: var(--color-navy);
+  display: block;
+}
+
+.resource-card__meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.resource-card[hidden] {
+  display: none;
+}
+
+.filter-empty {
+  text-align: center;
+  padding: var(--space-lg);
+  color: var(--color-ink-soft);
+  font-style: italic;
+}
+
+/* ============================================================
+   10. FICHES ACTIVITE DEPLIABLES (details / summary)
+   ============================================================ */
+.activity-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-left: 6px solid var(--color-navy);
+  border-radius: var(--radius);
+  margin-bottom: var(--space-md);
+  overflow: hidden;
+}
+
+.activity-card summary {
+  cursor: pointer;
+  list-style: none;
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  font-family: var(--font-display);
+  font-weight: 800;
+}
+
+.activity-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.activity-card summary h3 {
+  margin: 0;
+}
+
+.activity-card__toggle {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  color: var(--color-navy);
+  border: 2px solid var(--color-navy);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.activity-card[open] .activity-card__toggle {
+  transform: rotate(45deg);
+}
+
+.activity-card summary:hover .activity-card__toggle {
+  background: var(--color-yellow);
+  border-color: var(--color-yellow);
+}
+
+.activity-card__body {
+  padding: 0 var(--space-md) var(--space-md);
+}
+
+.rubrique {
+  padding-top: var(--space-md);
+  border-top: 1px dashed var(--color-border);
+}
+
+.rubrique:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.rubrique h4 {
+  color: var(--color-navy);
+  margin-bottom: 0.5em;
+}
+
+.rubrique--optional {
+  background: var(--color-chalk);
+  border-radius: var(--radius);
+  padding: var(--space-sm) var(--space-md);
+  border-top: none;
+}
+
+.video-placeholder {
+  background: var(--color-navy);
+  color: var(--color-white);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.video-placeholder a {
+  color: var(--color-yellow);
+}
+
+.video-list a {
+  font-weight: 600;
+}
+
+.lexique {
+  display: grid;
+  gap: 0.6em;
+}
+
+.lexique dt {
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.lexique dd {
+  margin: 0 0 0.4em;
+  color: var(--color-ink-soft);
+}
+
+/* ============================================================
+   11. QUIZ INTERACTIF
+   ============================================================ */
+.quiz-question {
+  margin-bottom: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-chalk);
+  border-radius: var(--radius);
+}
+
+.quiz-question p {
+  margin: 0 0 0.6em;
+  font-weight: 700;
+}
+
+.quiz-question ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.4em;
+}
+
+.quiz-question label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6em;
+  padding: 0.5em 0.7em;
+  border-radius: 8px;
+  border: 2px solid var(--color-border);
+  background: var(--color-white);
+  cursor: pointer;
+}
+
+.quiz-question label:hover {
+  border-color: var(--color-navy);
+}
+
+.quiz-question input[type="radio"] {
+  margin-top: 0.25em;
+}
+
+.quiz-question.is-correct label.is-selected {
+  border-color: var(--color-green);
+  background: var(--color-green-light);
+}
+
+.quiz-question.is-incorrect label.is-selected {
+  border-color: var(--color-coral);
+  background: var(--color-coral-light);
+}
+
+.quiz-question label.is-answer:not(.is-selected) {
+  border-color: var(--color-green);
+}
+
+.quiz-result {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+  border-radius: var(--radius);
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.quiz-submit {
+  margin-top: var(--space-sm);
+}
+
+/* ============================================================
+   12. ALERTES / ENCARTS
+   ============================================================ */
+.callout {
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+  border-left: 5px solid;
+}
+
+.callout h4,
+.callout h3 {
+  margin-top: 0;
+}
+
+.callout--info {
+  background: var(--color-coral-light);
+  border-color: var(--color-coral);
+}
+
+.callout--success {
+  background: var(--color-green-light);
+  border-color: var(--color-green);
+}
+
+.callout--neutral {
+  background: var(--color-chalk);
+  border-color: var(--color-navy);
+}
+
+/* ============================================================
+   13. TABLEAUX (referentiels d'evaluation)
+   ============================================================ */
+.table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 480px;
+  background: var(--color-white);
+}
+
+th, td {
+  text-align: left;
+  padding: 0.7em 0.9em;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.92rem;
+}
+
+thead th {
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:nth-child(even) {
+  background: var(--color-chalk);
+}
+
+/* ============================================================
+   14. UTILITAIRES
+   ============================================================ */
+.text-center { text-align: center; }
+.mt-0 { margin-top: 0; }
+.mb-0 { margin-bottom: 0; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.hero {
+  background: linear-gradient(160deg, var(--color-navy) 0%, var(--color-navy-soft) 100%);
+  color: var(--color-white);
+  padding: var(--space-xl) 0 var(--space-lg);
+}
+
+.hero .eyebrow {
+  color: var(--color-yellow);
+}
+
+.hero h1 {
+  color: var(--color-white);
+}
+
+.hero .lede {
+  color: #cfd6ea;
+}
+
+.page-header {
+  background: var(--color-navy);
+  color: var(--color-white);
+  padding: var(--space-lg) 0;
+}
+
+.page-header h1 {
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.page-header .lede {
+  color: #cfd6ea;
+}
+
+.breadcrumb {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-ink-soft);
+  margin-bottom: var(--space-sm);
+}
+
+.breadcrumb a {
+  color: var(--color-navy);
+}
