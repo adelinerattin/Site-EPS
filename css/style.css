@@ -402,43 +402,12 @@ li {
   margin-top: var(--space-xl);
 }
 
-.site-footer__inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: var(--space-lg) var(--space-md);
-  display: grid;
-  gap: var(--space-md);
-}
-
-@media (min-width: 700px) {
-  .site-footer__inner {
-    grid-template-columns: 2fr 1fr;
-    align-items: start;
-  }
-}
-
-.site-footer h2 {
-  color: var(--color-white);
-  font-size: 1.1rem;
-}
-
-.site-footer a {
-  color: var(--color-yellow);
-}
-
-.site-footer__meta {
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  color: #b9c2da;
-}
-
 .site-footer__bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  margin-top: var(--space-md);
-  padding-top: var(--space-md);
+  padding: var(--space-md) 0;
   font-family: var(--font-mono);
   font-size: 0.78rem;
   color: #8f9ac2;
+  text-align: center;
 }
 
 /* ============================================================
@@ -999,9 +968,31 @@ tbody tr:nth-child(even) {
 }
 
 .hero {
+  position: relative;
+  overflow: hidden;
   background: linear-gradient(160deg, var(--color-navy) 0%, var(--color-navy-soft) 100%);
   color: var(--color-white);
   padding: var(--space-xl) 0 var(--space-lg);
+}
+
+/* Motif decoratif "sport" tres discret en arriere-plan du hero
+   (ballon, sifflet, chronometre, lignes de couloir). Le dessin est
+   dans assets/hero-pattern.svg. Pour le rendre plus ou moins visible,
+   changez juste la valeur d'opacity ci-dessous (entre 0 et 1). */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/hero-pattern.svg");
+  background-repeat: repeat;
+  background-size: 260px;
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .hero .eyebrow {
@@ -1054,12 +1045,14 @@ tbody tr:nth-child(even) {
    Voir js/hero-nav.js pour la logique.
    ============================================================ */
 .hero-nav {
-  margin-top: var(--space-lg);
+  margin: var(--space-lg) auto 0;
+  max-width: 760px;
 }
 
 .hero-nav__tabs {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.6rem;
 }
 

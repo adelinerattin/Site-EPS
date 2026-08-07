@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320">
+  <!-- Motif decoratif utilise en arriere-plan du hero (page d'accueil).
+       Icones dessinees a la main : ballon, sifflet, chronometre,
+       lignes de couloir d'athletisme. Voir css/style.css, regle
+       ".hero::before" pour l'opacite et la taille d'affichage. -->
+  <g fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Ballon -->
+    <g transform="translate(52,56)">
+      <circle cx="0" cy="0" r="26" />
+      <path d="M -26 0 A 26 26 0 0 0 26 0" />
+      <path d="M -17 -18 A 30 30 0 0 1 17 18" />
+      <path d="M -17 18 A 30 30 0 0 1 17 -18" />
+    </g>
+
+    <!-- Sifflet -->
+    <g transform="translate(242,58)">
+      <rect x="-30" y="-14" width="46" height="28" rx="14" />
+      <circle cx="24" cy="0" r="12" />
+      <circle cx="-6" cy="0" r="4" />
+      <path d="M -30 0 h -16" />
+    </g>
+
+    <!-- Chronometre -->
+    <g transform="translate(62,238)">
+      <circle cx="0" cy="4" r="28" />
+      <path d="M 0 4 L 0 -14" />
+      <path d="M 0 4 L 16 12" />
+      <path d="M -9 -30 h 18" />
+      <path d="M 0 -30 v -9" />
+    </g>
+
+    <!-- Lignes de couloir -->
+    <g transform="translate(206,222)" stroke-dasharray="6 9">
+      <path d="M -55 44 Q 0 -28 62 12" />
+      <path d="M -60 60 Q 0 -10 72 32" />
+      <path d="M -65 76 Q 0 8 82 52" />
+    </g>
+
+  </g>
+</svg>
