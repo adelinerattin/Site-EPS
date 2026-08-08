@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+  <!-- Illustration du hero : une "carte" bleu marine inclinee, avec une
+       ombre jaune decalee derriere (comme une photo posee), et a
+       l'interieur un badge "dossard" central (ballon) entoure de
+       sifflet, chronometre et lignes de couloir. Purement vectoriel :
+       aucune photo, donc entierement modifiable ici si besoin. -->
+
+  <!-- Ombre / decalage jaune -->
+  <rect x="44" y="60" width="380" height="380" rx="32" fill="#ffd23f" transform="rotate(-7 234 250)" />
+
+  <!-- Carte principale bleu marine -->
+  <rect x="20" y="24" width="380" height="380" rx="32" fill="#0a1f44" transform="rotate(4 210 214)" />
+
+  <g transform="rotate(4 210 214)">
+    <!-- Trame de points (coin haut-gauche de la carte) -->
+    <g fill="#ffffff" opacity="0.28">
+      <circle cx="56" cy="60" r="3" /><circle cx="76" cy="60" r="3" /><circle cx="96" cy="60" r="3" /><circle cx="116" cy="60" r="3" />
+      <circle cx="56" cy="80" r="3" /><circle cx="76" cy="80" r="3" /><circle cx="96" cy="80" r="3" /><circle cx="116" cy="80" r="3" />
+      <circle cx="56" cy="100" r="3" /><circle cx="76" cy="100" r="3" /><circle cx="96" cy="100" r="3" /><circle cx="116" cy="100" r="3" />
+    </g>
+
+    <!-- Badge "dossard" central avec ballon -->
+    <g transform="translate(210,214)">
+      <circle r="96" fill="none" stroke="#ffd23f" stroke-width="7" />
+      <circle r="78" fill="#0a1f44" stroke="#ffffff" stroke-width="3" />
+      <g stroke="#ffffff" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <circle r="36" />
+        <path d="M -36 0 A 36 36 0 0 0 36 0" />
+        <path d="M -24 -25 A 42 42 0 0 1 24 25" />
+        <path d="M -24 25 A 42 42 0 0 1 24 -25" />
+      </g>
+    </g>
+
+    <!-- Sifflet -->
+    <g transform="translate(336,108) rotate(-12)" stroke="#ffd23f" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="-28" y="-13" width="44" height="26" rx="13" />
+      <circle cx="22" cy="0" r="11" />
+      <circle cx="-7" cy="0" r="3.5" />
+      <path d="M -28 0 h -14" />
+    </g>
+
+    <!-- Chronometre -->
+    <g transform="translate(96,336)" stroke="#ffffff" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cy="4" r="26" />
+      <path d="M0 4 L0 -12" />
+      <path d="M0 4 L13 11" />
+      <path d="M-8 -28 h16" />
+      <path d="M0 -28 v-8" />
+    </g>
+
+    <!-- Lignes de couloir -->
+    <g transform="translate(330,344)" stroke="#ffd23f" stroke-width="3.5" fill="none" stroke-dasharray="6 8">
+      <path d="M-46 34 Q0 -24 52 10" />
+      <path d="M-50 48 Q0 -8 60 26" />
+    </g>
+  </g>
+</svg>

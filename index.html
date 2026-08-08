@@ -41,26 +41,46 @@
 
   <main id="main-content">
     <!-- ============================================================
-         HERO / PRESENTATION DU SITE
-         ------------------------------------------------------------
-         La navigation "hero-nav" ci-dessous affiche un bouton par
-         page du site. Cliquer sur un bouton ouvre un panneau qui
-         resume le contenu de cette page (sous-rubriques ou activites)
-         avec un lien pour ouvrir la page complete. La logique est
-         dans js/hero-nav.js ; pour ajouter/retirer une page, copiez
-         un bouton ET son panneau (meme valeur dans data-target /
-         data-panel et dans aria-controls / id).
+         HERO — meme structure sur toutes les pages du site (voir
+         css/style.css, composant ".site-hero"). Seuls le titre (en 2
+         lignes : ".hero-title__line1" + ".hero-title__accent"), le
+         texte et le lien du bouton changent d'une page a l'autre.
+         L'illustration (assets/hero-illustration.svg) est identique
+         partout et masquee sur mobile.
          ============================================================ -->
-    <section class="hero">
-      <div class="container">
-        <p class="eyebrow">Collège — Tarn-et-Garonne (82)</p>
-        <h1>Bienvenue sur l'Espace EPS</h1>
-        <p class="lede">
-          Ce site rassemble toutes les ressources qui complètent vos cours d'EPS :
-          règlement, règles d'arbitrage, vidéos de démonstration, lexique, quiz
-          d'entraînement et référentiels d'évaluation, classés par niveau et par activité.
-        </p>
+    <section class="site-hero">
+      <div class="container site-hero__inner">
+        <div class="site-hero__text">
+          <p class="eyebrow">Collège — Tarn-et-Garonne (82)</p>
+          <h1>
+            <span class="hero-title__line1">Bouge, apprends,</span>
+            <span class="hero-title__accent">dépasse-toi !</span>
+          </h1>
+          <p class="lede">
+            Ce site rassemble toutes les ressources qui complètent vos cours d'EPS :
+            règlement, règles d'arbitrage, vidéos de démonstration, lexique, quiz
+            d'entraînement et référentiels d'évaluation, classés par niveau et par activité.
+          </p>
+          <p><a class="btn btn--primary" href="#pages">Découvrir mes ressources →</a></p>
+        </div>
+        <div class="site-hero__visual">
+          <img src="assets/hero-illustration.svg" alt="" width="380" height="380">
+        </div>
+      </div>
+    </section>
 
+    <!-- ============================================================
+         NAVIGATION PAR PAGES
+         ------------------------------------------------------------
+         Un bouton par page du site. Cliquer sur un bouton ouvre un
+         panneau qui resume le contenu de cette page (sous-rubriques
+         ou activites) avec un lien pour ouvrir la page complete. La
+         logique est dans js/hero-nav.js ; pour ajouter/retirer une
+         page, copiez un bouton ET son panneau (meme valeur dans
+         data-target / data-panel et dans aria-controls / id).
+         ============================================================ -->
+    <section class="section section--tight" id="pages">
+      <div class="container">
         <div class="hero-nav">
           <div class="hero-nav__tabs" role="tablist" aria-label="Pages du site">
             <button type="button" class="hero-nav__tab" data-target="eps-generale" role="tab" aria-selected="false" aria-controls="panel-eps-generale" id="tab-eps-generale">EPS générale</button>

@@ -70,7 +70,7 @@
   --radius-lg: 18px;
   --shadow-card: 0 2px 10px rgba(10, 31, 68, 0.1);
   --shadow-card-hover: 0 6px 20px rgba(10, 31, 68, 0.18);
-  --header-height: 64px;
+  --header-height: 84px;
   --max-width: 1100px;
 }
 
@@ -234,8 +234,8 @@ li {
   position: sticky;
   top: 0;
   z-index: 500;
-  background: var(--color-navy);
-  border-bottom: 3px solid var(--color-yellow);
+  background: var(--color-chalk);
+  border-bottom: 3px solid var(--color-navy);
 }
 
 .site-header__inner {
@@ -252,8 +252,8 @@ li {
 .site-logo {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  color: var(--color-white);
+  gap: 0.7rem;
+  color: var(--color-navy);
   text-decoration: none;
   font-family: var(--font-display);
   font-weight: 800;
@@ -275,17 +275,19 @@ li {
   flex-shrink: 0;
 }
 
-/* Logo de l'association sportive, affiche dans l'en-tete de chaque page.
-   Le fichier image se trouve dans assets/logo-as-badge.jpg — remplacez-le
-   par le logo de votre propre etablissement si besoin (meme nom de fichier
-   pour ne rien avoir a changer dans les pages HTML). */
+/* Logo de l'association sportive, affiche en grand dans l'en-tete de
+   chaque page. Le fichier image se trouve dans assets/logo-as-badge.jpg
+   — remplacez-le par le logo de votre propre etablissement si besoin
+   (meme nom de fichier pour ne rien avoir a changer dans les pages HTML).
+   Pour changer sa taille, modifiez juste width/height ci-dessous. */
 .site-logo__mark--img {
-  width: 40px;
-  height: 40px;
+  width: 62px;
+  height: 62px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid var(--color-orange);
-  background: var(--color-chalk);
+  border: 3px solid var(--color-orange);
+  background: var(--color-white);
+  box-shadow: var(--shadow-card);
 }
 
 /* Bouton hamburger (visible seulement sur mobile/tablette) */
@@ -298,7 +300,7 @@ li {
   width: 44px;
   height: 44px;
   background: transparent;
-  border: 2px solid var(--color-yellow);
+  border: 2px solid var(--color-navy);
   border-radius: 8px;
   cursor: pointer;
   padding: 0;
@@ -307,7 +309,7 @@ li {
 .nav-toggle__bar {
   width: 20px;
   height: 2px;
-  background: var(--color-white);
+  background: var(--color-navy);
   border-radius: 2px;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
@@ -327,8 +329,8 @@ li {
   top: var(--header-height);
   left: 0;
   right: 0;
-  background: var(--color-navy);
-  border-bottom: 3px solid var(--color-yellow);
+  background: var(--color-chalk);
+  border-bottom: 3px solid var(--color-navy);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.25s ease;
@@ -349,16 +351,16 @@ li {
 
 .main-nav__list a {
   display: block;
-  color: var(--color-white);
+  color: var(--color-navy);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   padding: 0.7rem 0.6rem;
   border-radius: 8px;
 }
 
 .main-nav__list a:hover,
 .main-nav__list a:focus-visible {
-  background: var(--color-navy-light);
+  background: var(--color-white);
 }
 
 .main-nav__list a[aria-current="page"] {
@@ -515,35 +517,6 @@ a.card:hover,
 a.card:focus-visible {
   box-shadow: var(--shadow-card-hover);
   transform: translateY(-2px);
-}
-
-.card--niveau {
-  display: flex;
-  align-items: center;
-  gap: var(--space-md);
-}
-
-.card--niveau h3 {
-  margin: 0 0 0.2rem;
-}
-
-.card--niveau p {
-  margin: 0;
-  color: var(--color-ink-soft);
-  font-size: 0.92rem;
-}
-
-/* Carte "hub" en tete de page d'accueil */
-.hub-grid {
-  display: grid;
-  gap: var(--space-md);
-  grid-template-columns: 1fr;
-}
-
-@media (min-width: 700px) {
-  .hub-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 /* ============================================================
@@ -1020,85 +993,101 @@ tbody tr:nth-child(even) {
   white-space: nowrap;
 }
 
-.hero {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(160deg, var(--color-navy) 0%, var(--color-navy-soft) 100%);
-  color: var(--color-white);
-  padding: var(--space-xl) 0 var(--space-lg);
+/* ============================================================
+   HERO UNIFIE — identique sur les 7 pages, seuls le titre, le
+   texte et le lien du bouton changent d'une page a l'autre.
+   Deux colonnes (texte + illustration) sur grand ecran ; sur
+   mobile, l'illustration est masquee pour garder un hero compact.
+   ============================================================ */
+.site-hero {
+  background: var(--color-chalk);
+  padding: var(--space-xl) 0;
 }
 
-/* Motif decoratif "sport" tres discret en arriere-plan du hero
-   (ballon, sifflet, chronometre, lignes de couloir). Le dessin est
-   dans assets/hero-pattern.svg. Pour le rendre plus ou moins visible,
-   changez juste la valeur d'opacity ci-dessous (entre 0 et 1). */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("../assets/hero-pattern.svg");
-  background-repeat: repeat;
-  background-size: 260px;
-  opacity: 0.16;
-  pointer-events: none;
+.site-hero__inner {
+  display: grid;
+  gap: var(--space-lg);
+  align-items: center;
 }
 
-.hero .container {
-  position: relative;
-  z-index: 1;
+@media (min-width: 860px) {
+  .site-hero__inner {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--space-xl);
+  }
 }
 
-.hero .eyebrow {
-  color: var(--color-yellow);
+.site-hero__text {
+  max-width: 48ch;
 }
 
-.hero h1 {
-  color: var(--color-white);
-}
-
-.hero .lede {
-  color: #cfd6ea;
-}
-
-.page-header {
-  background: var(--color-navy);
-  color: var(--color-white);
-  padding: var(--space-lg) 0;
-}
-
-.page-header h1 {
-  color: var(--color-white);
+/* Ligne au-dessus du titre : badge "dossard" + petit label.
+   Omettez le badge dossard sur les pages sans niveau (accueil). */
+.site-hero__kicker {
   display: flex;
   align-items: center;
-  gap: var(--space-md);
-}
-
-.page-header .lede {
-  color: #cfd6ea;
-}
-
-.breadcrumb {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--color-ink-soft);
+  gap: 0.7rem;
   margin-bottom: var(--space-sm);
 }
 
-.breadcrumb a {
+.site-hero__kicker .eyebrow {
+  margin: 0;
+}
+
+.site-hero h1 {
+  margin-bottom: var(--space-md);
+}
+
+/* Titre en 2 lignes façon "BOUGE, APPRENDS, / DÉPASSE-TOI !" :
+   1ère ligne en bleu marine, 2e ligne en accent italique. */
+.hero-title__line1,
+.hero-title__accent {
+  display: block;
+}
+
+.hero-title__line1 {
   color: var(--color-navy);
 }
 
+.hero-title__accent {
+  color: var(--color-coral);
+  font-style: italic;
+}
+
+.site-hero .lede {
+  color: var(--color-ink-soft);
+}
+
+.site-hero__visual {
+  display: none;
+}
+
+@media (min-width: 860px) {
+  .site-hero__visual {
+    display: block;
+    justify-self: center;
+    width: 100%;
+    max-width: 380px;
+  }
+}
+
+.site-hero__visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ============================================================
-   15. PAGE D'ACCUEIL : NAVIGATION "PAGES" DANS LE HERO + PRESENTATION
+   15. PAGE D'ACCUEIL : NAVIGATION "PAGES" + PRESENTATION
    ------------------------------------------------------------
    Composant "hero-nav" : une rangee de boutons (une par page du
-   site) affichee dans la zone hero. Cliquer sur un bouton affiche,
+   site) affichee juste sous le hero. Cliquer sur un bouton affiche,
    juste en dessous, un panneau qui resume le contenu de cette page
    (sous-rubriques, activites) avec un lien vers la page complete.
    Voir js/hero-nav.js pour la logique.
    ============================================================ */
 .hero-nav {
-  margin: var(--space-lg) auto 0;
+  margin: 0 auto;
   max-width: 760px;
 }
 
@@ -1115,15 +1104,15 @@ tbody tr:nth-child(even) {
   font-size: 0.95rem;
   padding: 0.7em 1.2em;
   border-radius: 999px;
-  border: 2px solid rgba(255, 255, 255, 0.35);
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--color-white);
+  border: 2px solid var(--color-border);
+  background: var(--color-white);
+  color: var(--color-navy);
   cursor: pointer;
   transition: background 0.15s ease, border-color 0.15s ease, transform 0.12s ease;
 }
 
 .hero-nav__tab:hover {
-  border-color: var(--color-yellow);
+  border-color: var(--color-navy);
   transform: translateY(-1px);
 }
 
@@ -1138,10 +1127,11 @@ tbody tr:nth-child(even) {
 }
 
 .hero-nav__panel {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--space-md);
+  box-shadow: var(--shadow-card);
 }
 
 .hero-nav__panel[hidden] {
@@ -1149,7 +1139,7 @@ tbody tr:nth-child(even) {
 }
 
 .hero-nav__panel h3 {
-  color: var(--color-white);
+  color: var(--color-navy);
   margin-bottom: 0.6em;
 }
 
@@ -1164,9 +1154,9 @@ tbody tr:nth-child(even) {
 
 .hero-nav__chips a {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: var(--color-white);
+  background: var(--color-chalk);
+  border: 1px solid var(--color-border);
+  color: var(--color-navy);
   text-decoration: none;
   font-size: 0.88rem;
   font-weight: 600;
@@ -1177,13 +1167,13 @@ tbody tr:nth-child(even) {
 .hero-nav__chips a:hover,
 .hero-nav__chips a:focus-visible {
   border-color: var(--color-orange);
-  background: rgba(232, 135, 30, 0.25);
+  background: #fdf0e0;
 }
 
 .hero-nav__meta {
   font-family: var(--font-mono);
   font-size: 0.82rem;
-  color: #cfd6ea;
+  color: var(--color-ink-soft);
   margin-bottom: var(--space-md);
 }
 
