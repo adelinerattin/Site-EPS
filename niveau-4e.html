@@ -53,7 +53,7 @@
             <img class="site-hero__logo" src="assets/logo-as-simone-veil.jpg" alt="">
             <h1>
             <span class="hero-title__line1">Tes activités</span>
-            <span class="hero-title__accent">de 4e !</span>
+            <span class="hero-title__accent">de 4e !</span>
             </h1>
           </div>
           <p class="lede">Retrouvez ici toutes les activités physiques travaillées en 4e. Cliquez sur une activité pour dérouler ses ressources.</p>
@@ -67,9 +67,31 @@
 
     <section class="section">
       <div class="container">
+        <!--
+          ============================================================
+          COMMENT MODIFIER CETTE PAGE ?
+          - Chaque activité est un bloc <details class="activity-card">.
+          - À l'intérieur de chaque activité, une barre d'onglets
+            (<div class="rubrique-tabs">) permet d'accéder directement à
+            une seule rubrique à la fois (attendus, règles, quiz...) sans
+            tout afficher d'un coup. Chaque bouton porte
+            aria-controls="id-de-la-rubrique-visee" : cet id doit
+            correspondre exactement à l'id du <section class="rubrique">
+            correspondant. La logique d'affichage est gérée automatiquement
+            par js/main.js (initRubriqueTabs), rien à modifier ici.
+          - Pour les vidéos : remplacez le contenu de
+            <div class="video-embed video-embed--placeholder"> par un
+            lecteur YouTube une fois le lien reçu, ex. :
+            <div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/XXXXXXXXXXX" title="..." allowfullscreen></iframe></div>
+            repérable par le commentaire "LIEN VIDEO A AJOUTER".
+          - Pour les quiz : modifiez le tableau QUIZ_DATA['...'] situé
+            juste avant la fermeture de chaque bloc d'activité (8 questions
+            par activité, calibrées pour des élèves de 13-14 ans).
+          ============================================================
+        -->
 
         <!-- ==================================================
-             ACTIVITE 1 — BOXE FRANCAISE
+             ACTIVITE 1 — BOXE FRANCAISE (SAVATE)
              ================================================== -->
         <details class="activity-card" id="boxe-francaise-4e">
           <summary>
@@ -78,35 +100,168 @@
           </summary>
           <div class="activity-card__body">
 
-            <section class="rubrique">
+            <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : Boxe française (savate)">
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="boxe-francaise-4e-attendus">🎯 Attendus</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="boxe-francaise-4e-acquisitions">✅ Acquisitions</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="boxe-francaise-4e-regles">🏳️ Règles</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="boxe-francaise-4e-evaluation">📊 Évaluation</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="boxe-francaise-4e-videos">🎥 Vidéos</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="boxe-francaise-4e-quiz">🧠 Quiz</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="boxe-francaise-4e-lexique">📖 Lexique</button>
+            </div>
+
+            <section class="rubrique" id="boxe-francaise-4e-attendus">
               <h4>🎯 Les attendus</h4>
-              <p>Compétence propre CP4 — <em>Conduire et maîtriser un affrontement individuel dans une activité de combat</em>. Toucher sans être touché, en maîtrisant ses appuis, sa distance et son intensité, dans le respect strict de l'intégrité de l'adversaire.</p>
+              <p>
+                Compétence propre CP4 — <em>Conduire et maîtriser un affrontement individuel dans une activité de combat</em>.
+              </p>
+              <p>
+                S'engager loyalement dans un assaut et en rechercher le gain tout en contrôlant
+                ses touches, maîtrisant la distance pour toucher l'adversaire sans se faire
+                toucher et en assurant sa sécurité et celle de son adversaire. Être capable de
+                gérer un tournoi en assumant, en autonomie, les rôles d'arbitre et de juge.
+              </p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Lien avec le socle commun</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td>Le tireur</td>
+                      <td>
+                        <ul>
+                          <li>Mise en œuvre d'un projet individuel prenant en compte les caractéristiques du rapport de force (domaine 2)</li>
+                          <li>Développer sa motricité et acquérir des techniques spécifiques pour être plus efficace (domaine 1)</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr><td>L'arbitre</td><td>Faire preuve de responsabilité, respecter les règles de la vie collective, s'engager et prendre des initiatives (domaine 3)</td></tr>
+                    <tr><td>Le juge</td><td>Faire preuve de responsabilité, respecter les règles de la vie collective, s'engager et prendre des initiatives (domaine 3)</td></tr>
+                    <tr><td>Le tireur fair-play</td><td>Respecter les adversaires, l'arbitre et être solidaire de ses partenaires (domaine 3)</td></tr>
+                  </tbody>
+                </table>
+              </div>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="boxe-francaise-4e-acquisitions">
               <h4>✅ Acquisitions prioritaires</h4>
+
+              <p><strong>Le tireur (en attaque et en défense)</strong></p>
               <ul>
-                <li>Adopter une garde stable et mobile.</li>
-                <li>Toucher en maîtrisant l'intensité (touche contrôlée, jamais frappée fort).</li>
-                <li>Gérer la distance (proche / hors de portée).</li>
-                <li>Respecter absolument les consignes de sécurité et l'arrêt au signal.</li>
+                <li>Maîtriser la distance et le contrôle des touches/l'impact (toucher sans frapper : touche à rebond).</li>
+                <li>Connaître et respecter les zones de touches autorisées (cuisses, buste, front).</li>
+                <li>Apprendre et maîtriser les coups de base (direct bras avant, fouetté).</li>
+                <li>Agir au bon moment : observer l'adversaire pour anticiper et choisir une réponse adaptée.</li>
+                <li>Trouver et maîtriser un enchaînement qui va mettre en difficulté son adversaire en le privant de temps pour défendre ses cibles.</li>
+                <li>Se déplacer en restant face à face.</li>
+                <li>Contrôle de ses actions et de ses émotions : accepter de toucher et d'être touché.</li>
+                <li>Apprendre à se déplacer et à esquiver et à faire des parades en étant dynamique sur ses appuis.</li>
+                <li>Apprendre à garder sa garde après un coup.</li>
+              </ul>
+
+              <p><strong>L'arbitre</strong></p>
+              <ul>
+                <li>Appliquer le protocole et les commandements : « Tireurs aux coins, tireurs au centre, saluez-vous, en garde, allez ».</li>
+                <li>Être mobile et se placer perpendiculairement aux tireurs pour identifier, sanctionner les fautes et donner les avertissements (sortie de l'enceinte, coup trop fort, cible non autorisée, coup dans le tibia, les tireurs parlent).</li>
+              </ul>
+
+              <p><strong>Le juge</strong></p>
+              <ul>
+                <li>Identifier, reconnaître et compter les touches en pied ou au poing.</li>
+                <li>Différencier les touches valides comptabilisées des touches non valides (non règlementaires, dans le vide, gants).</li>
+                <li>Savoir chronométrer : signaler la fin des assauts.</li>
+                <li>Remplir la fiche d'observation et gérer un tournoi.</li>
               </ul>
             </section>
 
-            <section class="rubrique rubrique--optional">
-              <h4>📋 Évaluation diagnostique</h4>
-              <p>Un assaut d'observation en début de cycle permet d'évaluer la maîtrise de la garde, de la distance et du contrôle de la touche avant de démarrer les apprentissages.</p>
-            </section>
-
-            <section class="rubrique">
+            <section class="rubrique" id="boxe-francaise-4e-regles">
               <h4>🏳️ Règles d'arbitrage</h4>
-              <div class="video-placeholder">
-                🎬 Vidéo à ajouter — <a href="#">lien vidéo à compléter</a> <!-- LIEN VIDEO A AJOUTER -->
+              <div class="video-embed video-embed--placeholder">
+                <p>🎬 Vidéo résumant les règles à ajouter — <a href="#">lien vidéo à compléter</a></p> <!-- LIEN VIDEO A AJOUTER -->
               </div>
-              <p>Seules les touches contrôlées, précises et non violentes sont valorisées. Toute touche portée avec excès de force entraîne un avertissement immédiat, voire l'arrêt de l'assaut par l'arbitre.</p>
+              <p>C'est l'arbitre qui applique le règlement suivant :</p>
+              <ul>
+                <li>Appliquer le protocole et les commandements : « Tireurs aux coins, tireurs au centre, saluez-vous, en garde, allez ».</li>
+                <li>Être mobile et se placer perpendiculairement aux tireurs pour identifier, sanctionner les fautes et donner les avertissements (sortie de l'enceinte, coup trop fort, cible non autorisée, coup dans le tibia, les tireurs parlent).</li>
+              </ul>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="boxe-francaise-4e-evaluation">
+              <h4>📊 Modalités d'évaluation</h4>
+
+              <p><strong>Situation repère</strong></p>
+              <ul>
+                <li>L'évaluation finale va se dérouler en 2 temps.</li>
+                <li>Lors du 1er temps, les élèves se répartiront par groupes affinitaires de 5 ou 6 tireurs. Chaque élève, en suivant les rotations de la fiche d'observation, va passer dans les rôles de tireur, arbitre, juge (et chronométreur pour les groupes de 6).</li>
+                <li>Les rotations et le déroulement des assauts se font en autonomie : l'arbitre lance les assauts après avoir donné les commandements et les juges comptabilisent les touches valides pour chaque tireur.</li>
+                <li>Chaque assaut dure 1'30.</li>
+                <li>À la fin de l'assaut, l'arbitre renvoie les tireurs à leurs coins, consulte les juges puis désigne le vainqueur en levant le gant du gagnant.</li>
+                <li>Lors du 2ème temps d'évaluation, et selon les résultats des assauts de la 1ère évaluation et de la séquence, les élèves seront répartis par groupes homogènes. Le déroulement de l'évaluation sera identique à celui de la semaine précédente.</li>
+              </ul>
+
+              <p><strong>Grille d'évaluation — Boxe française 4e</strong></p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th>Maîtrise insuffisante</th><th>Maîtrise fragile</th><th>Maîtrise satisfaisante</th><th>Très bonne maîtrise</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="6">Le tireur (en attaque et en défense)<br><span class="text-mono">/12</span></td>
+                      <td rowspan="2">Maintien de la garde</td>
+                      <td>Garde rarement en place, bras souvent baissés, posture instable</td>
+                      <td>Garde présente mais souvent oubliée lors des déplacements ou après une action</td>
+                      <td>La garde est maintenue la plupart du temps (baissée lors des fouettés), posture stable et protectrice</td>
+                      <td>La garde est constamment en place, stable, mobile et adaptée à la situation</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Maîtrise technique</td>
+                      <td>Gestes non maîtrisés (touches trop fortes, cibles ou coup non autorisés, déséquilibre fréquent)</td>
+                      <td>Gestes reconnaissables mais imprécis et/ou mal contrôlés à cause d'une mauvaise distance et/ou d'un mauvais équilibre</td>
+                      <td>Les touches sont précises et contrôlées avec retour en garde</td>
+                      <td>Le tireur arrive à enchaîner plusieurs coups, gestes précis, équilibrés et bien maîtrisés</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Esquive - parade</td>
+                      <td>Le tireur subit et/ou refuse l'affrontement : pas ou peu de défense</td>
+                      <td>Défense présente mais tardive ou désorganisée</td>
+                      <td>Le tireur est dynamique sur ses appuis et arrive à esquiver ou parader sur plusieurs attaques adverses</td>
+                      <td>Défense variée, maîtrisée et souvent suivie d'une riposte</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">L'arbitre<br><span class="text-mono">/4</span></td>
+                      <td rowspan="2">Commandements, déplacements, décisions</td>
+                      <td>Pas ou peu d'arbitrage : l'arbitre ne connaît pas les commandements et/ou est statique pendant l'assaut</td>
+                      <td>Les commandements sont maîtrisés mais ne signale pas toutes les fautes et avertissements</td>
+                      <td>Le rôle est tenu correctement : commandements maîtrisés, bon placement, quelques oublis d'avertissements</td>
+                      <td>Le rôle est tenu avec sérieux, impartialité et vigilance. Assure la sécurité des 2 tireurs par des décisions justes.</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Le juge<br><span class="text-mono">/4</span></td>
+                      <td rowspan="2">Remplissage de la fiche de jugement</td>
+                      <td>L'élève n'assume pas le rôle de juge : n'observe pas l'assaut, ne remplit pas la fiche de juge</td>
+                      <td>Élève passif : ne suit qu'à moitié l'assaut, la fiche d'observation est mal remplie</td>
+                      <td>Juge attentif, fiche d'observation remplie mais encore quelques difficultés à reconnaître les touches valides</td>
+                      <td>Juge attentif, sérieux. La fiche d'observation est parfaitement remplie.</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="rubrique" id="boxe-francaise-4e-videos">
+              <h4>🎥 Vidéos de démonstration</h4>
+              <ul class="video-list">
+                <li>La garde de base — <a href="#">lien à ajouter</a></li>
+                <li>Le direct bras avant — <a href="#">lien à ajouter</a></li>
+                <li>Le fouetté (touche de pied) — <a href="#">lien à ajouter</a></li>
+                <li>Esquives et parades — <a href="#">lien à ajouter</a></li>
+              </ul>
+            </section>
+
+            <section class="rubrique" id="boxe-francaise-4e-quiz">
               <h4>🧠 Quiz d'entraînement</h4>
               <div class="quiz" data-quiz-id="boxe-francaise-4e">
                 <div class="quiz-questions"></div>
@@ -116,45 +271,28 @@
               <script>
                 window.QUIZ_DATA = window.QUIZ_DATA || {};
                 window.QUIZ_DATA['boxe-francaise-4e'] = [
-                  { question: "En boxe française scolaire, une touche doit être :", options: ["La plus forte possible", "Contrôlée et précise", "Interdite"], correct: 1 },
-                  { question: "Que se passe-t-il en cas de touche trop violente ?", options: ["Rien", "Avertissement voire arrêt de l'assaut", "Point supplémentaire"], correct: 1 },
-                  { question: "La garde sert à :", options: ["Se protéger et pouvoir toucher rapidement", "Décorer la tenue", "Ralentir le combat"], correct: 0 },
-                  { question: "On peut toucher avec :", options: ["Uniquement les poings", "Les poings et les pieds", "Uniquement les pieds"], correct: 1 }
+                  { question: "En boxe française, comment appelle-t-on l'affrontement entre deux tireurs ?", options: ["Un round", "Un assaut", "Un set"], correct: 1 },
+                  { question: "Avec quelles parties du corps peut-on toucher en boxe française ?", options: ["Les poings uniquement", "Les poings et les pieds", "Les pieds uniquement"], correct: 1 },
+                  { question: "Une touche doit être :", options: ["La plus puissante possible", "Contrôlée, précise, sans excès de force", "Interdite si elle touche"], correct: 1 },
+                  { question: "Quelles sont les cibles autorisées ?", options: ["Cuisses, buste, front", "Tibias et dos", "N'importe où sur le corps"], correct: 0 },
+                  { question: "Le coup de pied circulaire caractéristique de la boxe française s'appelle :", options: ["Le direct", "Le fouetté", "Le crochet"], correct: 1 },
+                  { question: "Quand un tireur commet un coup trop fort ou touche une cible interdite, l'arbitre :", options: ["Ignore la faute", "Donne un avertissement, voire arrête l'assaut", "Change immédiatement de tireur"], correct: 1 },
+                  { question: "Le rôle du juge pendant l'assaut est de :", options: ["Compter et différencier les touches valides des touches non valides", "Remplacer l'arbitre", "Chronométrer uniquement les pauses"], correct: 0 },
+                  { question: "Sur la grille d'évaluation, un tireur qui « arrive à enchaîner plusieurs coups, gestes précis, équilibrés et bien maîtrisés » correspond au niveau :", options: ["Maîtrise fragile", "Maîtrise satisfaisante", "Très bonne maîtrise"], correct: 2 }
                 ];
               </script>
             </section>
 
-            <section class="rubrique">
-              <h4>🎥 Vidéos de démonstration</h4>
-              <ul class="video-list">
-                <li>La garde de base — <a href="#">lien à ajouter</a></li>
-                <li>Le direct (touche de poing) — <a href="#">lien à ajouter</a></li>
-                <li>Le fouetté (touche de pied) — <a href="#">lien à ajouter</a></li>
-              </ul>
-            </section>
-
-            <section class="rubrique">
+            <section class="rubrique" id="boxe-francaise-4e-lexique">
               <h4>📖 Lexique</h4>
               <dl class="lexique">
                 <dt>Assaut</dt><dd>Confrontation codifiée entre deux tireurs, avec touches contrôlées.</dd>
                 <dt>Tireur</dt><dd>Nom donné au pratiquant de boxe française.</dd>
                 <dt>Fouetté</dt><dd>Coup de pied circulaire caractéristique de la boxe française.</dd>
+                <dt>Direct (bras avant)</dt><dd>Coup de poing porté en ligne droite avec le bras avant.</dd>
                 <dt>Distance</dt><dd>Espace entre les deux tireurs, à gérer pour toucher sans être touché.</dd>
+                <dt>Enceinte</dt><dd>Espace délimité dans lequel se déroule l'assaut ; en sortir est sanctionné.</dd>
               </dl>
-            </section>
-
-            <section class="rubrique">
-              <h4>📊 Référentiel d'évaluation</h4>
-              <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Compétence évaluée</th><th>Critères de réussite</th><th>Barème indicatif</th></tr></thead>
-                  <tbody>
-                    <tr><td>Maîtrise technique</td><td>Qualité et contrôle des touches</td><td>[à compléter]</td></tr>
-                    <tr><td>Gestion de la distance</td><td>Capacité à toucher sans être touché</td><td>[à compléter]</td></tr>
-                    <tr><td>Respect / sécurité</td><td>Respect du partenaire et des consignes</td><td>[à compléter]</td></tr>
-                  </tbody>
-                </table>
-              </div>
             </section>
 
           </div>
@@ -170,30 +308,180 @@
           </summary>
           <div class="activity-card__body">
 
-            <section class="rubrique">
+            <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : Rugby flag">
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="rugby-flag-4e-attendus">🎯 Attendus</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="rugby-flag-4e-acquisitions">✅ Acquisitions</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="rugby-flag-4e-regles">🏳️ Règles</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="rugby-flag-4e-evaluation">📊 Évaluation</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="rugby-flag-4e-videos">🎥 Vidéos</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="rugby-flag-4e-quiz">🧠 Quiz</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="rugby-flag-4e-lexique">📖 Lexique</button>
+            </div>
+
+            <section class="rubrique" id="rugby-flag-4e-attendus">
               <h4>🎯 Les attendus</h4>
-              <p>Compétence propre CP4. Progresser collectivement vers l'en-but adverse en évitant les prises de drapeau (flags), par la passe et le jeu au large.</p>
+              <p>
+                Compétence propre CP4 — <em>Conduire et maîtriser un affrontement collectif</em>.
+              </p>
+              <p>
+                En situation aménagée (5 contre 5), participer efficacement au jeu collectif en
+                alternant des rôles simples d'attaque et de défense. En attaque, rechercher la
+                progression de la balle vers l'en-but par des courses et des passes, tout en
+                conservant le ballon. En défense, se replacer rapidement en ligne pour gêner la
+                progression adverse. Être capable de co-arbitrer une rencontre.
+              </p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Lien avec le socle commun</th></tr></thead>
+                  <tbody>
+                    <tr><td>L'équipe (en attaque et en défense)</td><td>Mise en œuvre d'un projet prenant en compte les caractéristiques du rapport de force (domaine 2)</td></tr>
+                    <tr><td>Le joueur (en attaque et en défense)</td><td>Développer sa motricité et acquérir des techniques spécifiques pour être plus efficace (domaine 1)</td></tr>
+                    <tr><td>Le co-arbitre</td><td>Faire preuve de responsabilité, respecter les règles de la vie collective, s'engager et prendre des initiatives (domaine 3)</td></tr>
+                    <tr><td>Le joueur fair-play</td><td>Respecter les adversaires, l'arbitre et être solidaire de ses partenaires (domaine 3)</td></tr>
+                  </tbody>
+                </table>
+              </div>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="rugby-flag-4e-acquisitions">
               <h4>✅ Acquisitions prioritaires</h4>
+
+              <p><strong>L'équipe (en attaque et en défense)</strong></p>
               <ul>
-                <li>Passer le ballon vers l'arrière ou latéralement uniquement (jamais vers l'avant).</li>
-                <li>Éviter la prise de drapeau par des changements de rythme et d'appuis.</li>
-                <li>Se replacer en soutien du porteur de balle.</li>
-                <li>Défendre en retirant un flag plutôt qu'en plaquant (sport sans contact).</li>
+                <li>Faire progresser le ballon vers l'avant en se faisant des passes vers l'arrière : l'organisation en « escalier » — être à distance de passe les uns des autres, se placer légèrement derrière et sur le côté du PB si je suis le joueur le plus proche de lui, avancer ensemble, en même temps que le ballon.</li>
+                <li>Défendre en étant alignés les uns avec les autres, au bon espacement et en se répartissant les vis-à-vis.</li>
+              </ul>
+
+              <p><strong>Le joueur (en attaque et en défense)</strong></p>
+              <ul>
+                <li>Passes en balancier : une main en bas du ballon, une main en haut du ballon, les épaules accompagnent le geste, je finis bras tendus en direction de ma cible, je prends l'information avant de faire ma passe.</li>
+                <li>Réceptionner une passe : je suis concentré, je positionne mes bras tendus en face de moi pour indiquer la cible à mon partenaire, j'appelle mon partenaire.</li>
+                <li>Faire une passe en direction d'un joueur mobile.</li>
+                <li>Recevoir le ballon en se déplaçant.</li>
+                <li>Accélérer lorsque je prends possession du ballon pour gagner du terrain.</li>
+                <li>Aplatir en effectuant une pression du haut vers le bas sur le ballon dans la zone d'en-but.</li>
+                <li>Récupérer et remettre en jeu rapidement le ballon : en fente, mettre le poids du corps sur la jambe opposée à la direction de la passe puis transfert du poids du corps.</li>
+                <li>Changer rapidement de statut lors d'un ballon tombé ou au 6ème flag.</li>
+                <li>Être réactif et dynamique sur les appuis pour arracher le flag ou intercepter les ballons : jambes légèrement fléchies avec poids du corps sur l'avant des pieds, bras préparés devant soi, prêt à intervenir, pieds légèrement décalés.</li>
+                <li>Protéger sa zone d'en-but : se placer entre le porteur et ma zone d'en-but.</li>
+              </ul>
+
+              <p><strong>Le co-arbitre</strong></p>
+              <ul>
+                <li>Connaître et maîtriser le règlement : engagement, ballon tombé, en-avant, hors-jeu, pas de raffut, interdiction de cacher ou protéger ses flags.</li>
+                <li>Compter et annoncer le nombre de flags arrachés.</li>
+                <li>Se déplacer et suivre le jeu en étant proche de l'action.</li>
+                <li>Prendre et assumer ses responsabilités sans se faire influencer par les joueurs.</li>
               </ul>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="rugby-flag-4e-regles">
               <h4>🏳️ Règles d'arbitrage</h4>
-              <div class="video-placeholder">
-                🎬 Vidéo à ajouter — <a href="#">lien vidéo à compléter</a> <!-- LIEN VIDEO A AJOUTER -->
+              <div class="video-embed video-embed--placeholder">
+                <p>🎬 Vidéo résumant les règles à ajouter — <a href="#">lien vidéo à compléter</a></p> <!-- LIEN VIDEO A AJOUTER -->
               </div>
-              <p>Une passe en avant (vers l'en-but adverse) est interdite et donne le ballon à l'équipe adverse. Quand un flag est retiré, le porteur doit immédiatement s'arrêter et passer ou faire une remise en jeu selon les règles définies en classe.</p>
+              <p>Le co-arbitre fait appliquer le règlement suivant :</p>
+              <ul>
+                <li>Connaître et maîtriser le règlement : engagement, ballon tombé, en-avant, hors-jeu, pas de raffut, interdiction de cacher ou protéger ses flags.</li>
+                <li>Compter et annoncer le nombre de flags arrachés.</li>
+                <li>Se déplacer et suivre le jeu en étant proche de l'action.</li>
+                <li>Prendre et assumer ses responsabilités sans se faire influencer par les joueurs.</li>
+              </ul>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="rugby-flag-4e-evaluation">
+              <h4>📊 Modalités d'évaluation</h4>
+
+              <p><strong>Grille d'évaluation — L'équipe et les joueurs</strong></p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th>Maîtrise insuffisante</th><th>Maîtrise fragile</th><th>Maîtrise satisfaisante</th><th>Très bonne maîtrise</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="2">L'équipe en défense<br><span class="text-mono">/4</span></td>
+                      <td rowspan="2">Organisation collective en ligne</td>
+                      <td>Défense isolée et désorganisée</td>
+                      <td>Début d'organisation en ligne sur les phases arrêtées mais intervalles trop importants entre les joueurs par manque de communication</td>
+                      <td>Bonne organisation en ligne sur les phases arrêtées mais des difficultés à la maintenir sur les phases de jeu</td>
+                      <td>Défense alignée et replacée / Peu d'espaces concédés / Communication minimale mais efficace</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr>
+                      <td rowspan="4">Le joueur en attaque<br><span class="text-mono">/6</span></td>
+                      <td rowspan="2">Choix ballon en main (porteur de balle)<br><span class="text-mono">/4</span></td>
+                      <td>Panique lorsqu'il reçoit le ballon et/ou ne participe jamais aux phases offensives</td>
+                      <td>Court sans observer, conserve le ballon ou le donne au hasard, court en faisant des travers</td>
+                      <td>Alterne course et passe selon la situation, cherche à fixer puis transmettre mais ne fait pas toujours les bons choix</td>
+                      <td>Lit rapidement le jeu, fixe efficacement et décale au bon moment</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Placement (non porteur de balle)<br><span class="text-mono">/2</span></td>
+                      <td>Reste spectateur de l'action / Est souvent mal placé (devant le ballon)</td>
+                      <td>Volonté de participer au jeu mais mauvais placement : trop loin ou dans l'axe du PB</td>
+                      <td>Se rend disponible, se démarque et propose une solution de passe</td>
+                      <td>Anticipe les actions, crée des espaces et offre plusieurs solutions au porteur</td>
+                    </tr>
+                    <tr><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                    <tr>
+                      <td rowspan="4">Le joueur en défense<br><span class="text-mono">/4</span></td>
+                      <td rowspan="2">Placement<br><span class="text-mono">/2</span></td>
+                      <td>Pas concerné par la défense / Ne sait pas se placer</td>
+                      <td>Temps de réaction au changement de statut long (se place tardivement) / Crée des intervalles car n'est pas en face de son adversaire</td>
+                      <td>Bonne posture défensive / Sait se positionner selon les situations de jeu</td>
+                      <td>Adapte constamment son placement à son adversaire / Régule ses coéquipiers / Leader de la défense</td>
+                    </tr>
+                    <tr><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Arracher les flags<br><span class="text-mono">/2</span></td>
+                      <td>Intervient rarement ou manque souvent ses tentatives</td>
+                      <td>Réalise quelques flags mais avec difficultés</td>
+                      <td>Arrache régulièrement les flags de son adversaire direct</td>
+                      <td>Très efficace dans ses interventions et limite fortement la progression adverse</td>
+                    </tr>
+                    <tr><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p><strong>Grille d'évaluation — L'arbitre et l'échauffé</strong></p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th>Maîtrise insuffisante</th><th>Maîtrise fragile</th><th>Maîtrise satisfaisante</th><th>Très bonne maîtrise</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="2">L'arbitre<br><span class="text-mono">/4</span></td>
+                      <td rowspan="2">Connaissance et application du règlement</td>
+                      <td>Ne connaît pas les règles et/ou ne participe pas au rôle d'arbitre</td>
+                      <td>Hésitations dans la prise de décision à cause d'une connaissance trop légère du règlement et/ou trop loin de l'action</td>
+                      <td>Se déplace pour être proche de l'action mais peut gêner les joueurs, applique les règles principales, se fait entendre</td>
+                      <td>Anticipe les déplacements du jeu et se place de manière efficace, maîtrise les règles et communique avec assurance</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">L'échauffé<br><span class="text-mono">/2</span></td>
+                      <td rowspan="2">Gestion de l'échauffement</td>
+                      <td>Pas d'échauffement et/ou fini largement avant le temps imparti</td>
+                      <td>Gestion de l'échauffement aléatoire : beaucoup de temps sur un exercice et/ou peu d'implication</td>
+                      <td>Échauffement complet et progressif / Bon échauffement de tous les joueurs / Élève suiveur de l'échauffement</td>
+                      <td>Échauffement complet, différents thèmes travaillés / Élève leader de l'échauffement</td>
+                    </tr>
+                    <tr><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="rubrique" id="rugby-flag-4e-videos">
+              <h4>🎥 Vidéos de démonstration</h4>
+              <ul class="video-list">
+                <li>La passe en balancier — <a href="#">lien à ajouter</a></li>
+                <li>L'organisation offensive en « escalier » — <a href="#">lien à ajouter</a></li>
+                <li>Arracher un flag efficacement — <a href="#">lien à ajouter</a></li>
+              </ul>
+            </section>
+
+            <section class="rubrique" id="rugby-flag-4e-quiz">
               <h4>🧠 Quiz d'entraînement</h4>
               <div class="quiz" data-quiz-id="rugby-flag-4e">
                 <div class="quiz-questions"></div>
@@ -203,43 +491,28 @@
               <script>
                 window.QUIZ_DATA = window.QUIZ_DATA || {};
                 window.QUIZ_DATA['rugby-flag-4e'] = [
-                  { question: "Une passe peut être faite :", options: ["Vers l'avant uniquement", "Vers l'arrière ou latéralement", "Dans n'importe quelle direction"], correct: 1 },
-                  { question: "Le rugby flag est un sport :", options: ["Avec plaquages", "Sans contact, avec retrait de drapeau", "Avec contact limité aux épaules"], correct: 1 },
-                  { question: "Que doit faire le porteur du ballon quand son flag est retiré ?", options: ["Continuer à courir", "S'arrêter immédiatement", "Rendre le ballon à l'arbitre"], correct: 1 },
-                  { question: "Le soutien du porteur de balle sert à :", options: ["Récupérer le ballon en cas de retrait de flag", "Ralentir l'attaque", "Remplacer le porteur définitivement"], correct: 0 }
+                  { question: "Au rugby flag, comment arrête-t-on le porteur du ballon ?", options: ["En le plaquant", "En lui arrachant un flag à la ceinture", "En lui prenant le ballon des mains"], correct: 1 },
+                  { question: "Dans quelle direction peut-on faire une passe ?", options: ["Vers l'avant uniquement", "Vers l'arrière ou latéralement", "N'importe quelle direction"], correct: 1 },
+                  { question: "Qu'est-ce qu'un « en-avant » ?", options: ["Une passe faite vers l'avant, sanctionnée", "Une course rapide vers l'en-but", "Un point marqué"], correct: 0 },
+                  { question: "L'organisation en « escalier » sert à :", options: ["Être tous alignés à la même hauteur", "Être à distance de passe les uns des autres, légèrement décalés derrière le porteur", "Se regrouper tous autour du ballon"], correct: 1 },
+                  { question: "En défense, l'équipe doit s'organiser :", options: ["En étant alignée, au bon espacement, avec chacun son vis-à-vis", "En restant tous derrière le but", "Sans se soucier du placement"], correct: 0 },
+                  { question: "Quel est le rôle du co-arbitre au rugby flag ?", options: ["Marquer des essais", "Faire appliquer le règlement et compter les flags arrachés", "Remplacer un joueur blessé"], correct: 1 },
+                  { question: "Pour arracher un flag efficacement, le défenseur doit :", options: ["Rester statique, bras croisés", "Être dynamique sur ses appuis, jambes fléchies, bras prêts à intervenir", "Courir les yeux fermés vers le porteur"], correct: 1 },
+                  { question: "Sur la grille d'évaluation, un joueur qui « lit rapidement le jeu, fixe efficacement et décale au bon moment » est évalué en :", options: ["Maîtrise insuffisante", "Maîtrise fragile", "Très bonne maîtrise"], correct: 2 }
                 ];
               </script>
             </section>
 
-            <section class="rubrique">
-              <h4>🎥 Vidéos de démonstration</h4>
-              <ul class="video-list">
-                <li>Le changement de rythme pour éviter un flag — <a href="#">lien à ajouter</a></li>
-                <li>La passe latérale — <a href="#">lien à ajouter</a></li>
-              </ul>
-            </section>
-
-            <section class="rubrique">
+            <section class="rubrique" id="rugby-flag-4e-lexique">
               <h4>📖 Lexique</h4>
               <dl class="lexique">
-                <dt>Flag</dt><dd>Drapeau velcro fixé à la ceinture, à retirer pour "arrêter" le porteur du ballon.</dd>
+                <dt>Flag</dt><dd>Drapeau velcro fixé à la ceinture, à retirer pour « arrêter » le porteur du ballon.</dd>
                 <dt>En-but</dt><dd>Zone de marque en bout de terrain.</dd>
                 <dt>Soutien</dt><dd>Joueur proche du porteur de balle, prêt à recevoir une passe.</dd>
+                <dt>PB</dt><dd>Porteur du Ballon.</dd>
+                <dt>Escalier</dt><dd>Organisation offensive où chaque joueur se place légèrement derrière et sur le côté du porteur du ballon.</dd>
+                <dt>Hors-jeu</dt><dd>Faute commise par un joueur placé devant le porteur du ballon ou devant le dernier joueur ayant joué le ballon.</dd>
               </dl>
-            </section>
-
-            <section class="rubrique">
-              <h4>📊 Référentiel d'évaluation</h4>
-              <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Compétence évaluée</th><th>Critères de réussite</th><th>Barème indicatif</th></tr></thead>
-                  <tbody>
-                    <tr><td>Progression collective</td><td>Passes réussies, essais marqués</td><td>[à compléter]</td></tr>
-                    <tr><td>Défense</td><td>Nombre de flags retirés</td><td>[à compléter]</td></tr>
-                    <tr><td>Respect des règles</td><td>Passes en avant évitées, fair-play</td><td>[à compléter]</td></tr>
-                  </tbody>
-                </table>
-              </div>
             </section>
 
           </div>
@@ -255,30 +528,179 @@
           </summary>
           <div class="activity-card__body">
 
-            <section class="rubrique">
+            <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : Badminton (simple, grand terrain)">
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-4e-attendus">🎯 Attendus</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-4e-acquisitions">✅ Acquisitions</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-4e-regles">🏳️ Règles</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-4e-evaluation">📊 Évaluation</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-4e-videos">🎥 Vidéos</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-4e-quiz">🧠 Quiz</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-4e-lexique">📖 Lexique</button>
+            </div>
+
+            <section class="rubrique" id="badminton-4e-attendus">
               <h4>🎯 Les attendus</h4>
-              <p>Compétence propre CP4. Jouer désormais sur grand terrain (terrain de simple entier) : gérer un espace de jeu plus grand en alternant jeu court et jeu long pour déséquilibrer l'adversaire.</p>
+              <p>
+                Compétence propre CP4 — <em>Conduire et maîtriser un affrontement individuel</em>.
+              </p>
+              <p>
+                En simple et sur grand terrain, s'entraîner pour gagner le match en étant capable
+                de construire un point pour rompre l'échange en utilisant l'ensemble du terrain
+                (longueur et largeur) et en variant ses frappes pour déplacer et déséquilibrer
+                son adversaire. Appliquer et faire appliquer le règlement et conseiller son
+                partenaire.
+              </p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Lien avec le socle commun</th></tr></thead>
+                  <tbody>
+                    <tr><td>Le joueur</td><td>Pratiquer des APSA et acquérir des techniques spécifiques pour être plus efficient (domaine 1)</td></tr>
+                    <tr>
+                      <td>L'entraîné</td>
+                      <td>
+                        <ul>
+                          <li>Répéter un geste pour le stabiliser et le rendre plus efficace (domaine 2)</li>
+                          <li>Construire et mettre en œuvre des projets d'apprentissage (domaine 2)</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr><td>Le coach</td><td>Faire preuve de responsabilité, respecter les règles de la vie collective, s'engager et prendre des initiatives (domaine 3)</td></tr>
+                    <tr><td>L'arbitre</td><td>Faire preuve de responsabilité, respecter les règles de la vie collective, s'engager et prendre des initiatives (domaine 3)</td></tr>
+                  </tbody>
+                </table>
+              </div>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="badminton-4e-acquisitions">
               <h4>✅ Acquisitions prioritaires</h4>
+
+              <p><strong>Le joueur</strong></p>
               <ul>
-                <li>Couvrir efficacement tout le terrain de simple.</li>
-                <li>Alterner amortis, dégagements et smashes selon la situation.</li>
-                <li>Anticiper à partir de la posture de l'adversaire.</li>
-                <li>Gérer son effort sur des échanges plus longs (terrain plus grand).</li>
+                <li>Position d'attente et replacement central : le replacement central n'est pas une règle absolue mais une référence à adopter.</li>
+                <li>Services en diagonale.</li>
+                <li>Faire reculer son adversaire en utilisant le dégagé pour exploiter l'espace libre avant (révision).</li>
+                <li>Maîtrise des frappes variées en vitesse (amortis et smashs).</li>
+                <li>Faire déplacer son adversaire en utilisant des frappes variées en largeur.</li>
+                <li>Prendre l'information sur le placement adverse.</li>
+              </ul>
+
+              <p><strong>L'entraîné</strong></p>
+              <ul>
+                <li>Produire des trajectoires hautes pour favoriser le maintien de l'échange.</li>
+                <li>Répéter un geste pour le stabiliser puis être capable de le réinvestir en situation de match : jeu des 3 zones.</li>
+                <li>S'investir dans une routine de travail.</li>
+              </ul>
+
+              <p><strong>Le coach</strong></p>
+              <ul>
+                <li>Analyser le jeu, les déplacements, les frappes de son partenaire et de son adversaire afin de lui donner des conseils pertinents lui permettant de prendre l'avantage sur le jeu.</li>
+              </ul>
+
+              <p><strong>L'arbitre</strong></p>
+              <ul>
+                <li>Développer un arbitrage prenant en compte les règles suivantes : service, délimitations du terrain, fautes principales.</li>
+                <li>Suivre et tenir une feuille de match.</li>
+                <li>Compter les points et annoncer le serveur.</li>
               </ul>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="badminton-4e-regles">
               <h4>🏳️ Règles d'arbitrage</h4>
-              <div class="video-placeholder">
-                🎬 Vidéo à ajouter — <a href="#">lien vidéo à compléter</a> <!-- LIEN VIDEO A AJOUTER -->
+              <div class="video-embed video-embed--placeholder">
+                <p>🎬 Vidéo résumant les règles à ajouter — <a href="#">lien vidéo à compléter</a></p> <!-- LIEN VIDEO A AJOUTER -->
               </div>
-              <p>Sur grand terrain, les couloirs latéraux et le fond de court (jusqu'à la ligne arrière de simple) sont désormais valides pour le jeu, contrairement au 1/2 terrain travaillé les années précédentes.</p>
+              <p>L'arbitre développe un arbitrage prenant en compte les règles suivantes :</p>
+              <ul>
+                <li>Développer un arbitrage prenant en compte les règles suivantes : service, délimitations du terrain, fautes principales.</li>
+                <li>Suivre et tenir une feuille de match.</li>
+                <li>Compter les points et annoncer le serveur.</li>
+              </ul>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="badminton-4e-evaluation">
+              <h4>📊 Modalités d'évaluation</h4>
+
+              <p><strong>Situation repère</strong></p>
+              <ul>
+                <li>Les élèves sont évalués lors de matchs effectués par groupes de niveaux. Les matchs se font au temps et durent 3'30min (cela permet de gérer les matchs et de les faire tous commencer et terminer au même moment. De plus, les matchs au temps obligent les élèves à chercher à rompre l'échange le plus vite possible ne sachant pas quand le match va se terminer).</li>
+                <li>Chaque élève est placé dans un groupe de « niveau ». La rotation des matchs, la gestion des rôles d'arbitre et de coach sont laissés en autonomie aux élèves qui doivent suivre leur fiche de poule.</li>
+                <li>Le choix de l'évaluation par matchs de poules se fait au regard des terrains disponibles et des rôles à évaluer en parallèle (coach et arbitre).</li>
+                <li>Les rôles de coach et d'arbitre sont évalués au fil de la séquence mais seront aussi observés lors de l'évaluation.</li>
+                <li>Le rôle de l'entraîné est aussi évalué au fil de la séquence lors des situations d'apprentissage et des situations de réinvestissement.</li>
+              </ul>
+
+              <p><strong>Grille d'évaluation — Badminton 4e</strong></p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th>Maîtrise insuffisante</th><th>Maîtrise fragile</th><th>Maîtrise satisfaisante</th><th>Très bonne maîtrise</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="6">Le joueur<br><span class="text-mono">/10</span></td>
+                      <td rowspan="2">Position d'attente et replacement</td>
+                      <td>Position d'attente et replacement peu maîtrisés : ne se replace pas après sa frappe et/ou garde sa raquette en bas</td>
+                      <td>Position d'attente présente mais passive (manque de dynamisme) / Replacement automatique au centre mais parfois inadapté à la situation</td>
+                      <td>Position d'attente active (raquette haute, dynamique) / Replacement pertinent en fonction du coup joué</td>
+                      <td>Position d'attente dynamique (anticipation) / Replacement optimisé (pas toujours au centre mais au bon endroit) permettant de prendre l'avantage</td>
+                    </tr>
+                    <tr><td>0 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Service</td>
+                      <td>Service pas maîtrisé ou pas règlementaire</td>
+                      <td>Service règlementaire mais sans intention de marquer le point</td>
+                      <td>Arrive à marquer quelques points grâce à son service</td>
+                      <td>Met systématiquement en difficulté son adversaire dès le service et gagne le point</td>
+                    </tr>
+                    <tr><td>0 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Construction du point</td>
+                      <td>Joue principalement dans la même zone et à la même vitesse : les frappes sont peu variées et ne mettent pas l'adversaire en difficulté</td>
+                      <td>Construction du point limitée : tente de varier certaines frappes (long/court ou droite/gauche) mais de manière peu régulière ou inefficace</td>
+                      <td>Construit le point avec une intention tactique simple : utilise différentes frappes pour déplacer l'adversaire (variation de vitesse, direction et largeur)</td>
+                      <td>Adapte ses choix de frappes à la situation de jeu afin de prendre l'avantage : enchaîne des frappes variées pour créer puis exploiter un déséquilibre</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>3 pts</td><td>4,5 pts</td><td>6 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Le coach<br><span class="text-mono">/4</span></td>
+                      <td rowspan="2">Qualité et pertinence des conseils donnés</td>
+                      <td>« Le supporter » — Observe peu le match ou donne des encouragements uniquement / Conseils absents ou peu liés au jeu</td>
+                      <td>« L'observateur » — Repère quelques éléments simples du match / Donne des conseils généraux mais peu précis</td>
+                      <td>« Le conseiller » — Observe attentivement le jeu et identifie les situations pertinentes / Donne des conseils précis en lien avec le match et/ou l'adversaire</td>
+                      <td>« L'analyste » — Analyse le rapport de force pendant le match / Propose des conseils tactiques précis et adaptés</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">L'entraîné<br><span class="text-mono">/2</span></td>
+                      <td rowspan="2">Engagement dans les tâches d'apprentissage</td>
+                      <td>« L'inintéressé » — Ne s'investit pas dans le travail de répétition (détournement de la tâche)</td>
+                      <td>« Le persévérant » — Travail sérieux et volonté de réussir malgré les difficultés</td>
+                      <td>« L'appliqué » — S'engage dans les tâches de répétition + réussite dans les différents niveaux</td>
+                      <td>« L'assidu » — Engagement régulier + aide et conseille ses camarades</td>
+                    </tr>
+                    <tr><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">L'arbitre<br><span class="text-mono">/3</span></td>
+                      <td rowspan="2">Connaissance du règlement</td>
+                      <td>L'arbitrage reste incomplet ou manque de rigueur (match souvent interrompu)</td>
+                      <td>Le match est globalement géré mais certaines décisions manquent de précision ou d'autorité</td>
+                      <td>Arbitre de manière autonome et fluide (score, règles et rythme du match bien gérés)</td>
+                      <td>Arbitrage précis, impartial et fluide (anticipe les problèmes, gère les échanges contestés)</td>
+                    </tr>
+                    <tr><td>0 pt</td><td>1 pt</td><td>2 pts</td><td>3 pts</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="rubrique" id="badminton-4e-videos">
+              <h4>🎥 Vidéos de démonstration</h4>
+              <ul class="video-list">
+                <li>Le replacement central après une frappe — <a href="#">lien à ajouter</a></li>
+                <li>Le service en diagonale — <a href="#">lien à ajouter</a></li>
+                <li>Le smash et l'amorti — <a href="#">lien à ajouter</a></li>
+              </ul>
+            </section>
+
+            <section class="rubrique" id="badminton-4e-quiz">
               <h4>🧠 Quiz d'entraînement</h4>
               <div class="quiz" data-quiz-id="badminton-4e">
                 <div class="quiz-questions"></div>
@@ -288,43 +710,28 @@
               <script>
                 window.QUIZ_DATA = window.QUIZ_DATA || {};
                 window.QUIZ_DATA['badminton-4e'] = [
-                  { question: "Sur le terrain de simple, quelles lignes sont valides ?", options: ["Les lignes de double uniquement", "Les lignes de simple (couloirs latéraux exclus)", "Aucune ligne n'existe"], correct: 1 },
-                  { question: "Sur grand terrain, il est important de :", options: ["Rester immobile au centre", "Couvrir tout le terrain efficacement", "Ne jouer que devant le filet"], correct: 1 },
-                  { question: "Alterner jeu court et jeu long permet de :", options: ["Fatiguer l'adversaire et créer des espaces", "Respecter une règle obligatoire", "Ralentir volontairement le jeu"], correct: 0 },
-                  { question: "Anticiper un coup adverse s'appuie sur :", options: ["Le hasard", "La lecture de la posture et de l'armé de raquette adverse", "Le bruit du volant"], correct: 1 }
+                  { question: "Sur le terrain de simple, quelles lignes sont valides pour le jeu ?", options: ["Les lignes de simple, couloirs latéraux exclus", "Les lignes de double", "Aucune, tout est faute"], correct: 0 },
+                  { question: "Que signifie « servir en diagonale » ?", options: ["Envoyer le volant dans la case de service opposée en diagonale", "Servir n'importe où", "Servir en dehors du terrain"], correct: 0 },
+                  { question: "Le dégagé sert surtout à :", options: ["Faire reculer l'adversaire en exploitant l'espace libre arrière", "Faire une passe courte au filet", "Ralentir volontairement le jeu"], correct: 0 },
+                  { question: "Sur grand terrain, le replacement central est :", options: ["Une règle absolue à respecter toujours", "Une référence à adopter, pas une règle absolue", "Interdit"], correct: 1 },
+                  { question: "Pour mettre l'adversaire en difficulté, il faut :", options: ["Toujours jouer au même endroit", "Varier ses frappes en vitesse et en largeur", "Ne jouer que des amortis"], correct: 1 },
+                  { question: "Le rôle de l'arbitre pendant le match est de :", options: ["Compter les points et annoncer le serveur", "Jouer à la place d'un absent", "Choisir qui gagne le match"], correct: 0 },
+                  { question: "Un coach efficace pendant le match doit :", options: ["Observer attentivement le jeu et donner des conseils précis liés au match", "Ne rien dire pour ne pas déranger", "Jouer à la place de son partenaire"], correct: 0 },
+                  { question: "Sur la grille d'évaluation, un joueur qui « adapte ses choix de frappes à la situation de jeu afin de prendre l'avantage » est en :", options: ["Maîtrise fragile", "Maîtrise satisfaisante", "Très bonne maîtrise"], correct: 2 }
                 ];
               </script>
             </section>
 
-            <section class="rubrique">
-              <h4>🎥 Vidéos de démonstration</h4>
-              <ul class="video-list">
-                <li>Couvrir le grand terrain — <a href="#">lien à ajouter</a></li>
-                <li>Le jeu au filet — <a href="#">lien à ajouter</a></li>
-              </ul>
-            </section>
-
-            <section class="rubrique">
+            <section class="rubrique" id="badminton-4e-lexique">
               <h4>📖 Lexique</h4>
               <dl class="lexique">
                 <dt>Ligne de simple</dt><dd>Ligne délimitant le terrain de jeu en simple, plus étroite que celle du double.</dd>
                 <dt>Jeu au filet</dt><dd>Ensemble des frappes réalisées près du filet (amortis, contre-amortis).</dd>
                 <dt>Armé</dt><dd>Position de préparation de la raquette avant la frappe.</dd>
+                <dt>Dégagé</dt><dd>Frappe haute et profonde qui envoie le volant au fond du terrain adverse.</dd>
+                <dt>Amorti</dt><dd>Frappe courte qui fait tomber le volant juste après le filet.</dd>
+                <dt>Smash</dt><dd>Frappe descendante et puissante destinée à conclure l'échange.</dd>
               </dl>
-            </section>
-
-            <section class="rubrique">
-              <h4>📊 Référentiel d'évaluation</h4>
-              <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Compétence évaluée</th><th>Critères de réussite</th><th>Barème indicatif</th></tr></thead>
-                  <tbody>
-                    <tr><td>Couverture du terrain</td><td>Déplacements efficaces sur tout le terrain</td><td>[à compléter]</td></tr>
-                    <tr><td>Variation tactique</td><td>Alternance jeu court / jeu long</td><td>[à compléter]</td></tr>
-                    <tr><td>Résultat des matchs</td><td>Score obtenu en confrontation</td><td>[à compléter]</td></tr>
-                  </tbody>
-                </table>
-              </div>
             </section>
 
           </div>
@@ -340,30 +747,231 @@
           </summary>
           <div class="activity-card__body">
 
-            <section class="rubrique">
+            <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : Basket-ball">
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="basket-4e-attendus">🎯 Attendus</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="basket-4e-acquisitions">✅ Acquisitions</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="basket-4e-regles">🏳️ Règles</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="basket-4e-evaluation">📊 Évaluation</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="basket-4e-videos">🎥 Vidéos</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="basket-4e-quiz">🧠 Quiz</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="basket-4e-lexique">📖 Lexique</button>
+            </div>
+
+            <section class="rubrique" id="basket-4e-attendus">
               <h4>🎯 Les attendus</h4>
-              <p>Compétence propre CP4. Élaborer des stratégies collectives (attaque rapide, écrans simples) pour créer des situations de tir favorables et défendre efficacement.</p>
+              <p>
+                Compétence propre CP4 — <em>Conduire et maîtriser un affrontement collectif</em>.
+              </p>
+              <p>
+                En 4 contre 4, rechercher le gain du match en organisant un projet de jeu qui
+                vise à produire des contre-attaques au moment de la récupération du ballon face
+                à une défense déséquilibrée qui cherche à stopper la progression et à se
+                réorganiser (défense individuelle stricte). Co-arbitrer avec assurance et
+                fiabilité et observer avec pertinence. Respecter les adversaires et les
+                arbitres, être solidaire de ses partenaires.
+              </p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Lien avec le socle commun</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td>L'équipe (en attaque)</td>
+                      <td>
+                        <ul>
+                          <li>Mise en œuvre d'un projet prenant en compte les caractéristiques du rapport de force (domaine 2)</li>
+                          <li>Adapter son engagement moteur en fonction du rapport de force (AFC 2)</li>
+                          <li>Anticiper la prise et le traitement d'informations pour enchaîner ses actions</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Le joueur (en attaque et en défense)</td>
+                      <td>
+                        <ul>
+                          <li>Développer sa motricité et acquérir des techniques spécifiques pour être plus efficace (domaine 1)</li>
+                          <li>Réaliser des actions décisives en situation favorable afin de faire basculer le rapport de force (AFC 1)</li>
+                          <li>S'adapter rapidement au changement de statut attaquant-défenseur</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Le co-arbitre</td>
+                      <td>
+                        <ul>
+                          <li>Faire preuve de responsabilité, s'engager et prendre des initiatives (domaine 3)</li>
+                          <li>Co-arbitrer une séquence de match (AFC 4)</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Le joueur fair-play</td>
+                      <td>
+                        <ul>
+                          <li>Respecter les adversaires, l'arbitre et être solidaire de ses partenaires (domaine 3)</li>
+                          <li>Être solidaire de ses partenaires et respectueux de ses adversaires et de l'arbitre (AFC 3)</li>
+                          <li>Accepter le résultat de la rencontre (AFC 5)</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>L'observateur</td>
+                      <td>
+                        <ul>
+                          <li>Se mettre au service de l'autre pour lui permettre de progresser en relevant des indicateurs pertinents (domaine 2)</li>
+                          <li>Observer (AFC 4)</li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="basket-4e-acquisitions">
               <h4>✅ Acquisitions prioritaires</h4>
+
+              <p><strong>L'équipe (en attaque)</strong></p>
               <ul>
-                <li>Dribbler en protégeant le ballon, sans marcher (3 secondes/marcher).</li>
-                <li>Enchaîner dribble - passe - tir.</li>
-                <li>Défendre individuellement son adversaire direct (« un contre un »).</li>
-                <li>Respecter les règles de non-contact et le fair-play.</li>
+                <li>Appliquer les principes d'une contre-attaque efficace : occupation des 3 couloirs de jeu (central et latéraux).</li>
+                <li>Se projeter rapidement vers l'avant pour offrir une solution de passe longue.</li>
+                <li>Prendre l'information sur le rapport de force (défense en place ou déséquilibrée).</li>
+              </ul>
+
+              <p><strong>Le joueur (en attaque et en défense)</strong></p>
+              <p>Porteur de balle :</p>
+              <ul>
+                <li>Construire une passe tendue et longue afin d'atteindre un partenaire situé à 5/10m.</li>
+                <li>Réaliser une passe dans la course de mon partenaire afin de ne pas ralentir la progression et garder le temps d'avance.</li>
+                <li>Maîtriser le dribble de contre-attaque pour accélérer le jeu.</li>
+                <li>Déclencher un double pas systématique quand je me retrouve seul face au panier.</li>
+                <li>Faire des choix pertinents pour faire progresser le ballon (dribbler, passer, tirer).</li>
+              </ul>
+              <p>Non porteur de balle :</p>
+              <ul>
+                <li>Démarquage rapide et vers l'avant et en utilisant les couloirs latéraux (contre-attaque).</li>
+              </ul>
+              <p>Défenseur :</p>
+              <ul>
+                <li>Adapter sa défense au rapport de force adverse et à l'organisation de mon équipe : presser rapidement le PB pour ralentir sa progression.</li>
+                <li>Être réactif au changement de statut.</li>
+              </ul>
+
+              <p><strong>Le co-arbitre</strong></p>
+              <ul>
+                <li>Co-arbitrer une rencontre en faisant appliquer le règlement suivant : engagement au milieu du terrain (en début de match), marchés, reprises de dribble, fautes sur le porteur, pied, le porteur de balle ne peut tenir le ballon que 5 secondes maximum lors d'une remise en jeu, sorties de terrain.</li>
+                <li>Être réactif et se montrer ferme dans sa prise de décision, se déplacer en suivant la ligne du ballon.</li>
+              </ul>
+
+              <p><strong>Le joueur fair-play</strong></p>
+              <ul>
+                <li>Encourager et relativiser les erreurs de chacun.</li>
+                <li>Respecter les adversaires quelle que soit l'issue du match.</li>
+                <li>Faire confiance aux arbitres et respecter leurs décisions.</li>
+              </ul>
+
+              <p><strong>L'observateur</strong></p>
+              <ul>
+                <li>Relever des indicateurs pertinents permettant de rendre compte de l'efficacité d'un joueur ou d'une équipe (pertes de balle, passes réussies/tentées, efficacité aux tirs…).</li>
+                <li>Remplir efficacement la fiche d'observation afin de relever un score juste à la fin du match.</li>
               </ul>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="basket-4e-regles">
               <h4>🏳️ Règles d'arbitrage</h4>
-              <div class="video-placeholder">
-                🎬 Vidéo à ajouter — <a href="#">lien vidéo à compléter</a> <!-- LIEN VIDEO A AJOUTER -->
+              <div class="video-embed video-embed--placeholder">
+                <p>🎬 Vidéo résumant les règles à ajouter — <a href="#">lien vidéo à compléter</a></p> <!-- LIEN VIDEO A AJOUTER -->
               </div>
-              <p>Le marcher (déplacement de plus de 2 appuis sans dribbler) et le double dribble (dribbler à nouveau après avoir repris le ballon à deux mains) sont sifflés et donnent le ballon à l'équipe adverse.</p>
+              <p>Le co-arbitre fait appliquer le règlement suivant :</p>
+              <ul>
+                <li>Engagement au milieu du terrain (en début de match).</li>
+                <li>Marchés, reprises de dribble.</li>
+                <li>Fautes sur le porteur, pied.</li>
+                <li>Le porteur de balle ne peut tenir le ballon que 5 secondes maximum lors d'une remise en jeu.</li>
+                <li>Sorties de terrain.</li>
+              </ul>
+              <p>Il doit être réactif et se montrer ferme dans sa prise de décision, se déplacer en suivant la ligne du ballon.</p>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="basket-4e-evaluation">
+              <h4>📊 Modalités d'évaluation</h4>
+
+              <p><strong>Situation repère</strong></p>
+              <ul>
+                <li>Jouer et co-arbitrer un tournoi où chaque équipe fait 4 matchs de 5 minutes (temps arrêté) en 4 contre 4 sur un terrain de basket.</li>
+                <li>L'évaluation se fera en 2 temps : sur le créneau de 2h (le lundi), les équipes seront homogènes entre elles et hétérogènes en leur sein ; sur le créneau de 1h (le mardi), les équipes seront réalisées par niveaux et chaque équipe de niveau jouera sur un terrain.</li>
+                <li>4 équipes qui jouent (sur 2 terrains) en 4 vs 4 avec le 5ème joueur qui complète la fiche d'observation.</li>
+                <li>Le score est calculé par les remplaçants des équipes qui jouent qui observent et s'occupent de gérer les 8 secondes.</li>
+                <li>3 façons de marquer des points : tir tenté en moins de 8 secondes qui touche le cercle rouge par le haut = 1 point ; panier marqué en plus de 8 secondes = 2 points ; panier marqué en moins de 8 secondes = 4 points.</li>
+                <li>L'équipe qui arbitre se répartit les rôles : 2 arbitres centraux (1 par ½ terrain) qui s'occupent de signaler les fautes (contacts, 3 secondes, reprise de dribble, marchés) par terrain ; 1 arbitre qui gère le temps (5 minutes en temps arrêté).</li>
+                <li>Le rôle de l'arbitre (pratique et théorie) sera évalué en amont.</li>
+              </ul>
+
+              <p><strong>Grille d'évaluation — Basket-ball 4e</strong></p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th>Maîtrise insuffisante</th><th>Maîtrise fragile</th><th>Maîtrise satisfaisante</th><th>Très bonne maîtrise</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="2">L'équipe en attaque<br><span class="text-mono">/6</span></td>
+                      <td rowspan="2">Score total par match (moyenne des 3 meilleurs matchs)</td>
+                      <td>Moins de 3 pts</td>
+                      <td>Entre 4 et 8 pts</td>
+                      <td>Entre 9 et 13 pts</td>
+                      <td>14 pts ou +</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>3 pts</td><td>4 pts</td><td>6 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Le joueur en attaque<br><span class="text-mono">/4</span></td>
+                      <td rowspan="2">Faire des choix pertinents pour faire progresser la balle et tirer dans des situations favorables</td>
+                      <td>« Le passif » — Ne participe pas aux attaques de son équipe / Beaucoup de pertes de balles (mauvaises passes, dribbles excessifs) / Tire de manière inopportune</td>
+                      <td>« Le joueur volontaire maladroit » — Passes courtes précises mais longues interceptées / Pertes de balle sous pression défensive / Démarquage trop proche du porteur</td>
+                      <td>« Le joueur efficace » — Tire efficacement en situation favorable / Pas de perte de balle / Se projette lors des CA / Rebond offensif</td>
+                      <td>« Le joueur expert » — Efficacité dans les tirs et les passes / Bons choix offensifs qui font basculer le rapport de force / Toujours en mouvement</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Le joueur en défense<br><span class="text-mono">/4</span></td>
+                      <td rowspan="2">Perturber la progression de l'équipe adverse</td>
+                      <td>« Le défenseur absent ou dangereux » — Reste immobile, ne défend pas / Joueur explosif ou dangereux</td>
+                      <td>« Le défenseur attentiste » — Bien positionné (entre PB/NPB et le panier) mais rapidement pris de vitesse par son vis à vis</td>
+                      <td>« Le défenseur efficace » — Toujours bien placé / Quelques interceptions / Rebond défensif</td>
+                      <td>« Le défenseur expert » — Presse, coupe les lignes de passe, intercepte, aide ses partenaires dépassés / Toujours au rebond défensif</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Le co-arbitre<br><span class="text-mono">/4</span></td>
+                      <td rowspan="2">Maîtrise des règles du jeu</td>
+                      <td>« Le passif ou perturbateur » — Absent du match ou cherche à imposer son autorité et ses décisions</td>
+                      <td>« L'assisté ou l'influençable » — Sa connaissance du règlement est parcellaire et/ou il est influençable (ne s'affirme pas pendant le match)</td>
+                      <td>« Le basketteur » — Connaît et fait appliquer les principales règles / Se déplace en suivant la ligne du ballon</td>
+                      <td>« Le basketteur expert » — Arbitrage des règles précises, fait assurer un climat serein</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Le joueur fair-play<br><span class="text-mono">/2</span></td>
+                      <td rowspan="2">Respect de ses adversaires, arbitres et partenaires</td>
+                      <td>Contredit l'arbitre ou râle sur ses partenaires / S'énerve sur ses adversaires lorsqu'ils commettent des fautes</td>
+                      <td>Ne s'arrête pas tout le temps après le coup de sifflet de l'arbitre / Ne joue qu'avec certains de ses partenaires</td>
+                      <td>Applique et respecte les décisions de l'arbitre / Bienveillance envers ses partenaires</td>
+                      <td>Conseille, écoute et encourage ses partenaires</td>
+                    </tr>
+                    <tr><td>0 pt</td><td>0,5 pt</td><td>1 pt</td><td>2 pts</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="rubrique" id="basket-4e-videos">
+              <h4>🎥 Vidéos de démonstration</h4>
+              <ul class="video-list">
+                <li>Le règlement du basket (arbitrage) — <a href="#">lien à ajouter</a></li>
+                <li>Le double pas en contre-attaque — <a href="#">lien à ajouter</a></li>
+                <li>La passe tendue longue — <a href="#">lien à ajouter</a></li>
+                <li>Le démarquage rapide vers l'avant — <a href="#">lien à ajouter</a></li>
+              </ul>
+            </section>
+
+            <section class="rubrique" id="basket-4e-quiz">
               <h4>🧠 Quiz d'entraînement</h4>
               <div class="quiz" data-quiz-id="basket-4e">
                 <div class="quiz-questions"></div>
@@ -373,44 +981,28 @@
               <script>
                 window.QUIZ_DATA = window.QUIZ_DATA || {};
                 window.QUIZ_DATA['basket-4e'] = [
-                  { question: "Le 'marcher' est sanctionné quand :", options: ["Le joueur dribble normalement", "Le joueur se déplace de plus de 2 appuis sans dribbler", "Le joueur tire au panier"], correct: 1 },
-                  { question: "Le double dribble consiste à :", options: ["Dribbler des deux mains en même temps", "Dribbler à nouveau après avoir repris le ballon à deux mains", "Faire deux passes d'affilée"], correct: 1 },
-                  { question: "Un écran sert à :", options: ["Bloquer physiquement un adversaire pour libérer un partenaire", "Sortir du terrain", "Remplacer une passe"], correct: 0 },
-                  { question: "Le basket-ball est un sport :", options: ["De contact autorisé", "Sans contact volontaire (fautes sanctionnées)", "Où tout est permis"], correct: 1 }
+                  { question: "En 4 contre 4, comment marque-t-on le plus de points sur une action rapide ?", options: ["Panier marqué en moins de 8 secondes = 4 points", "Panier marqué en moins de 8 secondes = 1 point", "Tous les paniers valent 2 points"], correct: 0 },
+                  { question: "La contre-attaque consiste à :", options: ["Ralentir le jeu après une récupération de balle", "Profiter d'une récupération de balle pour attaquer vite, avant que la défense adverse ne se réorganise", "Ne jamais attaquer avant la moitié de terrain"], correct: 1 },
+                  { question: "Pour une passe de contre-attaque efficace, il faut :", options: ["Une passe tendue et longue vers un partenaire à 5-10m", "Une passe très courte à son voisin", "Attendre l'arrêt du partenaire"], correct: 0 },
+                  { question: "Occuper les 3 couloirs de jeu en contre-attaque permet de :", options: ["Se regrouper au même endroit", "Offrir plusieurs solutions de passe et étirer la défense", "Ralentir l'attaque"], correct: 1 },
+                  { question: "Le co-arbitre doit notamment sanctionner :", options: ["Les marchés et les reprises de dribble", "Les tirs manqués", "Les passes réussies"], correct: 0 },
+                  { question: "Un défenseur qui « presse, coupe les lignes de passe, intercepte, aide ses partenaires » correspond à l'archétype :", options: ["« Le défenseur absent »", "« Le défenseur attentiste »", "« Le défenseur expert »"], correct: 2 },
+                  { question: "Le joueur porteur de balle doit, quand il est seul face au panier :", options: ["Déclencher un double pas", "Toujours faire une passe en arrière", "S'arrêter immédiatement"], correct: 0 },
+                  { question: "Sur la grille d'évaluation, un joueur fair-play qui « conseille, écoute et encourage ses partenaires » est en :", options: ["Maîtrise insuffisante", "Maîtrise satisfaisante", "Très bonne maîtrise"], correct: 2 }
                 ];
               </script>
             </section>
 
-            <section class="rubrique">
-              <h4>🎥 Vidéos de démonstration</h4>
-              <ul class="video-list">
-                <li>Le tir en course (lay-up) — <a href="#">lien à ajouter</a></li>
-                <li>La passe à deux mains poitrine — <a href="#">lien à ajouter</a></li>
-                <li>La défense individuelle — <a href="#">lien à ajouter</a></li>
-              </ul>
-            </section>
-
-            <section class="rubrique">
+            <section class="rubrique" id="basket-4e-lexique">
               <h4>📖 Lexique</h4>
               <dl class="lexique">
-                <dt>Lay-up</dt><dd>Tir en course près du panier, après une ou deux foulées.</dd>
+                <dt>Double pas</dt><dd>Tir en course près du panier, après une ou deux foulées (lay-up).</dd>
                 <dt>Écran</dt><dd>Blocage positionnel utilisé pour libérer un partenaire.</dd>
                 <dt>Marcher</dt><dd>Faute commise en se déplaçant sans dribbler avec le ballon.</dd>
+                <dt>Double dribble</dt><dd>Faute commise en dribblant à nouveau après avoir repris le ballon à deux mains.</dd>
+                <dt>Contre-attaque</dt><dd>Attaque rapide déclenchée juste après la récupération du ballon, avant que la défense ne se réorganise.</dd>
+                <dt>PB / NPB</dt><dd>Porteur du Ballon / Non-Porteur du Ballon.</dd>
               </dl>
-            </section>
-
-            <section class="rubrique">
-              <h4>📊 Référentiel d'évaluation</h4>
-              <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Compétence évaluée</th><th>Critères de réussite</th><th>Barème indicatif</th></tr></thead>
-                  <tbody>
-                    <tr><td>Efficacité offensive</td><td>Tirs tentés / réussis</td><td>[à compléter]</td></tr>
-                    <tr><td>Efficacité défensive</td><td>Ballons récupérés, interceptions</td><td>[à compléter]</td></tr>
-                    <tr><td>Respect des règles</td><td>Fautes commises, fair-play</td><td>[à compléter]</td></tr>
-                  </tbody>
-                </table>
-              </div>
             </section>
 
           </div>
@@ -426,35 +1018,193 @@
           </summary>
           <div class="activity-card__body">
 
-            <section class="rubrique">
+            <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : Relais vitesse 2x40m">
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="relais-vitesse-4e-attendus">🎯 Attendus</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="relais-vitesse-4e-acquisitions">✅ Acquisitions</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="relais-vitesse-4e-regles">🏳️ Règles</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="relais-vitesse-4e-evaluation">📊 Évaluation</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="relais-vitesse-4e-videos">🎥 Vidéos</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="relais-vitesse-4e-quiz">🧠 Quiz</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="relais-vitesse-4e-lexique">📖 Lexique</button>
+            </div>
+
+            <section class="rubrique" id="relais-vitesse-4e-attendus">
               <h4>🎯 Les attendus</h4>
-              <p>Compétence propre CP1. Réaliser la meilleure performance possible en binôme, en optimisant la transmission du témoin sans ralentir la course.</p>
+              <p>
+                Compétence propre CP1 — <em>Réaliser une performance motrice maximale</em>.
+              </p>
+              <p>
+                Réaliser la meilleure performance possible dans un relais de 2x40m en coordonnant
+                les vitesses de course du donneur et du receveur afin d'assurer une transmission
+                valide et efficace. Juger et chronométrer avec sérieux la performance de son
+                groupe. Être capable de s'échauffer en autonomie afin de préparer son corps à un
+                effort intense.
+              </p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Lien avec le socle commun</th></tr></thead>
+                  <tbody>
+                    <tr><td>L'athlète (donneur, receveur)</td><td>Développer sa motricité et acquérir des techniques spécifiques pour être plus efficace (domaine 1)</td></tr>
+                    <tr><td>Le binôme</td><td>Mise en œuvre d'une stratégie collective prenant en compte les caractéristiques de chacun afin de réaliser la meilleure performance possible (domaine 2)</td></tr>
+                    <tr><td>Le juge-chronométreur</td><td>Faire preuve de responsabilité, respecter les règles de la vie collective, s'engager et prendre des initiatives (domaine 3)</td></tr>
+                    <tr><td>L'échauffé</td><td>Connaître les principes d'un échauffement à réaliser en sécurité afin de ne pas se mettre en danger (domaine 4)</td></tr>
+                  </tbody>
+                </table>
+              </div>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="relais-vitesse-4e-acquisitions">
               <h4>✅ Acquisitions prioritaires</h4>
+
+              <p><strong>L'athlète (donneur, receveur)</strong></p>
+              <p>Donneur :</p>
               <ul>
-                <li>Accélérer avant de recevoir le témoin (course lancée).</li>
-                <li>Transmettre le témoin dans la zone de transmission réglementaire.</li>
-                <li>Synchroniser les deux coureurs (signal de départ du receveur).</li>
-                <li>Ne jamais courir en dehors de son couloir.</li>
+                <li>Adopter une position dynamique de départ : jambes semi-fléchies, bras opposé à la jambe avant vers l'avant.</li>
+                <li>Être réactif aux commandements et pousser sur sa jambe avant.</li>
+                <li>Se décaler d'un côté du couloir en fonction de la main qui tient le témoin afin que ce dernier soit au milieu.</li>
+                <li>Donner le signal « HOP » au bon moment pour le receveur (2 bras tendus).</li>
+              </ul>
+              <p>Receveur :</p>
+              <ul>
+                <li>Adapter sa position d'attente à la position dans le couloir du donneur.</li>
+                <li>Contrôler l'arrivée du donneur en regardant au-dessus de son épaule.</li>
+                <li>Trouver la marque optimale à partir de laquelle lancer sa course lorsque le donneur la dépasse.</li>
+                <li>Courir à pleine vitesse sans se retourner et tendre le bras au « HOP » du donneur.</li>
+              </ul>
+
+              <p><strong>Le binôme</strong></p>
+              <ul>
+                <li>Transmission du témoin lorsque le donneur ET le receveur sont à vitesse maximale.</li>
+                <li>Mettre en place un projet de course : dans quelle main je tiens le témoin, dans quel ½ couloir je cours, quelle main je tends lors de la transmission.</li>
+                <li>Le temps du 2x40m doit être inférieur aux 2 temps individuels sur 40m additionnés.</li>
+              </ul>
+
+              <p><strong>L'échauffé</strong></p>
+              <ul>
+                <li>Connaître et appliquer les étapes d'un échauffement spécifique en relais-vitesse (articulations, mise en train progressive avec gammes, étirements, accentuer sur les parties du corps les plus sollicitées, travail de la transmission).</li>
+              </ul>
+
+              <p><strong>Le juge-chronométreur</strong></p>
+              <ul>
+                <li>Connaître et appliquer le règlement relatif au départ/arrivée, à la chute du témoin, à la zone autorisée pour la transmission du témoin.</li>
+                <li>Être attentif lors du chronométrage d'une course (perpendiculaire à la ligne d'arrivée, réactivité au signal du starter, arrêter le temps quand la ligne des épaules du coureur passe la ligne d'arrivée).</li>
               </ul>
             </section>
 
-            <section class="rubrique rubrique--optional">
-              <h4>📋 Évaluation diagnostique</h4>
-              <p>Un chronométrage initial du relais permet de comparer la performance en binôme à la somme des performances individuelles, et de sensibiliser à l'enjeu de la transmission.</p>
-            </section>
-
-            <section class="rubrique">
+            <section class="rubrique" id="relais-vitesse-4e-regles">
               <h4>🏳️ Règles d'arbitrage</h4>
-              <div class="video-placeholder">
-                🎬 Vidéo à ajouter — <a href="#">lien vidéo à compléter</a> <!-- LIEN VIDEO A AJOUTER -->
+              <div class="video-embed video-embed--placeholder">
+                <p>🎬 Vidéo résumant les règles à ajouter — <a href="#">lien vidéo à compléter</a></p> <!-- LIEN VIDEO A AJOUTER -->
               </div>
-              <p>Le témoin doit impérativement être transmis à l'intérieur de la zone de transmission délimitée. Une transmission hors zone entraîne la nullité de la course pour l'équipe concernée.</p>
+              <p>Ce sont les règles que le juge-chronométreur doit connaître et appliquer :</p>
+              <ul>
+                <li>Connaître et appliquer le règlement relatif au départ/arrivée, à la chute du témoin, à la zone autorisée pour la transmission du témoin.</li>
+                <li>Être attentif lors du chronométrage d'une course (perpendiculaire à la ligne d'arrivée, réactivité au signal du starter, arrêter le temps quand la ligne des épaules du coureur passe la ligne d'arrivée).</li>
+              </ul>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="relais-vitesse-4e-evaluation">
+              <h4>📊 Modalités d'évaluation</h4>
+
+              <p><strong>Situation repère</strong></p>
+              <ul>
+                <li>L'évaluation de relais vitesse s'effectue sur 3 leçons.</li>
+                <li>Lors de la première, les élèves seront chronométrés sur un 40m départ arrêté afin de remettre à jour les temps réalisés au début de la séquence. Si le temps réalisé sur 40m le jour de l'évaluation est inférieur à celui réalisé lors de la première leçon (record battu), un bonus d'1pt est automatiquement attribué à l'athlète. En parallèle, le rôle de chronométreur sera évalué en comparant l'écart entre le temps obtenu par le chronométreur et celui obtenu par la professeure.</li>
+                <li>Lors de la seconde leçon, les rôles de donneur et receveur ainsi que la technique de transmission sera observée. Chaque groupe aura choisi, au préalable, 3 combinaisons dans lesquelles ils sont les plus efficaces et permettant à chacun d'être évalué une fois dans le rôle de donneur, une fois dans le rôle de receveur (4 combinaisons pour les groupes de 4).</li>
+                <li>Lors de la dernière leçon, la performance en 2x40m de chaque groupe sera chronométrée. L'objectif est que cette dernière soit inférieure au temps cumulé des 2 performances individuelles sur 40m des coureurs. Chaque groupe passera 3 fois (en gardant les mêmes combinaisons que la leçon précédente). Si le témoin tombe, l'athlète sort de son couloir ou la transmission se fait en dehors de la zone, la performance ne sera pas mesurée.</li>
+                <li>Les groupes de relais ont été constitués en début de séquence par les élèves et sont restés fixes.</li>
+              </ul>
+
+              <p><strong>Grille d'évaluation — Relais vitesse 2x40m 4e</strong></p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th>Maîtrise insuffisante</th><th>Maîtrise fragile</th><th>Maîtrise satisfaisante</th><th>Très bonne maîtrise</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="2">Donneur<br><span class="text-mono">/3</span></td>
+                      <td rowspan="2">Attitude au départ, signal donné</td>
+                      <td>Le donneur n'est pas concentré sur son départ : parle et/ou n'est pas sur sa ligne / Il ne court pas à sa vitesse maximale</td>
+                      <td>Temps de réaction très long au départ qui fait perdre du temps au donneur / Pas de signal donné au receveur ou non audible</td>
+                      <td>Donneur concentré et réactif aux commandements du starter / Le signal « HOP » est dit mais trop tôt ou tard</td>
+                      <td>Attitude de départ efficace : réactivité + léger déséquilibre avant sur les premières foulées / « HOP » audible et au bon moment</td>
+                    </tr>
+                    <tr><td>0 pt</td><td>1 pt</td><td>2 pts</td><td>3 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Receveur<br><span class="text-mono">/3</span></td>
+                      <td rowspan="2">Marque de départ, attitude de course</td>
+                      <td>Posture de course passive : pas de marque, le receveur commence à courir lorsque le donneur est à sa hauteur</td>
+                      <td>Le receveur part trop tôt ou tard à cause d'une marque aléatoire / Court avec le bras tendu en arrière</td>
+                      <td>Bonne attitude d'attente du receveur : il sait quand partir et où se positionner dans le couloir / Présentation du bras parfois trop tôt</td>
+                      <td>Le receveur attend sur un côté du couloir, le regard par-dessus son épaule / Course déclenchée quand le donneur passe la marque, ne se retourne pas et tend le bras seulement au « HOP »</td>
+                    </tr>
+                    <tr><td>0 pt</td><td>1 pt</td><td>2 pts</td><td>3 pts</td></tr>
+                    <tr>
+                      <td rowspan="6">Binôme<br><span class="text-mono">/6</span></td>
+                      <td rowspan="2">Vitesse lors de la transmission</td>
+                      <td>Transmission à l'arrêt — La transmission du témoin se fait à l'arrêt et/ou le témoin est transmis hors zone/pas transmis</td>
+                      <td>Transmission non coordonnée — Le donneur ou le receveur doit ralentir sa course lors de la transmission et/ou les coureurs se rentrent dedans</td>
+                      <td>Transmission continue — Maintien de la vitesse des coureurs lors de la transmission</td>
+                      <td>Transmission efficace — Le témoin est transmis lorsque les 2 athlètes sont à vitesse maximale</td>
+                    </tr>
+                    <tr><td>0 pt</td><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td></tr>
+                    <tr>
+                      <td rowspan="2">Projet de course</td>
+                      <td>Pas de projet de course (s'adaptent au dernier moment)</td>
+                      <td>Le passage du témoin se fait de la même main</td>
+                      <td>Projet de course annoncé et respecté</td>
+                      <td>Projet de course annoncé, respecté et performant</td>
+                    </tr>
+                    <tr><td>0 pt</td><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td></tr>
+                    <tr>
+                      <td rowspan="2">Performance réalisée</td>
+                      <td>Le temps du 2x40m est supérieur aux 2 temps individuels cumulés</td>
+                      <td>Le temps du 2x40m est égal aux 2 temps individuels cumulés</td>
+                      <td>Le temps du 2x40m est inférieur de 0,5 seconde par rapport aux 2 temps individuels cumulés</td>
+                      <td>Le temps du 2x40m est inférieur de plus de 0,6 seconde par rapport aux 2 temps individuels cumulés</td>
+                    </tr>
+                    <tr><td>0 pt</td><td>1 pt</td><td>2 pts</td><td>3 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">L'échauffé<br><span class="text-mono">/4</span></td>
+                      <td rowspan="2">Réalisation de l'échauffement</td>
+                      <td>Pas d'échauffement ou dure moins de 2'</td>
+                      <td>Échauffement discontinu, incomplet et/ou pas adapté à l'activité relais-vitesse</td>
+                      <td>Échauffement progressif et continu mais parfois en décalage avec la spécificité du relais</td>
+                      <td>Échauffement progressif, continu et complet + spécifique à l'activité relais</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">L'officiel<br><span class="text-mono">/2</span></td>
+                      <td rowspan="2">Attitude (prendre et assumer des responsabilités)</td>
+                      <td>Pas concerné par ses fonctions : ne chronomètre pas</td>
+                      <td>Le temps est chronométré mais manque d'attention : mauvais placement, discute en même temps</td>
+                      <td>Bon placement : perpendiculaire à la ligne d'arrivée + concentré / Temps recueilli avec précision</td>
+                      <td>Bon placement : perpendiculaire à la ligne d'arrivée + concentré / Temps recueilli avec précision</td>
+                    </tr>
+                    <tr><td>0 pt</td><td>0,5 pt</td><td>2 pts</td><td>2 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Investissement<br><span class="text-mono">/2</span></td>
+                      <td rowspan="2">Moyenne des notes d'investissement au cours de la séquence (s'engager dans les activités)</td>
+                      <td>Pas d'investissement</td>
+                      <td>Investissement aléatoire en fonction des leçons, beaucoup de rappels à l'ordre</td>
+                      <td>Bon investissement dans l'ensemble malgré quelques déconcentrations lors d'1 ou 2 leçons</td>
+                      <td>Très bon investissement, attitude sérieuse et régulière tout au long de la séquence</td>
+                    </tr>
+                    <tr><td>0 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="rubrique" id="relais-vitesse-4e-videos">
+              <h4>🎥 Vidéos de démonstration</h4>
+              <ul class="video-list">
+                <li>La transmission du témoin en pleine vitesse — <a href="#">lien à ajouter</a></li>
+                <li>Le signal « HOP » et la position du bras — <a href="#">lien à ajouter</a></li>
+                <li>Le départ du receveur (marque optimale) — <a href="#">lien à ajouter</a></li>
+              </ul>
+            </section>
+
+            <section class="rubrique" id="relais-vitesse-4e-quiz">
               <h4>🧠 Quiz d'entraînement</h4>
               <div class="quiz" data-quiz-id="relais-vitesse-4e">
                 <div class="quiz-questions"></div>
@@ -464,43 +1214,28 @@
               <script>
                 window.QUIZ_DATA = window.QUIZ_DATA || {};
                 window.QUIZ_DATA['relais-vitesse-4e'] = [
-                  { question: "Le témoin doit être transmis :", options: ["N'importe où sur le parcours", "Dans la zone de transmission délimitée", "Après la ligne d'arrivée"], correct: 1 },
-                  { question: "Le receveur du témoin doit :", options: ["Rester immobile en attendant", "Commencer à accélérer avant de recevoir le témoin", "Courir dans le couloir voisin"], correct: 1 },
-                  { question: "Une transmission hors zone entraîne :", options: ["Un point bonus", "La nullité de la course pour l'équipe", "Rien de particulier"], correct: 1 },
-                  { question: "Le relais 2x40m se court :", options: ["Avec 2 coureurs sur une distance totale de 40m", "Avec 2 coureurs, chacun sur 40m", "Avec 4 coureurs"], correct: 1 }
+                  { question: "Dans un relais 2x40m, combien de coureurs composent un binôme ?", options: ["1", "2", "4"], correct: 1 },
+                  { question: "Que doit faire le donneur juste avant de transmettre le témoin ?", options: ["S'arrêter", "Annoncer « HOP » au bon moment, bras tendu", "Ralentir puis accélérer"], correct: 1 },
+                  { question: "Le receveur doit démarrer sa course :", options: ["Dès que le donneur s'élance", "Quand le donneur dépasse sa marque optimale, sans se retourner", "Après avoir entendu le coup de sifflet de l'arbitre"], correct: 1 },
+                  { question: "L'objectif de performance du binôme est que le temps du 2x40m soit :", options: ["Supérieur aux 2 temps individuels cumulés", "Égal aux 2 temps individuels cumulés", "Inférieur aux 2 temps individuels cumulés"], correct: 2 },
+                  { question: "Une transmission du témoin est jugée efficace quand :", options: ["Elle se fait à l'arrêt", "Les 2 athlètes sont à vitesse maximale au moment de l'échange", "Le donneur ralentit fortement"], correct: 1 },
+                  { question: "Le rôle du juge-chronométreur inclut notamment :", options: ["Se placer perpendiculairement à la ligne d'arrivée et être réactif au signal du starter", "Courir avec les athlètes", "Donner le signal « HOP »"], correct: 0 },
+                  { question: "Un projet de course pour le binôme doit préciser notamment :", options: ["Uniquement la couleur des dossards", "Dans quelle main est tenu le témoin et dans quel demi-couloir chacun court", "Le nombre de spectateurs"], correct: 1 },
+                  { question: "Sur la grille d'évaluation, une transmission où « le témoin est transmis lorsque les 2 athlètes sont à vitesse maximale » correspond à :", options: ["Transmission à l'arrêt", "Transmission non coordonnée", "Transmission efficace (très bonne maîtrise)"], correct: 2 }
                 ];
               </script>
             </section>
 
-            <section class="rubrique">
-              <h4>🎥 Vidéos de démonstration</h4>
-              <ul class="video-list">
-                <li>La transmission du témoin — <a href="#">lien à ajouter</a></li>
-                <li>Le départ du receveur — <a href="#">lien à ajouter</a></li>
-              </ul>
-            </section>
-
-            <section class="rubrique">
+            <section class="rubrique" id="relais-vitesse-4e-lexique">
               <h4>📖 Lexique</h4>
               <dl class="lexique">
                 <dt>Témoin</dt><dd>Bâtonnet transmis d'un coureur à l'autre pendant le relais.</dd>
                 <dt>Zone de transmission</dt><dd>Portion de piste où la transmission du témoin est autorisée.</dd>
+                <dt>Donneur</dt><dd>Coureur qui part en premier et transmet le témoin.</dd>
+                <dt>Receveur</dt><dd>Coureur qui reçoit le témoin et termine la course.</dd>
                 <dt>Course lancée</dt><dd>Fait de démarrer sa course avant de recevoir le témoin, pour ne pas perdre de vitesse.</dd>
+                <dt>Marque</dt><dd>Repère au sol permettant au receveur de savoir à quel moment démarrer sa course.</dd>
               </dl>
-            </section>
-
-            <section class="rubrique">
-              <h4>📊 Référentiel d'évaluation</h4>
-              <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Compétence évaluée</th><th>Critères de réussite</th><th>Barème indicatif</th></tr></thead>
-                  <tbody>
-                    <tr><td>Performance chronométrée</td><td>Temps total du relais</td><td>[à compléter]</td></tr>
-                    <tr><td>Qualité de la transmission</td><td>Transmission réussie dans la zone, sans perte de vitesse</td><td>[à compléter]</td></tr>
-                    <tr><td>Coopération</td><td>Synchronisation entre les deux coureurs</td><td>[à compléter]</td></tr>
-                  </tbody>
-                </table>
-              </div>
             </section>
 
           </div>

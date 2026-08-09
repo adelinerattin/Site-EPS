@@ -53,7 +53,7 @@
             <img class="site-hero__logo" src="assets/logo-as-simone-veil.jpg" alt="">
             <h1>
             <span class="hero-title__line1">Tes activités</span>
-            <span class="hero-title__accent">de 5e !</span>
+            <span class="hero-title__accent">de 5e !</span>
             </h1>
           </div>
           <p class="lede">Retrouvez ici toutes les activités physiques travaillées en 5e. Cliquez sur une activité pour dérouler ses ressources.</p>
@@ -67,6 +67,14 @@
 
     <section class="section">
       <div class="container">
+        <!--
+          ============================================================
+          COMMENT MODIFIER CETTE PAGE ?
+          Voir niveau-6e.html pour le détail des commentaires (structure
+          des onglets, des vidéos et des quiz : le fonctionnement est
+          rigoureusement identique sur cette page).
+          ============================================================
+        -->
 
         <!-- ==================================================
              ACTIVITE 1 — HANDBALL
@@ -78,35 +86,155 @@
           </summary>
           <div class="activity-card__body">
 
-            <section class="rubrique">
+            <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : Handball">
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-5e-attendus">🎯 Attendus</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-5e-acquisitions">✅ Acquisitions</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-5e-regles">🏳️ Règles</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-5e-evaluation">📊 Évaluation</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-5e-videos">🎥 Vidéos</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-5e-quiz">🧠 Quiz</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-5e-lexique">📖 Lexique</button>
+            </div>
+
+            <section class="rubrique" id="handball-5e-attendus">
               <h4>🎯 Les attendus</h4>
-              <p>Compétence propre CP4. En poursuite du travail engagé en 6e : élaborer un projet de jeu collectif simple (attaque placée, repli défensif) pour marquer plus de buts que l'adversaire.</p>
+              <p class="callout callout--neutral">Ce document ne fournissait que la grille d'évaluation ; les attendus, acquisitions et règles ci-dessous ont été rédigés à partir des critères de cette grille et de la progression logique depuis le niveau 6e.</p>
+              <p>
+                Compétence propre CP4 — <em>Conduire et maîtriser un affrontement collectif</em>.
+              </p>
+              <p>
+                En poursuite du travail engagé en 6e sur la défense individuelle, organiser
+                collectivement une défense de zone qui oblige les joueurs à occuper un secteur du
+                terrain plutôt qu'un adversaire désigné, en communiquant pour glisser d'une zone à
+                l'autre. En attaque, faire des choix rapides et pertinents (garder/avancer ou
+                fixer/passer) pour construire une attaque collective, et se rendre disponible pour
+                faire progresser rapidement le ballon. Co-arbitrer une rencontre de manière autonome
+                et gérer ses émotions dans le jeu comme dans la défaite.
+              </p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Lien avec le socle commun</th></tr></thead>
+                  <tbody>
+                    <tr><td>Le joueur en défense</td><td>Coopérer et réaliser des projets (domaine 2) / Pratiquer des APSA et acquérir des techniques spécifiques pour être plus efficace (domaine 1)</td></tr>
+                    <tr><td>Le joueur en attaque</td><td>Pratiquer des APSA et acquérir des techniques spécifiques pour être plus efficace (domaine 1)</td></tr>
+                    <tr><td>Le co-arbitre</td><td>Faire preuve de responsabilité, respecter les règles de la vie collective, s'engager et prendre des initiatives (domaine 3)</td></tr>
+                    <tr><td>Le joueur fair-play</td><td>Maîtriser l'expression de sa sensibilité et de ses opinions, respecter celles des autres (domaine 3)</td></tr>
+                  </tbody>
+                </table>
+              </div>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="handball-5e-acquisitions">
               <h4>✅ Acquisitions prioritaires</h4>
+
+              <p><strong>Le joueur en défense</strong></p>
               <ul>
-                <li>Occuper les couloirs de jeu pour élargir l'attaque.</li>
-                <li>Enchaîner réception - passe ou tir en mouvement.</li>
-                <li>Se replacer rapidement en défense après une perte de balle.</li>
-                <li>Respecter les décisions de l'arbitre.</li>
+                <li>Comprendre et occuper une zone du terrain plutôt que suivre un adversaire désigné : la défense de zone.</li>
+                <li>Revenir systématiquement en zone après une perte de balle (repli défensif), en regardant le ballon pour s'orienter.</li>
+                <li>Communiquer avec ses partenaires pour glisser d'une zone à l'autre selon les déplacements adverses.</li>
+                <li>Être capable, ponctuellement, de presser un porteur de balle tout en gardant son équipe organisée.</li>
+              </ul>
+
+              <p><strong>Le joueur en attaque</strong></p>
+              <ul>
+                <li>Porteur du ballon (PB) : faire des choix rapides et pertinents (garder/avancer ou fixer/passer) pour construire une attaque plutôt que forcer un tir individuel.</li>
+                <li>Porteur du ballon (PB) : après une passe, re-proposer immédiatement une nouvelle solution pour continuer à faire progresser son équipe.</li>
+                <li>Non-porteur du ballon (NPB) : se déplacer utilement pour créer un espace dans la défense de zone adverse et permettre d'aller au tir favorablement.</li>
+                <li>Non-porteur du ballon (NPB) : être réactif et ne pas gêner le porteur de balle.</li>
+              </ul>
+
+              <p><strong>Le co-arbitre</strong></p>
+              <p>Co-arbitrer une rencontre en connaissant et en faisant appliquer le règlement (voir l'onglet « Règles »), en s'affirmant dans ses décisions.</p>
+
+              <p><strong>Le joueur fair-play</strong></p>
+              <ul>
+                <li>Gérer ses émotions tout au long du match, y compris dans les moments de tension ou après une défaite.</li>
+                <li>Garder une attitude stable et respectueuse envers ses partenaires, ses adversaires et les co-arbitres.</li>
               </ul>
             </section>
 
-            <section class="rubrique rubrique--optional">
-              <h4>📋 Évaluation diagnostique</h4>
-              <p>Un mini-match observé en début de cycle permet de repérer le niveau de jeu collectif (occupation de l'espace, prise de risque, défense) de chaque élève.</p>
-            </section>
-
-            <section class="rubrique">
+            <section class="rubrique" id="handball-5e-regles">
               <h4>🏳️ Règles d'arbitrage</h4>
-              <div class="video-placeholder">
-                🎬 Vidéo à ajouter — <a href="#">lien vidéo à compléter</a> <!-- LIEN VIDEO A AJOUTER -->
-              </div>
-              <p>La zone du gardien (surface de but) est interdite aux joueurs de champ, même sans ballon. Une faute qui empêche une occasion de but manifeste donne lieu à un jet de 7 mètres.</p>
+              <div class="video-embed video-embed--placeholder">
+                <p>🎬 Vidéo résumant les règles à ajouter — <a href="#">lien vidéo à compléter</a></p>
+              </div> <!-- LIEN VIDEO A AJOUTER -->
+              <p>Le co-arbitre fait appliquer le règlement suivant :</p>
+              <ul>
+                <li>En défense, chaque joueur occupe une zone du terrain (défense de zone) et communique avec ses partenaires pour glisser d'une zone à l'autre selon la progression du ballon adverse.</li>
+                <li>Engagement au milieu du terrain (en début de match et après un but concédé).</li>
+                <li>Pénétration interdite dans la zone (surface de but).</li>
+                <li>Les piétinements sont acceptés, mais pas le déplacement (règle des 3 pas / reprise de dribble).</li>
+                <li>Les contacts sont interdits.</li>
+                <li>Quand un joueur commet une faute, il pose le ballon et se prépare à défendre.</li>
+              </ul>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="handball-5e-evaluation">
+              <h4>📊 Modalités d'évaluation</h4>
+              <p><strong>Grille d'évaluation — Handball 5e</strong></p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th>Maîtrise insuffisante</th><th>Maîtrise fragile</th><th>Maîtrise satisfaisante</th><th>Très bonne maîtrise</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="2">Le joueur en défense<br><span class="text-mono">/6</span></td>
+                      <td rowspan="2">Organisation de la défense de zone</td>
+                      <td>L'élève ne participe pas à la défense en zone, reste devant malgré les sollicitations</td>
+                      <td>L'élève revient en zone sans regarder le ballon, il a besoin d'être guidé en permanence et malgré cela, a du mal à trouver ses repères</td>
+                      <td>L'élève revient en zone mais manque de communication pour glisser ou temps de retard mais présent et efficace</td>
+                      <td>L'élève revient toujours en zone ou en presseur et place son équipe en conséquence (communication)</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr>
+                      <td rowspan="4">Le joueur en attaque<br><span class="text-mono">/8</span></td>
+                      <td rowspan="2">PB — Choix : est capable de réaliser une attaque construite</td>
+                      <td>Élève qui ne s'implique pas dans le collectif</td>
+                      <td>Élève qui reste en retrait, manque de réactivité et de rapidité sur les choix de passes ou de dribbles</td>
+                      <td>Élève qui est un bon atout mais qui reste uniquement sur son individualité. Tirs forcés pas toujours en situation favorable</td>
+                      <td>Choix pertinents et rapides et re-propose une solution après sa passe ce qui permet à son équipe d'aller au tir</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">NPB — Participation à la progression rapide du ballon</td>
+                      <td>Pas de déplacements voire gêne le porteur de balle</td>
+                      <td>Déplacements trop discrets, ne permet pas à son équipe de créer des espaces</td>
+                      <td>Déplacements pertinents mais avec un petit manque de réactivité</td>
+                      <td>L'élève propose des solutions pertinentes pour créer un espace dans la défense de zone pour aller tirer favorablement</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Le co-arbitre<br><span class="text-mono">/4</span></td>
+                      <td rowspan="2">Maîtrise des règles du jeu et de l'auto-arbitrage</td>
+                      <td>« Le passif ou perturbateur » — Absent du match ou cherche à imposer son autorité et ses décisions</td>
+                      <td>« L'assisté ou l'influençable » — Sa connaissance du règlement est parcellaire et/ou il est influençable (ne s'affirme pas pendant le match)</td>
+                      <td>« L'handballeur » — Connaît et fait appliquer les principales règles</td>
+                      <td>« L'handballeur expert » — Arbitrage des règles précises, fait assurer un climat serein</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Le joueur fair-play<br><span class="text-mono">/2</span></td>
+                      <td rowspan="2">Gestion des émotions</td>
+                      <td>Attitude à revoir, l'élève quitte le match</td>
+                      <td>Attitude trop changeante, gestion des émotions trop compliquée</td>
+                      <td>Attitude correcte malgré quelques remarques pour se remobiliser sur le match</td>
+                      <td>Attitude irréprochable durant le cycle, gestion des émotions parfaites</td>
+                    </tr>
+                    <tr><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="rubrique" id="handball-5e-videos">
+              <h4>🎥 Vidéos de démonstration</h4>
+              <ul class="video-list">
+                <li>La défense de zone : occuper son secteur — <a href="#">lien à ajouter</a></li>
+                <li>Glisser d'une zone à l'autre — <a href="#">lien à ajouter</a></li>
+                <li>Le choix du porteur de balle (garder / passer / fixer)</li>
+              </ul>
+            </section>
+
+            <section class="rubrique" id="handball-5e-quiz">
               <h4>🧠 Quiz d'entraînement</h4>
               <div class="quiz" data-quiz-id="handball-5e">
                 <div class="quiz-questions"></div>
@@ -116,43 +244,28 @@
               <script>
                 window.QUIZ_DATA = window.QUIZ_DATA || {};
                 window.QUIZ_DATA['handball-5e'] = [
-                  { question: "Un joueur de champ peut-il entrer dans la surface de but ?", options: ["Oui, toujours", "Non, même sans ballon", "Oui, seulement en défense"], correct: 1 },
-                  { question: "Une faute qui empêche une occasion de but manifeste est sanctionnée par :", options: ["Un jet de 7 mètres", "Rien", "Un carton jaune obligatoire"], correct: 0 },
-                  { question: "Le repli défensif consiste à :", options: ["Rester devant le but adverse", "Revenir rapidement protéger son propre but après une perte de balle", "Sortir du terrain"], correct: 1 },
-                  { question: "Occuper les couloirs de jeu permet de :", options: ["Réduire l'espace de jeu", "Élargir l'attaque et créer des espaces", "Ralentir le jeu"], correct: 1 }
+                  { question: "En 5e, quel type de défense collective l'équipe doit-elle organiser ?", options: ["Une défense individuelle stricte", "Une défense de zone", "Aucune défense organisée"], correct: 1 },
+                  { question: "Que signifie « NPB » sur la fiche d'évaluation ?", options: ["Non-Porteur du Ballon", "Nombre de Passes au But", "Note du Bon Placement"], correct: 0 },
+                  { question: "Un « choix pertinent » du porteur de balle (PB) consiste à :", options: ["Toujours dribbler jusqu'au but", "Choisir rapidement entre garder/avancer ou fixer/passer selon la situation", "Attendre l'arrêt du jeu avant de décider"], correct: 1 },
+                  { question: "Dans une défense de zone bien organisée, un joueur « glisse » d'une zone à l'autre grâce à :", options: ["La communication avec ses partenaires", "Le hasard", "L'arrêt du jeu"], correct: 0 },
+                  { question: "Le co-arbitrage en handball 5e signifie que :", options: ["Seul le professeur arbitre", "Les élèves eux-mêmes arbitrent le match en appliquant le règlement", "Il n'y a pas de règles"], correct: 1 },
+                  { question: "Sur la grille, un joueur en attaque qui « re-propose une solution après sa passe » obtient quel niveau de maîtrise ?", options: ["Maîtrise insuffisante", "Maîtrise fragile", "Très bonne maîtrise"], correct: 2 },
+                  { question: "Un co-arbitre « influençable, dont la connaissance du règlement est parcellaire » correspond à l'archétype :", options: ["« L'handballeur »", "« L'assisté ou l'influençable »", "« L'handballeur expert »"], correct: 1 },
+                  { question: "Pourquoi la défense de zone remplace-t-elle la défense individuelle travaillée en 6e ?", options: ["Parce qu'elle est plus simple à comprendre", "Parce qu'elle demande d'occuper un espace et de communiquer collectivement plutôt que suivre un seul adversaire", "Parce que le règlement l'impose à partir de la 5e"], correct: 1 }
                 ];
               </script>
             </section>
 
-            <section class="rubrique">
-              <h4>🎥 Vidéos de démonstration</h4>
-              <ul class="video-list">
-                <li>Le tir en suspension — <a href="#">lien à ajouter</a></li>
-                <li>Le repli défensif — <a href="#">lien à ajouter</a></li>
-              </ul>
-            </section>
-
-            <section class="rubrique">
+            <section class="rubrique" id="handball-5e-lexique">
               <h4>📖 Lexique</h4>
               <dl class="lexique">
-                <dt>Attaque placée</dt><dd>Organisation collective face à une défense déjà en place.</dd>
-                <dt>Repli défensif</dt><dd>Retour rapide de tous les joueurs pour protéger leur but.</dd>
-                <dt>Couloir de jeu</dt><dd>Zone latérale du terrain utilisée pour élargir le jeu.</dd>
+                <dt>Défense de zone</dt><dd>Organisation défensive où chaque joueur occupe et défend un secteur du terrain plutôt qu'un adversaire désigné.</dd>
+                <dt>Glisser</dt><dd>Se déplacer d'une zone défensive à une autre pour suivre le ballon, en communiquant avec ses partenaires.</dd>
+                <dt>Presseur</dt><dd>Défenseur qui vient ponctuellement gêner le porteur de balle sans quitter l'organisation collective.</dd>
+                <dt>PB / NPB</dt><dd>Porteur du Ballon / Non-Porteur du Ballon.</dd>
+                <dt>Co-arbitrage</dt><dd>Arbitrage assuré à tour de rôle par les élèves eux-mêmes.</dd>
+                <dt>Attaque construite</dt><dd>Attaque organisée par des choix collectifs (passes, démarquages) plutôt que par des tentatives individuelles.</dd>
               </dl>
-            </section>
-
-            <section class="rubrique">
-              <h4>📊 Référentiel d'évaluation</h4>
-              <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Compétence évaluée</th><th>Critères de réussite</th><th>Barème indicatif</th></tr></thead>
-                  <tbody>
-                    <tr><td>Projet de jeu collectif</td><td>Occupation de l'espace, choix de passe/tir</td><td>[à compléter]</td></tr>
-                    <tr><td>Efficacité défensive</td><td>Replis, interceptions</td><td>[à compléter]</td></tr>
-                    <tr><td>Fair-play</td><td>Respect des règles et de l'arbitre</td><td>[à compléter]</td></tr>
-                  </tbody>
-                </table>
-              </div>
             </section>
 
           </div>
@@ -168,30 +281,149 @@
           </summary>
           <div class="activity-card__body">
 
-            <section class="rubrique">
+            <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : Ultimate">
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-5e-attendus">🎯 Attendus</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-5e-acquisitions">✅ Acquisitions</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-5e-regles">🏳️ Règles</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-5e-evaluation">📊 Évaluation</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-5e-videos">🎥 Vidéos</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-5e-quiz">🧠 Quiz</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-5e-lexique">📖 Lexique</button>
+            </div>
+
+            <section class="rubrique" id="ultimate-5e-attendus">
               <h4>🎯 Les attendus</h4>
-              <p>Compétence propre CP4. Construire des combinaisons de passes à plusieurs joueurs pour progresser plus efficacement vers l'en-but adverse.</p>
+              <p class="callout callout--neutral">Ce document ne fournissait que la grille d'évaluation ; les attendus, acquisitions et règles ci-dessous ont été rédigés à partir des critères de cette grille et de la progression logique depuis le niveau 6e.</p>
+              <p>
+                Compétence propre CP4 — <em>Conduire et maîtriser un affrontement collectif</em>.
+              </p>
+              <p>
+                En poursuite du travail engagé en 6e, maîtriser les techniques de passe (revers,
+                coup droit) pour faire progresser rapidement le disque, et se démarquer efficacement
+                par des appels et contre-appels. Ajouter à la défense individuelle déjà travaillée
+                une exigence de continuité sur tout un match, voire tout un tournoi. Être réactif
+                lors des turnovers en changeant immédiatement de statut (attaque/défense). Poursuivre
+                l'auto-arbitrage en privilégiant le dialogue pour régler les litiges.
+              </p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Lien avec le socle commun</th></tr></thead>
+                  <tbody>
+                    <tr><td>Le joueur en attaque</td><td>Pratiquer des APSA et acquérir des techniques spécifiques pour améliorer son efficacité (domaine 1)</td></tr>
+                    <tr><td>Le joueur en attaque et en défense</td><td>Coopérer et réaliser des projets (domaine 2)</td></tr>
+                    <tr><td>L'équipe en défense</td><td>Coopérer et réaliser des projets (domaine 2)</td></tr>
+                    <tr><td>L'auto-arbitre</td><td>Faire preuve de responsabilité, respecter les règles de la vie collective, s'engager et prendre des initiatives (domaine 3)</td></tr>
+                  </tbody>
+                </table>
+              </div>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="ultimate-5e-acquisitions">
               <h4>✅ Acquisitions prioritaires</h4>
+
+              <p><strong>Le joueur en attaque</strong></p>
               <ul>
-                <li>Enchaîner plusieurs passes rapides et précises.</li>
-                <li>Marquer son adversaire direct (marking).</li>
-                <li>Occuper des espaces différents selon le porteur du disque.</li>
-                <li>Continuer à respecter l'esprit du jeu, y compris en situation tendue.</li>
+                <li>Participer activement à l'attaque en limitant les déchets (passes perdues) ; dépasser la maîtrise basique du seul revers pour utiliser aussi le coup droit.</li>
+                <li>Prendre l'information rapidement et transmettre des passes précises dans la course du non-porteur de disque.</li>
+                <li>Se démarquer avec mobilité, en réalisant des appels et contre-appels pour sortir du marquage du défenseur.</li>
+                <li>S'adapter aux déplacements de ses partenaires et demander le disque dans sa course.</li>
+              </ul>
+
+              <p><strong>Le joueur en attaque et en défense</strong></p>
+              <ul>
+                <li>Être très réactif lors de chaque turnover : changer immédiatement de statut (passer d'attaquant à défenseur ou inversement) sans temps mort.</li>
+              </ul>
+
+              <p><strong>L'équipe en défense</strong></p>
+              <ul>
+                <li>Organiser et maintenir une défense individuelle sans « trous », de façon permanente sur un match, puis sur un tournoi entier.</li>
+              </ul>
+
+              <p><strong>L'auto-arbitre</strong></p>
+              <p>Auto-arbitrer une rencontre en connaissant et en appliquant les règles principales (voir l'onglet « Règles »), en privilégiant le dialogue pour contribuer à un climat serein plutôt que d'imposer ses décisions.</p>
+            </section>
+
+            <section class="rubrique" id="ultimate-5e-regles">
+              <h4>🏳️ Règles d'arbitrage</h4>
+              <div class="video-embed video-embed--placeholder">
+                <p>🎬 Vidéo résumant les règles à ajouter — <a href="#">lien vidéo à compléter</a></p>
+              </div> <!-- LIEN VIDEO A AJOUTER -->
+              <p>L'ultimate se joue en auto-arbitrage. Règlement appliqué par les joueurs eux-mêmes :</p>
+              <ul>
+                <li>Engagement en début de match, puis changement d'en-but à chaque touchdown.</li>
+                <li>10 secondes maximum le disque en main pour le porteur : elles sont déclenchées et comptées à voix haute par le défenseur au marquage.</li>
+                <li>Défense individuelle, à 1m du porteur de disque, maintenue sans interruption tout au long du match.</li>
+                <li>Interdiction de se déplacer disque en main (le pied de pivot doit rester fixe).</li>
+                <li>En cas de désaccord sur une faute (contact, marcher...), les deux joueurs concernés dialoguent pour trouver un accord ; en cas de doute persistant, le disque revient au dernier joueur qui en avait la possession.</li>
               </ul>
             </section>
 
-            <section class="rubrique">
-              <h4>🏳️ Règles d'arbitrage</h4>
-              <div class="video-placeholder">
-                🎬 Vidéo à ajouter — <a href="#">lien vidéo à compléter</a> <!-- LIEN VIDEO A AJOUTER -->
+            <section class="rubrique" id="ultimate-5e-evaluation">
+              <h4>📊 Modalités d'évaluation</h4>
+              <p><strong>Grille d'évaluation — Ultimate 5e</strong></p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th>Maîtrise insuffisante</th><th>Maîtrise fragile</th><th>Maîtrise satisfaisante</th><th>Très bonne maîtrise</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="4">Le joueur en attaque<br><span class="text-mono">/9</span></td>
+                      <td rowspan="2">Rôle dans la progression rapide du disque et maîtrise des coups</td>
+                      <td>Le joueur ne participe pas à l'attaque ou trop de déchets</td>
+                      <td>Le joueur se débarrasse systématiquement du disque lorsqu'il en a possession, maîtrise basique des coups (revers principalement)</td>
+                      <td>Bonne prise d'information et maîtrise des coups mais problème d'exécution quelques fois</td>
+                      <td>Très efficace : maîtrise des différentes techniques et passes précises dans la course du NPD</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2,5 pts</td><td>4 pts</td><td>5 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Démarquage</td>
+                      <td>Ne participe jamais ou rarement aux contre-attaques, reste statique</td>
+                      <td>Manque de mobilité lorsque le défenseur est au marquage et/ou ne se démarque pas efficacement (est caché par le défenseur)</td>
+                      <td>Mobile, propose des solutions de passe efficace malgré la présence d'un défenseur</td>
+                      <td>Très mobile, est capable de faire des appels/contre appels pour sortir du marquage, s'adapte selon les déplacements de ses partenaires, demande des disques dans la course</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Le joueur en attaque et en défense<br><span class="text-mono">/5</span></td>
+                      <td rowspan="2">Réactivité lors des turnovers</td>
+                      <td>Temps de réaction trop important mettant en difficulté son équipe</td>
+                      <td>Temps de réaction trop changeant en fonction des équipes</td>
+                      <td>Temps de réaction correct mais qui peut s'améliorer</td>
+                      <td>Très vif lors de tous les turnovers</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2,5 pts</td><td>4 pts</td><td>5 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">L'équipe en défense<br><span class="text-mono">/4</span></td>
+                      <td rowspan="2">Organisation et mise en place de la défense individuelle</td>
+                      <td>La défense à trous</td>
+                      <td>L'individuelle à mi-temps</td>
+                      <td>L'individuelle permanente sur un match</td>
+                      <td>L'individuelle permanente sur un tournoi</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">L'auto-arbitre<br><span class="text-mono">/2</span></td>
+                      <td rowspan="2">Maîtrise des règles du jeu et de l'auto-arbitrage</td>
+                      <td>Évite le dialogue et tente d'imposer aux autres ses décisions altérant le climat de la rencontre</td>
+                      <td>Sa connaissance du règlement est parcellaire. Les autres joueurs lui rappellent ce qu'il doit faire et/ou fait de l'anti-jeu</td>
+                      <td>Capable d'un auto-arbitrage des règles principales</td>
+                      <td>Capable d'un auto-arbitrage des règles précises, contribue à assurer un climat serein</td>
+                    </tr>
+                    <tr><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                  </tbody>
+                </table>
               </div>
-              <p>Le défenseur qui marque le porteur du disque doit compter à voix haute ("stall count") jusqu'à 10 : si le disque n'est pas lancé avant, il y a turnover.</p>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="ultimate-5e-videos">
+              <h4>🎥 Vidéos de démonstration</h4>
+              <ul class="video-list">
+                <li>Le démarquage par appels et contre-appels — <a href="#">lien à ajouter</a></li>
+                <li>Réagir vite après un turnover — <a href="#">lien à ajouter</a></li>
+                <li>Tenir une défense individuelle sur tout un match — <a href="#">lien à ajouter</a></li>
+              </ul>
+            </section>
+
+            <section class="rubrique" id="ultimate-5e-quiz">
               <h4>🧠 Quiz d'entraînement</h4>
               <div class="quiz" data-quiz-id="ultimate-5e">
                 <div class="quiz-questions"></div>
@@ -201,50 +433,35 @@
               <script>
                 window.QUIZ_DATA = window.QUIZ_DATA || {};
                 window.QUIZ_DATA['ultimate-5e'] = [
-                  { question: "Le 'stall count' est :", options: ["Le score final du match", "Le décompte du défenseur pour forcer une passe rapide", "Un type de passe"], correct: 1 },
-                  { question: "Si le stall count atteint 10 sans passe :", options: ["Rien ne se passe", "C'est un turnover", "Le point est marqué"], correct: 1 },
-                  { question: "'Marker' son adversaire direct signifie :", options: ["Le défendre individuellement", "L'aider à attaquer", "Le remplacer"], correct: 0 },
-                  { question: "Une combinaison de passes efficace vise à :", options: ["Perdre du temps", "Progresser rapidement vers l'en-but adverse", "Sortir le disque du terrain"], correct: 1 }
+                  { question: "Quel geste technique un joueur d'ultimate 5e doit-il maîtriser, en plus du revers ?", options: ["Le coup droit", "Le service", "La touche"], correct: 0 },
+                  { question: "Le démarquage par « appels et contre-appels » sert à :", options: ["Rester immobile près du porteur", "Sortir du marquage du défenseur en changeant de rythme et de direction", "Ralentir le jeu de son équipe"], correct: 1 },
+                  { question: "Un « turnover » se produit quand :", options: ["Une équipe marque un point", "Le disque change de possession (interception, chute, faute)", "Le match se termine"], correct: 1 },
+                  { question: "Après un turnover, un joueur réactif doit :", options: ["Attendre les instructions de l'arbitre", "Changer immédiatement de statut (attaque/défense) et se replacer vite", "Sortir du terrain"], correct: 1 },
+                  { question: "Une défense individuelle « permanente sur un tournoi » obtient quel niveau de maîtrise ?", options: ["Maîtrise insuffisante", "Maîtrise fragile", "Très bonne maîtrise"], correct: 2 },
+                  { question: "En cas de désaccord sur une faute, l'esprit de l'auto-arbitrage veut que :", options: ["Le jeu s'arrête définitivement", "Les joueurs dialoguent pour trouver un accord", "Un spectateur décide à leur place"], correct: 1 },
+                  { question: "Un joueur qui « maîtrise les différentes techniques et passes précises dans la course du non-porteur de disque » obtient, pour ce critère noté sur 5 :", options: ["1 pt", "4 pts", "5 pts"], correct: 2 },
+                  { question: "Un auto-arbitre qui « évite le dialogue et tente d'imposer ses décisions » obtient combien de points sur ce critère noté sur 2 ?", options: ["0,5 pt", "1,5 pt", "2 pts"], correct: 0 }
                 ];
               </script>
             </section>
 
-            <section class="rubrique">
-              <h4>🎥 Vidéos de démonstration</h4>
-              <ul class="video-list">
-                <li>La passe longue (huck) — <a href="#">lien à ajouter</a></li>
-                <li>Le marquage défensif — <a href="#">lien à ajouter</a></li>
-              </ul>
-            </section>
-
-            <section class="rubrique">
+            <section class="rubrique" id="ultimate-5e-lexique">
               <h4>📖 Lexique</h4>
               <dl class="lexique">
-                <dt>Stall count</dt><dd>Décompte à voix haute du défenseur qui limite le temps de possession du disque.</dd>
-                <dt>Handler</dt><dd>Joueur qui organise le jeu proche du porteur du disque.</dd>
-                <dt>Cutter</dt><dd>Joueur qui sprinte pour se démarquer et recevoir une passe.</dd>
+                <dt>Turnover</dt><dd>Changement de possession du disque (interception, chute, faute).</dd>
+                <dt>Appel / contre-appel</dt><dd>Changements de direction et de rythme d'un non-porteur pour sortir du marquage de son défenseur.</dd>
+                <dt>Défense individuelle permanente</dt><dd>Défense sur un adversaire attitré, maintenue sans interruption sur tout un match ou un tournoi.</dd>
+                <dt>Auto-arbitrage</dt><dd>Arbitrage assuré par les joueurs eux-mêmes, basé sur le dialogue et le respect du règlement.</dd>
+                <dt>Pied de pivot</dt><dd>Pied qui reste fixe au sol pendant qu'on manie le disque.</dd>
+                <dt>Esprit du jeu</dt><dd>Principe fondateur de l'ultimate basé sur le respect et l'auto-arbitrage.</dd>
               </dl>
-            </section>
-
-            <section class="rubrique">
-              <h4>📊 Référentiel d'évaluation</h4>
-              <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Compétence évaluée</th><th>Critères de réussite</th><th>Barème indicatif</th></tr></thead>
-                  <tbody>
-                    <tr><td>Enchaînement de passes</td><td>Nombre de passes réussies avant turnover</td><td>[à compléter]</td></tr>
-                    <tr><td>Défense individuelle</td><td>Qualité du marquage</td><td>[à compléter]</td></tr>
-                    <tr><td>Esprit du jeu</td><td>Respect et autogestion des litiges</td><td>[à compléter]</td></tr>
-                  </tbody>
-                </table>
-              </div>
             </section>
 
           </div>
         </details>
 
         <!-- ==================================================
-             ACTIVITE 3 — BIATHLON
+             ACTIVITE 3 — BIATHLON (SCOLAIRE)
              ================================================== -->
         <details class="activity-card" id="biathlon-5e">
           <summary>
@@ -253,35 +470,161 @@
           </summary>
           <div class="activity-card__body">
 
-            <section class="rubrique">
+            <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : Biathlon">
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="biathlon-5e-attendus">🎯 Attendus</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="biathlon-5e-acquisitions">✅ Acquisitions</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="biathlon-5e-regles">🏳️ Règles</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="biathlon-5e-evaluation">📊 Évaluation</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="biathlon-5e-videos">🎥 Vidéos</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="biathlon-5e-quiz">🧠 Quiz</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="biathlon-5e-lexique">📖 Lexique</button>
+            </div>
+
+            <section class="rubrique" id="biathlon-5e-attendus">
               <h4>🎯 Les attendus</h4>
-              <p>Compétence propre CP1. Gérer son effort en alternant course (demi-fond) et tir de précision (laser ou carabine à air comprimé sécurisée), en restant lucide malgré la fatigue.</p>
+              <p>
+                Compétence propre CP1 — <em>Réaliser une performance motrice maximale</em>.
+              </p>
+              <p>
+                Enchaîner une course de demi-fond gérée à l'allure choisie (VMA ou VMA-1) et des
+                séries de lancers de vortex afin de produire la meilleure performance combinée
+                possible, en gérant le compromis entre vitesse de course et précision de lancer.
+                Observer, valider et conseiller un camarade dans son échauffement et sa performance.
+                Savoir s'échauffer en autonomie pour préparer son corps à une épreuve combinée.
+              </p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Lien avec le socle commun</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td>L'athlète</td>
+                      <td>
+                        <ul>
+                          <li>« Planifier et réaliser une épreuve combinée »</li>
+                          <li>« Gérer son effort, faire des choix pour réaliser la meilleure performance »</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr><td>L'échauffé</td><td>« S'échauffer avant un effort »</td></tr>
+                    <tr><td>L'observateur / coach</td><td>« Aider ses camarades et assumer différents rôles sociaux »</td></tr>
+                  </tbody>
+                </table>
+              </div>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="biathlon-5e-acquisitions">
               <h4>✅ Acquisitions prioritaires</h4>
+
+              <p><strong>L'athlète</strong></p>
               <ul>
-                <li>Réguler sa vitesse de course pour arriver au tir en état de tirer juste.</li>
-                <li>Maîtriser sa respiration avant chaque tir.</li>
-                <li>Connaître la pénalité liée à un tir manqué (tour de pénalité ou temps ajouté).</li>
-                <li>Respecter strictement les consignes de sécurité au pas de tir.</li>
+                <li>S'engager dans une démarche réflexive individuelle à partir de la prise en compte des leçons réalisées précédemment.</li>
+                <li>Définir une stratégie d'épreuve (course + lancers) visant la meilleure performance possible en fonction de ses capacités du jour J.</li>
+                <li>Gérer son allure de course afin d'arriver à temps (ni en avance, ni en retard) à son plot de VMA.</li>
+                <li>Gérer le compromis vitesse (lors des allers-retours de 18'') / précision (lors des lancers de vortex).</li>
+                <li>Ajuster son tir : contrôler sa respiration, maîtrise et stabilité de la concentration.</li>
+              </ul>
+
+              <p><strong>L'échauffé</strong></p>
+              <ul>
+                <li>Adapter son échauffement à l'épreuve à réaliser : course (effort intense) + lancers.</li>
+                <li>S'organiser pour effectuer un échauffement complet en 12' (articulations, gammes musculaires, étirements activo-dynamiques, accélérations progressives, lancers).</li>
+              </ul>
+
+              <p><strong>L'observateur / coach</strong></p>
+              <ul>
+                <li>Maîtriser les rôles d'observateur (remplir la fiche d'observation : course réalisée dans les temps, lancers valides dans la zone) et de coach (gérer l'échauffement de son athlète, être réactif pour ramener les vortex dans la zone de lancer afin que l'athlète puisse enchaîner sans perdre de temps).</li>
+                <li>Renseigner son camarade à partir de critères simples (courses restantes, gestion de l'allure, précision des lancers).</li>
+                <li>Encourager et motiver son camarade.</li>
               </ul>
             </section>
 
-            <section class="rubrique rubrique--optional">
-              <h4>📋 Évaluation diagnostique</h4>
-              <p>Un test initial (course chronométrée + série de tirs) permet de mesurer le niveau de départ en course et en précision, avant de fixer des objectifs individuels.</p>
-            </section>
-
-            <section class="rubrique">
+            <section class="rubrique" id="biathlon-5e-regles">
               <h4>🏳️ Règles d'arbitrage</h4>
-              <div class="video-placeholder">
-                🎬 Vidéo à ajouter — <a href="#">lien vidéo à compléter</a> <!-- LIEN VIDEO A AJOUTER -->
-              </div>
-              <p>Chaque tir manqué entraîne une pénalité (tour de pénalité chronométré ou temps ajouté au résultat final, selon le format choisi par le professeur). Le respect des consignes de sécurité au pas de tir est impératif et non négociable.</p>
+              <div class="video-embed video-embed--placeholder">
+                <p>🎬 Vidéo résumant les règles à ajouter — <a href="#">lien vidéo à compléter</a></p>
+              </div> <!-- LIEN VIDEO A AJOUTER -->
+              <p>Ce sont les règles que l'observateur/coach doit connaître et faire respecter :</p>
+              <ul>
+                <li>Avant de courir, l'athlète annonce son choix : courir à sa VMA ou à VMA-1.</li>
+                <li>Chaque aller-retour dure 18'' : le passage n'est validé que si l'athlète arrive au plot ni en avance, ni en retard.</li>
+                <li>À l'issue des 3 minutes de course, l'athlète dispose de 1'30 pour effectuer 3 lancers de vortex dans la zone de lancer de son choix.</li>
+                <li>Une récupération de 1'30 est accordée avant d'enchaîner la seconde partie de l'épreuve (nouveau choix de plot, 3' de course, 1'30 de lancers).</li>
+              </ul>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="biathlon-5e-evaluation">
+              <h4>📊 Modalités d'évaluation</h4>
+
+              <p><strong>Situation repère</strong></p>
+              <ul>
+                <li>Les élèves sont évalués sur le rôle d'athlète. L'évaluation consiste à réaliser 2 courses de 3 minutes alternées par 2 sessions de 3 lancers.</li>
+                <li>Avant la course, les athlètes doivent indiquer leur choix de courir à leur VMA ou à VMA-1. Ils enchaînent ensuite 3 minutes de course pendant lesquelles ils effectuent des allers-retours (10 courses) de 18'' jusqu'au plot choisi (VMA ou VMA-1). L'objectif est d'arriver au plot à la fin des 18'', ni en avance, ni en retard sinon le passage n'est pas validé.</li>
+                <li>À la fin de ces 3 minutes de course, les athlètes ont 1'30 pour effectuer leurs 3 lancers. Le choix de la zone est laissé aux élèves.</li>
+                <li>Les athlètes ont ensuite 1'30 de récupération avant d'effectuer la seconde partie de l'évaluation (choix du plot de course – 3' d'allers-retours – 1'30 pour effectuer 3 lancers).</li>
+                <li>Les élèves n'étant pas évalués sur le rôle d'athlète sont évalués sur le rôle d'observateur/coach. Leur but est de valider les courses de leurs camarades et les lancers ainsi que de les aider dans leur échauffement et dans leur gestion de course.</li>
+                <li>En plus de ces 2 rôles, les élèves seront évalués sur le rôle de l'échauffé (être capable de préparer son corps à une épreuve de biathlon pendant 12').</li>
+              </ul>
+
+              <p><strong>Grille d'évaluation — Biathlon 5e</strong></p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th>Maîtrise insuffisante</th><th>Maîtrise fragile</th><th>Maîtrise satisfaisante</th><th>Très bonne maîtrise</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="4">L'athlète<br><span class="text-mono">/12</span></td>
+                      <td rowspan="2">Nombre de points obtenus<br><span class="text-mono">/9</span></td>
+                      <td>Moins de 15 pts</td><td>Entre 15 et 20 pts</td><td>Entre 21 et 23 pts</td><td>Plus de 24 pts</td>
+                    </tr>
+                    <tr><td>2,25 pts</td><td>4,5 pts</td><td>6,75 pts</td><td>9 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Choix et réalisation du projet de course<br><span class="text-mono">/3</span></td>
+                      <td>L'athlète ne court pas et ne lance pas à sa VMA et zone de lancer de référence</td>
+                      <td>L'athlète fait 2 choix en-deçà de sa VMA et/ou zone de lancer de référence</td>
+                      <td>L'athlète fait 1 choix en-deçà de sa VMA et/ou zone de lancer de référence</td>
+                      <td>Le choix fait par l'athlète pour la course et les lancers correspond à sa VMA et zone de lancer de référence</td>
+                    </tr>
+                    <tr><td>0,75 pt</td><td>1,5 pt</td><td>2,25 pts</td><td>3 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">L'échauffé<br><span class="text-mono">/4</span></td>
+                      <td rowspan="2">Qualité et gestion de l'échauffement</td>
+                      <td>Peu de sérieux, l'échauffement est incomplet voire inexistant et trop entrecoupé de moments de pause</td>
+                      <td>Échauffement incomplet ou terminé trop en avance (mauvaise gestion des 8')</td>
+                      <td>L'échauffement est complet mais manque de progressivité dans les étapes réalisées</td>
+                      <td>L'échauffement est complet et progressif. L'athlète est prêt à réaliser son épreuve.</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr>
+                      <td rowspan="4">L'observateur/coach<br><span class="text-mono">/4</span></td>
+                      <td rowspan="2">Remplissage fiche d'observation<br><span class="text-mono">/2</span></td>
+                      <td>Fiche d'observation pas remplie ou non rendue</td>
+                      <td>Fiche d'observation partiellement remplie</td>
+                      <td>Fiche d'observation remplie avec sérieux mais manque des informations</td>
+                      <td>Fiche d'observation complète : projet de course, observations, total</td>
+                    </tr>
+                    <tr><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Attitude vis-à-vis de son camarade<br><span class="text-mono">/2</span></td>
+                      <td>Pas concerné par la course de son camarade</td>
+                      <td>Manque de concentration dans l'observation</td>
+                      <td>Encourage et motive son camarade</td>
+                      <td>Encourage et conseille son camarade sur son épreuve</td>
+                    </tr>
+                    <tr><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="rubrique" id="biathlon-5e-videos">
+              <h4>🎥 Vidéos de démonstration</h4>
+              <ul class="video-list">
+                <li>Gérer son allure entre VMA et VMA-1 — <a href="#">lien à ajouter</a></li>
+                <li>Enchaîner course et lancer de vortex — <a href="#">lien à ajouter</a></li>
+                <li>Remplir une fiche d'observation — <a href="#">lien à ajouter</a></li>
+              </ul>
+            </section>
+
+            <section class="rubrique" id="biathlon-5e-quiz">
               <h4>🧠 Quiz d'entraînement</h4>
               <div class="quiz" data-quiz-id="biathlon-5e">
                 <div class="quiz-questions"></div>
@@ -291,43 +634,27 @@
               <script>
                 window.QUIZ_DATA = window.QUIZ_DATA || {};
                 window.QUIZ_DATA['biathlon-5e'] = [
-                  { question: "Le biathlon scolaire associe :", options: ["Natation et course", "Course et tir de précision", "Vélo et saut"], correct: 1 },
-                  { question: "Un tir manqué entraîne en général :", options: ["Aucune conséquence", "Une pénalité (tour ou temps ajouté)", "La victoire automatique"], correct: 1 },
-                  { question: "Avant de tirer, il est important de :", options: ["Courir le plus vite possible", "Réguler sa respiration pour se stabiliser", "Fermer les deux yeux"], correct: 1 },
-                  { question: "Au pas de tir, la sécurité est :", options: ["Facultative", "Impérative et non négociable", "Gérée uniquement par les élèves"], correct: 1 }
+                  { question: "Le biathlon scolaire pratiqué ici associe :", options: ["Natation et tir", "Course de demi-fond (VMA) et lancers de vortex", "Vélo et saut en hauteur"], correct: 1 },
+                  { question: "Avant de courir, l'athlète doit choisir :", options: ["Courir à sa VMA ou à VMA-1", "Le nombre de tours à faire", "La couleur de son plot"], correct: 0 },
+                  { question: "Pendant la course, un passage est validé si l'athlète arrive au plot :", options: ["Le plus vite possible", "Ni en avance, ni en retard sur les 18''", "Après 30 secondes"], correct: 1 },
+                  { question: "Combien de temps l'athlète a-t-il pour effectuer ses 3 lancers après chaque course de 3 minutes ?", options: ["30 secondes", "1'30", "5 minutes"], correct: 1 },
+                  { question: "Le rôle d'observateur/coach consiste notamment à :", options: ["Courir à la place de l'athlète", "Remplir la fiche d'observation et ramener rapidement les vortex", "Ne rien faire pendant l'épreuve"], correct: 1 },
+                  { question: "Un échauffement noté « complet et progressif », où l'athlète est prêt à réaliser son épreuve, correspond à :", options: ["Maîtrise insuffisante", "Maîtrise fragile", "Très bonne maîtrise"], correct: 2 },
+                  { question: "Le critère « choix et réalisation du projet de course » évalue surtout :", options: ["Si le choix de VMA et de zone de lancer annoncé correspond à la performance réellement réalisée", "Le nombre de spectateurs présents", "La couleur du dossard"], correct: 0 },
+                  { question: "Pour obtenir le maximum de points sur le critère « nombre de points obtenus » (noté sur 9), il faut totaliser :", options: ["Moins de 15 points", "Entre 21 et 23 points", "Plus de 24 points"], correct: 2 }
                 ];
               </script>
             </section>
 
-            <section class="rubrique">
-              <h4>🎥 Vidéos de démonstration</h4>
-              <ul class="video-list">
-                <li>Position de tir stable — <a href="#">lien à ajouter</a></li>
-                <li>Gestion de l'allure en course — <a href="#">lien à ajouter</a></li>
-              </ul>
-            </section>
-
-            <section class="rubrique">
+            <section class="rubrique" id="biathlon-5e-lexique">
               <h4>📖 Lexique</h4>
               <dl class="lexique">
-                <dt>Pas de tir</dt><dd>Zone dédiée et sécurisée où s'effectuent les tirs.</dd>
-                <dt>Pénalité</dt><dd>Sanction (temps ou tour supplémentaire) pour un tir manqué.</dd>
-                <dt>Allure</dt><dd>Vitesse de course maintenue sur la distance.</dd>
+                <dt>VMA</dt><dd>Vitesse Maximale Aérobie : vitesse de référence utilisée pour calculer l'allure de course (VMA ou VMA-1).</dd>
+                <dt>Plot de VMA</dt><dd>Repère au sol que l'athlète doit atteindre au bout de chaque 18'' de course, ni en avance ni en retard.</dd>
+                <dt>Zone de lancer</dt><dd>Zone choisie par l'athlète pour effectuer ses 3 lancers de vortex après chaque course.</dd>
+                <dt>Épreuve combinée</dt><dd>Épreuve qui associe plusieurs disciplines (ici course et lancer) dont les performances se cumulent.</dd>
+                <dt>Fiche d'observation</dt><dd>Document rempli par l'observateur/coach pour valider et noter les performances de son camarade.</dd>
               </dl>
-            </section>
-
-            <section class="rubrique">
-              <h4>📊 Référentiel d'évaluation</h4>
-              <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Compétence évaluée</th><th>Critères de réussite</th><th>Barème indicatif</th></tr></thead>
-                  <tbody>
-                    <tr><td>Performance globale</td><td>Temps total (course + pénalités)</td><td>[à compléter]</td></tr>
-                    <tr><td>Précision au tir</td><td>Nombre de cibles touchées</td><td>[à compléter]</td></tr>
-                    <tr><td>Gestion de l'effort</td><td>Régularité de l'allure de course</td><td>[à compléter]</td></tr>
-                  </tbody>
-                </table>
-              </div>
             </section>
 
           </div>
@@ -343,30 +670,212 @@
           </summary>
           <div class="activity-card__body">
 
-            <section class="rubrique">
+            <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : Badminton">
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-5e-attendus">🎯 Attendus</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-5e-acquisitions">✅ Acquisitions</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-5e-regles">🏳️ Règles</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-5e-evaluation">📊 Évaluation</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-5e-videos">🎥 Vidéos</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-5e-quiz">🧠 Quiz</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-5e-lexique">📖 Lexique</button>
+            </div>
+
+            <section class="rubrique" id="badminton-5e-attendus">
               <h4>🎯 Les attendus</h4>
-              <p>Compétence propre CP4. Construire un rapport de force favorable en variant la longueur et le placement de ses frappes pour prendre l'adversaire de vitesse.</p>
+              <p>
+                Compétence propre CP4 — <em>Conduire et maîtriser un affrontement individuel</em>.
+              </p>
+              <p>
+                En simple et sur ½ terrain, s'entraîner pour gagner le match en étant capable de
+                construire un point pour rompre l'échange en mettant intentionnellement l'adversaire
+                en difficulté (utilisation de frappes variées en longueur et vitesse). Appliquer et
+                faire appliquer le règlement. Participer à l'installation et au rangement du matériel.
+              </p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Lien avec le socle commun</th></tr></thead>
+                  <tbody>
+                    <tr><td>Le joueur</td><td>Pratiquer des APSA et acquérir des techniques spécifiques pour être plus efficient (domaine 1)</td></tr>
+                    <tr>
+                      <td>L'entraîné</td>
+                      <td>
+                        <ul>
+                          <li>Répéter un geste pour le stabiliser et le rendre plus efficace (Domaine 2)</li>
+                          <li>Construire et mettre en œuvre des projets d'apprentissage (Domaine 2)</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr><td>L'arbitre</td><td>Faire preuve de responsabilité, respecter les règles de la vie collective, s'engager et prendre des initiatives (domaine 3)</td></tr>
+                    <tr><td>Le matériel</td><td>Faire preuve de responsabilité, respecter les règles de la vie collective, s'engager et prendre des initiatives (domaine 3)</td></tr>
+                  </tbody>
+                </table>
+              </div>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="badminton-5e-acquisitions">
               <h4>✅ Acquisitions prioritaires</h4>
+
+              <p><strong>Le joueur</strong></p>
+              <p>Jouer avec intentionnalité :</p>
               <ul>
-                <li>Varier les trajectoires (court / long, croisé / droit).</li>
-                <li>Anticiper le déplacement de l'adversaire.</li>
-                <li>Enchaîner déplacement et frappe sans se déséquilibrer.</li>
-                <li>Arbitrer un match en autonomie (score, faute, sortie).</li>
+                <li>Utiliser le service comme une arme permettant de mettre en difficulté son adversaire (prendre l'avantage sur le jeu) : services courts/longs.</li>
+                <li>Identifier les situations favorables de marque : utilisation du BINGO de manière pertinente.</li>
+                <li>Exploiter les espaces libres (ex : je fais un dégagé fond de court pour créer l'espace libre juste derrière le filet et ainsi faire un amorti OU j'envoie un volant fond de terrain pour que mon adversaire me renvoie un volant haut devant le filet et que je smashe).</li>
+                <li>Frappes variées en longueur (jeu court/jeu long) et en vitesse (amorti/smash) : je joue pour gagner le point et pas seulement pour renvoyer le volant.</li>
+                <li>Position d'attente et replacement : le replacement doit servir à rejouer et pas seulement à revenir au milieu.</li>
+              </ul>
+
+              <p><strong>L'entraîné</strong></p>
+              <ul>
+                <li>Produire des trajectoires hautes pour favoriser le maintien de l'échange.</li>
+                <li>Répéter un geste pour le stabiliser puis être capable de le réinvestir en situation de match : jeu des 3 zones.</li>
+                <li>S'investir dans une routine de travail.</li>
+              </ul>
+
+              <p><strong>L'arbitre</strong></p>
+              <ul>
+                <li>Développer un arbitrage prenant en compte les règles suivantes : service, délimitations du terrain, fautes principales.</li>
+                <li>Prendre des décisions justifiées.</li>
+                <li>Suivre et tenir une feuille de match.</li>
+                <li>Compter les points et annoncer le serveur.</li>
+              </ul>
+
+              <p><strong>Le matériel</strong></p>
+              <ul>
+                <li>Savoir installer les poteaux et filet puis tendre les filets.</li>
+                <li>Plier correctement le filet.</li>
               </ul>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="badminton-5e-regles">
               <h4>🏳️ Règles d'arbitrage</h4>
-              <div class="video-placeholder">
-                🎬 Vidéo à ajouter — <a href="#">lien vidéo à compléter</a> <!-- LIEN VIDEO A AJOUTER -->
-              </div>
-              <p>Une faute est sifflée si le volant touche le joueur ou ses vêtements, si le joueur touche le filet avec sa raquette ou son corps, ou si le volant est frappé deux fois de suite par le même joueur.</p>
+              <div class="video-embed video-embed--placeholder">
+                <p>🎬 Vidéo résumant les règles à ajouter — <a href="#">lien vidéo à compléter</a></p>
+              </div> <!-- LIEN VIDEO A AJOUTER -->
+              <p>L'arbitre développe son arbitrage en tenant une feuille de match et en portant une attention particulière aux règles suivantes :</p>
+              <ul>
+                <li>Service : 1 service par personne, je sers quand je gagne le point ; le volant doit arriver derrière la rivière et être tapé en dessous de la taille ; si le volant n'est pas touché, il y a une 2e chance.</li>
+                <li>Délimitations du terrain : les lignes font partie du terrain, on joue avec les lignes les plus à l'extérieur.</li>
+                <li>Fautes principales : toucher le filet avec la raquette ou le corps, frapper le volant deux fois de suite (pas de jongle possible), ne pas respecter son côté de terrain.</li>
+                <li>L'arbitre compte les points et annonce le serveur à haute voix, et prend des décisions justifiées sur les situations litigieuses.</li>
+              </ul>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="badminton-5e-evaluation">
+              <h4>📊 Modalités d'évaluation</h4>
+
+              <p><strong>Situation repère</strong></p>
+              <ul>
+                <li>Les élèves sont évalués lors d'une montante-descendante durant laquelle les matchs durent 3'30min. Chaque élève est placé au début de la montante-descendante et la rotation se fait ensuite de manière autonome : l'élève qui gagne le match monte d'un ½ terrain, l'élève qui perd le match descend d'un ½ terrain. S'il y a un arbitre sur le ½ terrain, c'est le perdant du terrain du dessus qui devient arbitre et l'arbitre qui joue sur le ½ terrain qu'il vient d'arbitrer.</li>
+                <li>Le choix de la montante-descendante se justifie au regard de la volonté d'observer les élèves rompre les échanges le plus vite possible et afin de permettre à tous les élèves de jouer le même nombre de matchs.</li>
+                <li>Le rôle d'arbitre est évalué au fil de la séquence (évaluation continue) mais sera aussi observé lors de l'évaluation.</li>
+                <li>Le rôle de l'entraîné est aussi évalué au fil de la séquence lors des situations d'apprentissage et des situations de réinvestissement.</li>
+              </ul>
+
+              <p><strong>Grille d'évaluation — Le joueur et l'arbitre</strong></p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th>Maîtrise insuffisante</th><th>Maîtrise fragile</th><th>Maîtrise satisfaisante</th><th>Très bonne maîtrise</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="9">Le joueur<br><span class="text-mono">/16</span></td>
+                      <td>Profils</td>
+                      <td>« L'inintentionné »</td><td>« Le sécuritaire »</td><td>« Le technicien »</td><td>« Le tacticien »</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2">Position d'attente et replacement</td>
+                      <td>Position d'attente et replacement absent (subit l'échange)</td>
+                      <td>– Position d'attente présente mais peu passive (manque de dynamisme)<br>– Replacement effectué mais inefficace</td>
+                      <td>– Position d'attente active (raquette haute, dynamique)<br>– Replacement régulier permettant de rejouer dans de bonnes conditions</td>
+                      <td>– Position d'attente dynamique (anticipation)<br>– Replacement rapide et efficace permettant de prendre l'initiative</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Service</td>
+                      <td>Service pas maîtrisé ou pas règlementaire</td>
+                      <td>Service règlementaire mais sans intention de marquer le point</td>
+                      <td>Arrive à marquer quelques points grâce à son service</td>
+                      <td>Met systématiquement en difficulté son adversaire dès le service</td>
+                    </tr>
+                    <tr><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Construction du point</td>
+                      <td>Pas d'intentionnalité : renvois centrés ou beaucoup de fautes directes</td>
+                      <td>Cherche aléatoirement à mettre en difficulté son adversaire en utilisant principalement le dégagé et le jeu court/long</td>
+                      <td>Construction simple du point en identifiant les espaces libres, frappes variées mais pas toujours précises</td>
+                      <td>Crée et exploite toutes les situations favorables de marque grâce à l'utilisation de frappes variées en longueur et vitesse (amorti/smash)</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2,5 pts</td><td>4 pts</td><td>5 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Utilisation du BINGO</td>
+                      <td>Annonce un BINGO au hasard ou ne l'utilise jamais (ne repère pas les situations favorables pour marquer le point)</td>
+                      <td>Annonce parfois un BINGO dans des situations favorables mais de manière tardive ou peu pertinente</td>
+                      <td>Repère les situations favorables les plus évidentes (adversaire en retard, volant haut…) et annonce le BINGO</td>
+                      <td>Utilisation du BINGO toujours pertinemment et qui entraîne systématiquement la rupture de l'échange</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2,5 pts</td><td>4 pts</td><td>5 pts</td></tr>
+                    <tr>
+                      <td rowspan="3">L'arbitre<br><span class="text-mono">/3</span></td>
+                      <td rowspan="3">Posture et attitude</td>
+                      <td>N'arbitre pas et/ou ne perturbe ses camarades</td>
+                      <td>Suit le match et compte les points mais hésitant sur certaines règles</td>
+                      <td>Compte les points à haute voix + est capable d'intervenir lorsqu'une règle n'est pas respectée</td>
+                      <td>– Compte et annonce les points ainsi que le serveur à haute voix<br>– Est capable d'expliquer ses décisions et de réguler le match de façon autonome</td>
+                    </tr>
+                    <tr><td>« Le passif ou perturbateur »</td><td>« L'hésitant »</td><td>« Le badiste »</td><td>« L'expert »</td></tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p><strong>Grille d'évaluation — L'entraîné et le matériel</strong></p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th>Maîtrise insuffisante</th><th>Maîtrise fragile</th><th>Maîtrise satisfaisante</th><th>Très bonne maîtrise</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="5">L'entraîné<br><span class="text-mono">/4</span></td>
+                      <td rowspan="5">Engagement dans les tâches d'apprentissage + réinvestissement</td>
+                      <td>« L'inintéressé »</td><td>« Le persévérant »</td><td>« L'appliqué »</td><td>« L'assidu »</td>
+                    </tr>
+                    <tr>
+                      <td>Ne s'investit pas dans le travail de répétition (détournement de la tâche)</td>
+                      <td>Travail sérieux et volonté de réussir malgré les difficultés</td>
+                      <td>S'engage dans les tâches de répétition + réussite dans les différents niveaux</td>
+                      <td>Engagement régulier + aide et conseille ses camarades</td>
+                    </tr>
+                    <tr><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                    <tr>
+                      <td>N'utilise jamais le bonus lors des situations de réinvestissement</td>
+                      <td>N'utilise que rarement le bonus lors des situations de réinvestissement (1 à 2 fois par match)</td>
+                      <td>Parvient à réinvestir le thème de travail dans les situations de réinvestissement (au moins 3 bonus par match)</td>
+                      <td>Très bon réinvestissement en situation de match (4 bonus ou plus)</td>
+                    </tr>
+                    <tr><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Le matériel<br><span class="text-mono">/2</span></td>
+                      <td rowspan="2">Participation à l'installation du matériel</td>
+                      <td>Reste longtemps au vestiaire et sort lorsque c'est fini</td>
+                      <td>Participe aléatoirement à l'installation du matériel ou installe un poteau puis va s'asseoir</td>
+                      <td>Aide à installer tout le matériel</td>
+                      <td>Installe + aide ses camarades en difficulté</td>
+                    </tr>
+                    <tr><td>0 pt</td><td>0,25 pt</td><td>0,75 pt</td><td>1 pt</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="rubrique" id="badminton-5e-videos">
+              <h4>🎥 Vidéos de démonstration</h4>
+              <ul class="video-list">
+                <li>Le smash et l'amorti — <a href="#">lien à ajouter</a></li>
+                <li>Repérer une situation « BINGO » — <a href="#">lien à ajouter</a></li>
+                <li>Le service réglementaire — <a href="#">lien à ajouter</a></li>
+              </ul>
+            </section>
+
+            <section class="rubrique" id="badminton-5e-quiz">
               <h4>🧠 Quiz d'entraînement</h4>
               <div class="quiz" data-quiz-id="badminton-5e">
                 <div class="quiz-questions"></div>
@@ -376,43 +885,28 @@
               <script>
                 window.QUIZ_DATA = window.QUIZ_DATA || {};
                 window.QUIZ_DATA['badminton-5e'] = [
-                  { question: "Toucher le filet avec sa raquette pendant l'échange est :", options: ["Autorisé", "Une faute", "Un point gagné"], correct: 1 },
-                  { question: "Frapper deux fois de suite le volant est :", options: ["Autorisé", "Une faute", "Obligatoire"], correct: 1 },
-                  { question: "Varier ses frappes (court/long) sert à :", options: ["Perdre du temps", "Déplacer l'adversaire et créer des espaces", "Respecter une règle obligatoire"], correct: 1 },
-                  { question: "En autonomie, qui peut arbitrer un match d'entraînement ?", options: ["Seulement le professeur", "Les élèves eux-mêmes", "Personne"], correct: 1 }
+                  { question: "En simple 5e, sur quelle partie du terrain se joue le match ?", options: ["Le terrain entier", "Un ½ terrain", "Uniquement le fond de court"], correct: 1 },
+                  { question: "Le « BINGO » sert à :", options: ["Signaler une situation favorable pour marquer le point", "Compter les points du match", "Arrêter le jeu"], correct: 0 },
+                  { question: "Un service qui « met systématiquement en difficulté l'adversaire » correspond à quel niveau de maîtrise ?", options: ["Maîtrise insuffisante", "Maîtrise fragile", "Très bonne maîtrise"], correct: 2 },
+                  { question: "Le rôle de « l'entraîné » est notamment évalué grâce à :", options: ["Un jeu d'échauffement type « partenaire en or »", "Le nombre de services ratés", "La couleur du volant"], correct: 0 },
+                  { question: "Le rôle « matériel » consiste à :", options: ["Regarder les autres jouer", "Participer à l'installation des poteaux et du filet", "Arbitrer un match"], correct: 1 },
+                  { question: "Un joueur qui « crée et exploite les espaces libres et situations favorables de marque » obtient, sur le critère « construction du point », le niveau :", options: ["Maîtrise fragile", "Maîtrise satisfaisante", "Très bonne maîtrise"], correct: 2 },
+                  { question: "Un arbitre qui « compte et annonce les points ainsi que le serveur à haute voix » correspond à l'archétype :", options: ["« L'hésitant »", "« Le badiste »", "« L'expert »"], correct: 2 },
+                  { question: "Pourquoi varier la longueur ET la vitesse de ses frappes (amorti/smash) en 5e ?", options: ["Pour perdre du temps", "Pour rompre l'échange en exploitant une situation favorable plutôt que simplement renvoyer le volant", "Parce que le règlement l'impose à chaque échange"], correct: 1 }
                 ];
               </script>
             </section>
 
-            <section class="rubrique">
-              <h4>🎥 Vidéos de démonstration</h4>
-              <ul class="video-list">
-                <li>Le smash — <a href="#">lien à ajouter</a></li>
-                <li>Les déplacements en fentes — <a href="#">lien à ajouter</a></li>
-              </ul>
-            </section>
-
-            <section class="rubrique">
+            <section class="rubrique" id="badminton-5e-lexique">
               <h4>📖 Lexique</h4>
               <dl class="lexique">
-                <dt>Smash</dt><dd>Frappe offensive puissante et descendante.</dd>
-                <dt>Fente</dt><dd>Grand pas permettant d'atteindre rapidement le volant.</dd>
-                <dt>Rapport de force</dt><dd>Situation d'avantage ou de désavantage entre deux joueurs pendant l'échange.</dd>
+                <dt>BINGO</dt><dd>Signal annoncé par le joueur qui repère une situation favorable pour rompre l'échange et marquer le point.</dd>
+                <dt>Rivière</dt><dd>Ligne de service courte, proche du filet, qui délimite la zone de service.</dd>
+                <dt>Amorti</dt><dd>Frappe courte qui fait tomber le volant juste après le filet.</dd>
+                <dt>Dégagé</dt><dd>Frappe haute et profonde qui envoie le volant au fond du terrain adverse.</dd>
+                <dt>Partenaire en or</dt><dd>Jeu d'échauffement où l'on cumule des points en maintenant l'échange par des trajectoires hautes.</dd>
+                <dt>Feuille de match</dt><dd>Document tenu par l'arbitre pour suivre et consigner le déroulement du match.</dd>
               </dl>
-            </section>
-
-            <section class="rubrique">
-              <h4>📊 Référentiel d'évaluation</h4>
-              <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Compétence évaluée</th><th>Critères de réussite</th><th>Barème indicatif</th></tr></thead>
-                  <tbody>
-                    <tr><td>Variation des frappes</td><td>Diversité des trajectoires produites</td><td>[à compléter]</td></tr>
-                    <tr><td>Déplacements</td><td>Qualité et rapidité des déplacements</td><td>[à compléter]</td></tr>
-                    <tr><td>Arbitrage</td><td>Autonomie et fiabilité de l'arbitrage</td><td>[à compléter]</td></tr>
-                  </tbody>
-                </table>
-              </div>
             </section>
 
           </div>
@@ -428,30 +922,168 @@
           </summary>
           <div class="activity-card__body">
 
-            <section class="rubrique">
+            <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : Tennis de table">
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-5e-attendus">🎯 Attendus</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-5e-acquisitions">✅ Acquisitions</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-5e-regles">🏳️ Règles</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-5e-evaluation">📊 Évaluation</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-5e-videos">🎥 Vidéos</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-5e-quiz">🧠 Quiz</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-5e-lexique">📖 Lexique</button>
+            </div>
+
+            <section class="rubrique" id="tennis-table-5e-attendus">
               <h4>🎯 Les attendus</h4>
-              <p>Compétence propre CP4. Construire un projet tactique (viser un point faible, varier les effets) pour prendre l'avantage dans l'échange.</p>
+              <p>
+                Compétence propre CP4 — <em>Conduire et maîtriser un affrontement individuel</em>.
+              </p>
+              <p>
+                S'entraîner pour rechercher le gain d'une rencontre en construisant le point dès le
+                service afin de rompre l'échange par des frappes variées en vitesse, en direction
+                et/ou en rotation et en prenant en compte les points forts/faibles de mon adversaire.
+                Coacher son partenaire pour l'aider à gagner la rencontre. Connaître et appliquer le
+                règlement.
+              </p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Lien avec le socle commun</th></tr></thead>
+                  <tbody>
+                    <tr><td>Le joueur</td><td>Pratiquer des APSA et acquérir des techniques spécifiques pour être plus efficace (domaine 1)</td></tr>
+                    <tr>
+                      <td>L'entraîné</td>
+                      <td>
+                        <ul>
+                          <li>Organiser son travail personnel (domaine 2)</li>
+                          <li>S'engager dans les situations d'apprentissage et réinvestir les notions travaillées en situation de match (domaine 2)</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr><td>Le coach</td><td>Maîtriser l'expression de sa sensibilité et de ses opinions, respecter celles des autres (domaine 3)</td></tr>
+                    <tr><td>L'arbitre</td><td>Faire preuve de responsabilité, respecter et faire respecter le règlement (domaine 3)</td></tr>
+                  </tbody>
+                </table>
+              </div>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="tennis-table-5e-acquisitions">
               <h4>✅ Acquisitions prioritaires</h4>
+
+              <p><strong>Le joueur</strong></p>
               <ul>
-                <li>Varier les effets (coupé, lifté) selon la situation.</li>
-                <li>Placer la balle loin de l'adversaire ou sur un point faible identifié.</li>
-                <li>Adapter sa position de jeu (proche / loin de la table).</li>
-                <li>Analyser le jeu de l'adversaire pour ajuster sa stratégie.</li>
+                <li>Adapter son geste et ses déplacements à la trajectoire de la balle.</li>
+                <li>Utiliser le service comme une arme permettant de prendre l'avantage sur l'échange : services rasant, accéléré (raquette fermée), rapide sur le point faible identifié, dans un coin…, coupé/lifté.</li>
+                <li>Identifier et exploiter une situation favorable de marque : jouer placé (latéralement), jouer dans l'espace libre si mon adversaire est décalé, smasher si la balle est en cloche, annoncer « BINGO ».</li>
+                <li>Identifier et jouer sur mes points forts et points faibles de mon adversaire.</li>
+              </ul>
+
+              <p><strong>L'entraîné</strong></p>
+              <ul>
+                <li>S'investir avec sérieux dans les situations d'apprentissage dans les différents rôles : celui qui fait travailler, celui qui travaille, celui qui compte.</li>
+                <li>Utiliser un maximum de fois les bonus dans les situations de matchs.</li>
+              </ul>
+
+              <p><strong>Le coach</strong></p>
+              <ul>
+                <li>Analyser le jeu de l'adversaire en repérant ses points faibles.</li>
+                <li>Conseiller son partenaire sur la stratégie à adopter pour qu'il puisse mettre en difficulté son adversaire.</li>
+              </ul>
+
+              <p><strong>L'arbitre</strong></p>
+              <ul>
+                <li>Arbitrer un match en annonçant le score à chaque fin d'échange et en portant une attention particulière aux services (changement tous les 2 points).</li>
+                <li>Appliquer et faire appliquer le règlement suivant : 1 seule chance au service, la balle doit être lancée puis frappée avec la raquette et faire un rebond dans sa ½ table puis dans la ½ table adverse, règle du let, fautes (double rebond, volée, côté de la table).</li>
               </ul>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="tennis-table-5e-regles">
               <h4>🏳️ Règles d'arbitrage</h4>
-              <div class="video-placeholder">
-                🎬 Vidéo à ajouter — <a href="#">lien vidéo à compléter</a> <!-- LIEN VIDEO A AJOUTER -->
-              </div>
-              <p>Le service doit être effectué balle lancée verticalement à la main, sans effet caché, et doit rebondir d'abord dans son propre camp puis dans le camp adverse.</p>
+              <div class="video-embed video-embed--placeholder">
+                <p>🎬 Vidéo résumant les règles à ajouter — <a href="#">lien vidéo à compléter</a></p>
+              </div> <!-- LIEN VIDEO A AJOUTER -->
+              <p>L'arbitre annonce le score à chaque fin d'échange et applique le règlement suivant :</p>
+              <ul>
+                <li>1 seule chance au service.</li>
+                <li>La balle doit être lancée puis frappée avec la raquette, et faire un rebond dans sa ½ table puis dans la ½ table adverse.</li>
+                <li>Règle du let : le service est rejoué si la balle touche le filet et retombe côté adverse.</li>
+                <li>Fautes : double rebond du même côté, volée (frapper la balle avant qu'elle rebondisse), balle qui sort par le côté de la table.</li>
+                <li>Le service change tous les 2 points ; l'arbitre y porte une attention particulière.</li>
+              </ul>
             </section>
 
-            <section class="rubrique">
+            <section class="rubrique" id="tennis-table-5e-evaluation">
+              <h4>📊 Modalités d'évaluation</h4>
+
+              <p><strong>Situation repère</strong></p>
+              <ul>
+                <li>Les élèves sont évalués en 2 temps.</li>
+                <li>Lors du 1er temps, ils sont évalués sous la forme d'une montante descendante. Les matchs durent 4 minutes. À la fin du temps imparti, le joueur qui a marqué le plus de points monte d'une table, celui qui a perdu descend d'une table et devient arbitre si nécessaire. La compétence « rechercher le gain d'une rencontre en construisant le point dès le service afin de rompre l'échange par des frappes variées en vitesse, direction et/ou en rotation et en prenant en compte les points forts/faibles de mon adversaire » est évaluée lors de cette leçon. Chaque élève a la possibilité d'annoncer « BINGO » pour chaque point. S'il annonce « BINGO » avant de frapper la balle et marque le point à l'issue de son geste, le point compte double. S'il annonce « BINGO » mais que son adversaire renvoie la balle, le jeu continue.</li>
+                <li>Dans un second temps, les élèves sont évalués par groupes de niveaux. Chaque élève est réparti dans un groupe de 5 ou 6 joueurs dans lequel, pour chaque rencontre, 2 joueurs s'affrontent, 1 (ou 2) élève(s) arbitre(nt) et 2 élèves coachent. Les matchs vont en 11 points. Dès qu'un joueur marque 5 points, une pause coaching est effectuée. Chaque joueur va voir son coach qui lui donne des conseils (joue sur son point faible, tes services doivent être plus rasants…). Le jeu reprend alors du score avant la pause coaching et va jusqu'en 11 (avec 2 points d'écart).</li>
+                <li>L'évaluation du rôle d'arbitre et de coach est réalisée au fil de la séquence lors des situations d'apprentissage et de réinvestissement (rôle de l'entraîné), pendant les matchs de fin de leçon (rôle d'arbitre) et à la fin de la séquence lors des matchs en ronde italienne (rôle de coach).</li>
+              </ul>
+
+              <p class="callout callout--neutral"><strong>Évaluation tennis de table 5e (2ème séquence)</strong> — grille reproduite telle quelle depuis le document source.</p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th>Maîtrise insuffisante</th><th>Maîtrise fragile</th><th>Maîtrise satisfaisante</th><th>Très bonne maîtrise</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="6">Le joueur<br><span class="text-mono">/12</span></td>
+                      <td rowspan="2">Technique (coups utilisés : CD, revers, smash, top spin)</td>
+                      <td>« Le relanceur »<br>– Difficulté à renvoyer la balle en revers et/ou coup droit à cause d'une mauvaise adaptation à la trajectoire de la balle.<br>– Fautes directes nombreuses (+ 1 balle /2).</td>
+                      <td>« Le coup préféré »<br>– Renvoie les balles en utilisant principalement qu'un seul coup (qu'en revers ou coup droit).<br>– Trajectoires variées en direction.<br>– Fautes directes minoritaires (entre 25 et 50%).</td>
+                      <td>« Le complet »<br>– Coups droits et revers maîtrisés.<br>– Peu de fautes directes (-25%).<br>– Trajectoires variées en direction et/ou vitesse.</td>
+                      <td>« L'adaptable »<br>– Coups techniques utilisés adaptés à la situation ou l'adversaire.<br>– Très peu de fautes directes (-10%).<br>– Trajectoires variées en vitesse, direction et rotation.</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Intentionnalité de jeu : comment je mets mon adversaire en difficulté</td>
+                      <td>« Le pongiste aléatoire »<br>– Pas d'intentionnalité de rupture : ce qui le préoccupe est de renvoyer la balle de l'autre côté du filet.<br>– Peu de coups gagnants.</td>
+                      <td>« Le profiteur »<br>– Est capable d'identifier une balle favorable pour rompre l'échange (balle haute milieu de table) mais problème d'exécution.<br>– A la volonté de varier les trajectoires mais balles encore « faciles ».</td>
+                      <td>« L'efficace »<br>– Intention de provoquer la faute de l'adversaire dès le service (rasant et accéléré).<br>– Capable de rompre l'échange par des trajectoires variées en direction et/ou vitesse.</td>
+                      <td>« Le maître du jeu »<br>– Impose son jeu en mettant son adversaire en difficulté dès le service (avec effets) puis cherche à rompre l'échange le plus vite possible.<br>– Est capable d'identifier le point faible de son adversaire pour y jouer dessus.</td>
+                    </tr>
+                    <tr><td>1,5 pt</td><td>3 pts</td><td>4,5 pts</td><td>6 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Utilisation du BINGO</td>
+                      <td>Le pongiste n'utilise jamais le BINGO tout au long du match</td>
+                      <td>Le pongiste utilise quelques fois le BINGO mais pas à bon escient</td>
+                      <td>BINGO utilisé au bon moment mais manque d'exécution pour rompre l'échange</td>
+                      <td>Le pongiste connaît son point fort et/ou le point faible de son adversaire et utilise le BINGO en conséquence</td>
+                    </tr>
+                    <tr><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">L'arbitre<br><span class="text-mono">/4</span></td>
+                      <td rowspan="2">Maîtrise du règlement</td>
+                      <td>« L'absent »<br>– Pas de connaissance du règlement.<br>– N'arbitre pas et/ou ne gère pas le score (ne reste pas sur sa table).</td>
+                      <td>« Le fébrile »<br>– Connaissance partielle et/ou arbitre influençable.<br>– Gère le score mais ne sait pas à qui c'est de servir.</td>
+                      <td>« L'omniprésent »<br>– Bonne connaissance du règlement.<br>– Gestion du score précise et maîtrisée.</td>
+                      <td>« L'expert »<br>– Connaît toutes les règles d'arbitrage et assure le bon déroulement du match en annonçant à haute voix le score et le serveur.</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr>
+                      <td rowspan="2">Le coach<br><span class="text-mono">/4</span></td>
+                      <td rowspan="2">Pertinence des retours donnés</td>
+                      <td>« L'inintéressé »<br>– Élève pas concerné par le rôle de coach : ne regarde pas son partenaire jouer, ne le conseille pas.</td>
+                      <td>« Le timide »<br>– Coach présent et attentif mais en difficulté dans les retours à donner à son partenaire.</td>
+                      <td>« Le coach en devenir »<br>– Coach présent et attentif qui parvient à réguler le jeu de son partenaire en lui expliquant la cause de sa faute.</td>
+                      <td>« Le coach expert »<br>– Retours constructifs à son partenaire sur son jeu et qui est capable d'analyser le jeu adverse et de le conseiller en fonction.</td>
+                    </tr>
+                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="rubrique" id="tennis-table-5e-videos">
+              <h4>🎥 Vidéos de démonstration</h4>
+              <ul class="video-list">
+                <li>Le service à effet (coupé/lifté) — <a href="#">lien à ajouter</a></li>
+                <li>Construire le point dès le service — <a href="#">lien à ajouter</a></li>
+                <li>Le rôle de coach pendant une pause coaching — <a href="#">lien à ajouter</a></li>
+              </ul>
+            </section>
+
+            <section class="rubrique" id="tennis-table-5e-quiz">
               <h4>🧠 Quiz d'entraînement</h4>
               <div class="quiz" data-quiz-id="tennis-table-5e">
                 <div class="quiz-questions"></div>
@@ -461,43 +1093,28 @@
               <script>
                 window.QUIZ_DATA = window.QUIZ_DATA || {};
                 window.QUIZ_DATA['tennis-table-5e'] = [
-                  { question: "Un service réglementaire doit être effectué :", options: ["Balle cachée dans la main", "Balle lancée verticalement, visible de l'adversaire", "Sans lancer la balle"], correct: 1 },
-                  { question: "Au service, la balle doit rebondir :", options: ["Directement côté adverse", "D'abord dans son propre camp, puis côté adverse", "Sur le filet"], correct: 1 },
-                  { question: "Un effet 'lifté' produit une trajectoire :", options: ["Descendante et défensive", "Montante et offensive avec rotation avant", "Toujours latérale"], correct: 1 },
-                  { question: "Analyser le jeu adverse permet de :", options: ["Deviner ses points faibles", "Perdre du temps", "Compter les spectateurs"], correct: 0 }
+                  { question: "En tennis de table 5e (2e séquence), le joueur cherche surtout à :", options: ["Renvoyer la balle le plus haut possible", "Construire le point dès le service pour rompre l'échange", "Éviter de servir"], correct: 1 },
+                  { question: "Le rôle de « coach » consiste à :", options: ["Jouer à la place de son partenaire", "Analyser le jeu adverse et conseiller son partenaire sur sa stratégie", "Compter uniquement les points"], correct: 1 },
+                  { question: "Dans la 2e phase de l'évaluation (poules de niveaux), une pause coaching a lieu :", options: ["Au début du match uniquement", "Dès qu'un joueur marque 5 points", "Toutes les 2 minutes"], correct: 1 },
+                  { question: "Un joueur « adaptable » utilise des coups techniques :", options: ["Toujours identiques quelle que soit la situation", "Adaptés à la situation ou à l'adversaire, avec très peu de fautes directes", "Uniquement en coup droit"], correct: 1 },
+                  { question: "Le « BINGO » annoncé avant de frapper la balle, s'il permet de marquer le point, rapporte :", options: ["Le double du point", "Rien de plus", "Un point en moins"], correct: 0 },
+                  { question: "Un arbitre « omniprésent » se distingue par :", options: ["Une bonne connaissance du règlement et une gestion précise et maîtrisée du score", "Son absence pendant le match", "Le fait de ne jamais annoncer le score"], correct: 0 },
+                  { question: "Sur le critère « intentionnalité de jeu » (noté sur 6), un joueur qui « impose son jeu dès le service et identifie le point faible de son adversaire » obtient :", options: ["1,5 pt", "4,5 pts", "6 pts"], correct: 2 },
+                  { question: "Pourquoi identifier les points forts et points faibles de son adversaire fait-il partie des acquisitions prioritaires du joueur en 5e ?", options: ["Cela n'a aucune utilité en match", "Cela permet d'adapter sa stratégie de jeu pour mettre l'adversaire en difficulté", "C'est uniquement le rôle du coach"], correct: 1 }
                 ];
               </script>
             </section>
 
-            <section class="rubrique">
-              <h4>🎥 Vidéos de démonstration</h4>
-              <ul class="video-list">
-                <li>Le topspin coup droit — <a href="#">lien à ajouter</a></li>
-                <li>Le service à effet — <a href="#">lien à ajouter</a></li>
-              </ul>
-            </section>
-
-            <section class="rubrique">
+            <section class="rubrique" id="tennis-table-5e-lexique">
               <h4>📖 Lexique</h4>
               <dl class="lexique">
-                <dt>Effet coupé</dt><dd>Rotation arrière donnée à la balle, ralentissant son rebond.</dd>
-                <dt>Point faible</dt><dd>Zone ou geste où l'adversaire est le moins efficace.</dd>
-                <dt>Demi-volée</dt><dd>Frappe effectuée juste après le rebond de la balle.</dd>
+                <dt>BINGO</dt><dd>Annonce faite par le joueur avant de frapper une balle jugée favorable ; s'il marque le point, celui-ci compte double.</dd>
+                <dt>Let</dt><dd>Échange ou service à rejouer sans conséquence sur le score.</dd>
+                <dt>Effet lifté / coupé</dt><dd>Rotation donnée à la balle (avant pour le lifté, arrière pour le coupé) qui modifie sa trajectoire et son rebond.</dd>
+                <dt>Point faible</dt><dd>Zone ou geste où l'adversaire est le moins efficace, à identifier et exploiter.</dd>
+                <dt>Pause coaching</dt><dd>Interruption du match, à 5 points, pendant laquelle chaque joueur va chercher les conseils de son coach.</dd>
+                <dt>Ronde italienne</dt><dd>Format de tournoi où chaque joueur affronte tour à tour tous les autres joueurs de son groupe.</dd>
               </dl>
-            </section>
-
-            <section class="rubrique">
-              <h4>📊 Référentiel d'évaluation</h4>
-              <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Compétence évaluée</th><th>Critères de réussite</th><th>Barème indicatif</th></tr></thead>
-                  <tbody>
-                    <tr><td>Projet tactique</td><td>Balles placées sur un point faible identifié</td><td>[à compléter]</td></tr>
-                    <tr><td>Variation des effets</td><td>Diversité des effets produits</td><td>[à compléter]</td></tr>
-                    <tr><td>Résultat des matchs</td><td>Score obtenu en confrontation</td><td>[à compléter]</td></tr>
-                  </tbody>
-                </table>
-              </div>
             </section>
 
           </div>
