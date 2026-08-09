@@ -16,8 +16,7 @@
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-logo" href="index.html">
-        <img class="site-logo__mark site-logo__mark--img" src="assets/logo-as-badge.jpg" alt="">
-        Espace EPS du collège
+        <img class="site-logo__mark site-logo__mark--img" src="assets/logo-as-badge.jpg" alt="Accueil — Espace EPS du collège">
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
         <span class="visually-hidden">Ouvrir le menu</span>
@@ -46,22 +45,23 @@
          lignes : ".hero-title__line1" + ".hero-title__accent"), le
          texte et le lien du bouton changent d'une page a l'autre.
          L'illustration (assets/hero-illustration.svg) est identique
-         partout et masquee sur mobile.
+         partout et masquee sur mobile. La navigation entre les pages
+         se fait via le menu du haut (en-tete) : pas de liens redondants
+         ici.
          ============================================================ -->
     <section class="site-hero">
       <div class="container site-hero__inner">
         <div class="site-hero__text">
-          <p class="eyebrow">Collège — Tarn-et-Garonne (82)</p>
+          <img class="site-hero__logo" src="assets/logo-as-badge.jpg" alt="">
           <h1>
             <span class="hero-title__line1">Bouge, apprends,</span>
             <span class="hero-title__accent">dépasse-toi !</span>
           </h1>
           <p class="lede">
-            Ce site rassemble toutes les ressources qui complètent vos cours d'EPS :
-            règlement, règles d'arbitrage, vidéos de démonstration, lexique, quiz
-            d'entraînement et référentiels d'évaluation, classés par niveau et par activité.
+            Bienvenue dans ton espace ressources pour progresser, t'informer et te motiver
+            au quotidien en EPS et au collège.
           </p>
-          <p><a class="btn btn--primary" href="#pages">Découvrir mes ressources →</a></p>
+          <p><a class="btn btn--primary" href="#decouvrir">Découvrir mes ressources →</a></p>
         </div>
         <div class="site-hero__visual">
           <img src="assets/hero-illustration.svg" alt="" width="380" height="380">
@@ -70,128 +70,9 @@
     </section>
 
     <!-- ============================================================
-         NAVIGATION PAR PAGES
-         ------------------------------------------------------------
-         Un bouton par page du site. Cliquer sur un bouton ouvre un
-         panneau qui resume le contenu de cette page (sous-rubriques
-         ou activites) avec un lien pour ouvrir la page complete. La
-         logique est dans js/hero-nav.js ; pour ajouter/retirer une
-         page, copiez un bouton ET son panneau (meme valeur dans
-         data-target / data-panel et dans aria-controls / id).
-         ============================================================ -->
-    <section class="section section--tight" id="pages">
-      <div class="container">
-        <div class="hero-nav">
-          <div class="hero-nav__tabs" role="tablist" aria-label="Pages du site">
-            <button type="button" class="hero-nav__tab" data-target="eps-generale" role="tab" aria-selected="false" aria-controls="panel-eps-generale" id="tab-eps-generale">EPS générale</button>
-            <button type="button" class="hero-nav__tab" data-target="6e" role="tab" aria-selected="false" aria-controls="panel-6e" id="tab-6e">6e</button>
-            <button type="button" class="hero-nav__tab" data-target="5e" role="tab" aria-selected="false" aria-controls="panel-5e" id="tab-5e">5e</button>
-            <button type="button" class="hero-nav__tab" data-target="4e" role="tab" aria-selected="false" aria-controls="panel-4e" id="tab-4e">4e</button>
-            <button type="button" class="hero-nav__tab" data-target="3e" role="tab" aria-selected="false" aria-controls="panel-3e" id="tab-3e">3e</button>
-            <button type="button" class="hero-nav__tab" data-target="pp6e" role="tab" aria-selected="false" aria-controls="panel-pp6e" id="tab-pp6e">Mon entrée en 6e</button>
-          </div>
-
-          <div class="hero-nav__panels">
-
-            <div class="hero-nav__panel" id="panel-eps-generale" data-panel="eps-generale" role="tabpanel" aria-labelledby="tab-eps-generale" hidden>
-              <h3>EPS générale</h3>
-              <p class="hero-nav__meta">Organisation du cours, règlement, association sportive, tenue et modalités de dispense.</p>
-              <ul class="hero-nav__chips">
-                <li><a href="eps-generale.html#organisation">Organisation du cours</a></li>
-                <li><a href="eps-generale.html#reglement">Règlement EPS</a></li>
-                <li><a href="eps-generale.html#association-sportive">Association sportive (AS)</a></li>
-                <li><a href="eps-generale.html#tenue">Tenue exigée</a></li>
-                <li><a href="eps-generale.html#dispense">Modalités de dispense</a></li>
-              </ul>
-              <a class="btn btn--primary" href="eps-generale.html">Ouvrir la page EPS générale</a>
-            </div>
-
-            <div class="hero-nav__panel" id="panel-6e" data-panel="6e" role="tabpanel" aria-labelledby="tab-6e" hidden>
-              <h3>Niveau 6e</h3>
-              <p class="hero-nav__meta">7 activités. Chacune contient : les attendus, les acquisitions prioritaires, les règles d'arbitrage, un quiz, des vidéos, un lexique et un référentiel d'évaluation.</p>
-              <ul class="hero-nav__chips">
-                <li><a href="niveau-6e.html#triathlon-athletique-6e">Triathlon athlétique</a></li>
-                <li><a href="niveau-6e.html#handball-6e">Handball</a></li>
-                <li><a href="niveau-6e.html#ultimate-6e">Ultimate</a></li>
-                <li><a href="niveau-6e.html#course-orientation-6e">Course d'orientation</a></li>
-                <li><a href="niveau-6e.html#badminton-6e">Badminton</a></li>
-                <li><a href="niveau-6e.html#danse-6e">Danse</a></li>
-                <li><a href="niveau-6e.html#tennis-table-6e">Tennis de table</a></li>
-              </ul>
-              <a class="btn btn--primary" href="niveau-6e.html">Ouvrir la page 6e</a>
-            </div>
-
-            <div class="hero-nav__panel" id="panel-5e" data-panel="5e" role="tabpanel" aria-labelledby="tab-5e" hidden>
-              <h3>Niveau 5e</h3>
-              <p class="hero-nav__meta">5 activités. Chacune contient : les attendus, les acquisitions prioritaires, les règles d'arbitrage, un quiz, des vidéos, un lexique et un référentiel d'évaluation.</p>
-              <ul class="hero-nav__chips">
-                <li><a href="niveau-5e.html#handball-5e">Handball</a></li>
-                <li><a href="niveau-5e.html#ultimate-5e">Ultimate</a></li>
-                <li><a href="niveau-5e.html#biathlon-5e">Biathlon</a></li>
-                <li><a href="niveau-5e.html#badminton-5e">Badminton</a></li>
-                <li><a href="niveau-5e.html#tennis-table-5e">Tennis de table</a></li>
-              </ul>
-              <a class="btn btn--primary" href="niveau-5e.html">Ouvrir la page 5e</a>
-            </div>
-
-            <div class="hero-nav__panel" id="panel-4e" data-panel="4e" role="tabpanel" aria-labelledby="tab-4e" hidden>
-              <h3>Niveau 4e</h3>
-              <p class="hero-nav__meta">5 activités. Chacune contient : les attendus, les acquisitions prioritaires, les règles d'arbitrage, un quiz, des vidéos, un lexique et un référentiel d'évaluation.</p>
-              <ul class="hero-nav__chips">
-                <li><a href="niveau-4e.html#boxe-francaise-4e">Boxe française</a></li>
-                <li><a href="niveau-4e.html#rugby-flag-4e">Rugby flag</a></li>
-                <li><a href="niveau-4e.html#badminton-4e">Badminton</a></li>
-                <li><a href="niveau-4e.html#basket-4e">Basket-ball</a></li>
-                <li><a href="niveau-4e.html#relais-vitesse-4e">Relais vitesse 2x40m</a></li>
-              </ul>
-              <a class="btn btn--primary" href="niveau-4e.html">Ouvrir la page 4e</a>
-            </div>
-
-            <div class="hero-nav__panel" id="panel-3e" data-panel="3e" role="tabpanel" aria-labelledby="tab-3e" hidden>
-              <h3>Niveau 3e</h3>
-              <p class="hero-nav__meta">6 activités. Chacune contient : les attendus, les acquisitions prioritaires, les règles d'arbitrage, un quiz, des vidéos, un lexique et un référentiel d'évaluation.</p>
-              <ul class="hero-nav__chips">
-                <li><a href="niveau-3e.html#boxe-francaise-3e">Boxe française</a></li>
-                <li><a href="niveau-3e.html#rugby-flag-3e">Rugby flag</a></li>
-                <li><a href="niveau-3e.html#badminton-3e">Badminton (double)</a></li>
-                <li><a href="niveau-3e.html#basket-3e">Basket-ball</a></li>
-                <li><a href="niveau-3e.html#relais-vitesse-3e">Relais vitesse 3x40m</a></li>
-                <li><a href="niveau-3e.html#cross-training-3e">Cross training</a></li>
-              </ul>
-              <a class="btn btn--primary" href="niveau-3e.html">Ouvrir la page 3e</a>
-            </div>
-
-            <div class="hero-nav__panel" id="panel-pp6e" data-panel="pp6e" role="tabpanel" aria-labelledby="tab-pp6e" hidden>
-              <h3>Mon entrée en 6e</h3>
-              <p class="hero-nav__meta">Tout pour devenir un collégien autonome.</p>
-              <ul class="hero-nav__chips">
-                <li><a href="prof-principal-6e.html#ent">ENT et Pronote</a></li>
-                <li><a href="prof-principal-6e.html#mail">Envoyer un mail</a></li>
-                <li><a href="prof-principal-6e.html#emploi-du-temps">Emploi du temps</a></li>
-                <li><a href="prof-principal-6e.html#sac">Faire son sac</a></li>
-                <li><a href="prof-principal-6e.html#cartes">Mes cartes</a></li>
-                <li><a href="prof-principal-6e.html#telephone">Téléphone portable</a></li>
-                <li><a href="prof-principal-6e.html#deplacements">Se déplacer</a></li>
-                <li><a href="prof-principal-6e.html#devoirs">Organiser ses devoirs</a></li>
-                <li><a href="prof-principal-6e.html#apprendre-lecon">Apprendre une leçon</a></li>
-                <li><a href="prof-principal-6e.html#contacts">Contacts utiles</a></li>
-                <li><a href="prof-principal-6e.html#absence-retard">Absence / retard</a></li>
-                <li><a href="prof-principal-6e.html#documents-rentree">Documents de rentrée</a></li>
-              </ul>
-              <a class="btn btn--primary" href="prof-principal-6e.html">Ouvrir la page Mon entrée en 6e</a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr class="lane-divider container">
-
-    <!-- ============================================================
          CE QUE VOUS ALLEZ TROUVER ICI
          ============================================================ -->
-    <section class="section">
+    <section class="section" id="decouvrir">
       <div class="container">
         <h2>Ce que vous allez trouver ici</h2>
         <div class="grid grid--3">
@@ -225,6 +106,5 @@
   </footer>
 
   <script src="js/main.js" defer></script>
-  <script src="js/hero-nav.js" defer></script>
 </body>
 </html>

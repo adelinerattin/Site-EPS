@@ -1021,6 +1021,21 @@ tbody tr:nth-child(even) {
   max-width: 48ch;
 }
 
+/* Grand logo affiche en haut de la colonne de texte du hero (en plus
+   du petit logo dans l'en-tete). Meme fichier image que le logo de
+   l'en-tete : assets/logo-as-badge.jpg. */
+.site-hero__logo {
+  display: block;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--color-orange);
+  background: var(--color-white);
+  box-shadow: var(--shadow-card);
+  margin-bottom: var(--space-md);
+}
+
 /* Ligne au-dessus du titre : badge "dossard" + petit label.
    Omettez le badge dossard sur les pages sans niveau (accueil). */
 .site-hero__kicker {
@@ -1039,7 +1054,8 @@ tbody tr:nth-child(even) {
 }
 
 /* Titre en 2 lignes façon "BOUGE, APPRENDS, / DÉPASSE-TOI !" :
-   1ère ligne en bleu marine, 2e ligne en accent italique. */
+   1ère ligne en bleu marine (comme le logo), 2e ligne en jaune sur
+   fond marine (memes couleurs que le ruban du logo). */
 .hero-title__line1,
 .hero-title__accent {
   display: block;
@@ -1050,8 +1066,13 @@ tbody tr:nth-child(even) {
 }
 
 .hero-title__accent {
-  color: var(--color-coral);
+  display: inline-block;
+  color: var(--color-yellow);
   font-style: italic;
+  background: var(--color-navy);
+  padding: 0.04em 0.22em;
+  border-radius: 0.12em;
+  margin-top: 0.15em;
 }
 
 .site-hero .lede {
@@ -1078,105 +1099,8 @@ tbody tr:nth-child(even) {
 }
 
 /* ============================================================
-   15. PAGE D'ACCUEIL : NAVIGATION "PAGES" + PRESENTATION
-   ------------------------------------------------------------
-   Composant "hero-nav" : une rangee de boutons (une par page du
-   site) affichee juste sous le hero. Cliquer sur un bouton affiche,
-   juste en dessous, un panneau qui resume le contenu de cette page
-   (sous-rubriques, activites) avec un lien vers la page complete.
-   Voir js/hero-nav.js pour la logique.
+   15. PAGE D'ACCUEIL : PRESENTATION
    ============================================================ */
-.hero-nav {
-  margin: 0 auto;
-  max-width: 760px;
-}
-
-.hero-nav__tabs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.6rem;
-}
-
-.hero-nav__tab {
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 0.95rem;
-  padding: 0.7em 1.2em;
-  border-radius: 999px;
-  border: 2px solid var(--color-border);
-  background: var(--color-white);
-  color: var(--color-navy);
-  cursor: pointer;
-  transition: background 0.15s ease, border-color 0.15s ease, transform 0.12s ease;
-}
-
-.hero-nav__tab:hover {
-  border-color: var(--color-navy);
-  transform: translateY(-1px);
-}
-
-.hero-nav__tab[aria-selected="true"] {
-  background: var(--color-yellow);
-  border-color: var(--color-yellow);
-  color: var(--color-navy);
-}
-
-.hero-nav__panels {
-  margin-top: var(--space-md);
-}
-
-.hero-nav__panel {
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-md);
-  box-shadow: var(--shadow-card);
-}
-
-.hero-nav__panel[hidden] {
-  display: none;
-}
-
-.hero-nav__panel h3 {
-  color: var(--color-navy);
-  margin-bottom: 0.6em;
-}
-
-.hero-nav__chips {
-  list-style: none;
-  margin: 0 0 var(--space-sm);
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.hero-nav__chips a {
-  display: inline-block;
-  background: var(--color-chalk);
-  border: 1px solid var(--color-border);
-  color: var(--color-navy);
-  text-decoration: none;
-  font-size: 0.88rem;
-  font-weight: 600;
-  padding: 0.4em 0.85em;
-  border-radius: 999px;
-}
-
-.hero-nav__chips a:hover,
-.hero-nav__chips a:focus-visible {
-  border-color: var(--color-orange);
-  background: #fdf0e0;
-}
-
-.hero-nav__meta {
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  color: var(--color-ink-soft);
-  margin-bottom: var(--space-md);
-}
-
 /* Cartes de presentation rapide ("Ce que vous allez trouver ici") */
 .feature-card {
   text-align: left;
