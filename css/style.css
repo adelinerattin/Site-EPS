@@ -70,7 +70,7 @@
   --radius-lg: 18px;
   --shadow-card: 0 2px 10px rgba(10, 31, 68, 0.1);
   --shadow-card-hover: 0 6px 20px rgba(10, 31, 68, 0.18);
-  --header-height: 84px;
+  --header-height: 64px;
   --max-width: 1100px;
 }
 
@@ -245,49 +245,8 @@ li {
   height: var(--header-height);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--space-md);
-}
-
-.site-logo {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  color: var(--color-navy);
-  text-decoration: none;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 1.15rem;
-  letter-spacing: 0.03em;
-  white-space: nowrap;
-}
-
-.site-logo__mark {
-  display: inline-flex;
-  align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: var(--color-yellow);
-  color: var(--color-navy);
-  font-size: 1rem;
-  flex-shrink: 0;
-}
-
-/* Logo de l'association sportive, affiche en grand dans l'en-tete de
-   chaque page. Le fichier image se trouve dans assets/logo-as-badge.jpg
-   — remplacez-le par le logo de votre propre etablissement si besoin
-   (meme nom de fichier pour ne rien avoir a changer dans les pages HTML).
-   Pour changer sa taille, modifiez juste width/height ci-dessous. */
-.site-logo__mark--img {
-  width: 62px;
-  height: 62px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--color-orange);
-  background: var(--color-white);
-  box-shadow: var(--shadow-card);
+  gap: var(--space-md);
 }
 
 /* Bouton hamburger (visible seulement sur mobile/tablette) */
@@ -1012,31 +971,56 @@ tbody tr:nth-child(even) {
 
 @media (min-width: 860px) {
   .site-hero__inner {
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1.4fr 0.6fr;
     gap: var(--space-xl);
   }
 }
 
-.site-hero__text {
-  max-width: 48ch;
+/* Ligne "logo + titre" : le logo est affiche a cote du titre, dans le
+   meme espace (pas au-dessus). Sa taille grandit avec l'ecran (jusqu'a
+   3 fois sa taille de base sur grand ecran) pour rester raisonnable
+   sur mobile. Meme fichier image que le logo de l'en-tete :
+   assets/logo-as-badge.jpg. */
+.site-hero__lockup {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
 }
 
-/* Grand logo affiche en haut de la colonne de texte du hero (en plus
-   du petit logo dans l'en-tete). Meme fichier image que le logo de
-   l'en-tete : assets/logo-as-badge.jpg. */
+.site-hero__lockup h1 {
+  margin-bottom: 0;
+  flex: 1 1 200px;
+  min-width: 0;
+}
+
 .site-hero__logo {
   display: block;
   width: 96px;
   height: 96px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--color-orange);
   background: var(--color-white);
   box-shadow: var(--shadow-card);
-  margin-bottom: var(--space-md);
+  flex-shrink: 0;
 }
 
-/* Ligne au-dessus du titre : badge "dossard" + petit label.
+@media (min-width: 640px) {
+  .site-hero__logo {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (min-width: 900px) {
+  .site-hero__logo {
+    width: 288px;
+    height: 288px;
+  }
+}
+
+/* Ligne au-dessus du logo+titre : badge "dossard" + petit label.
    Omettez le badge dossard sur les pages sans niveau (accueil). */
 .site-hero__kicker {
   display: flex;
@@ -1047,10 +1031,6 @@ tbody tr:nth-child(even) {
 
 .site-hero__kicker .eyebrow {
   margin: 0;
-}
-
-.site-hero h1 {
-  margin-bottom: var(--space-md);
 }
 
 /* Titre en 2 lignes façon "BOUGE, APPRENDS, / DÉPASSE-TOI !" :
@@ -1077,6 +1057,7 @@ tbody tr:nth-child(even) {
 
 .site-hero .lede {
   color: var(--color-ink-soft);
+  max-width: 46ch;
 }
 
 .site-hero__visual {
