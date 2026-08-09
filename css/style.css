@@ -42,17 +42,19 @@
   --color-coral-light: #fdece8;   /* corail tres clair : fond des messages d'alerte */
   --color-orange: #e8871e;        /* orange "ballon" : clin d'oeil au logo de l'AS, accent secondaire */
   --color-chalk: #f7f5ef;         /* fond clair "craie" pour le contenu */
+  --color-cream: #fcefdc;         /* couleur crème exacte du fond du logo, utilisee pour le hero */
   --color-white: #ffffff;
   --color-ink: #1a1e27;           /* couleur du texte courant (presque noir) */
   --color-ink-soft: #4a5164;      /* texte secondaire / legendes */
   --color-border: #dcd8cc;        /* bordures discretes sur fond clair */
 
   /* Typographies */
-  /* Police "tableau de scores" : condensee, forte, pour les titres et numeros.
-     Pile de polices systeme (aucun chargement externe requis).
-     Astuce : pour un rendu encore plus "stade", vous pouvez importer une police
-     Google Fonts comme "Oswald" ou "Bebas Neue" et la placer en tete de liste ici. */
-  --font-display: "Arial Narrow", "Helvetica Neue Condensed", "Roboto Condensed", Impact, sans-serif;
+  /* Police d'affichage (titres, numeros de dossard) : Rubik, chargee
+     depuis Google Fonts (voir la balise <link> dans le <head> de
+     chaque page) — ronde et chaleureuse plutot que froide/condensee.
+     La pile de secours (apres la virgule) s'applique seulement si la
+     police ne peut pas se charger (site hors-ligne, etc.). */
+  --font-display: "Rubik", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   /* Police de texte courant, lisible sur mobile */
   --font-body: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   /* Police "chronometre" pour les petits labels / metadonnees */
@@ -959,7 +961,7 @@ tbody tr:nth-child(even) {
    mobile, l'illustration est masquee pour garder un hero compact.
    ============================================================ */
 .site-hero {
-  background: var(--color-chalk);
+  background: var(--color-cream);
   padding: var(--space-xl) 0;
 }
 
@@ -977,15 +979,14 @@ tbody tr:nth-child(even) {
 }
 
 /* Ligne "logo + titre" : le logo est affiche a cote du titre, dans le
-   meme espace (pas au-dessus). Sa taille grandit avec l'ecran (jusqu'a
-   3 fois sa taille de base sur grand ecran) pour rester raisonnable
-   sur mobile. Meme fichier image que le logo de l'en-tete :
+   meme espace (pas au-dessus), en retrait pour que l'oeil aille
+   d'abord vers le texte. Meme fichier image que le logo de l'en-tete :
    assets/logo-as-badge.jpg. */
 .site-hero__lockup {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: var(--space-md);
+  gap: var(--space-lg);
   margin-bottom: var(--space-md);
 }
 
@@ -997,8 +998,8 @@ tbody tr:nth-child(even) {
 
 .site-hero__logo {
   display: block;
-  width: 96px;
-  height: 96px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   object-fit: cover;
   background: var(--color-white);
@@ -1008,15 +1009,15 @@ tbody tr:nth-child(even) {
 
 @media (min-width: 640px) {
   .site-hero__logo {
-    width: 180px;
-    height: 180px;
+    width: 64px;
+    height: 64px;
   }
 }
 
 @media (min-width: 900px) {
   .site-hero__logo {
-    width: 288px;
-    height: 288px;
+    width: 76px;
+    height: 76px;
   }
 }
 
