@@ -45,4 +45,43 @@
     <path d="M-46 -2 L-46 34" stroke-width="12" />
     <path d="M24 5 L72 27" stroke-width="16" />
   </g>
+
+  <!-- Pictogrammes secondaires, en arriere-plan des silhouettes, pour
+       remplir l'espace sans distraire du sujet principal. -->
+
+  <!-- Boussole (course d'orientation) -->
+  <g transform="translate(305,85)" stroke="#ffd23f" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+    <circle r="22" />
+    <path d="M0 -22 L0 -15 M0 22 L0 15 M-22 0 L-15 0 M22 0 L15 0" />
+    <path d="M0 -13 L6 0 L0 13 L-6 0 Z" fill="#ffd23f" stroke="none" />
+  </g>
+
+  <!-- Chronometre -->
+  <g transform="translate(437,300)" stroke="#ffffff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+    <circle cy="4" r="19" />
+    <path d="M0 4 L0 -9" />
+    <path d="M0 4 L10 9" />
+    <path d="M-7 -21 h14" />
+    <path d="M0 -21 v-6" />
+  </g>
+
+  <!-- Ballon rond (handball / basket) -->
+  <g transform="translate(418,410)" stroke="#ffd23f" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.85">
+    <circle r="17" />
+    <path d="M-17 0 A17 17 0 0 0 17 0" />
+    <path d="M-12 -12 A19 19 0 0 1 12 12" />
+  </g>
+
+  <!-- Ballon ovale (rugby) -->
+  <g transform="translate(432,520) rotate(28)" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8">
+    <ellipse rx="21" ry="12" />
+    <path d="M-15 0 h30 M-6 -5 v10 M6 -5 v10" />
+  </g>
+
+  <!-- Petit ballon, cote clair (echo discret du motif) -->
+  <g transform="translate(60,300)" stroke="#0a1f44" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.15">
+    <circle r="20" />
+    <path d="M-20 0 A20 20 0 0 0 20 0" />
+    <path d="M-14 -14 A22 22 0 0 1 14 14" />
+  </g>
 </svg>
