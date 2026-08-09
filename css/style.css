@@ -998,8 +998,8 @@ tbody tr:nth-child(even) {
 
 .site-hero__logo {
   display: block;
-  width: 52px;
-  height: 52px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   object-fit: cover;
   background: var(--color-white);
@@ -1009,15 +1009,15 @@ tbody tr:nth-child(even) {
 
 @media (min-width: 640px) {
   .site-hero__logo {
-    width: 64px;
-    height: 64px;
+    width: 92px;
+    height: 92px;
   }
 }
 
 @media (min-width: 900px) {
   .site-hero__logo {
-    width: 76px;
-    height: 76px;
+    width: 108px;
+    height: 108px;
   }
 }
 
