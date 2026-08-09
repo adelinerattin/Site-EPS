@@ -979,9 +979,9 @@ tbody tr:nth-child(even) {
 }
 
 /* Ligne "logo + titre" : le logo est affiche a cote du titre, dans le
-   meme espace (pas au-dessus), en retrait pour que l'oeil aille
-   d'abord vers le texte. Meme fichier image que le logo de l'en-tete :
-   assets/logo-as-badge.jpg. */
+   meme espace (pas au-dessus). Fichier image : assets/logo-as-simone-veil.jpg
+   (le logo complet, non recadre — pour changer de logo, remplacez ce
+   fichier en gardant le meme nom). */
 .site-hero__lockup {
   display: flex;
   align-items: center;
@@ -996,28 +996,24 @@ tbody tr:nth-child(even) {
   min-width: 0;
 }
 
+/* Logo affiche tel quel (image complete, non recadree, sans cercle
+   ni cadre) : il se fond directement dans le fond creme du hero. */
 .site-hero__logo {
   display: block;
-  width: 88px;
-  height: 88px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: var(--color-white);
-  box-shadow: var(--shadow-card);
+  width: auto;
+  height: 108px;
   flex-shrink: 0;
 }
 
 @media (min-width: 640px) {
   .site-hero__logo {
-    width: 112px;
-    height: 112px;
+    height: 145px;
   }
 }
 
 @media (min-width: 900px) {
   .site-hero__logo {
-    width: 132px;
-    height: 132px;
+    height: 175px;
   }
 }
 
