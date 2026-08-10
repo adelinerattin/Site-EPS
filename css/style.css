@@ -1068,9 +1068,10 @@ tbody tr:nth-child(even) {
 /* ============================================================
    HERO UNIFIE — identique sur les 7 pages, seuls le titre, le
    texte et le lien du bouton changent d'une page a l'autre.
-   Deux colonnes (texte + illustration) sur grand ecran ; sur
-   mobile, l'illustration reste visible mais empilee sous le texte
-   (une seule colonne).
+   L'illustration est masquee sur telephone (moins de 640px). A
+   partir de la taille tablette (iPad) et sur ordinateur, elle
+   passe a droite du texte (2 colonnes), alignee en haut avec le
+   texte ("align-items: start" sur la grille).
    ============================================================ */
 .site-hero {
   background: var(--color-cream);
@@ -1080,10 +1081,10 @@ tbody tr:nth-child(even) {
 .site-hero__inner {
   display: grid;
   gap: var(--space-lg);
-  align-items: center;
+  align-items: start;
 }
 
-@media (min-width: 860px) {
+@media (min-width: 640px) {
   .site-hero__inner {
     grid-template-columns: 1.4fr 0.6fr;
     gap: var(--space-xl);
@@ -1096,7 +1097,7 @@ tbody tr:nth-child(even) {
    fichier en gardant le meme nom). */
 .site-hero__lockup {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   gap: var(--space-lg);
   margin-bottom: var(--space-md);
@@ -1170,17 +1171,15 @@ tbody tr:nth-child(even) {
 }
 
 .site-hero__visual {
-  display: block;
-  justify-self: center;
-  width: 100%;
-  max-width: 320px;
-  margin: 0 auto;
+  display: none;
 }
 
-@media (min-width: 860px) {
+@media (min-width: 640px) {
   .site-hero__visual {
+    display: block;
+    justify-self: center;
+    width: 100%;
     max-width: 380px;
-    margin: 0;
   }
 }
 
