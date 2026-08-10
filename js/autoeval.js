@@ -12,17 +12,24 @@
      role: "Le joueur",
      critere: "Service reglementaire",
      tiers: [
-       { label: "Maîtrise insuffisante", points: 1 },
-       { label: "Maîtrise fragile", points: 2 },
-       { label: "Maîtrise satisfaisante", points: 3 },
-       { label: "Très bonne maîtrise", points: 4 }
+       { label: "Maîtrise insuffisante", points: 1, desc: "Le service n'est pas reglementaire." },
+       { label: "Maîtrise fragile", points: 2, desc: "Le service est reussi mais de facon aleatoire." },
+       { label: "Maîtrise satisfaisante", points: 3, desc: "Le service est reglementaire." },
+       { label: "Très bonne maîtrise", points: 4, desc: "Le service met l'adversaire en difficulte." }
      ]
    }
 
-   Ce fichier lit ces donnees, affiche 4 puces par critere, calcule
-   le total de points choisis puis le convertit proportionnellement
-   en note sur 20 (quel que soit le total reel de points de la
-   grille source), et affiche le resultat.
+   Le champ "desc" (facultatif mais recommande) rappelle a l'eleve, en
+   une phrase simple, ce qu'il doit etre capable de faire pour se
+   situer a ce niveau — il s'affiche sous chaque puce pour l'aider a
+   s'auto-evaluer.
+
+   Ce fichier lit ces donnees, affiche 4 puces par critere (chaque
+   role recoit automatiquement un fond gris different pour regrouper
+   visuellement ses criteres), calcule le total de points choisis
+   puis le convertit proportionnellement en note sur 20 (quel que
+   soit le total reel de points de la grille source), et affiche le
+   resultat.
    ============================================================ */
 
 window.AUTOEVAL_DATA = window.AUTOEVAL_DATA || {};
@@ -61,9 +68,20 @@ document.addEventListener("DOMContentLoaded", function () {
     var submitBtn = container.querySelector(".autoeval-submit");
     var resultBox = container.querySelector(".autoeval-result");
 
+    /* Attribue un indice de couleur (0, 1, 2...) a chaque role selon
+       son ordre d'apparition, pour regrouper visuellement ses criteres. */
+    var roleIndex = {};
+    var nextRoleIndex = 0;
+    criteria.forEach(function (c) {
+      if (!(c.role in roleIndex)) {
+        roleIndex[c.role] = nextRoleIndex % 5;
+        nextRoleIndex++;
+      }
+    });
+
     var html = "";
     criteria.forEach(function (c, cIndex) {
-      html += '<div class="autoeval-item" data-item-index="' + cIndex + '">';
+      html += '<div class="autoeval-item autoeval-item--role-' + roleIndex[c.role] + '" data-item-index="' + cIndex + '">';
       html +=
         '<p class="autoeval-item__title"><span class="autoeval-item__role">' +
         c.role +
@@ -78,8 +96,11 @@ document.addEventListener("DOMContentLoaded", function () {
           "<li>" +
           '<label class="autoeval-option" for="' + inputId + '">' +
           '<input type="radio" id="' + inputId + '" name="' + autoevalId + "-c" + cIndex + '" value="' + tier.points + '">' +
+          '<span class="autoeval-option__head">' +
           '<span class="autoeval-option__dot autoeval-option__dot--' + dot + '" aria-hidden="true"></span>' +
           "<span>" + tier.label + "</span>" +
+          "</span>" +
+          (tier.desc ? '<span class="autoeval-option__desc">' + tier.desc + "</span>" : "") +
           "</label>" +
           "</li>";
       });

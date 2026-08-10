@@ -885,7 +885,18 @@ a.card:focus-visible {
   padding: var(--space-sm) var(--space-md);
   background: var(--color-chalk);
   border-radius: var(--radius);
+  border-left: 5px solid var(--color-border);
 }
+
+/* Code couleur par role : chaque role d'une activite recoit un gris
+   d'un degrade different (le plus soutenu pour le 1er role rencontre)
+   pour regrouper visuellement ses criteres, attribue automatiquement
+   par js/autoeval.js selon l'ordre d'apparition des roles. */
+.autoeval-item--role-0 { background: #d6d3ca; border-left-color: #9c9789; }
+.autoeval-item--role-1 { background: #e3e0d8; border-left-color: #b7b2a2; }
+.autoeval-item--role-2 { background: #eeece6; border-left-color: #cac5b6; }
+.autoeval-item--role-3 { background: #f5f4f0; border-left-color: #ddd8ca; }
+.autoeval-item--role-4 { background: #faf9f7; border-left-color: #e8e4d9; }
 
 .autoeval-item__title {
   margin: 0 0 0.6em;
@@ -913,9 +924,10 @@ a.card:focus-visible {
 
 .autoeval-option {
   display: flex;
-  align-items: center;
-  gap: 0.5em;
-  padding: 0.5em 0.7em;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4em;
+  padding: 0.6em 0.7em;
   border-radius: 8px;
   border: 2px solid var(--color-border);
   background: var(--color-white);
@@ -927,6 +939,12 @@ a.card:focus-visible {
   border-color: var(--color-navy);
 }
 
+.autoeval-option__head {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
 .autoeval-option input[type="radio"] {
   margin: 0;
   flex-shrink: 0;
@@ -935,6 +953,9 @@ a.card:focus-visible {
 .autoeval-option.is-selected {
   border-color: var(--color-navy);
   background: var(--color-cream);
+}
+
+.autoeval-option.is-selected .autoeval-option__head {
   font-weight: 700;
 }
 
@@ -943,6 +964,12 @@ a.card:focus-visible {
   height: 10px;
   border-radius: 50%;
   flex-shrink: 0;
+}
+
+.autoeval-option__desc {
+  color: var(--color-ink-soft);
+  font-size: 0.8rem;
+  line-height: 1.35;
 }
 
 .autoeval-option__dot--insuffisante { background: var(--color-red); }
@@ -1046,7 +1073,7 @@ th, td {
   text-align: left;
   vertical-align: top;
   padding: 0.7em 0.9em;
-  border-bottom: 1px solid var(--color-border);
+  border: 1px solid var(--color-border);
   font-size: 0.92rem;
 }
 
@@ -1057,10 +1084,7 @@ thead th {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-}
-
-tbody tr:last-child td {
-  border-bottom: none;
+  border-color: var(--color-navy-light);
 }
 
 tbody tr:nth-child(even) {
@@ -1073,6 +1097,13 @@ tbody tr:nth-child(even) {
    et en gras. Le marqueur ".eval-grid" sur <table> scope ces regles
    aux grilles d'evaluation uniquement (pas aux tableaux "role / lien
    avec le socle" plus simples). */
+thead th.mastery-insuffisante,
+thead th.mastery-fragile,
+thead th.mastery-satisfaisante,
+thead th.mastery-excellente {
+  text-align: center;
+}
+
 thead th.mastery-insuffisante {
   background: var(--color-red);
   color: var(--color-white);
