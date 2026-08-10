@@ -41,6 +41,8 @@
   --color-coral: #e8543f;         /* corail : alertes / informations importantes */
   --color-coral-light: #fdece8;   /* corail tres clair : fond des messages d'alerte */
   --color-orange: #e8871e;        /* orange "ballon" : clin d'oeil au logo de l'AS, accent secondaire */
+  --color-red: #d64545;           /* rouge : en-tete "maitrise insuffisante" des grilles d'evaluation */
+  --color-green-pale: #8fd19e;    /* vert clair mais lisible : en-tete "maitrise satisfaisante" (different de --color-green-light, trop pale pour un en-tete) */
   --color-chalk: #f7f5ef;         /* fond clair "craie" pour le contenu */
   --color-cream: #fcefdc;         /* couleur crème exacte du fond du logo, utilisee pour le hero */
   --color-white: #ffffff;
@@ -870,6 +872,131 @@ a.card:focus-visible {
 }
 
 /* ============================================================
+   11bis. AUTO-EVALUATION
+   ------------------------------------------------------------
+   Pour chaque critere de la grille d'evaluation, l'eleve choisit
+   son niveau de maitrise ressenti parmi 4 puces colorees (memes
+   couleurs que les en-tetes des grilles). Le score est calcule
+   proportionnellement sur 20, quel que soit le total de points
+   reel de la grille source (js/autoeval.js).
+   ============================================================ */
+.autoeval-item {
+  margin-bottom: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-chalk);
+  border-radius: var(--radius);
+}
+
+.autoeval-item__title {
+  margin: 0 0 0.6em;
+  font-weight: 700;
+}
+
+.autoeval-item__role {
+  color: var(--color-ink-soft);
+  font-weight: 400;
+}
+
+.autoeval-options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5em;
+}
+
+@media (min-width: 640px) {
+  .autoeval-options {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.autoeval-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em 0.7em;
+  border-radius: 8px;
+  border: 2px solid var(--color-border);
+  background: var(--color-white);
+  cursor: pointer;
+  font-size: 0.88rem;
+}
+
+.autoeval-option:hover {
+  border-color: var(--color-navy);
+}
+
+.autoeval-option input[type="radio"] {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.autoeval-option.is-selected {
+  border-color: var(--color-navy);
+  background: var(--color-cream);
+  font-weight: 700;
+}
+
+.autoeval-option__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.autoeval-option__dot--insuffisante { background: var(--color-red); }
+.autoeval-option__dot--fragile { background: var(--color-yellow); }
+.autoeval-option__dot--satisfaisante { background: var(--color-green-pale); }
+.autoeval-option__dot--excellente { background: var(--color-green); }
+
+.autoeval-result {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+  border-radius: var(--radius);
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.autoeval-result .autoeval-result__detail {
+  display: block;
+  margin-top: 0.4em;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+.autoeval-submit {
+  margin-top: var(--space-sm);
+}
+
+/* Schema vectoriel illustrant une regle (terrain, zones...), insere
+   dans la rubrique "Regles" d'une activite. */
+.rule-diagram {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-sm);
+  margin-bottom: var(--space-md);
+  text-align: center;
+}
+
+.rule-diagram svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.rule-diagram figcaption {
+  margin-top: 0.5em;
+  font-size: 0.82rem;
+  color: var(--color-ink-soft);
+}
+
+/* ============================================================
    12. ALERTES / ENCARTS
    ============================================================ */
 .callout {
@@ -940,6 +1067,43 @@ tbody tr:nth-child(even) {
   background: var(--color-chalk);
 }
 
+/* Grilles d'evaluation ("maitrise insuffisante/fragile/satisfaisante/
+   tres bonne") : en-tetes colores par niveau, points centres et en
+   gras, roles et criteres centres (horizontalement + verticalement)
+   et en gras. Le marqueur ".eval-grid" sur <table> scope ces regles
+   aux grilles d'evaluation uniquement (pas aux tableaux "role / lien
+   avec le socle" plus simples). */
+thead th.mastery-insuffisante {
+  background: var(--color-red);
+  color: var(--color-white);
+}
+
+thead th.mastery-fragile {
+  background: var(--color-yellow);
+  color: var(--color-navy);
+}
+
+thead th.mastery-satisfaisante {
+  background: var(--color-green-pale);
+  color: var(--color-navy);
+}
+
+thead th.mastery-excellente {
+  background: var(--color-green);
+  color: var(--color-white);
+}
+
+.eval-grid .role-critere {
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 700;
+}
+
+.eval-grid tr.pts-row td {
+  text-align: center;
+  font-weight: 700;
+}
+
 /* ============================================================
    13bis. ONGLETS DE RUBRIQUE (activity-card)
    ------------------------------------------------------------
@@ -978,6 +1142,10 @@ tbody tr:nth-child(even) {
 .rubrique-tab:hover,
 .rubrique-tab:focus-visible {
   border-color: var(--color-orange);
+}
+
+.rubrique-tab[hidden] {
+  display: none;
 }
 
 .rubrique-tab[aria-selected="true"] {
