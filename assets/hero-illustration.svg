@@ -1,14 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 560">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 660">
   <!-- Illustration du hero : bloc diagonal bleu marine avec bande jaune,
        et 3 silhouettes de sportifs (course, saut au basket, gainage)
        dessinees en pictogramme (traits epais). Purement vectoriel :
-       aucune photo, donc librement modifiable ici. -->
+       aucune photo, donc librement modifiable ici. Canvas volontairement
+       plus haut que large (480x660) pour que le bloc marine descende
+       jusqu'au bas de la zone hero (bouton "Decouvrir mes ressources"
+       inclus) sur tablette/ordinateur. -->
 
-  <!-- Bloc diagonal bleu marine -->
-  <polygon points="260,0 480,0 480,560 0,560" fill="#0a1f44" />
+  <!-- Bloc diagonal bleu marine (la diagonale atteint deja le bord
+       gauche a y=560 : au-dela, la forme reste simplement pleine
+       largeur jusqu'au nouveau bas du canevas) -->
+  <polygon points="260,0 480,0 480,660 0,660" fill="#0a1f44" />
 
-  <!-- Bande jaune diagonale -->
-  <polygon points="-18,552 242,-8 284,11 24,571" fill="#ffd23f" />
+  <!-- Bande jaune diagonale (prolongee dans le meme axe) -->
+  <polygon points="-64,652 242,-8 284,11 -22,671" fill="#ffd23f" />
 
   <!-- Trame de points (zone claire, coin haut-gauche) -->
   <g fill="#0a1f44" opacity="0.18">
@@ -39,7 +44,7 @@
   </g>
 
   <!-- Silhouette 3 : gainage (planche) -->
-  <g transform="translate(300,468) scale(1.15)" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+  <g transform="translate(300,568) scale(1.15)" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="-64" cy="-6" r="12" fill="#ffffff" stroke="none" />
     <path d="M-52 -4 L30 6" stroke-width="18" />
     <path d="M-46 -2 L-46 34" stroke-width="12" />
@@ -66,14 +71,14 @@
   </g>
 
   <!-- Ballon rond (handball / basket) -->
-  <g transform="translate(418,410)" stroke="#ffd23f" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.85">
+  <g transform="translate(418,510)" stroke="#ffd23f" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.85">
     <circle r="17" />
     <path d="M-17 0 A17 17 0 0 0 17 0" />
     <path d="M-12 -12 A19 19 0 0 1 12 12" />
   </g>
 
   <!-- Ballon ovale (rugby) -->
-  <g transform="translate(432,520) rotate(28)" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8">
+  <g transform="translate(432,620) rotate(28)" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8">
     <ellipse rx="21" ry="12" />
     <path d="M-15 0 h30 M-6 -5 v10 M6 -5 v10" />
   </g>
@@ -106,14 +111,14 @@
   </g>
 
   <!-- Poignee de main (entraide, solidarite) -->
-  <g transform="translate(150,415)" stroke="#ffd23f" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+  <g transform="translate(150,515)" stroke="#ffd23f" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
     <path d="M-26 -4 L-5 3" />
     <path d="M26 -4 L5 3" />
     <circle cx="0" cy="3" r="6" fill="#ffd23f" stroke="none" />
   </g>
 
   <!-- Livre ouvert -->
-  <g transform="translate(450,462)" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+  <g transform="translate(450,562)" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
     <path d="M0 -12 L-19 -8 L-19 10 L0 6 L19 10 L19 -8 Z" />
     <path d="M0 -12 L0 6" />
     <path d="M-14 -4 L-5 -6 M-14 1 L-5 -1" stroke-width="1.8" opacity="0.7" />
@@ -121,7 +126,7 @@
   </g>
 
   <!-- Calendrier -->
-  <g transform="translate(120,518)" stroke="#ffd23f" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+  <g transform="translate(120,618)" stroke="#ffd23f" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
     <rect x="-16" y="-13" width="32" height="28" rx="4" />
     <path d="M-16 -4 h32" />
     <path d="M-8 -17 v8 M8 -17 v8" />
@@ -131,7 +136,7 @@
   </g>
 
   <!-- Mail (enveloppe) -->
-  <g transform="translate(258,533)" stroke="#ffffff" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+  <g transform="translate(258,633)" stroke="#ffffff" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
     <rect x="-17" y="-11" width="34" height="22" rx="3" />
     <path d="M-17 -9 L0 4 L17 -9" />
   </g>
