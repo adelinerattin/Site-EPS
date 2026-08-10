@@ -89,11 +89,12 @@
             <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : Handball">
               <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-5e-attendus">🎯 Attendus</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-5e-acquisitions">✅ Acquisitions</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-5e-lexique">📖 Lexique</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-5e-regles">🏳️ Règles</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-5e-evaluation">📊 Évaluation</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-5e-autoeval">🧮 Auto-évaluation</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-5e-videos">🎥 Vidéos</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-5e-quiz">🧠 Quiz</button>
-              <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-5e-lexique">📖 Lexique</button>
             </div>
 
             <section class="rubrique" id="handball-5e-attendus">
@@ -153,6 +154,18 @@
               </ul>
             </section>
 
+            <section class="rubrique" id="handball-5e-lexique">
+              <h4>📖 Lexique</h4>
+              <dl class="lexique">
+                <dt>Défense de zone</dt><dd>Organisation défensive où chaque joueur occupe et défend un secteur du terrain plutôt qu'un adversaire désigné.</dd>
+                <dt>Glisser</dt><dd>Se déplacer d'une zone défensive à une autre pour suivre le ballon, en communiquant avec ses partenaires.</dd>
+                <dt>Presseur</dt><dd>Défenseur qui vient ponctuellement gêner le porteur de balle sans quitter l'organisation collective.</dd>
+                <dt>PB / NPB</dt><dd>Porteur du Ballon / Non-Porteur du Ballon.</dd>
+                <dt>Co-arbitrage</dt><dd>Arbitrage assuré à tour de rôle par les élèves eux-mêmes.</dd>
+                <dt>Attaque construite</dt><dd>Attaque organisée par des choix collectifs (passes, démarquages) plutôt que par des tentatives individuelles.</dd>
+              </dl>
+            </section>
+
             <section class="rubrique" id="handball-5e-regles">
               <h4>🏳️ Règles d'arbitrage</h4>
               <div class="video-embed video-embed--placeholder">
@@ -173,56 +186,101 @@
               <h4>📊 Modalités d'évaluation</h4>
               <p><strong>Grille d'évaluation — Handball 5e</strong></p>
               <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th>Maîtrise insuffisante</th><th>Maîtrise fragile</th><th>Maîtrise satisfaisante</th><th>Très bonne maîtrise</th></tr></thead>
+                <table class="eval-grid">
+                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th class="mastery-insuffisante">Maîtrise insuffisante</th><th class="mastery-fragile">Maîtrise fragile</th><th class="mastery-satisfaisante">Maîtrise satisfaisante</th><th class="mastery-excellente">Très bonne maîtrise</th></tr></thead>
                   <tbody>
                     <tr>
-                      <td rowspan="2">Le joueur en défense<br><span class="text-mono">/6</span></td>
-                      <td rowspan="2">Organisation de la défense de zone</td>
+                      <td class="role-critere" rowspan="2">Le joueur en défense<br><span class="text-mono">/6</span></td>
+                      <td class="role-critere" rowspan="2">Organisation de la défense de zone</td>
                       <td>L'élève ne participe pas à la défense en zone, reste devant malgré les sollicitations</td>
                       <td>L'élève revient en zone sans regarder le ballon, il a besoin d'être guidé en permanence et malgré cela, a du mal à trouver ses repères</td>
                       <td>L'élève revient en zone mais manque de communication pour glisser ou temps de retard mais présent et efficace</td>
                       <td>L'élève revient toujours en zone ou en presseur et place son équipe en conséquence (communication)</td>
                     </tr>
-                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr class="pts-row"><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
                     <tr>
-                      <td rowspan="4">Le joueur en attaque<br><span class="text-mono">/8</span></td>
-                      <td rowspan="2">PB — Choix : est capable de réaliser une attaque construite</td>
+                      <td class="role-critere" rowspan="4">Le joueur en attaque<br><span class="text-mono">/8</span></td>
+                      <td class="role-critere" rowspan="2">PB — Choix : est capable de réaliser une attaque construite</td>
                       <td>Élève qui ne s'implique pas dans le collectif</td>
                       <td>Élève qui reste en retrait, manque de réactivité et de rapidité sur les choix de passes ou de dribbles</td>
                       <td>Élève qui est un bon atout mais qui reste uniquement sur son individualité. Tirs forcés pas toujours en situation favorable</td>
                       <td>Choix pertinents et rapides et re-propose une solution après sa passe ce qui permet à son équipe d'aller au tir</td>
                     </tr>
-                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr class="pts-row"><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
                     <tr>
-                      <td rowspan="2">NPB — Participation à la progression rapide du ballon</td>
+                      <td class="role-critere" rowspan="2">NPB — Participation à la progression rapide du ballon</td>
                       <td>Pas de déplacements voire gêne le porteur de balle</td>
                       <td>Déplacements trop discrets, ne permet pas à son équipe de créer des espaces</td>
                       <td>Déplacements pertinents mais avec un petit manque de réactivité</td>
                       <td>L'élève propose des solutions pertinentes pour créer un espace dans la défense de zone pour aller tirer favorablement</td>
                     </tr>
-                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr class="pts-row"><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
                     <tr>
-                      <td rowspan="2">Le co-arbitre<br><span class="text-mono">/4</span></td>
-                      <td rowspan="2">Maîtrise des règles du jeu et de l'auto-arbitrage</td>
+                      <td class="role-critere" rowspan="2">Le co-arbitre<br><span class="text-mono">/4</span></td>
+                      <td class="role-critere" rowspan="2">Maîtrise des règles du jeu et de l'auto-arbitrage</td>
                       <td>« Le passif ou perturbateur » — Absent du match ou cherche à imposer son autorité et ses décisions</td>
                       <td>« L'assisté ou l'influençable » — Sa connaissance du règlement est parcellaire et/ou il est influençable (ne s'affirme pas pendant le match)</td>
                       <td>« L'handballeur » — Connaît et fait appliquer les principales règles</td>
                       <td>« L'handballeur expert » — Arbitrage des règles précises, fait assurer un climat serein</td>
                     </tr>
-                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr class="pts-row"><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
                     <tr>
-                      <td rowspan="2">Le joueur fair-play<br><span class="text-mono">/2</span></td>
-                      <td rowspan="2">Gestion des émotions</td>
+                      <td class="role-critere" rowspan="2">Le joueur fair-play<br><span class="text-mono">/2</span></td>
+                      <td class="role-critere" rowspan="2">Gestion des émotions</td>
                       <td>Attitude à revoir, l'élève quitte le match</td>
                       <td>Attitude trop changeante, gestion des émotions trop compliquée</td>
                       <td>Attitude correcte malgré quelques remarques pour se remobiliser sur le match</td>
                       <td>Attitude irréprochable durant le cycle, gestion des émotions parfaites</td>
                     </tr>
-                    <tr><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                    <tr class="pts-row"><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
                   </tbody>
                 </table>
               </div>
+            </section>
+
+            <section class="rubrique" id="handball-5e-autoeval">
+              <h4>🧮 Auto-évaluation</h4>
+              <p>Pour chaque critère, choisis le niveau de maîtrise qui te correspond le mieux. Tu obtiendras une estimation de ta note sur 20.</p>
+              <div class="autoeval" data-autoeval-id="handball-5e">
+                <div class="autoeval-criteria"></div>
+                <button type="button" class="btn btn--primary autoeval-submit">Calculer mon score</button>
+                <div class="autoeval-result" role="status" hidden></div>
+              </div>
+              <script>
+                window.AUTOEVAL_DATA = window.AUTOEVAL_DATA || {};
+                window.AUTOEVAL_DATA['handball-5e'] = [
+                  { role: "Le joueur en défense", critere: "Organisation de la défense de zone", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Je ne participe pas à la défense en zone, je reste devant malgré les sollicitations." },
+                    { label: "Maîtrise fragile", points: 2, desc: "Je reviens en zone sans regarder le ballon, j'ai besoin d'être guidé en permanence." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "Je reviens en zone mais je communique peu pour glisser, ou j'ai un temps de retard tout en restant efficace." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "Je reviens toujours en zone (ou en presseur) et je place mon équipe en communiquant." }
+                  ]},
+                  { role: "Le joueur en attaque", critere: "PB — Choix : est capable de réaliser une attaque construite", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Je ne m'implique pas dans le jeu collectif." },
+                    { label: "Maîtrise fragile", points: 2, desc: "Je reste en retrait, je manque de réactivité et de rapidité sur mes choix de passes ou de dribbles." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "Je suis un bon atout mais je reste sur mon individualité, mes tirs sont forcés et pas toujours favorables." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "Mes choix sont pertinents et rapides, je re-propose une solution après ma passe pour aider mon équipe à aller au tir." }
+                  ]},
+                  { role: "Le joueur en attaque", critere: "NPB — Participation à la progression rapide du ballon", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Je ne me déplace pas, voire je gêne le porteur de balle." },
+                    { label: "Maîtrise fragile", points: 2, desc: "Mes déplacements sont trop discrets, je ne permets pas à mon équipe de créer des espaces." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "Mes déplacements sont pertinents mais avec un petit manque de réactivité." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "Je propose des solutions pertinentes pour créer un espace dans la défense de zone adverse et aller tirer favorablement." }
+                  ]},
+                  { role: "Le co-arbitre", critere: "Maîtrise des règles du jeu et de l'auto-arbitrage", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Je suis absent du match ou je cherche à imposer mon autorité et mes décisions." },
+                    { label: "Maîtrise fragile", points: 2, desc: "Ma connaissance du règlement est incomplète et/ou je suis influençable, je ne m'affirme pas pendant le match." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "Je connais et je fais appliquer les principales règles." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "J'arbitre avec précision et je contribue à assurer un climat serein." }
+                  ]},
+                  { role: "Le joueur fair-play", critere: "Gestion des émotions", tiers: [
+                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Mon attitude est à revoir, je quitte le match." },
+                    { label: "Maîtrise fragile", points: 1, desc: "Mon attitude est trop changeante, je gère mal mes émotions." },
+                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Mon attitude est correcte malgré quelques remarques pour me remobiliser." },
+                    { label: "Très bonne maîtrise", points: 2, desc: "Mon attitude est irréprochable durant tout le cycle, je gère parfaitement mes émotions." }
+                  ]}
+                ];
+              </script>
             </section>
 
             <section class="rubrique" id="handball-5e-videos">
@@ -256,18 +314,6 @@
               </script>
             </section>
 
-            <section class="rubrique" id="handball-5e-lexique">
-              <h4>📖 Lexique</h4>
-              <dl class="lexique">
-                <dt>Défense de zone</dt><dd>Organisation défensive où chaque joueur occupe et défend un secteur du terrain plutôt qu'un adversaire désigné.</dd>
-                <dt>Glisser</dt><dd>Se déplacer d'une zone défensive à une autre pour suivre le ballon, en communiquant avec ses partenaires.</dd>
-                <dt>Presseur</dt><dd>Défenseur qui vient ponctuellement gêner le porteur de balle sans quitter l'organisation collective.</dd>
-                <dt>PB / NPB</dt><dd>Porteur du Ballon / Non-Porteur du Ballon.</dd>
-                <dt>Co-arbitrage</dt><dd>Arbitrage assuré à tour de rôle par les élèves eux-mêmes.</dd>
-                <dt>Attaque construite</dt><dd>Attaque organisée par des choix collectifs (passes, démarquages) plutôt que par des tentatives individuelles.</dd>
-              </dl>
-            </section>
-
           </div>
         </details>
 
@@ -284,11 +330,12 @@
             <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : Ultimate">
               <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-5e-attendus">🎯 Attendus</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-5e-acquisitions">✅ Acquisitions</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-5e-lexique">📖 Lexique</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-5e-regles">🏳️ Règles</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-5e-evaluation">📊 Évaluation</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-5e-autoeval">🧮 Auto-évaluation</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-5e-videos">🎥 Vidéos</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-5e-quiz">🧠 Quiz</button>
-              <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-5e-lexique">📖 Lexique</button>
             </div>
 
             <section class="rubrique" id="ultimate-5e-attendus">
@@ -343,6 +390,18 @@
               <p>Auto-arbitrer une rencontre en connaissant et en appliquant les règles principales (voir l'onglet « Règles »), en privilégiant le dialogue pour contribuer à un climat serein plutôt que d'imposer ses décisions.</p>
             </section>
 
+            <section class="rubrique" id="ultimate-5e-lexique">
+              <h4>📖 Lexique</h4>
+              <dl class="lexique">
+                <dt>Turnover</dt><dd>Changement de possession du disque (interception, chute, faute).</dd>
+                <dt>Appel / contre-appel</dt><dd>Changements de direction et de rythme d'un non-porteur pour sortir du marquage de son défenseur.</dd>
+                <dt>Défense individuelle permanente</dt><dd>Défense sur un adversaire attitré, maintenue sans interruption sur tout un match ou un tournoi.</dd>
+                <dt>Auto-arbitrage</dt><dd>Arbitrage assuré par les joueurs eux-mêmes, basé sur le dialogue et le respect du règlement.</dd>
+                <dt>Pied de pivot</dt><dd>Pied qui reste fixe au sol pendant qu'on manie le disque.</dd>
+                <dt>Esprit du jeu</dt><dd>Principe fondateur de l'ultimate basé sur le respect et l'auto-arbitrage.</dd>
+              </dl>
+            </section>
+
             <section class="rubrique" id="ultimate-5e-regles">
               <h4>🏳️ Règles d'arbitrage</h4>
               <div class="video-embed video-embed--placeholder">
@@ -362,56 +421,101 @@
               <h4>📊 Modalités d'évaluation</h4>
               <p><strong>Grille d'évaluation — Ultimate 5e</strong></p>
               <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th>Maîtrise insuffisante</th><th>Maîtrise fragile</th><th>Maîtrise satisfaisante</th><th>Très bonne maîtrise</th></tr></thead>
+                <table class="eval-grid">
+                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th class="mastery-insuffisante">Maîtrise insuffisante</th><th class="mastery-fragile">Maîtrise fragile</th><th class="mastery-satisfaisante">Maîtrise satisfaisante</th><th class="mastery-excellente">Très bonne maîtrise</th></tr></thead>
                   <tbody>
                     <tr>
-                      <td rowspan="4">Le joueur en attaque<br><span class="text-mono">/9</span></td>
-                      <td rowspan="2">Rôle dans la progression rapide du disque et maîtrise des coups</td>
+                      <td class="role-critere" rowspan="4">Le joueur en attaque<br><span class="text-mono">/9</span></td>
+                      <td class="role-critere" rowspan="2">Rôle dans la progression rapide du disque et maîtrise des coups</td>
                       <td>Le joueur ne participe pas à l'attaque ou trop de déchets</td>
                       <td>Le joueur se débarrasse systématiquement du disque lorsqu'il en a possession, maîtrise basique des coups (revers principalement)</td>
                       <td>Bonne prise d'information et maîtrise des coups mais problème d'exécution quelques fois</td>
                       <td>Très efficace : maîtrise des différentes techniques et passes précises dans la course du NPD</td>
                     </tr>
-                    <tr><td>1 pt</td><td>2,5 pts</td><td>4 pts</td><td>5 pts</td></tr>
+                    <tr class="pts-row"><td>1 pt</td><td>2,5 pts</td><td>4 pts</td><td>5 pts</td></tr>
                     <tr>
-                      <td rowspan="2">Démarquage</td>
+                      <td class="role-critere" rowspan="2">Démarquage</td>
                       <td>Ne participe jamais ou rarement aux contre-attaques, reste statique</td>
                       <td>Manque de mobilité lorsque le défenseur est au marquage et/ou ne se démarque pas efficacement (est caché par le défenseur)</td>
                       <td>Mobile, propose des solutions de passe efficace malgré la présence d'un défenseur</td>
                       <td>Très mobile, est capable de faire des appels/contre appels pour sortir du marquage, s'adapte selon les déplacements de ses partenaires, demande des disques dans la course</td>
                     </tr>
-                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr class="pts-row"><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
                     <tr>
-                      <td rowspan="2">Le joueur en attaque et en défense<br><span class="text-mono">/5</span></td>
-                      <td rowspan="2">Réactivité lors des turnovers</td>
+                      <td class="role-critere" rowspan="2">Le joueur en attaque et en défense<br><span class="text-mono">/5</span></td>
+                      <td class="role-critere" rowspan="2">Réactivité lors des turnovers</td>
                       <td>Temps de réaction trop important mettant en difficulté son équipe</td>
                       <td>Temps de réaction trop changeant en fonction des équipes</td>
                       <td>Temps de réaction correct mais qui peut s'améliorer</td>
                       <td>Très vif lors de tous les turnovers</td>
                     </tr>
-                    <tr><td>1 pt</td><td>2,5 pts</td><td>4 pts</td><td>5 pts</td></tr>
+                    <tr class="pts-row"><td>1 pt</td><td>2,5 pts</td><td>4 pts</td><td>5 pts</td></tr>
                     <tr>
-                      <td rowspan="2">L'équipe en défense<br><span class="text-mono">/4</span></td>
-                      <td rowspan="2">Organisation et mise en place de la défense individuelle</td>
+                      <td class="role-critere" rowspan="2">L'équipe en défense<br><span class="text-mono">/4</span></td>
+                      <td class="role-critere" rowspan="2">Organisation et mise en place de la défense individuelle</td>
                       <td>La défense à trous</td>
                       <td>L'individuelle à mi-temps</td>
                       <td>L'individuelle permanente sur un match</td>
                       <td>L'individuelle permanente sur un tournoi</td>
                     </tr>
-                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr class="pts-row"><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
                     <tr>
-                      <td rowspan="2">L'auto-arbitre<br><span class="text-mono">/2</span></td>
-                      <td rowspan="2">Maîtrise des règles du jeu et de l'auto-arbitrage</td>
+                      <td class="role-critere" rowspan="2">L'auto-arbitre<br><span class="text-mono">/2</span></td>
+                      <td class="role-critere" rowspan="2">Maîtrise des règles du jeu et de l'auto-arbitrage</td>
                       <td>Évite le dialogue et tente d'imposer aux autres ses décisions altérant le climat de la rencontre</td>
                       <td>Sa connaissance du règlement est parcellaire. Les autres joueurs lui rappellent ce qu'il doit faire et/ou fait de l'anti-jeu</td>
                       <td>Capable d'un auto-arbitrage des règles principales</td>
                       <td>Capable d'un auto-arbitrage des règles précises, contribue à assurer un climat serein</td>
                     </tr>
-                    <tr><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                    <tr class="pts-row"><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
                   </tbody>
                 </table>
               </div>
+            </section>
+
+            <section class="rubrique" id="ultimate-5e-autoeval">
+              <h4>🧮 Auto-évaluation</h4>
+              <p>Pour chaque critère, choisis le niveau de maîtrise qui te correspond le mieux. Tu obtiendras une estimation de ta note sur 20.</p>
+              <div class="autoeval" data-autoeval-id="ultimate-5e">
+                <div class="autoeval-criteria"></div>
+                <button type="button" class="btn btn--primary autoeval-submit">Calculer mon score</button>
+                <div class="autoeval-result" role="status" hidden></div>
+              </div>
+              <script>
+                window.AUTOEVAL_DATA = window.AUTOEVAL_DATA || {};
+                window.AUTOEVAL_DATA['ultimate-5e'] = [
+                  { role: "Le joueur en attaque", critere: "Rôle dans la progression rapide du disque et maîtrise des coups", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Je ne participe pas à l'attaque ou je fais trop de déchets (passes perdues)." },
+                    { label: "Maîtrise fragile", points: 2.5, desc: "Je me débarrasse systématiquement du disque dès que je l'ai, je ne maîtrise que le revers." },
+                    { label: "Maîtrise satisfaisante", points: 4, desc: "Je prends bien l'information et je maîtrise les coups mais j'ai parfois des problèmes d'exécution." },
+                    { label: "Très bonne maîtrise", points: 5, desc: "Je maîtrise les différentes techniques et je fais des passes précises dans la course du non-porteur." }
+                  ]},
+                  { role: "Le joueur en attaque", critere: "Démarquage", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Je ne participe jamais ou rarement aux contre-attaques, je reste statique." },
+                    { label: "Maîtrise fragile", points: 2, desc: "Je manque de mobilité face au marquage et/ou je ne me démarque pas efficacement." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "Je suis mobile, je propose des solutions de passe efficaces malgré la présence d'un défenseur." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "Je suis très mobile, je fais des appels/contre-appels, je m'adapte à mes partenaires et je demande le disque dans la course." }
+                  ]},
+                  { role: "Le joueur en attaque et en défense", critere: "Réactivité lors des turnovers", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Mon temps de réaction est trop important et met mon équipe en difficulté." },
+                    { label: "Maîtrise fragile", points: 2.5, desc: "Mon temps de réaction est trop changeant en fonction des équipes." },
+                    { label: "Maîtrise satisfaisante", points: 4, desc: "Mon temps de réaction est correct mais peut encore s'améliorer." },
+                    { label: "Très bonne maîtrise", points: 5, desc: "Je suis très vif lors de tous les turnovers." }
+                  ]},
+                  { role: "L'équipe en défense", critere: "Organisation et mise en place de la défense individuelle", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Notre défense individuelle est « à trous »." },
+                    { label: "Maîtrise fragile", points: 2, desc: "Notre défense individuelle tient à mi-temps seulement." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "Notre défense individuelle est permanente sur un match." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "Notre défense individuelle est permanente sur un tournoi entier." }
+                  ]},
+                  { role: "L'auto-arbitre", critere: "Maîtrise des règles du jeu et de l'auto-arbitrage", tiers: [
+                    { label: "Maîtrise insuffisante", points: 0.5, desc: "J'évite le dialogue et je tente d'imposer mes décisions, ce qui altère le climat de la rencontre." },
+                    { label: "Maîtrise fragile", points: 1, desc: "Ma connaissance du règlement est incomplète, les autres joueurs doivent me rappeler ce que je dois faire." },
+                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Je suis capable d'un auto-arbitrage des règles principales." },
+                    { label: "Très bonne maîtrise", points: 2, desc: "Je suis capable d'un auto-arbitrage précis et je contribue à assurer un climat serein." }
+                  ]}
+                ];
+              </script>
             </section>
 
             <section class="rubrique" id="ultimate-5e-videos">
@@ -445,18 +549,6 @@
               </script>
             </section>
 
-            <section class="rubrique" id="ultimate-5e-lexique">
-              <h4>📖 Lexique</h4>
-              <dl class="lexique">
-                <dt>Turnover</dt><dd>Changement de possession du disque (interception, chute, faute).</dd>
-                <dt>Appel / contre-appel</dt><dd>Changements de direction et de rythme d'un non-porteur pour sortir du marquage de son défenseur.</dd>
-                <dt>Défense individuelle permanente</dt><dd>Défense sur un adversaire attitré, maintenue sans interruption sur tout un match ou un tournoi.</dd>
-                <dt>Auto-arbitrage</dt><dd>Arbitrage assuré par les joueurs eux-mêmes, basé sur le dialogue et le respect du règlement.</dd>
-                <dt>Pied de pivot</dt><dd>Pied qui reste fixe au sol pendant qu'on manie le disque.</dd>
-                <dt>Esprit du jeu</dt><dd>Principe fondateur de l'ultimate basé sur le respect et l'auto-arbitrage.</dd>
-              </dl>
-            </section>
-
           </div>
         </details>
 
@@ -473,11 +565,12 @@
             <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : Biathlon">
               <button type="button" class="rubrique-tab" role="tab" aria-controls="biathlon-5e-attendus">🎯 Attendus</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="biathlon-5e-acquisitions">✅ Acquisitions</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="biathlon-5e-lexique">📖 Lexique</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="biathlon-5e-regles">🏳️ Règles</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="biathlon-5e-evaluation">📊 Évaluation</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="biathlon-5e-autoeval">🧮 Auto-évaluation</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="biathlon-5e-videos">🎥 Vidéos</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="biathlon-5e-quiz">🧠 Quiz</button>
-              <button type="button" class="rubrique-tab" role="tab" aria-controls="biathlon-5e-lexique">📖 Lexique</button>
             </div>
 
             <section class="rubrique" id="biathlon-5e-attendus">
@@ -538,6 +631,17 @@
               </ul>
             </section>
 
+            <section class="rubrique" id="biathlon-5e-lexique">
+              <h4>📖 Lexique</h4>
+              <dl class="lexique">
+                <dt>VMA</dt><dd>Vitesse Maximale Aérobie : vitesse de référence utilisée pour calculer l'allure de course (VMA ou VMA-1).</dd>
+                <dt>Plot de VMA</dt><dd>Repère au sol que l'athlète doit atteindre au bout de chaque 18'' de course, ni en avance ni en retard.</dd>
+                <dt>Zone de lancer</dt><dd>Zone choisie par l'athlète pour effectuer ses 3 lancers de vortex après chaque course.</dd>
+                <dt>Épreuve combinée</dt><dd>Épreuve qui associe plusieurs disciplines (ici course et lancer) dont les performances se cumulent.</dd>
+                <dt>Fiche d'observation</dt><dd>Document rempli par l'observateur/coach pour valider et noter les performances de son camarade.</dd>
+              </dl>
+            </section>
+
             <section class="rubrique" id="biathlon-5e-regles">
               <h4>🏳️ Règles d'arbitrage</h4>
               <div class="video-embed video-embed--placeholder">
@@ -567,52 +671,97 @@
 
               <p><strong>Grille d'évaluation — Biathlon 5e</strong></p>
               <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th>Maîtrise insuffisante</th><th>Maîtrise fragile</th><th>Maîtrise satisfaisante</th><th>Très bonne maîtrise</th></tr></thead>
+                <table class="eval-grid">
+                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th class="mastery-insuffisante">Maîtrise insuffisante</th><th class="mastery-fragile">Maîtrise fragile</th><th class="mastery-satisfaisante">Maîtrise satisfaisante</th><th class="mastery-excellente">Très bonne maîtrise</th></tr></thead>
                   <tbody>
                     <tr>
-                      <td rowspan="4">L'athlète<br><span class="text-mono">/12</span></td>
-                      <td rowspan="2">Nombre de points obtenus<br><span class="text-mono">/9</span></td>
+                      <td class="role-critere" rowspan="4">L'athlète<br><span class="text-mono">/12</span></td>
+                      <td class="role-critere" rowspan="2">Nombre de points obtenus<br><span class="text-mono">/9</span></td>
                       <td>Moins de 15 pts</td><td>Entre 15 et 20 pts</td><td>Entre 21 et 23 pts</td><td>Plus de 24 pts</td>
                     </tr>
-                    <tr><td>2,25 pts</td><td>4,5 pts</td><td>6,75 pts</td><td>9 pts</td></tr>
+                    <tr class="pts-row"><td>2,25 pts</td><td>4,5 pts</td><td>6,75 pts</td><td>9 pts</td></tr>
                     <tr>
-                      <td rowspan="2">Choix et réalisation du projet de course<br><span class="text-mono">/3</span></td>
+                      <td class="role-critere" rowspan="2">Choix et réalisation du projet de course<br><span class="text-mono">/3</span></td>
                       <td>L'athlète ne court pas et ne lance pas à sa VMA et zone de lancer de référence</td>
                       <td>L'athlète fait 2 choix en-deçà de sa VMA et/ou zone de lancer de référence</td>
                       <td>L'athlète fait 1 choix en-deçà de sa VMA et/ou zone de lancer de référence</td>
                       <td>Le choix fait par l'athlète pour la course et les lancers correspond à sa VMA et zone de lancer de référence</td>
                     </tr>
-                    <tr><td>0,75 pt</td><td>1,5 pt</td><td>2,25 pts</td><td>3 pts</td></tr>
+                    <tr class="pts-row"><td>0,75 pt</td><td>1,5 pt</td><td>2,25 pts</td><td>3 pts</td></tr>
                     <tr>
-                      <td rowspan="2">L'échauffé<br><span class="text-mono">/4</span></td>
-                      <td rowspan="2">Qualité et gestion de l'échauffement</td>
+                      <td class="role-critere" rowspan="2">L'échauffé<br><span class="text-mono">/4</span></td>
+                      <td class="role-critere" rowspan="2">Qualité et gestion de l'échauffement</td>
                       <td>Peu de sérieux, l'échauffement est incomplet voire inexistant et trop entrecoupé de moments de pause</td>
                       <td>Échauffement incomplet ou terminé trop en avance (mauvaise gestion des 8')</td>
                       <td>L'échauffement est complet mais manque de progressivité dans les étapes réalisées</td>
                       <td>L'échauffement est complet et progressif. L'athlète est prêt à réaliser son épreuve.</td>
                     </tr>
-                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr class="pts-row"><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
                     <tr>
-                      <td rowspan="4">L'observateur/coach<br><span class="text-mono">/4</span></td>
-                      <td rowspan="2">Remplissage fiche d'observation<br><span class="text-mono">/2</span></td>
+                      <td class="role-critere" rowspan="4">L'observateur/coach<br><span class="text-mono">/4</span></td>
+                      <td class="role-critere" rowspan="2">Remplissage fiche d'observation<br><span class="text-mono">/2</span></td>
                       <td>Fiche d'observation pas remplie ou non rendue</td>
                       <td>Fiche d'observation partiellement remplie</td>
                       <td>Fiche d'observation remplie avec sérieux mais manque des informations</td>
                       <td>Fiche d'observation complète : projet de course, observations, total</td>
                     </tr>
-                    <tr><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                    <tr class="pts-row"><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
                     <tr>
-                      <td rowspan="2">Attitude vis-à-vis de son camarade<br><span class="text-mono">/2</span></td>
+                      <td class="role-critere" rowspan="2">Attitude vis-à-vis de son camarade<br><span class="text-mono">/2</span></td>
                       <td>Pas concerné par la course de son camarade</td>
                       <td>Manque de concentration dans l'observation</td>
                       <td>Encourage et motive son camarade</td>
                       <td>Encourage et conseille son camarade sur son épreuve</td>
                     </tr>
-                    <tr><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                    <tr class="pts-row"><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
                   </tbody>
                 </table>
               </div>
+            </section>
+
+            <section class="rubrique" id="biathlon-5e-autoeval">
+              <h4>🧮 Auto-évaluation</h4>
+              <p>Pour chaque critère, choisis le niveau de maîtrise qui te correspond le mieux. Tu obtiendras une estimation de ta note sur 20.</p>
+              <div class="autoeval" data-autoeval-id="biathlon-5e">
+                <div class="autoeval-criteria"></div>
+                <button type="button" class="btn btn--primary autoeval-submit">Calculer mon score</button>
+                <div class="autoeval-result" role="status" hidden></div>
+              </div>
+              <script>
+                window.AUTOEVAL_DATA = window.AUTOEVAL_DATA || {};
+                window.AUTOEVAL_DATA['biathlon-5e'] = [
+                  { role: "L'athlète", critere: "Nombre de points obtenus", tiers: [
+                    { label: "Maîtrise insuffisante", points: 2.25, desc: "J'obtiens moins de 15 points au total." },
+                    { label: "Maîtrise fragile", points: 4.5, desc: "J'obtiens entre 15 et 20 points." },
+                    { label: "Maîtrise satisfaisante", points: 6.75, desc: "J'obtiens entre 21 et 23 points." },
+                    { label: "Très bonne maîtrise", points: 9, desc: "J'obtiens plus de 24 points." }
+                  ]},
+                  { role: "L'athlète", critere: "Choix et réalisation du projet de course", tiers: [
+                    { label: "Maîtrise insuffisante", points: 0.75, desc: "Je ne cours pas et ne lance pas à ma VMA et ma zone de lancer de référence." },
+                    { label: "Maîtrise fragile", points: 1.5, desc: "Je fais 2 choix en-deçà de ma VMA et/ou de ma zone de lancer de référence." },
+                    { label: "Maîtrise satisfaisante", points: 2.25, desc: "Je fais 1 choix en-deçà de ma VMA et/ou de ma zone de lancer de référence." },
+                    { label: "Très bonne maîtrise", points: 3, desc: "Mes choix de course et de lancers correspondent à ma VMA et ma zone de lancer de référence." }
+                  ]},
+                  { role: "L'échauffé", critere: "Qualité et gestion de l'échauffement", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Mon échauffement est peu sérieux, incomplet voire inexistant, trop entrecoupé de pauses." },
+                    { label: "Maîtrise fragile", points: 2, desc: "Mon échauffement est incomplet ou terminé trop en avance : je gère mal les 8'." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "Mon échauffement est complet mais manque de progressivité dans les étapes." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "Mon échauffement est complet et progressif, je suis prêt à réaliser mon épreuve." }
+                  ]},
+                  { role: "L'observateur/coach", critere: "Remplissage fiche d'observation", tiers: [
+                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Ma fiche d'observation n'est pas remplie ou n'est pas rendue." },
+                    { label: "Maîtrise fragile", points: 1, desc: "Ma fiche d'observation est partiellement remplie." },
+                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Ma fiche d'observation est remplie avec sérieux mais il manque des informations." },
+                    { label: "Très bonne maîtrise", points: 2, desc: "Ma fiche d'observation est complète : projet de course, observations, total." }
+                  ]},
+                  { role: "L'observateur/coach", critere: "Attitude vis-à-vis de son camarade", tiers: [
+                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Je ne suis pas concerné par la course de mon camarade." },
+                    { label: "Maîtrise fragile", points: 1, desc: "Je manque de concentration dans mon observation." },
+                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "J'encourage et je motive mon camarade." },
+                    { label: "Très bonne maîtrise", points: 2, desc: "J'encourage et je conseille mon camarade sur son épreuve." }
+                  ]}
+                ];
+              </script>
             </section>
 
             <section class="rubrique" id="biathlon-5e-videos">
@@ -646,17 +795,6 @@
               </script>
             </section>
 
-            <section class="rubrique" id="biathlon-5e-lexique">
-              <h4>📖 Lexique</h4>
-              <dl class="lexique">
-                <dt>VMA</dt><dd>Vitesse Maximale Aérobie : vitesse de référence utilisée pour calculer l'allure de course (VMA ou VMA-1).</dd>
-                <dt>Plot de VMA</dt><dd>Repère au sol que l'athlète doit atteindre au bout de chaque 18'' de course, ni en avance ni en retard.</dd>
-                <dt>Zone de lancer</dt><dd>Zone choisie par l'athlète pour effectuer ses 3 lancers de vortex après chaque course.</dd>
-                <dt>Épreuve combinée</dt><dd>Épreuve qui associe plusieurs disciplines (ici course et lancer) dont les performances se cumulent.</dd>
-                <dt>Fiche d'observation</dt><dd>Document rempli par l'observateur/coach pour valider et noter les performances de son camarade.</dd>
-              </dl>
-            </section>
-
           </div>
         </details>
 
@@ -673,11 +811,12 @@
             <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : Badminton">
               <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-5e-attendus">🎯 Attendus</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-5e-acquisitions">✅ Acquisitions</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-5e-lexique">📖 Lexique</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-5e-regles">🏳️ Règles</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-5e-evaluation">📊 Évaluation</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-5e-autoeval">🧮 Auto-évaluation</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-5e-videos">🎥 Vidéos</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-5e-quiz">🧠 Quiz</button>
-              <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-5e-lexique">📖 Lexique</button>
             </div>
 
             <section class="rubrique" id="badminton-5e-attendus">
@@ -747,6 +886,18 @@
               </ul>
             </section>
 
+            <section class="rubrique" id="badminton-5e-lexique">
+              <h4>📖 Lexique</h4>
+              <dl class="lexique">
+                <dt>BINGO</dt><dd>Signal annoncé par le joueur qui repère une situation favorable pour rompre l'échange et marquer le point.</dd>
+                <dt>Rivière</dt><dd>Ligne de service courte, proche du filet, qui délimite la zone de service.</dd>
+                <dt>Amorti</dt><dd>Frappe courte qui fait tomber le volant juste après le filet.</dd>
+                <dt>Dégagé</dt><dd>Frappe haute et profonde qui envoie le volant au fond du terrain adverse.</dd>
+                <dt>Partenaire en or</dt><dd>Jeu d'échauffement où l'on cumule des points en maintenant l'échange par des trajectoires hautes.</dd>
+                <dt>Feuille de match</dt><dd>Document tenu par l'arbitre pour suivre et consigner le déroulement du match.</dd>
+              </dl>
+            </section>
+
             <section class="rubrique" id="badminton-5e-regles">
               <h4>🏳️ Règles d'arbitrage</h4>
               <div class="video-embed video-embed--placeholder">
@@ -774,68 +925,68 @@
 
               <p><strong>Grille d'évaluation — Le joueur et l'arbitre</strong></p>
               <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th>Maîtrise insuffisante</th><th>Maîtrise fragile</th><th>Maîtrise satisfaisante</th><th>Très bonne maîtrise</th></tr></thead>
+                <table class="eval-grid">
+                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th class="mastery-insuffisante">Maîtrise insuffisante</th><th class="mastery-fragile">Maîtrise fragile</th><th class="mastery-satisfaisante">Maîtrise satisfaisante</th><th class="mastery-excellente">Très bonne maîtrise</th></tr></thead>
                   <tbody>
                     <tr>
-                      <td rowspan="9">Le joueur<br><span class="text-mono">/16</span></td>
+                      <td class="role-critere" rowspan="9">Le joueur<br><span class="text-mono">/16</span></td>
                       <td>Profils</td>
                       <td>« L'inintentionné »</td><td>« Le sécuritaire »</td><td>« Le technicien »</td><td>« Le tacticien »</td>
                     </tr>
                     <tr>
-                      <td rowspan="2">Position d'attente et replacement</td>
+                      <td class="role-critere" rowspan="2">Position d'attente et replacement</td>
                       <td>Position d'attente et replacement absent (subit l'échange)</td>
                       <td>– Position d'attente présente mais peu passive (manque de dynamisme)<br>– Replacement effectué mais inefficace</td>
                       <td>– Position d'attente active (raquette haute, dynamique)<br>– Replacement régulier permettant de rejouer dans de bonnes conditions</td>
                       <td>– Position d'attente dynamique (anticipation)<br>– Replacement rapide et efficace permettant de prendre l'initiative</td>
                     </tr>
-                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr class="pts-row"><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
                     <tr>
-                      <td rowspan="2">Service</td>
+                      <td class="role-critere" rowspan="2">Service</td>
                       <td>Service pas maîtrisé ou pas règlementaire</td>
                       <td>Service règlementaire mais sans intention de marquer le point</td>
                       <td>Arrive à marquer quelques points grâce à son service</td>
                       <td>Met systématiquement en difficulté son adversaire dès le service</td>
                     </tr>
-                    <tr><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                    <tr class="pts-row"><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
                     <tr>
-                      <td rowspan="2">Construction du point</td>
+                      <td class="role-critere" rowspan="2">Construction du point</td>
                       <td>Pas d'intentionnalité : renvois centrés ou beaucoup de fautes directes</td>
                       <td>Cherche aléatoirement à mettre en difficulté son adversaire en utilisant principalement le dégagé et le jeu court/long</td>
                       <td>Construction simple du point en identifiant les espaces libres, frappes variées mais pas toujours précises</td>
                       <td>Crée et exploite toutes les situations favorables de marque grâce à l'utilisation de frappes variées en longueur et vitesse (amorti/smash)</td>
                     </tr>
-                    <tr><td>1 pt</td><td>2,5 pts</td><td>4 pts</td><td>5 pts</td></tr>
+                    <tr class="pts-row"><td>1 pt</td><td>2,5 pts</td><td>4 pts</td><td>5 pts</td></tr>
                     <tr>
-                      <td rowspan="2">Utilisation du BINGO</td>
+                      <td class="role-critere" rowspan="2">Utilisation du BINGO</td>
                       <td>Annonce un BINGO au hasard ou ne l'utilise jamais (ne repère pas les situations favorables pour marquer le point)</td>
                       <td>Annonce parfois un BINGO dans des situations favorables mais de manière tardive ou peu pertinente</td>
                       <td>Repère les situations favorables les plus évidentes (adversaire en retard, volant haut…) et annonce le BINGO</td>
                       <td>Utilisation du BINGO toujours pertinemment et qui entraîne systématiquement la rupture de l'échange</td>
                     </tr>
-                    <tr><td>1 pt</td><td>2,5 pts</td><td>4 pts</td><td>5 pts</td></tr>
+                    <tr class="pts-row"><td>1 pt</td><td>2,5 pts</td><td>4 pts</td><td>5 pts</td></tr>
                     <tr>
-                      <td rowspan="3">L'arbitre<br><span class="text-mono">/3</span></td>
-                      <td rowspan="3">Posture et attitude</td>
+                      <td class="role-critere" rowspan="3">L'arbitre<br><span class="text-mono">/3</span></td>
+                      <td class="role-critere" rowspan="3">Posture et attitude</td>
                       <td>N'arbitre pas et/ou ne perturbe ses camarades</td>
                       <td>Suit le match et compte les points mais hésitant sur certaines règles</td>
                       <td>Compte les points à haute voix + est capable d'intervenir lorsqu'une règle n'est pas respectée</td>
                       <td>– Compte et annonce les points ainsi que le serveur à haute voix<br>– Est capable d'expliquer ses décisions et de réguler le match de façon autonome</td>
                     </tr>
                     <tr><td>« Le passif ou perturbateur »</td><td>« L'hésitant »</td><td>« Le badiste »</td><td>« L'expert »</td></tr>
-                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr class="pts-row"><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
                   </tbody>
                 </table>
               </div>
 
               <p><strong>Grille d'évaluation — L'entraîné et le matériel</strong></p>
               <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th>Maîtrise insuffisante</th><th>Maîtrise fragile</th><th>Maîtrise satisfaisante</th><th>Très bonne maîtrise</th></tr></thead>
+                <table class="eval-grid">
+                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th class="mastery-insuffisante">Maîtrise insuffisante</th><th class="mastery-fragile">Maîtrise fragile</th><th class="mastery-satisfaisante">Maîtrise satisfaisante</th><th class="mastery-excellente">Très bonne maîtrise</th></tr></thead>
                   <tbody>
                     <tr>
-                      <td rowspan="5">L'entraîné<br><span class="text-mono">/4</span></td>
-                      <td rowspan="5">Engagement dans les tâches d'apprentissage + réinvestissement</td>
+                      <td class="role-critere" rowspan="5">L'entraîné<br><span class="text-mono">/4</span></td>
+                      <td class="role-critere" rowspan="5">Engagement dans les tâches d'apprentissage + réinvestissement</td>
                       <td>« L'inintéressé »</td><td>« Le persévérant »</td><td>« L'appliqué »</td><td>« L'assidu »</td>
                     </tr>
                     <tr>
@@ -844,26 +995,89 @@
                       <td>S'engage dans les tâches de répétition + réussite dans les différents niveaux</td>
                       <td>Engagement régulier + aide et conseille ses camarades</td>
                     </tr>
-                    <tr><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                    <tr class="pts-row"><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
                     <tr>
                       <td>N'utilise jamais le bonus lors des situations de réinvestissement</td>
                       <td>N'utilise que rarement le bonus lors des situations de réinvestissement (1 à 2 fois par match)</td>
                       <td>Parvient à réinvestir le thème de travail dans les situations de réinvestissement (au moins 3 bonus par match)</td>
                       <td>Très bon réinvestissement en situation de match (4 bonus ou plus)</td>
                     </tr>
-                    <tr><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                    <tr class="pts-row"><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
                     <tr>
-                      <td rowspan="2">Le matériel<br><span class="text-mono">/2</span></td>
-                      <td rowspan="2">Participation à l'installation du matériel</td>
+                      <td class="role-critere" rowspan="2">Le matériel<br><span class="text-mono">/2</span></td>
+                      <td class="role-critere" rowspan="2">Participation à l'installation du matériel</td>
                       <td>Reste longtemps au vestiaire et sort lorsque c'est fini</td>
                       <td>Participe aléatoirement à l'installation du matériel ou installe un poteau puis va s'asseoir</td>
                       <td>Aide à installer tout le matériel</td>
                       <td>Installe + aide ses camarades en difficulté</td>
                     </tr>
-                    <tr><td>0 pt</td><td>0,25 pt</td><td>0,75 pt</td><td>1 pt</td></tr>
+                    <tr class="pts-row"><td>0 pt</td><td>0,25 pt</td><td>0,75 pt</td><td>1 pt</td></tr>
                   </tbody>
                 </table>
               </div>
+            </section>
+
+            <section class="rubrique" id="badminton-5e-autoeval">
+              <h4>🧮 Auto-évaluation</h4>
+              <p>Pour chaque critère, choisis le niveau de maîtrise qui te correspond le mieux. Tu obtiendras une estimation de ta note sur 20.</p>
+              <div class="autoeval" data-autoeval-id="badminton-5e">
+                <div class="autoeval-criteria"></div>
+                <button type="button" class="btn btn--primary autoeval-submit">Calculer mon score</button>
+                <div class="autoeval-result" role="status" hidden></div>
+              </div>
+              <script>
+                window.AUTOEVAL_DATA = window.AUTOEVAL_DATA || {};
+                window.AUTOEVAL_DATA['badminton-5e'] = [
+                  { role: "Le joueur", critere: "Position d'attente et replacement", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Ma position d'attente et mon replacement sont absents, je subis l'échange." },
+                    { label: "Maîtrise fragile", points: 2, desc: "Ma position d'attente est présente mais peu dynamique, mon replacement est effectué mais inefficace." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "Ma position d'attente est active (raquette haute), mon replacement est régulier et me permet de rejouer dans de bonnes conditions." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "Ma position d'attente est dynamique (anticipation), mon replacement rapide et efficace me permet de prendre l'initiative." }
+                  ]},
+                  { role: "Le joueur", critere: "Service", tiers: [
+                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Mon service n'est pas maîtrisé ou pas réglementaire." },
+                    { label: "Maîtrise fragile", points: 1, desc: "Mon service est réglementaire mais sans intention de marquer le point." },
+                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "J'arrive à marquer quelques points grâce à mon service." },
+                    { label: "Très bonne maîtrise", points: 2, desc: "Je mets systématiquement mon adversaire en difficulté dès le service." }
+                  ]},
+                  { role: "Le joueur", critere: "Construction du point", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Je n'ai pas d'intentionnalité : mes renvois sont centrés ou je fais beaucoup de fautes directes." },
+                    { label: "Maîtrise fragile", points: 2.5, desc: "Je cherche aléatoirement à mettre mon adversaire en difficulté, principalement avec le dégagé et le jeu court/long." },
+                    { label: "Maîtrise satisfaisante", points: 4, desc: "Je construis simplement le point en identifiant les espaces libres, mes frappes sont variées mais pas toujours précises." },
+                    { label: "Très bonne maîtrise", points: 5, desc: "Je crée et j'exploite toutes les situations favorables grâce à des frappes variées en longueur et en vitesse (amorti/smash)." }
+                  ]},
+                  { role: "Le joueur", critere: "Utilisation du BINGO", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "J'annonce un BINGO au hasard ou je ne l'utilise jamais." },
+                    { label: "Maîtrise fragile", points: 2.5, desc: "J'annonce parfois un BINGO dans une situation favorable mais trop tard ou peu pertinemment." },
+                    { label: "Maîtrise satisfaisante", points: 4, desc: "Je repère les situations favorables les plus évidentes (adversaire en retard, volant haut…) et j'annonce le BINGO." },
+                    { label: "Très bonne maîtrise", points: 5, desc: "J'utilise toujours le BINGO à bon escient et je romps systématiquement l'échange." }
+                  ]},
+                  { role: "L'arbitre", critere: "Posture et attitude", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Je n'arbitre pas et/ou je perturbe mes camarades." },
+                    { label: "Maîtrise fragile", points: 2, desc: "Je suis le match et je compte les points mais j'hésite sur certaines règles." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "Je compte les points à haute voix et je suis capable d'intervenir quand une règle n'est pas respectée." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "Je compte et j'annonce les points et le serveur à haute voix, j'explique mes décisions et je régule le match seul." }
+                  ]},
+                  { role: "L'entraîné", critere: "Engagement dans le travail de répétition", tiers: [
+                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Je ne m'investis pas dans le travail de répétition (je détourne la tâche)." },
+                    { label: "Maîtrise fragile", points: 1, desc: "Je travaille sérieusement et je veux réussir malgré les difficultés." },
+                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Je m'engage dans les tâches de répétition et je réussis les différents niveaux." },
+                    { label: "Très bonne maîtrise", points: 2, desc: "Je m'engage régulièrement et j'aide et conseille mes camarades." }
+                  ]},
+                  { role: "L'entraîné", critere: "Utilisation du bonus en situation de réinvestissement", tiers: [
+                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Je n'utilise jamais le bonus lors des situations de réinvestissement." },
+                    { label: "Maîtrise fragile", points: 1, desc: "Je n'utilise que rarement le bonus (1 à 2 fois par match)." },
+                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Je parviens à réinvestir le thème de travail (au moins 3 bonus par match)." },
+                    { label: "Très bonne maîtrise", points: 2, desc: "Je réinvestis très bien en situation de match (4 bonus ou plus)." }
+                  ]},
+                  { role: "Le matériel", critere: "Participation à l'installation du matériel", tiers: [
+                    { label: "Maîtrise insuffisante", points: 0, desc: "Je reste longtemps au vestiaire et je sors quand tout est fini." },
+                    { label: "Maîtrise fragile", points: 0.25, desc: "Je participe de façon aléatoire à l'installation, ou j'installe un poteau puis je vais m'asseoir." },
+                    { label: "Maîtrise satisfaisante", points: 0.75, desc: "J'aide à installer tout le matériel." },
+                    { label: "Très bonne maîtrise", points: 1, desc: "J'installe le matériel et j'aide mes camarades en difficulté." }
+                  ]}
+                ];
+              </script>
             </section>
 
             <section class="rubrique" id="badminton-5e-videos">
@@ -897,18 +1111,6 @@
               </script>
             </section>
 
-            <section class="rubrique" id="badminton-5e-lexique">
-              <h4>📖 Lexique</h4>
-              <dl class="lexique">
-                <dt>BINGO</dt><dd>Signal annoncé par le joueur qui repère une situation favorable pour rompre l'échange et marquer le point.</dd>
-                <dt>Rivière</dt><dd>Ligne de service courte, proche du filet, qui délimite la zone de service.</dd>
-                <dt>Amorti</dt><dd>Frappe courte qui fait tomber le volant juste après le filet.</dd>
-                <dt>Dégagé</dt><dd>Frappe haute et profonde qui envoie le volant au fond du terrain adverse.</dd>
-                <dt>Partenaire en or</dt><dd>Jeu d'échauffement où l'on cumule des points en maintenant l'échange par des trajectoires hautes.</dd>
-                <dt>Feuille de match</dt><dd>Document tenu par l'arbitre pour suivre et consigner le déroulement du match.</dd>
-              </dl>
-            </section>
-
           </div>
         </details>
 
@@ -925,11 +1127,12 @@
             <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : Tennis de table">
               <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-5e-attendus">🎯 Attendus</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-5e-acquisitions">✅ Acquisitions</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-5e-lexique">📖 Lexique</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-5e-regles">🏳️ Règles</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-5e-evaluation">📊 Évaluation</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-5e-autoeval">🧮 Auto-évaluation</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-5e-videos">🎥 Vidéos</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-5e-quiz">🧠 Quiz</button>
-              <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-5e-lexique">📖 Lexique</button>
             </div>
 
             <section class="rubrique" id="tennis-table-5e-attendus">
@@ -995,6 +1198,18 @@
               </ul>
             </section>
 
+            <section class="rubrique" id="tennis-table-5e-lexique">
+              <h4>📖 Lexique</h4>
+              <dl class="lexique">
+                <dt>BINGO</dt><dd>Annonce faite par le joueur avant de frapper une balle jugée favorable ; s'il marque le point, celui-ci compte double.</dd>
+                <dt>Let</dt><dd>Échange ou service à rejouer sans conséquence sur le score.</dd>
+                <dt>Effet lifté / coupé</dt><dd>Rotation donnée à la balle (avant pour le lifté, arrière pour le coupé) qui modifie sa trajectoire et son rebond.</dd>
+                <dt>Point faible</dt><dd>Zone ou geste où l'adversaire est le moins efficace, à identifier et exploiter.</dd>
+                <dt>Pause coaching</dt><dd>Interruption du match, à 5 points, pendant laquelle chaque joueur va chercher les conseils de son coach.</dd>
+                <dt>Ronde italienne</dt><dd>Format de tournoi où chaque joueur affronte tour à tour tous les autres joueurs de son groupe.</dd>
+              </dl>
+            </section>
+
             <section class="rubrique" id="tennis-table-5e-regles">
               <h4>🏳️ Règles d'arbitrage</h4>
               <div class="video-embed video-embed--placeholder">
@@ -1023,55 +1238,100 @@
 
               <p class="callout callout--neutral"><strong>Évaluation tennis de table 5e (2ème séquence)</strong> — grille reproduite telle quelle depuis le document source.</p>
               <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th>Maîtrise insuffisante</th><th>Maîtrise fragile</th><th>Maîtrise satisfaisante</th><th>Très bonne maîtrise</th></tr></thead>
+                <table class="eval-grid">
+                  <thead><tr><th>Rôle à jouer</th><th>Critère</th><th class="mastery-insuffisante">Maîtrise insuffisante</th><th class="mastery-fragile">Maîtrise fragile</th><th class="mastery-satisfaisante">Maîtrise satisfaisante</th><th class="mastery-excellente">Très bonne maîtrise</th></tr></thead>
                   <tbody>
                     <tr>
-                      <td rowspan="6">Le joueur<br><span class="text-mono">/12</span></td>
-                      <td rowspan="2">Technique (coups utilisés : CD, revers, smash, top spin)</td>
+                      <td class="role-critere" rowspan="6">Le joueur<br><span class="text-mono">/12</span></td>
+                      <td class="role-critere" rowspan="2">Technique (coups utilisés : CD, revers, smash, top spin)</td>
                       <td>« Le relanceur »<br>– Difficulté à renvoyer la balle en revers et/ou coup droit à cause d'une mauvaise adaptation à la trajectoire de la balle.<br>– Fautes directes nombreuses (+ 1 balle /2).</td>
                       <td>« Le coup préféré »<br>– Renvoie les balles en utilisant principalement qu'un seul coup (qu'en revers ou coup droit).<br>– Trajectoires variées en direction.<br>– Fautes directes minoritaires (entre 25 et 50%).</td>
                       <td>« Le complet »<br>– Coups droits et revers maîtrisés.<br>– Peu de fautes directes (-25%).<br>– Trajectoires variées en direction et/ou vitesse.</td>
                       <td>« L'adaptable »<br>– Coups techniques utilisés adaptés à la situation ou l'adversaire.<br>– Très peu de fautes directes (-10%).<br>– Trajectoires variées en vitesse, direction et rotation.</td>
                     </tr>
-                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr class="pts-row"><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
                     <tr>
-                      <td rowspan="2">Intentionnalité de jeu : comment je mets mon adversaire en difficulté</td>
+                      <td class="role-critere" rowspan="2">Intentionnalité de jeu : comment je mets mon adversaire en difficulté</td>
                       <td>« Le pongiste aléatoire »<br>– Pas d'intentionnalité de rupture : ce qui le préoccupe est de renvoyer la balle de l'autre côté du filet.<br>– Peu de coups gagnants.</td>
                       <td>« Le profiteur »<br>– Est capable d'identifier une balle favorable pour rompre l'échange (balle haute milieu de table) mais problème d'exécution.<br>– A la volonté de varier les trajectoires mais balles encore « faciles ».</td>
                       <td>« L'efficace »<br>– Intention de provoquer la faute de l'adversaire dès le service (rasant et accéléré).<br>– Capable de rompre l'échange par des trajectoires variées en direction et/ou vitesse.</td>
                       <td>« Le maître du jeu »<br>– Impose son jeu en mettant son adversaire en difficulté dès le service (avec effets) puis cherche à rompre l'échange le plus vite possible.<br>– Est capable d'identifier le point faible de son adversaire pour y jouer dessus.</td>
                     </tr>
-                    <tr><td>1,5 pt</td><td>3 pts</td><td>4,5 pts</td><td>6 pts</td></tr>
+                    <tr class="pts-row"><td>1,5 pt</td><td>3 pts</td><td>4,5 pts</td><td>6 pts</td></tr>
                     <tr>
-                      <td rowspan="2">Utilisation du BINGO</td>
+                      <td class="role-critere" rowspan="2">Utilisation du BINGO</td>
                       <td>Le pongiste n'utilise jamais le BINGO tout au long du match</td>
                       <td>Le pongiste utilise quelques fois le BINGO mais pas à bon escient</td>
                       <td>BINGO utilisé au bon moment mais manque d'exécution pour rompre l'échange</td>
                       <td>Le pongiste connaît son point fort et/ou le point faible de son adversaire et utilise le BINGO en conséquence</td>
                     </tr>
-                    <tr><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
+                    <tr class="pts-row"><td>0,5 pt</td><td>1 pt</td><td>1,5 pt</td><td>2 pts</td></tr>
                     <tr>
-                      <td rowspan="2">L'arbitre<br><span class="text-mono">/4</span></td>
-                      <td rowspan="2">Maîtrise du règlement</td>
+                      <td class="role-critere" rowspan="2">L'arbitre<br><span class="text-mono">/4</span></td>
+                      <td class="role-critere" rowspan="2">Maîtrise du règlement</td>
                       <td>« L'absent »<br>– Pas de connaissance du règlement.<br>– N'arbitre pas et/ou ne gère pas le score (ne reste pas sur sa table).</td>
                       <td>« Le fébrile »<br>– Connaissance partielle et/ou arbitre influençable.<br>– Gère le score mais ne sait pas à qui c'est de servir.</td>
                       <td>« L'omniprésent »<br>– Bonne connaissance du règlement.<br>– Gestion du score précise et maîtrisée.</td>
                       <td>« L'expert »<br>– Connaît toutes les règles d'arbitrage et assure le bon déroulement du match en annonçant à haute voix le score et le serveur.</td>
                     </tr>
-                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr class="pts-row"><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
                     <tr>
-                      <td rowspan="2">Le coach<br><span class="text-mono">/4</span></td>
-                      <td rowspan="2">Pertinence des retours donnés</td>
+                      <td class="role-critere" rowspan="2">Le coach<br><span class="text-mono">/4</span></td>
+                      <td class="role-critere" rowspan="2">Pertinence des retours donnés</td>
                       <td>« L'inintéressé »<br>– Élève pas concerné par le rôle de coach : ne regarde pas son partenaire jouer, ne le conseille pas.</td>
                       <td>« Le timide »<br>– Coach présent et attentif mais en difficulté dans les retours à donner à son partenaire.</td>
                       <td>« Le coach en devenir »<br>– Coach présent et attentif qui parvient à réguler le jeu de son partenaire en lui expliquant la cause de sa faute.</td>
                       <td>« Le coach expert »<br>– Retours constructifs à son partenaire sur son jeu et qui est capable d'analyser le jeu adverse et de le conseiller en fonction.</td>
                     </tr>
-                    <tr><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
+                    <tr class="pts-row"><td>1 pt</td><td>2 pts</td><td>3 pts</td><td>4 pts</td></tr>
                   </tbody>
                 </table>
               </div>
+            </section>
+
+            <section class="rubrique" id="tennis-table-5e-autoeval">
+              <h4>🧮 Auto-évaluation</h4>
+              <p>Pour chaque critère, choisis le niveau de maîtrise qui te correspond le mieux. Tu obtiendras une estimation de ta note sur 20.</p>
+              <div class="autoeval" data-autoeval-id="tennis-table-5e">
+                <div class="autoeval-criteria"></div>
+                <button type="button" class="btn btn--primary autoeval-submit">Calculer mon score</button>
+                <div class="autoeval-result" role="status" hidden></div>
+              </div>
+              <script>
+                window.AUTOEVAL_DATA = window.AUTOEVAL_DATA || {};
+                window.AUTOEVAL_DATA['tennis-table-5e'] = [
+                  { role: "Le joueur", critere: "Technique (coups utilisés : CD, revers, smash, top spin)", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "« Le relanceur » — j'ai du mal à renvoyer en revers et/ou coup droit, je fais beaucoup de fautes directes (plus d'une balle sur deux)." },
+                    { label: "Maîtrise fragile", points: 2, desc: "« Le coup préféré » — je renvoie surtout avec un seul coup, mes trajectoires varient en direction, mes fautes directes restent fréquentes (25 à 50%)." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "« Le complet » — je maîtrise coup droit et revers, peu de fautes directes (-25%), trajectoires variées en direction et/ou vitesse." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "« L'adaptable » — mes coups sont adaptés à la situation ou à l'adversaire, très peu de fautes directes (-10%), trajectoires variées en vitesse, direction et rotation." }
+                  ]},
+                  { role: "Le joueur", critere: "Intentionnalité de jeu : comment je mets mon adversaire en difficulté", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1.5, desc: "« Le pongiste aléatoire » — je n'ai pas d'intentionnalité de rupture, je cherche juste à renvoyer la balle, peu de coups gagnants." },
+                    { label: "Maîtrise fragile", points: 3, desc: "« Le profiteur » — j'identifie une balle favorable (haute, milieu de table) mais j'ai des problèmes d'exécution, mes balles restent « faciles »." },
+                    { label: "Maîtrise satisfaisante", points: 4.5, desc: "« L'efficace » — j'ai l'intention de provoquer la faute dès le service (rasant, accéléré), je romps l'échange par des trajectoires variées." },
+                    { label: "Très bonne maîtrise", points: 6, desc: "« Le maître du jeu » — j'impose mon jeu dès le service (avec effets) puis je romps l'échange en jouant sur le point faible de mon adversaire." }
+                  ]},
+                  { role: "Le joueur", critere: "Utilisation du BINGO", tiers: [
+                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Je n'utilise jamais le BINGO de tout le match." },
+                    { label: "Maîtrise fragile", points: 1, desc: "J'utilise parfois le BINGO mais pas à bon escient." },
+                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Le BINGO est utilisé au bon moment mais je manque d'exécution pour rompre l'échange." },
+                    { label: "Très bonne maîtrise", points: 2, desc: "Je connais mon point fort et/ou le point faible de mon adversaire et j'utilise le BINGO en conséquence." }
+                  ]},
+                  { role: "L'arbitre", critere: "Maîtrise du règlement", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "« L'absent » — je n'ai pas de connaissance du règlement, je n'arbitre pas et/ou je ne gère pas le score." },
+                    { label: "Maîtrise fragile", points: 2, desc: "« Le fébrile » — ma connaissance est partielle et/ou je suis influençable, je gère le score mais je ne sais pas qui doit servir." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "« L'omniprésent » — j'ai une bonne connaissance du règlement, ma gestion du score est précise et maîtrisée." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "« L'expert » — je connais toutes les règles et j'assure le bon déroulement du match en annonçant le score et le serveur à haute voix." }
+                  ]},
+                  { role: "Le coach", critere: "Pertinence des retours donnés", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "« L'inintéressé » — je ne suis pas concerné par le rôle de coach, je ne regarde pas mon partenaire jouer, je ne le conseille pas." },
+                    { label: "Maîtrise fragile", points: 2, desc: "« Le timide » — je suis présent et attentif mais j'ai du mal à donner des retours à mon partenaire." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "« Le coach en devenir » — je suis présent et attentif, je parviens à réguler le jeu de mon partenaire en expliquant sa faute." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "« Le coach expert » — je donne des retours constructifs et j'analyse le jeu adverse pour conseiller mon partenaire en conséquence." }
+                  ]}
+                ];
+              </script>
             </section>
 
             <section class="rubrique" id="tennis-table-5e-videos">
@@ -1105,18 +1365,6 @@
               </script>
             </section>
 
-            <section class="rubrique" id="tennis-table-5e-lexique">
-              <h4>📖 Lexique</h4>
-              <dl class="lexique">
-                <dt>BINGO</dt><dd>Annonce faite par le joueur avant de frapper une balle jugée favorable ; s'il marque le point, celui-ci compte double.</dd>
-                <dt>Let</dt><dd>Échange ou service à rejouer sans conséquence sur le score.</dd>
-                <dt>Effet lifté / coupé</dt><dd>Rotation donnée à la balle (avant pour le lifté, arrière pour le coupé) qui modifie sa trajectoire et son rebond.</dd>
-                <dt>Point faible</dt><dd>Zone ou geste où l'adversaire est le moins efficace, à identifier et exploiter.</dd>
-                <dt>Pause coaching</dt><dd>Interruption du match, à 5 points, pendant laquelle chaque joueur va chercher les conseils de son coach.</dd>
-                <dt>Ronde italienne</dt><dd>Format de tournoi où chaque joueur affronte tour à tour tous les autres joueurs de son groupe.</dd>
-              </dl>
-            </section>
-
           </div>
         </details>
 
@@ -1132,5 +1380,6 @@
 
   <script src="js/main.js" defer></script>
   <script src="js/quiz.js" defer></script>
+  <script src="js/autoeval.js" defer></script>
 </body>
 </html>
