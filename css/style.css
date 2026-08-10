@@ -1069,7 +1069,8 @@ tbody tr:nth-child(even) {
    HERO UNIFIE — identique sur les 7 pages, seuls le titre, le
    texte et le lien du bouton changent d'une page a l'autre.
    Deux colonnes (texte + illustration) sur grand ecran ; sur
-   mobile, l'illustration est masquee pour garder un hero compact.
+   mobile, l'illustration reste visible mais empilee sous le texte
+   (une seule colonne).
    ============================================================ */
 .site-hero {
   background: var(--color-cream);
@@ -1169,15 +1170,17 @@ tbody tr:nth-child(even) {
 }
 
 .site-hero__visual {
-  display: none;
+  display: block;
+  justify-self: center;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 @media (min-width: 860px) {
   .site-hero__visual {
-    display: block;
-    justify-self: center;
-    width: 100%;
     max-width: 380px;
+    margin: 0;
   }
 }
 
