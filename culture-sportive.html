@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Culture Sportive — Espace EPS</title>
+  <meta name="description" content="Connaissances générales de culture sportive : les muscles, l'échauffement, l'alimentation du sportif et la fréquence cardiaque.">
+  <!-- Police d'affichage "Rubik" (titres, dossards) chargee depuis Google Fonts.
+       Le site reste utilisable sans elle : css/style.css prevoit une pile de
+       polices systeme de secours si ce lien ne charge pas. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span class="visually-hidden">Ouvrir le menu</span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+        <ul class="main-nav__list">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="eps-generale.html">L'EPS en général</a></li>
+          <li><a href="niveau-6e.html">6ème</a></li>
+          <li><a href="niveau-5e.html">5ème</a></li>
+          <li><a href="niveau-4e.html">4ème</a></li>
+          <li><a href="niveau-3e.html">3ème</a></li>
+          <li><a href="culture-sportive.html">Culture Sportive</a></li>
+          <li><a href="as-futsal.html">AS Futsal</a></li>
+          <li><a href="prof-principal-6e.html">Mon entrée en 6ème</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO — meme structure que sur les autres pages. -->
+    <section class="site-hero">
+      <div class="container site-hero__inner">
+        <div class="site-hero__text">
+          <div class="site-hero__kicker">
+            <span class="dossard dossard--sm" aria-hidden="true">CS</span>
+            <p class="eyebrow">Connaissances générales</p>
+          </div>
+          <div class="site-hero__lockup">
+            <img class="site-hero__logo" src="assets/logo-as-simone-veil.jpg" alt="">
+            <h1>
+              <span class="hero-title__line1">Culture Sportive</span>
+              <span class="hero-title__accent">Comprendre son corps</span>
+            </h1>
+          </div>
+          <p class="lede">Des connaissances générales, valables quel que soit ton niveau, pour mieux comprendre ton corps et ta pratique sportive.</p>
+          <p><a class="btn btn--primary" href="#muscles">Découvrir →</a></p>
+        </div>
+        <div class="site-hero__visual">
+          <img src="assets/hero-illustration.svg" alt="" width="380" height="522">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <!-- Navigation rapide : un clic ouvre directement la rubrique visee -->
+        <ul class="quick-nav">
+          <li><a href="#muscles">Les muscles</a></li>
+          <li><a href="#echauffement">L'échauffement</a></li>
+          <li><a href="#alimentation">L'alimentation</a></li>
+          <li><a href="#frequence-cardiaque">La fréquence cardiaque</a></li>
+        </ul>
+
+        <!-- ============================================================
+             CHAQUE RUBRIQUE EST UNE FICHE DEPLIABLE (".info-card")
+             Pour ajouter une rubrique, copiez un bloc <details class="info-card">
+             entier et donnez-lui un id unique.
+             ============================================================ -->
+
+        <!-- LES MUSCLES -->
+        <details class="info-card" id="muscles" open>
+          <summary>
+            <h2>💪 Les muscles</h2>
+            <span class="info-card__toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="info-card__body">
+            <p>Quand tu fais du sport, tu utilises des <strong>groupes musculaires</strong> différents selon l'activité. Les connaître t'aide à comprendre ton corps et à bien t'étirer après l'effort.</p>
+
+            <figure class="rule-diagram">
+              <svg viewBox="0 0 620 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="muscles-diagram-title">
+                <title id="muscles-diagram-title">Schéma du corps humain, vue de face et vue de dos, avec les principaux groupes musculaires repérés par une couleur</title>
+
+                <!-- VUE DE FACE -->
+                <text x="130" y="16" text-anchor="middle" font-size="13" font-weight="700" fill="#0a1f44" font-family="sans-serif">Vue de face</text>
+                <circle cx="130" cy="43" r="16" fill="#ffffff" stroke="#0a1f44" stroke-width="2" />
+                <rect x="123" y="57" width="14" height="10" fill="#ffffff" stroke="#0a1f44" stroke-width="2" />
+                <circle cx="103" cy="74" r="9" fill="#0a1f44" opacity="0.55" />
+                <circle cx="157" cy="74" r="9" fill="#0a1f44" opacity="0.55" />
+                <rect x="103" y="68" width="54" height="82" rx="14" fill="#ffffff" stroke="#0a1f44" stroke-width="2" />
+                <rect x="108" y="73" width="44" height="24" rx="7" fill="#e8543f" opacity="0.55" />
+                <rect x="112" y="100" width="36" height="44" rx="6" fill="#ffd23f" opacity="0.8" />
+                <rect x="80" y="70" width="15" height="78" rx="7" fill="#e8871e" opacity="0.6" stroke="#0a1f44" stroke-width="1.5" />
+                <rect x="165" y="70" width="15" height="78" rx="7" fill="#e8871e" opacity="0.6" stroke="#0a1f44" stroke-width="1.5" />
+                <rect x="108" y="150" width="20" height="98" rx="9" fill="#ffffff" stroke="#0a1f44" stroke-width="2" />
+                <rect x="108" y="154" width="20" height="48" rx="7" fill="#8fd19e" opacity="0.85" />
+                <rect x="132" y="150" width="20" height="98" rx="9" fill="#ffffff" stroke="#0a1f44" stroke-width="2" />
+                <rect x="132" y="154" width="20" height="48" rx="7" fill="#8fd19e" opacity="0.85" />
+
+                <g font-family="sans-serif">
+                  <circle cx="200" cy="76" r="5" fill="#0a1f44" opacity="0.55" /><text x="212" y="80" font-size="11" fill="#1a1e27">Épaules</text>
+                  <circle cx="200" cy="96" r="5" fill="#e8543f" opacity="0.75" /><text x="212" y="100" font-size="11" fill="#1a1e27">Pectoraux</text>
+                  <circle cx="200" cy="116" r="5" fill="#e8871e" opacity="0.75" /><text x="212" y="120" font-size="11" fill="#1a1e27">Bras</text>
+                  <circle cx="200" cy="136" r="5" fill="#ffd23f" /><text x="212" y="140" font-size="11" fill="#1a1e27">Abdominaux</text>
+                  <circle cx="200" cy="156" r="5" fill="#8fd19e" /><text x="212" y="160" font-size="11" fill="#1a1e27">Quadriceps</text>
+                </g>
+
+                <!-- VUE DE DOS -->
+                <text x="430" y="16" text-anchor="middle" font-size="13" font-weight="700" fill="#0a1f44" font-family="sans-serif">Vue de dos</text>
+                <circle cx="430" cy="43" r="16" fill="#ffffff" stroke="#0a1f44" stroke-width="2" />
+                <rect x="423" y="57" width="14" height="10" fill="#ffffff" stroke="#0a1f44" stroke-width="2" />
+                <rect x="403" y="68" width="54" height="82" rx="14" fill="#ffffff" stroke="#0a1f44" stroke-width="2" />
+                <rect x="408" y="73" width="44" height="40" rx="8" fill="#14336b" opacity="0.55" />
+                <rect x="405" y="116" width="50" height="28" rx="10" fill="#e8871e" opacity="0.65" />
+                <rect x="380" y="70" width="15" height="78" rx="7" fill="#ffffff" stroke="#0a1f44" stroke-width="1.5" />
+                <rect x="465" y="70" width="15" height="78" rx="7" fill="#ffffff" stroke="#0a1f44" stroke-width="1.5" />
+                <rect x="408" y="150" width="20" height="98" rx="9" fill="#ffffff" stroke="#0a1f44" stroke-width="2" />
+                <rect x="408" y="154" width="20" height="46" rx="7" fill="#e8543f" opacity="0.55" />
+                <rect x="408" y="204" width="20" height="40" rx="7" fill="#ffd23f" opacity="0.8" />
+                <rect x="432" y="150" width="20" height="98" rx="9" fill="#ffffff" stroke="#0a1f44" stroke-width="2" />
+                <rect x="432" y="154" width="20" height="46" rx="7" fill="#e8543f" opacity="0.55" />
+                <rect x="432" y="204" width="20" height="40" rx="7" fill="#ffd23f" opacity="0.8" />
+
+                <g font-family="sans-serif">
+                  <circle cx="500" cy="88" r="5" fill="#14336b" opacity="0.65" /><text x="512" y="92" font-size="11" fill="#1a1e27">Dos</text>
+                  <circle cx="500" cy="128" r="5" fill="#e8871e" opacity="0.75" /><text x="512" y="132" font-size="11" fill="#1a1e27">Fessiers</text>
+                  <circle cx="500" cy="175" r="5" fill="#e8543f" opacity="0.65" /><text x="512" y="179" font-size="11" fill="#1a1e27">Ischio-jambiers</text>
+                  <circle cx="500" cy="223" r="5" fill="#ffd23f" /><text x="512" y="227" font-size="11" fill="#1a1e27">Mollets</text>
+                </g>
+              </svg>
+              <figcaption>Repères des principaux groupes musculaires sollicités en sport, vus de face et de dos.</figcaption>
+            </figure>
+
+            <dl class="lexique">
+              <dt>Quadriceps</dt><dd>Devant de la cuisse. S'étire debout, en attrapant sa cheville derrière soi et en ramenant le talon vers la fesse, genoux serrés.</dd>
+              <dt>Ischio-jambiers</dt><dd>Derrière la cuisse. S'étire jambe tendue posée sur un appui, buste penché en avant vers le pied, dos droit.</dd>
+              <dt>Mollets</dt><dd>Derrière la jambe, sous le genou. S'étire en poussant contre un mur, jambe arrière tendue, talon au sol.</dd>
+              <dt>Fessiers</dt><dd>Sous le bas du dos. S'étire assis ou allongé, en ramenant un genou plié vers la poitrine, à l'opposé de l'épaule.</dd>
+              <dt>Abdominaux</dt><dd>Devant le ventre. S'étire allongé sur le ventre, en se redressant sur les avant-bras, bassin au sol.</dd>
+              <dt>Dos</dt><dd>Le long de la colonne vertébrale. S'étire assis ou à genoux, bras tendus devant soi, dos rond ("position de l'enfant").</dd>
+              <dt>Pectoraux</dt><dd>Devant la poitrine. S'étire en tendant un bras à hauteur d'épaule contre un mur et en tournant doucement le buste du côté opposé.</dd>
+              <dt>Bras (biceps/triceps)</dt><dd>Devant et derrière le bras. S'étire en levant un bras plié au-dessus de la tête et en poussant doucement le coude vers l'arrière avec l'autre main.</dd>
+              <dt>Épaules</dt><dd>Haut du bras/tronc. S'étire en ramenant un bras tendu devant la poitrine, maintenu par l'autre bras.</dd>
+            </dl>
+          </div>
+        </details>
+
+        <!-- L'ECHAUFFEMENT -->
+        <details class="info-card" id="echauffement">
+          <summary>
+            <h2>🔥 L'échauffement</h2>
+            <span class="info-card__toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="info-card__body">
+            <p><strong>À quoi ça sert ?</strong></p>
+            <ul>
+              <li>Préparer le cœur et les poumons à l'effort (augmenter progressivement le rythme cardiaque et respiratoire).</li>
+              <li>Préparer les muscles et les articulations (les rendre plus souples et plus réactifs).</li>
+              <li>Prévenir les blessures (limiter le risque de claquage, entorse, etc.).</li>
+              <li>Améliorer la performance (être prêt à donner le meilleur de soi dès le début de l'activité).</li>
+            </ul>
+
+            <p><strong>Les règles d'un bon échauffement</strong></p>
+            <ul>
+              <li><strong>Progressif</strong> : on augmente petit à petit l'intensité, sans jamais commencer à fond.</li>
+              <li><strong>Complet</strong> : on sollicite tout le corps, pas seulement les muscles qu'on pense utiliser.</li>
+              <li><strong>Adapté</strong> à l'activité pratiquée : on termine par des gestes proches de ceux du sport du jour.</li>
+            </ul>
+
+            <figure class="rule-diagram">
+              <svg viewBox="0 0 560 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="echauffement-diagram-title">
+                <title id="echauffement-diagram-title">Schéma des 4 étapes d'un échauffement, dans l'ordre</title>
+                <defs>
+                  <marker id="arrowEchauff" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                    <path d="M0,0 L8,4 L0,8 Z" fill="#0a1f44" />
+                  </marker>
+                </defs>
+                <g font-family="sans-serif">
+                  <rect x="15" y="35" width="110" height="75" rx="10" fill="#ffffff" stroke="#0a1f44" stroke-width="2" />
+                  <circle cx="70" cy="52" r="12" fill="#0a1f44" /><text x="70" y="56" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">1</text>
+                  <text x="70" y="80" text-anchor="middle" font-size="10.5" fill="#1a1e27">Mobilisation</text>
+                  <text x="70" y="94" text-anchor="middle" font-size="10.5" fill="#1a1e27">articulaire</text>
+                  <line x1="125" y1="72" x2="153" y2="72" stroke="#0a1f44" stroke-width="3" marker-end="url(#arrowEchauff)" />
+
+                  <rect x="155" y="35" width="110" height="75" rx="10" fill="#ffffff" stroke="#0a1f44" stroke-width="2" />
+                  <circle cx="210" cy="52" r="12" fill="#0a1f44" /><text x="210" y="56" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">2</text>
+                  <text x="210" y="80" text-anchor="middle" font-size="10.5" fill="#1a1e27">Activation</text>
+                  <text x="210" y="94" text-anchor="middle" font-size="10.5" fill="#1a1e27">cardio</text>
+                  <line x1="265" y1="72" x2="293" y2="72" stroke="#0a1f44" stroke-width="3" marker-end="url(#arrowEchauff)" />
+
+                  <rect x="295" y="35" width="110" height="75" rx="10" fill="#ffffff" stroke="#0a1f44" stroke-width="2" />
+                  <circle cx="350" cy="52" r="12" fill="#0a1f44" /><text x="350" y="56" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">3</text>
+                  <text x="350" y="80" text-anchor="middle" font-size="10.5" fill="#1a1e27">Étirements</text>
+                  <text x="350" y="94" text-anchor="middle" font-size="10.5" fill="#1a1e27">dynamiques</text>
+                  <line x1="405" y1="72" x2="433" y2="72" stroke="#0a1f44" stroke-width="3" marker-end="url(#arrowEchauff)" />
+
+                  <rect x="435" y="35" width="110" height="75" rx="10" fill="#ffffff" stroke="#0a1f44" stroke-width="2" />
+                  <circle cx="490" cy="52" r="12" fill="#0a1f44" /><text x="490" y="56" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">4</text>
+                  <text x="490" y="80" text-anchor="middle" font-size="10.5" fill="#1a1e27">Gestes</text>
+                  <text x="490" y="94" text-anchor="middle" font-size="10.5" fill="#1a1e27">spécifiques</text>
+                </g>
+              </svg>
+              <figcaption>Les 4 étapes d'un échauffement complet, toujours dans le même ordre.</figcaption>
+            </figure>
+          </div>
+        </details>
+
+        <!-- L'ALIMENTATION -->
+        <details class="info-card" id="alimentation">
+          <summary>
+            <h2>🍎 L'alimentation</h2>
+            <span class="info-card__toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="info-card__body">
+            <p><strong>Bien s'hydrater</strong></p>
+            <ul>
+              <li><strong>Avant</strong> l'effort : boire de l'eau régulièrement dans les heures qui précèdent.</li>
+              <li><strong>Pendant</strong> l'effort : boire de petites gorgées d'eau, surtout s'il fait chaud ou si l'effort est long.</li>
+              <li><strong>Après</strong> l'effort : boire pour compenser ce que l'on a perdu en transpirant.</li>
+            </ul>
+
+            <p><strong>À quoi servent les aliments ?</strong></p>
+            <ul>
+              <li><strong>Les glucides</strong> (pâtes, riz, pain, fruits...) apportent l'<strong>énergie</strong> nécessaire à l'effort.</li>
+              <li><strong>Les protéines</strong> (viande, poisson, œufs, légumineuses...) aident à la <strong>récupération musculaire</strong> après l'effort.</li>
+              <li><strong>Les fruits et légumes</strong> apportent des <strong>vitamines</strong> utiles au bon fonctionnement du corps.</li>
+            </ul>
+
+            <figure class="rule-diagram">
+              <svg viewBox="0 0 560 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="alimentation-diagram-title">
+                <title id="alimentation-diagram-title">Schéma de l'hydratation avant/pendant/après l'effort, et du rôle des glucides, protéines et fruits-légumes</title>
+                <text x="280" y="18" text-anchor="middle" font-size="13" font-weight="700" fill="#0a1f44" font-family="sans-serif">S'hydrater</text>
+                <g font-family="sans-serif">
+                  <g transform="translate(90,55)">
+                    <path d="M0,-16 C9,-3 9,11 0,16 C-9,11 -9,-3 0,-16 Z" fill="#14336b" opacity="0.75" />
+                    <text x="0" y="38" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1e27">Avant</text>
+                  </g>
+                  <line x1="140" y1="55" x2="220" y2="55" stroke="#0a1f44" stroke-width="2.5" stroke-dasharray="5 4" />
+                  <g transform="translate(280,55)">
+                    <path d="M0,-16 C9,-3 9,11 0,16 C-9,11 -9,-3 0,-16 Z" fill="#14336b" opacity="0.75" />
+                    <text x="0" y="38" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1e27">Pendant</text>
+                  </g>
+                  <line x1="330" y1="55" x2="410" y2="55" stroke="#0a1f44" stroke-width="2.5" stroke-dasharray="5 4" />
+                  <g transform="translate(470,55)">
+                    <path d="M0,-16 C9,-3 9,11 0,16 C-9,11 -9,-3 0,-16 Z" fill="#14336b" opacity="0.75" />
+                    <text x="0" y="38" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1e27">Après</text>
+                  </g>
+                </g>
+
+                <line x1="15" y1="105" x2="545" y2="105" stroke="#dcd8cc" stroke-width="1.5" />
+                <text x="280" y="128" text-anchor="middle" font-size="13" font-weight="700" fill="#0a1f44" font-family="sans-serif">À quoi servent les aliments ?</text>
+
+                <g font-family="sans-serif">
+                  <g transform="translate(90,175)">
+                    <rect x="-20" y="-20" width="40" height="40" rx="9" fill="#ffd23f" />
+                    <path d="M2,-10 L-8,4 L0,4 L-4,12 L10,-4 L1,-4 Z" fill="#0a1f44" />
+                    <text x="0" y="35" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1e27">Glucides</text>
+                    <text x="0" y="49" text-anchor="middle" font-size="10" fill="#4a5164">Énergie</text>
+                  </g>
+                  <g transform="translate(280,175)">
+                    <rect x="-20" y="-20" width="40" height="40" rx="9" fill="#e8543f" opacity="0.85" />
+                    <circle cx="0" cy="-4" r="7" fill="#ffffff" />
+                    <path d="M-9,10 C-9,-1 9,-1 9,10 Z" fill="#ffffff" />
+                    <text x="0" y="35" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1e27">Protéines</text>
+                    <text x="0" y="49" text-anchor="middle" font-size="10" fill="#4a5164">Récupération</text>
+                  </g>
+                  <g transform="translate(470,175)">
+                    <rect x="-20" y="-20" width="40" height="40" rx="9" fill="#8fd19e" />
+                    <path d="M0,-10 C10,-10 10,10 0,10 C-10,10 -10,-10 0,-10 Z" fill="#2e7d4f" />
+                    <line x1="0" y1="-10" x2="0" y2="10" stroke="#ffffff" stroke-width="1.5" />
+                    <text x="0" y="35" text-anchor="middle" font-size="11" font-weight="700" fill="#1a1e27">Fruits/légumes</text>
+                    <text x="0" y="49" text-anchor="middle" font-size="10" fill="#4a5164">Vitamines</text>
+                  </g>
+                </g>
+              </svg>
+              <figcaption>L'hydratation avant/pendant/après l'effort, et le rôle des glucides, protéines et fruits-légumes.</figcaption>
+            </figure>
+          </div>
+        </details>
+
+        <!-- LA FREQUENCE CARDIAQUE -->
+        <details class="info-card" id="frequence-cardiaque">
+          <summary>
+            <h2>❤️ La fréquence cardiaque</h2>
+            <span class="info-card__toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="info-card__body">
+            <p>La <strong>fréquence cardiaque</strong> (FC), c'est le nombre de fois que ton cœur bat en une minute (battements par minute, ou <strong>bpm</strong>).</p>
+
+            <p><strong>Comment la mesurer soi-même ?</strong></p>
+            <ul>
+              <li><strong>Prise de pouls au poignet</strong> : place 2 doigts (index et majeur) sur la face intérieure du poignet, sous le pouce.</li>
+              <li><strong>Prise de pouls au cou</strong> : place 2 doigts sur le côté du cou, sous la mâchoire.</li>
+              <li><strong>Montre connectée</strong> : certaines montres et applications mesurent la FC en continu.</li>
+              <li>Astuce : compte les battements pendant 15 secondes puis multiplie par 4 pour obtenir ta FC par minute.</li>
+            </ul>
+
+            <p><strong>FC au repos et FC à l'effort</strong></p>
+            <p>Ta FC <strong>au repos</strong> est la plus basse : celle que ton cœur a quand tu es assis, tranquille. Ta FC <strong>à l'effort</strong> augmente avec l'intensité de ce que tu fais : plus l'effort est intense, plus ton cœur bat vite pour apporter de l'oxygène à tes muscles.</p>
+
+            <p><strong>Les zones d'effort</strong></p>
+            <p>Il est normal d'être essoufflé pendant l'effort ! Voici un repère simple pour savoir si ton essoufflement correspond à l'intensité de ce que tu fais :</p>
+
+            <figure class="rule-diagram">
+              <svg viewBox="0 0 560 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="fc-diagram-title">
+                <title id="fc-diagram-title">Jauge des trois zones d'effort : légère, modérée et intense</title>
+                <text x="20" y="15" font-size="10.5" fill="#4a5164" font-family="sans-serif">FC au repos</text>
+                <text x="540" y="15" text-anchor="end" font-size="10.5" fill="#4a5164" font-family="sans-serif">Effort maximal</text>
+
+                <path d="M20,28 L60,28 L70,15 L80,42 L90,28 L120,28 L130,20 L140,36 L150,28 L540,28" fill="none" stroke="#e8543f" stroke-width="1.5" />
+
+                <rect x="20" y="45" width="173" height="40" fill="#8fd19e" />
+                <rect x="193" y="45" width="174" height="40" fill="#ffd23f" />
+                <rect x="367" y="45" width="173" height="40" fill="#e8543f" />
+                <rect x="20" y="45" width="520" height="40" fill="none" stroke="#0a1f44" stroke-width="2" />
+                <line x1="193" y1="45" x2="193" y2="85" stroke="#0a1f44" stroke-width="2" />
+                <line x1="367" y1="45" x2="367" y2="85" stroke="#0a1f44" stroke-width="2" />
+
+                <g font-family="sans-serif" font-size="11" fill="#1a1e27" text-anchor="middle">
+                  <text x="106" y="105" font-weight="700">Légère</text>
+                  <text x="106" y="119">tu peux parler</text>
+                  <text x="280" y="105" font-weight="700">Modérée</text>
+                  <text x="280" y="119">essoufflement normal</text>
+                  <text x="453" y="105" font-weight="700">Intense</text>
+                  <text x="453" y="119">difficile de parler</text>
+                </g>
+              </svg>
+              <figcaption>Plus l'effort est intense, plus la fréquence cardiaque et l'essoufflement augmentent : c'est normal.</figcaption>
+            </figure>
+          </div>
+        </details>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__bottom">
+      Site pédagogique statique — © [Année scolaire] [Nom du collège].
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
