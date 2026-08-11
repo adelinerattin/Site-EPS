@@ -149,12 +149,57 @@ document.addEventListener("DOMContentLoaded", function () {
 
       var noteSur20 = totalMax > 0 ? Math.round((totalObtained / totalMax) * 20 * 2) / 2 : 0;
 
-      resultBox.hidden = false;
-      resultBox.innerHTML =
+      /* Retour a l'eleve : on classe les criteres selon le niveau
+         choisi pour lui dire ce qu'il maitrise et ce qu'il peut encore
+         travailler en priorite. */
+      var forts = [];
+      var aTravailler = [];
+      criteria.forEach(function (c, cIndex) {
+        var selected = itemsWrap.querySelector(
+          '.autoeval-item[data-item-index="' + cIndex + '"] input[type=radio]:checked'
+        );
+        if (!selected) return;
+        var tierIndex = c.tiers.findIndex(function (t) {
+          return String(t.points) === selected.value;
+        });
+        var libelle = c.critere + " <em>(" + c.role + ")</em>";
+        if (tierIndex >= 2) {
+          forts.push(libelle);
+        } else {
+          /* Le niveau juste au-dessus indique la prochaine etape. */
+          var suivant = c.tiers[Math.min(tierIndex + 1, c.tiers.length - 1)];
+          aTravailler.push({ libelle: libelle, objectif: suivant && suivant.desc ? suivant.desc : "" });
+        }
+      });
+
+      var html =
         "Note estimée : " + formatPoints(noteSur20) + " / 20" +
         '<span class="autoeval-result__detail">' +
         formatPoints(totalObtained) + " / " + formatPoints(totalMax) + " points cumulés sur les critères ci-dessus" +
         "</span>";
+
+      html += '<div class="autoeval-feedback">';
+      if (forts.length) {
+        html += '<div class="autoeval-feedback__block autoeval-feedback__block--fort">';
+        html += "<p><strong>✅ Ce que tu maîtrises déjà</strong></p><ul>";
+        forts.forEach(function (f) { html += "<li>" + f + "</li>"; });
+        html += "</ul></div>";
+      }
+      if (aTravailler.length) {
+        html += '<div class="autoeval-feedback__block autoeval-feedback__block--progres">';
+        html += "<p><strong>🎯 Ce que tu peux encore améliorer</strong></p><ul>";
+        aTravailler.forEach(function (f) {
+          html += "<li>" + f.libelle + (f.objectif ? '<span class="autoeval-feedback__goal">Prochaine étape : ' + f.objectif + "</span>" : "") + "</li>";
+        });
+        html += "</ul></div>";
+      }
+      if (!aTravailler.length) {
+        html += '<p class="autoeval-feedback__bravo">🏆 Bravo, tu te situes au bon niveau sur tous les critères !</p>';
+      }
+      html += "</div>";
+
+      resultBox.hidden = false;
+      resultBox.innerHTML = html;
     });
   }
 });

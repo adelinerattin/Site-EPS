@@ -807,6 +807,58 @@ a.card:focus-visible {
 }
 
 /* ============================================================
+   10bis. ACQUISITIONS PRESENTEES PAR ROLE
+   ------------------------------------------------------------
+   Evite le "mur de texte" : un bloc par role (couleur dediee),
+   decoupe en epreuves, avec les mots-cles en gras.
+   ============================================================ */
+.acq-role {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-left: 6px solid var(--color-navy);
+  border-radius: var(--radius);
+  padding: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.acq-role--athlete { border-left-color: var(--color-navy); }
+.acq-role--echauffe { border-left-color: var(--color-orange); }
+.acq-role--officiel { border-left-color: var(--color-green); }
+
+.acq-role__head {
+  margin: 0.2em 0 0.6em;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.02rem;
+  color: var(--color-navy);
+}
+
+.acq-epreuve {
+  margin-bottom: var(--space-sm);
+}
+
+.acq-epreuve:last-child {
+  margin-bottom: 0;
+}
+
+.acq-epreuve__title {
+  margin: 0 0 0.3em;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-ink);
+}
+
+.acq-epreuve ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.acq-epreuve li {
+  margin-bottom: 0.35em;
+  font-size: 0.95rem;
+}
+
+/* ============================================================
    11. QUIZ INTERACTIF
    ============================================================ */
 .quiz-question {
@@ -1003,6 +1055,69 @@ a.card:focus-visible {
   opacity: 0.85;
 }
 
+/* Retour personnalise affiche sous la note : ce que l'eleve maitrise
+   deja et ce qu'il peut encore travailler (voir js/autoeval.js). */
+.autoeval-feedback {
+  display: grid;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+}
+
+@media (min-width: 700px) {
+  .autoeval-feedback:has(.autoeval-feedback__block + .autoeval-feedback__block) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.autoeval-feedback__block {
+  background: var(--color-white);
+  color: var(--color-ink);
+  border-radius: var(--radius);
+  padding: var(--space-sm) var(--space-md);
+  border-left: 5px solid var(--color-border);
+}
+
+.autoeval-feedback__block--fort { border-left-color: var(--color-green); }
+.autoeval-feedback__block--progres { border-left-color: var(--color-coral); }
+
+.autoeval-feedback__block p {
+  margin: 0 0 0.4em;
+}
+
+.autoeval-feedback__block ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.autoeval-feedback__block li {
+  margin-bottom: 0.45em;
+}
+
+.autoeval-feedback__block em {
+  color: var(--color-ink-soft);
+  font-size: 0.88em;
+}
+
+.autoeval-feedback__goal {
+  display: block;
+  margin-top: 0.15em;
+  color: var(--color-ink-soft);
+  font-size: 0.85em;
+  font-style: italic;
+}
+
+.autoeval-feedback__bravo {
+  margin: 0;
+  background: var(--color-green-light);
+  color: var(--color-ink);
+  border-radius: var(--radius);
+  padding: var(--space-sm) var(--space-md);
+  font-weight: 700;
+}
+
 .autoeval-submit {
   margin-top: var(--space-sm);
 }
@@ -1128,6 +1243,19 @@ thead th.mastery-satisfaisante {
 thead th.mastery-excellente {
   background: var(--color-green);
   color: var(--color-white);
+}
+
+/* Toute la colonne "Maitrise insuffisante" recoit un rouge tres
+   leger, pour la reperer d'un coup d'oeil sans alourdir la lecture.
+   L'en-tete garde sa couleur pleine (voir th.mastery-insuffisante).
+   La classe est posee sur chaque cellule concernee car les rowspan
+   rendent un ciblage par position peu fiable. */
+.eval-grid td.col-insuffisante {
+  background: rgba(214, 69, 69, 0.09);
+}
+
+.eval-grid tbody tr:nth-child(even) td.col-insuffisante {
+  background: rgba(214, 69, 69, 0.13);
 }
 
 .eval-grid .role-critere {
@@ -1531,6 +1659,52 @@ thead th.mastery-excellente {
 
 .fun-fact__diagram {
   margin-top: var(--space-sm);
+}
+
+/* Trois vignettes illustrant un record par une comparaison concrete
+   (un bus articule, un terrain de foot, un cyclomoteur...). */
+.record-grid {
+  display: grid;
+  gap: var(--space-sm);
+  grid-template-columns: 1fr;
+  margin-top: var(--space-md);
+}
+
+@media (min-width: 640px) {
+  .record-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.record-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-sm);
+  text-align: center;
+  margin: 0;
+}
+
+.record-card svg {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 0.4em;
+}
+
+.record-card__perf {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--color-navy);
+}
+
+.record-card__vs {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--color-ink-soft);
+  line-height: 1.35;
 }
 
 /* Variante rouge du meme encart, pour une regle importante a ne pas
