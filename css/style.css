@@ -863,6 +863,11 @@ a.card:focus-visible {
    Encadre dedie : chaque point commence par un emoji et les
    informations chiffrees (durees, formats, distances) sont en gras.
    ------------------------------------------------------------ */
+/* Un peu d'air entre le titre de la rubrique et la situation repere */
+.situation-repere__title {
+  margin-top: var(--space-md);
+}
+
 .situation-repere {
   background: var(--color-chalk);
   border: 1px solid var(--color-border);
@@ -1314,9 +1319,15 @@ thead th.mastery-excellente {
   font-weight: 700;
 }
 
-.eval-grid tr.pts-row td {
+/* Les lignes de points restent grises sur toute leur largeur : elles
+   se detachent ainsi des colonnes colorees et servent de separateur
+   entre deux criteres. La regle passe apres celles des colonnes pour
+   les emporter dans la cascade. */
+.eval-grid tr.pts-row td,
+.eval-grid tbody tr.pts-row:nth-child(even) td {
   text-align: center;
   font-weight: 700;
+  background: #e8e6e0;
 }
 
 /* ============================================================
@@ -1743,6 +1754,19 @@ thead th.mastery-excellente {
   height: auto;
   border-radius: 6px;
   margin-bottom: 0.4em;
+}
+
+/* Photo placee directement sous la definition du muscle, dans le
+   lexique : plus compacte et alignee a gauche. */
+.etirement--inline {
+  max-width: 260px;
+  margin: 0.6em 0 0.2em;
+  padding: 0.4rem;
+  text-align: left;
+}
+
+.etirement--inline img {
+  margin-bottom: 0;
 }
 
 .etirement__muscle {
