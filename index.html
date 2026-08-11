@@ -59,8 +59,10 @@
     <section class="site-hero">
       <div class="container site-hero__inner">
         <div class="site-hero__text">
-          <div class="site-hero__lockup">
-            <img class="site-hero__logo" src="assets/logo-as-simone-veil.jpg" alt="">
+          <div class="site-hero__lockup site-hero__lockup--wide">
+            <a class="site-hero__logo-link" href="index.html" aria-label="Retour à l'accueil">
+              <img class="site-hero__logo" src="assets/logo-as-simone-veil.jpg" alt="">
+            </a>
             <h1>
               <span class="hero-title__line1">Bouge, apprends,</span>
               <span class="hero-title__accent">dépasse-toi !</span>
@@ -84,21 +86,52 @@
     <section class="section" id="decouvrir">
       <div class="container">
         <h2>Ce que vous allez trouver ici</h2>
+        <!-- Pour ajouter un encart : copiez un bloc
+             <div class="card feature-card"> entier, changez le
+             pictogramme, le titre, le résumé et le lien du bouton. -->
         <div class="grid grid--3">
           <div class="card feature-card">
             <span class="feature-card__icon" aria-hidden="true">📋</span>
             <h3>Le fonctionnement d'un cours d'EPS</h3>
             <p>Règlement EPS, tenue exigée, règles de fonctionnement, programmation, modalités des dispenses, fonctionnement de l'Association Sportive et fiche d'inscription.</p>
+            <p class="feature-card__actions">
+              <a class="btn btn--outline" href="eps-generale.html">Voir la page →</a>
+            </p>
           </div>
           <div class="card feature-card">
             <span class="feature-card__icon" aria-hidden="true">🏅</span>
             <h3>Vos activités, niveau par niveau</h3>
             <p>Pour chaque activité sportive travaillée de la 6ème à la 3ème : les attendus en lien avec les textes officiels, ce qu'il y a à apprendre, les modalités d'évaluation, le règlement de l'activité pratiquée, des vidéos et des quiz d'entraînement.</p>
+            <p class="feature-card__actions">
+              <a class="btn btn--outline btn--sm" href="niveau-6e.html">6<sup>ème</sup></a>
+              <a class="btn btn--outline btn--sm" href="niveau-5e.html">5<sup>ème</sup></a>
+              <a class="btn btn--outline btn--sm" href="niveau-4e.html">4<sup>ème</sup></a>
+              <a class="btn btn--outline btn--sm" href="niveau-3e.html">3<sup>ème</sup></a>
+            </p>
+          </div>
+          <div class="card feature-card">
+            <span class="feature-card__icon" aria-hidden="true">🧠</span>
+            <h3>La culture sportive</h3>
+            <p>Les grands groupes musculaires et comment les étirer, les étapes d'un bon échauffement, l'alimentation et l'hydratation du sportif, la fréquence cardiaque et les zones d'effort : des connaissances utiles quel que soit ton niveau.</p>
+            <p class="feature-card__actions">
+              <a class="btn btn--outline" href="culture-sportive.html">Voir la page →</a>
+            </p>
+          </div>
+          <div class="card feature-card">
+            <span class="feature-card__icon" aria-hidden="true">⚽</span>
+            <h3>L'AS Futsal</h3>
+            <p>Tout pour mieux connaître l'activité : le règlement du futsal (terrain, joueurs, gardien, règle des 4 secondes), les fautes et les sanctions, le calendrier des entraînements et des compétitions, et comment devenir jeune officiel — arbitre ou juge — avec un quiz d'entraînement.</p>
+            <p class="feature-card__actions">
+              <a class="btn btn--outline" href="as-futsal.html">Voir la page →</a>
+            </p>
           </div>
           <div class="card feature-card">
             <span class="feature-card__icon" aria-hidden="true">🎒</span>
             <h3>La vie de collégien en 6e</h3>
             <p>ENT, Pronote, les interlocuteurs du collège, emploi du temps, faire son sac, s'organiser dans ses devoirs : tout pour gagner en autonomie dès la 6ème.</p>
+            <p class="feature-card__actions">
+              <a class="btn btn--outline" href="prof-principal-6e.html">Voir la page →</a>
+            </p>
           </div>
         </div>
       </div>

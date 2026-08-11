@@ -299,8 +299,14 @@ li {
   transition: max-height 0.25s ease;
 }
 
+/* Menu deroulant sur mobile : la hauteur s'adapte au nombre de
+   rubriques et la liste defile si elle depasse l'ecran, pour que la
+   derniere entree reste toujours accessible. */
 .main-nav.is-open {
-  max-height: 480px;
+  max-height: calc(100vh - var(--header-height));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 0 12px 20px rgba(10, 31, 68, 0.15);
 }
 
 .main-nav__list {
@@ -1308,16 +1314,49 @@ thead th.mastery-excellente {
   min-width: 0;
 }
 
-/* Variante pour les titres contenant un mot tres long (ex.
-   "Fonctionnement") : on augmente la largeur minimale souhaitee du
-   titre, si bien qu'il passe sous le logo sur petit ecran plutot que
-   d'etre comprime et coupe en deux. */
-.site-hero__lockup--wide h1 {
-  flex-basis: 300px;
+/* Variante pour les titres longs (ex. "Bouge, apprends," ou
+   "Fonctionnement") qu'on veut garder sur une seule ligne : le logo
+   passe AU-DESSUS du titre, qui dispose alors de toute la largeur.
+   A partir d'un grand ecran, la place est suffisante pour remettre
+   le logo a cote du titre comme sur les autres pages. */
+.site-hero__lockup--wide {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+@media (min-width: 1200px) {
+  .site-hero__lockup--wide {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-lg);
+  }
+}
+
+/* Tres petits telephones (iPhone SE...) : on reduit un peu le titre
+   pour qu'il tienne malgre tout sur une ligne. */
+@media (max-width: 360px) {
+  .site-hero__lockup--wide h1 {
+    font-size: 1.55rem;
+  }
 }
 
 /* Logo affiche tel quel (image complete, non recadree, sans cercle
-   ni cadre) : il se fond directement dans le fond creme du hero. */
+   ni cadre) : il se fond directement dans le fond creme du hero.
+   Il est cliquable sur toutes les pages et renvoie a l'accueil
+   (lien ".site-hero__logo-link"). */
+.site-hero__logo-link {
+  display: block;
+  flex-shrink: 0;
+  border-radius: 8px;
+  transition: transform 0.12s ease;
+}
+
+.site-hero__logo-link:hover,
+.site-hero__logo-link:focus-visible {
+  transform: scale(1.03);
+}
+
 .site-hero__logo {
   display: block;
   width: auto;
@@ -1404,9 +1443,14 @@ thead th.mastery-excellente {
 /* ============================================================
    15. PAGE D'ACCUEIL : PRESENTATION
    ============================================================ */
-/* Cartes de presentation rapide ("Ce que vous allez trouver ici") */
+/* Cartes de presentation rapide ("Ce que vous allez trouver ici").
+   Chaque carte se termine par un (ou plusieurs) bouton(s) menant a
+   la page correspondante ; "margin-top: auto" les aligne en bas
+   quelle que soit la longueur du texte. */
 .feature-card {
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
 .feature-card__icon {
@@ -1427,9 +1471,23 @@ thead th.mastery-excellente {
 }
 
 .feature-card p {
-  margin-bottom: 0;
+  margin-bottom: var(--space-md);
   color: var(--color-ink-soft);
   font-size: 0.95rem;
+}
+
+.feature-card__actions {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Bouton compact, utilise quand une carte renvoie vers plusieurs
+   pages (ex. les 4 niveaux de classe). */
+.btn--sm {
+  font-size: 0.85rem;
+  padding: 0.5em 0.9em;
 }
 
 /* ============================================================
