@@ -1308,6 +1308,14 @@ thead th.mastery-excellente {
   min-width: 0;
 }
 
+/* Variante pour les titres contenant un mot tres long (ex.
+   "Fonctionnement") : on augmente la largeur minimale souhaitee du
+   titre, si bien qu'il passe sous le logo sur petit ecran plutot que
+   d'etre comprime et coupe en deux. */
+.site-hero__lockup--wide h1 {
+  flex-basis: 300px;
+}
+
 /* Logo affiche tel quel (image complete, non recadree, sans cercle
    ni cadre) : il se fond directement dans le fond creme du hero. */
 .site-hero__logo {
@@ -1646,16 +1654,83 @@ thead th.mastery-excellente {
   color: var(--color-navy);
 }
 
-/* Case "activite pratiquee dans les installations de la ville" du
-   tableau de programmation : fond assombri pour la reperer d'un
-   coup d'oeil. */
-td.cell-ville {
-  background: #c9c4b4;
+/* ------------------------------------------------------------
+   TABLEAU DE PROGRAMMATION PAR NIVEAU
+   Tout est centre. Les cases des activites qui se deroulent sur le
+   plateau du college (et les cases vides) restent blanches ; seules
+   celles des installations de la ville sont colorees, avec une
+   couleur pastel differente par niveau de classe.
+   ------------------------------------------------------------ */
+.prog-table td {
+  text-align: center;
+  vertical-align: middle;
+  background: var(--color-white);
+}
+
+.prog-table thead th {
+  text-align: center;
+}
+
+/* Annule le zebrage general pour ce tableau */
+.prog-table tbody tr:nth-child(even) {
+  background: var(--color-white);
+}
+
+.prog-table td.cell-ville {
   font-weight: 700;
 }
 
-tbody tr:nth-child(even) td.cell-ville {
-  background: #c9c4b4;
+.prog-table td.cell-ville--6e { background: #d6e4f7; }
+.prog-table td.cell-ville--5e { background: #d9f0df; }
+.prog-table td.cell-ville--4e { background: #fce9cf; }
+.prog-table td.cell-ville--3e { background: #f6dcdc; }
+
+/* Pastille de couleur utilisee dans la legende du tableau */
+.prog-legend {
+  list-style: none;
+  margin: 0 0 var(--space-md);
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.2rem;
+  font-size: 0.88rem;
+}
+
+.prog-legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  margin: 0;
+}
+
+.prog-legend .swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+/* ------------------------------------------------------------
+   TABLEAU DES ACTIVITES DE L'AS
+   Une couleur douce par famille d'activite, pour reperer d'un coup
+   d'oeil tous les creneaux d'un meme sport.
+   ------------------------------------------------------------ */
+.as-table tbody tr:nth-child(even) {
+  background: transparent;
+}
+
+.as-table tr.as-futsal td { background: #e4ecf9; }
+.as-table tr.as-basket td { background: #fdeacf; }
+.as-table tr.as-rugby td { background: #dcf0e2; }
+.as-table tr.as-handball td { background: #f7dee2; }
+
+/* Mot-cle surligne facon feutre, pour les informations a ne pas
+   manquer dans un paragraphe. */
+.surligne {
+  background: linear-gradient(transparent 55%, var(--color-yellow) 55%);
+  font-weight: 700;
+  padding: 0 0.1em;
 }
 
 /* Liste de documents telechargeables (reglement, certificat...) */
