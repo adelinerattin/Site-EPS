@@ -58,7 +58,7 @@ function openDetailsFromHash() {
     targetDetails.open = true;
   }
 
-  var body = targetEl.closest ? targetEl.closest(".activity-card__body") : null;
+  var body = targetEl.closest ? targetEl.closest(".activity-card__body, .info-card__body") : null;
   var tabs = body ? body.querySelector(".rubrique-tabs") : null;
   if (tabs && tabs._epsPanels) {
     var index = tabs._epsPanels.indexOf(targetEl);

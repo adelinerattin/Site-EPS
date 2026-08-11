@@ -1348,6 +1348,11 @@ thead th.mastery-excellente {
 .hero-title__line1,
 .hero-title__accent {
   display: block;
+  /* Un titre contenant un mot tres long (ex. "Fonctionnement") depasse
+     sinon sa colonne sur telephone et fait defiler la page en largeur.
+     La cesure ne se declenche que si le mot ne tient vraiment pas. */
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .hero-title__line1 {
@@ -1460,6 +1465,237 @@ thead th.mastery-excellente {
 
 .fun-fact__diagram {
   margin-top: var(--space-sm);
+}
+
+/* Variante rouge du meme encart, pour une regle importante a ne pas
+   manquer (ex. les oublis de tenue). */
+.fun-fact--alert {
+  background: var(--color-coral-light);
+  border-color: var(--color-coral);
+}
+
+.fun-fact--alert .fun-fact__badge {
+  --dossard-color: var(--color-coral);
+  border-color: var(--color-coral);
+}
+
+.fun-fact--alert .fun-fact__label {
+  color: var(--color-coral);
+}
+
+/* ============================================================
+   18. SCHEMA "MA TENUE EN EPS"
+   ------------------------------------------------------------
+   Reprend la mise en page du document de l'enseignante : un
+   bandeau de titre, puis des cases (une par element de la tenue)
+   avec un en-tete gris, une illustration et une legende.
+   ============================================================ */
+.tenue-schema {
+  border: 2px solid var(--color-navy);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: var(--space-md) 0;
+  background: var(--color-white);
+}
+
+.tenue-schema__title {
+  margin: 0;
+  padding: var(--space-sm) var(--space-md);
+  text-align: center;
+  background: var(--color-cream);
+  border-bottom: 2px solid var(--color-navy);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-navy);
+}
+
+/* "minmax(0, 1fr)" (et non "1fr") : sans cela, la largeur intrinseque
+   des illustrations empeche les colonnes de retrecir et la page
+   deborde horizontalement sur telephone. */
+.tenue-schema__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 640px) {
+  .tenue-schema__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.tenue-item {
+  border-bottom: 2px solid var(--color-navy);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+@media (min-width: 640px) {
+  .tenue-item:nth-child(odd) {
+    border-right: 2px solid var(--color-navy);
+  }
+}
+
+.tenue-item__head {
+  margin: 0;
+  padding: 0.5em 0.8em;
+  text-align: center;
+  background: #e3e0d8;
+  border-bottom: 1px solid var(--color-border);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: var(--color-navy);
+}
+
+.tenue-item__body {
+  padding: var(--space-md);
+  text-align: center;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+}
+
+.tenue-item__body img {
+  max-height: 170px;
+  max-width: 100%;
+  width: auto;
+  margin: 0 auto;
+}
+
+.tenue-item__caption {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-ink);
+}
+
+.tenue-item__caption em {
+  color: var(--color-ink-soft);
+}
+
+/* Deux illustrations cote a cote dans une meme case (ex. K-way +
+   tenue de rechange, ou basket conseillee / deconseillee). */
+.tenue-item__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: var(--space-md);
+  width: 100%;
+}
+
+.tenue-sub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4em;
+  flex: 0 1 auto;
+}
+
+.tenue-sub img {
+  max-height: 120px;
+  max-width: 100%;
+  width: auto;
+}
+
+/* Deux vetements cote a cote sous une meme legende (t-shirt + pantalon
+   sous "Tenue de rechange"). */
+.tenue-sub__images {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.tenue-sub p {
+  margin: 0;
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--color-ink-soft);
+}
+
+/* Bandeau final sur toute la largeur (chewing-gums interdits) */
+.tenue-schema__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  text-align: left;
+}
+
+.tenue-schema__footer img {
+  max-height: 90px;
+  max-width: 100%;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.tenue-schema__footer p {
+  margin: 0;
+  flex: 1 1 220px;
+  min-width: 0;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+/* Case "activite pratiquee dans les installations de la ville" du
+   tableau de programmation : fond assombri pour la reperer d'un
+   coup d'oeil. */
+td.cell-ville {
+  background: #c9c4b4;
+  font-weight: 700;
+}
+
+tbody tr:nth-child(even) td.cell-ville {
+  background: #c9c4b4;
+}
+
+/* Liste de documents telechargeables (reglement, certificat...) */
+.doc-list {
+  list-style: none;
+  margin: 0 0 var(--space-md);
+  padding: 0;
+  display: grid;
+  gap: 0.6em;
+}
+
+.doc-list a {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  background: var(--color-white);
+  border: 2px solid var(--color-border);
+  border-left: 5px solid var(--color-navy);
+  border-radius: var(--radius);
+  padding: var(--space-sm) var(--space-md);
+  text-decoration: none;
+  color: var(--color-navy);
+  font-weight: 700;
+}
+
+.doc-list a:hover,
+.doc-list a:focus-visible {
+  border-color: var(--color-orange);
+  border-left-color: var(--color-orange);
+  background: var(--color-chalk);
+}
+
+.doc-list__meta {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--color-ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 /* ============================================================

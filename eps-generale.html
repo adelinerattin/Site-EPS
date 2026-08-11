@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EPS générale — Espace EPS</title>
-  <meta name="description" content="Organisation du cours d'EPS, règlement, association sportive, tenue exigée et modalités de dispense.">
+  <title>Fonctionnement de l'EPS — Espace EPS</title>
+  <meta name="description" content="Fonctionnement de l'EPS au collège : tenue, inaptitudes et dispenses, trajets, horaires et programmation, dates importantes et association sportive.">
   <!-- Police d'affichage "Rubik" (titres, dossards) chargee depuis Google Fonts.
        Le site reste utilisable sans elle : css/style.css prevoit une pile de
        polices systeme de secours si ce lien ne charge pas. -->
@@ -27,7 +27,7 @@
       <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
         <ul class="main-nav__list">
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="eps-generale.html">L'EPS en général</a></li>
+          <li><a href="eps-generale.html">Fonctionnement de l'EPS</a></li>
           <li><a href="niveau-6e.html">6ème</a></li>
           <li><a href="niveau-5e.html">5ème</a></li>
           <li><a href="niveau-4e.html">4ème</a></li>
@@ -54,12 +54,12 @@
           <div class="site-hero__lockup">
             <img class="site-hero__logo" src="assets/logo-as-simone-veil.jpg" alt="">
             <h1>
-            <span class="hero-title__line1">EPS générale</span>
-            <span class="hero-title__accent">Le cadre du cours</span>
+            <span class="hero-title__line1">Fonctionnement</span>
+            <span class="hero-title__accent">de l'EPS</span>
             </h1>
           </div>
           <p class="lede">Tout ce qu'il faut savoir pour bien vivre le cours d'EPS, quel que soit votre niveau.</p>
-          <p><a class="btn btn--primary" href="#organisation">Voir le règlement →</a></p>
+          <p><a class="btn btn--primary" href="#tenue">Voir ma tenue d'EPS →</a></p>
         </div>
         <div class="site-hero__visual">
           <img src="assets/hero-illustration.svg" alt="" width="380" height="522">
@@ -72,77 +72,472 @@
 
         <!-- Navigation rapide : un clic ouvre directement la rubrique visee -->
         <ul class="quick-nav">
-          <li><a href="#organisation">Organisation du cours</a></li>
-          <li><a href="#reglement">Règlement EPS</a></li>
-          <li><a href="#association-sportive">Association sportive (AS)</a></li>
-          <li><a href="#tenue">Tenue exigée</a></li>
-          <li><a href="#dispense">Modalités de dispense</a></li>
+          <li><a href="#tenue">Ma tenue d'EPS</a></li>
+          <li><a href="#inaptitudes">Inaptitudes à la pratique de l'EPS</a></li>
+          <li><a href="#trajets">Les trajets</a></li>
+          <li><a href="#organisation">Organisation de l'EPS</a></li>
+          <li><a href="#dates-importantes">Dates importantes</a></li>
+          <li><a href="#association-sportive">L'Association Sportive</a></li>
+          <li><a href="#documents">Documents à télécharger</a></li>
         </ul>
 
         <!-- ============================================================
-             CHAQUE RUBRIQUE EST UNE FICHE DEPLIABLE (".info-card")
-             Cliquez sur le titre pour l'ouvrir/la fermer. Pour ajouter
-             une rubrique, copiez un bloc <details class="info-card">
-             entier et donnez-lui un id unique (utilise par le menu
-             rapide ci-dessus et par les liens venant d'autres pages).
+             CHAQUE RUBRIQUE EST UNE FICHE DEPLIABLE (".info-card"), sur
+             le meme modele que les fiches activite des pages
+             niveau-XX.html. Quand une rubrique a plusieurs sous-parties,
+             celles-ci sont presentees en onglets (".rubrique-tabs") :
+             chaque bouton porte aria-controls="id-de-la-sous-rubrique",
+             qui doit correspondre exactement a l'id du
+             <section class="rubrique"> correspondant.
              ============================================================ -->
 
-        <!-- ORGANISATION ET REGLES DE FONCTIONNEMENT -->
-        <details class="info-card" id="organisation">
+        <!-- ==================================================
+             RUBRIQUE 1 — MA TENUE D'EPS
+             ================================================== -->
+        <details class="info-card" id="tenue" open>
           <summary>
-            <h2>Organisation et règles de fonctionnement du cours d'EPS</h2>
+            <h2>👕 Ma tenue d'EPS</h2>
+            <span class="info-card__toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="info-card__body">
+
+            <p>
+              Par souci d'hygiène et de sécurité, chaque élève doit être muni d'une tenue d'E.P.S.
+              (soit un survêtement, short ou t-shirt de sport, et une paire de chaussures adaptée à
+              la pratique d'une activité physique). Les cheveux doivent être attachés pour toutes
+              pratiques sportives.
+            </p>
+            <p>
+              Pour la pratique des A.P.S.A. en extérieur, les élèves doivent se munir de vêtements
+              adaptés aux conditions météorologiques (vêtements chauds, casquette, crème solaire...).
+              Un temps sera laissé aux élèves dans les vestiaires au début et à la fin des cours afin
+              qu'ils puissent se changer. L'intimité des élèves est préservée lors de leur passage
+              dans les vestiaires mais, s'il le juge utile, le professeur se garde le droit
+              d'intervenir afin d'assurer la sécurité de tous (cf. Article 44 du règlement intérieur).
+            </p>
+            <p>
+              Chaque élève doit être en possession de sa gourde pleine avant le début du cours.
+            </p>
+
+            <!-- Schema "Ma tenue en EPS" — reprise du document de l'enseignante.
+                 Les illustrations sont dans assets/tenue/ : pour en remplacer
+                 une, deposez la nouvelle image sous le meme nom de fichier. -->
+            <figure class="tenue-schema">
+              <figcaption class="tenue-schema__title">Quand je viens en EPS, je dois avoir :</figcaption>
+              <div class="tenue-schema__grid">
+
+                <div class="tenue-item">
+                  <p class="tenue-item__head">Mon jogging</p>
+                  <div class="tenue-item__body">
+                    <img src="assets/tenue/jogging.jpg" alt="Un jogging de sport" loading="lazy">
+                    <p class="tenue-item__caption">⚠️ Les jeans élastiques ne sont pas une tenue pour faire du sport ⚠️</p>
+                  </div>
+                </div>
+
+                <div class="tenue-item">
+                  <p class="tenue-item__head">Mes chaussures pour faire du sport</p>
+                  <div class="tenue-item__body">
+                    <img src="assets/tenue/baskets-semelle-epaisse.jpg" alt="Des baskets de sport à grosse semelle" loading="lazy">
+                    <p class="tenue-item__caption">✅ <em>Privilégier les baskets avec une grosse semelle</em></p>
+                    <img src="assets/tenue/baskets-semelle-plate.jpg" alt="Une basket de ville à semelle plate" loading="lazy">
+                    <p class="tenue-item__caption">❌ <em>Éviter les baskets avec une semelle plate</em></p>
+                  </div>
+                </div>
+
+                <div class="tenue-item">
+                  <p class="tenue-item__head">Ma gourde REMPLIE</p>
+                  <div class="tenue-item__body">
+                    <img src="assets/tenue/gourde.jpg" alt="Une gourde" loading="lazy">
+                    <p class="tenue-item__caption"><strong>J'anticipe</strong> le remplissage de ma gourde avant de venir en EPS (pendant la récréation)</p>
+                  </div>
+                </div>
+
+                <div class="tenue-item">
+                  <p class="tenue-item__head">Des vêtements adaptés à la météo 🌦️</p>
+                  <div class="tenue-item__body">
+                    <div class="tenue-item__row">
+                      <div class="tenue-sub">
+                        <img src="assets/tenue/kway.jpg" alt="Un K-way" loading="lazy">
+                        <p>K-way</p>
+                      </div>
+                      <div class="tenue-sub">
+                        <span class="tenue-sub__images">
+                          <img src="assets/tenue/tshirt.jpg" alt="Un tee-shirt" loading="lazy">
+                          <img src="assets/tenue/pantalon.jpg" alt="Un pantalon" loading="lazy">
+                        </span>
+                        <p>Tenue de rechange</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="tenue-schema__footer">
+                <img src="assets/tenue/chewing-gum.jpg" alt="Un chewing-gum barré" loading="lazy">
+                <p>Les chewing-gum sont interdits pendant le cours d'EPS. Un pot est présent à côté du portillon d'EPS pour les jeter.</p>
+              </div>
+            </figure>
+
+            <!-- Encart rouge : regle des oublis de tenue (meme composant que
+                 l'encart "Le savais-tu ?", en variante ".fun-fact--alert") -->
+            <div class="fun-fact fun-fact--alert">
+              <span class="dossard dossard--sm fun-fact__badge" aria-hidden="true">⚠️</span>
+              <div class="fun-fact__body">
+                <p class="fun-fact__label">En cas d'oubli de tenue</p>
+                <ul class="mb-0">
+                  <li>L'élève a le droit à un <strong>joker</strong> pour le premier oubli.</li>
+                  <li>L'élève a une <strong>observation</strong> pour le deuxième oubli.</li>
+                  <li>L'élève a une <strong>retenue</strong> pour tous les autres oublis suivants, sauf justifications écrites de la famille.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </details>
+
+        <!-- ==================================================
+             RUBRIQUE 2 — INAPTITUDES A LA PRATIQUE DE L'EPS
+             ================================================== -->
+        <details class="info-card" id="inaptitudes">
+          <summary>
+            <h2>🩺 Inaptitudes à la pratique de l'EPS</h2>
+            <span class="info-card__toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="info-card__body">
+
+            <p class="callout callout--info">
+              Les cours d'E.P.S. sont obligatoires au même titre que tous les autres cours,
+              y compris en cas d'inaptitude partielle ou totale.
+            </p>
+
+            <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : inaptitudes">
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="inaptitudes-ponctuelles">📅 Inaptitudes ponctuelles</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="inaptitudes-moins-2-mois">🩹 Inaptitudes médicales de moins de 2 mois</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="inaptitudes-plus-2-mois">🏥 Inaptitudes médicales de plus de 2 mois</button>
+            </div>
+
+            <section class="rubrique" id="inaptitudes-ponctuelles">
+              <h4>📅 Inaptitudes ponctuelles (une séance)</h4>
+              <p class="text-mono">Article 34 du règlement d'EPS</p>
+              <p>
+                Les demandes de dispenses ponctuelles doivent être exceptionnelles et doivent être
+                formulées auprès du professeur d'E.P.S par les responsables légaux.
+              </p>
+              <ul>
+                <li>Les élèves sont tenus de participer au cours.</li>
+                <li>
+                  Un même élève ne peut faire l'objet de plusieurs demandes de dispense ponctuelles
+                  consécutives. Ces dispenses seront notifiées sur PRONOTE si la demande est faite par
+                  la famille. Si ces demandes sont trop nombreuses, la famille sera convoquée par
+                  Madame la principale afin d'évaluer la situation.
+                </li>
+              </ul>
+
+              <h4>Comment prévenir d'une dispense ponctuelle ?</h4>
+              <ul class="video-list">
+                <li>
+                  <a href="https://docs.index-education.com/docs_fr/fr-pronote-support-fiche-1515-5130-faire-une-demande-de-dispense.php" target="_blank" rel="noopener">
+                    Prévenir d'une dispense ponctuelle en EPS sur PRONOTE (mode d'emploi)
+                  </a>
+                </li>
+                <li>
+                  <a href="https://youtube.com/shorts/k54VC_Lysww?si=x1rxjecTnMDW1eK7" target="_blank" rel="noopener">
+                    Format vidéo (YouTube)
+                  </a>
+                </li>
+              </ul>
+            </section>
+
+            <section class="rubrique" id="inaptitudes-moins-2-mois">
+              <h4>🩹 Inaptitudes médicales (avec certificat d'un médecin) de moins de 2 mois</h4>
+              <p class="text-mono">Article 35 du règlement d'EPS</p>
+              <ul>
+                <li>Les élèves sont tenus de participer au cours.</li>
+                <li>Au regard de la nature de leur inaptitude, ils auront des tâches à accomplir.</li>
+              </ul>
+              <p>
+                Afin de renseigner au mieux le professeur d'EPS d'une inaptitude, celle-ci doit faire
+                l'objet d'un certificat médical. Le modèle-type de certificat d'inaptitude est présenté
+                aux familles sur l'ENT et un exemplaire est distribué aux élèves en début d'année.
+                Il doit servir de référence pour le médecin.
+              </p>
+              <p>
+                Ainsi le professeur d'EPS peut proposer aux élèves inaptes un enseignement et une
+                évaluation adaptés à leurs possibilités. Ceux-ci s'engageront alors dans une activité
+                motrice tenant compte de leurs incapacités ou dans des rôles sociaux (observateur,
+                coach, arbitre…) qui font partie des programmes nationaux d'EPS.
+              </p>
+              <ul>
+                <li>Toute absence au cours ne pourra être justifiée par la dispense médicale (inaptitude physique).</li>
+              </ul>
+
+              <h4>Le certificat médical à faire remplir par le médecin</h4>
+              <ul class="doc-list">
+                <li>
+                  <a href="assets/docs/certificat-medical-eps.pdf" download>
+                    📄 Certificat médical d'aptitude partielle ou d'inaptitude totale à l'EPS
+                    <span class="doc-list__meta">PDF — à télécharger et à faire remplir par le médecin</span>
+                  </a>
+                </li>
+              </ul>
+            </section>
+
+            <section class="rubrique" id="inaptitudes-plus-2-mois">
+              <h4>🏥 Inaptitudes médicales (avec certificat d'un médecin) de plus de 2 mois</h4>
+              <p class="text-mono">Article 36 du règlement d'EPS</p>
+              <p>
+                Le seul cas de dispense de cours d'EPS concerne les élèves qui ont une inaptitude
+                totale supérieure à 2 mois.
+              </p>
+              <ul>
+                <li>Les élèves ne participent pas au cours.</li>
+                <li>Leur absence marquée par l'enseignant d'EPS sera donc justifiée.</li>
+              </ul>
+
+              <ul class="doc-list">
+                <li>
+                  <a href="assets/docs/certificat-medical-eps.pdf" download>
+                    📄 Certificat médical d'aptitude partielle ou d'inaptitude totale à l'EPS
+                    <span class="doc-list__meta">PDF — à télécharger et à faire remplir par le médecin</span>
+                  </a>
+                </li>
+              </ul>
+            </section>
+
+          </div>
+        </details>
+
+        <!-- ==================================================
+             RUBRIQUE 3 — LES TRAJETS
+             ================================================== -->
+        <details class="info-card" id="trajets">
+          <summary>
+            <h2>🚌 Les trajets</h2>
             <span class="info-card__toggle" aria-hidden="true">+</span>
           </summary>
           <div class="info-card__body">
             <p>
-              <!-- MODIFIER ICI : décrivez l'organisation concrète de vos cours -->
-              Chaque cours d'EPS dure en général 2 heures. Les élèves se changent dans les vestiaires
-              avant et après le cours, se déplacent en groupe classe jusqu'à l'installation sportive,
-              et se rassemblent au point d'appel donné par le professeur en début de séance.
+              Au collège, tous les trajets en bus pour se rendre aux installations sportives de la
+              ville sont encadrés par le professeur d'E.P.S. en charge du cours. Ainsi, tous les
+              élèves doivent partir du collège avec leur enseignant à l'heure du début du cours, et
+              revenir jusqu'au collège avec leur enseignant pour l'heure de la fin du cours. Aucun
+              élève n'est donc autorisé à se rendre ou à quitter seul les installations sportives.
             </p>
-            <ul>
-              <li>Appel effectué en tenue de sport, au lieu et à l'heure indiqués par le professeur.</li>
-              <li>Respect des autres élèves, du matériel et des installations sportives.</li>
-              <li>Écoute des consignes de sécurité avant chaque activité.</li>
-              <li>Rangement du matériel en fin de séance, avec l'aide des élèves.</li>
+            <p>
+              Pendant ces déplacements, les élèves doivent se conformer strictement aux consignes de
+              sécurité et instructions données par le professeur. Il est en particulier demandé aux
+              élèves de ne pas utiliser le téléphone portable ou tout autre objet connecté pendant
+              les trajets en bus (cf. Articles 74 à 79 du règlement intérieur).
+            </p>
+          </div>
+        </details>
+
+        <!-- ==================================================
+             RUBRIQUE 4 — ORGANISATION DE L'EPS
+             ================================================== -->
+        <details class="info-card" id="organisation">
+          <summary>
+            <h2>🗓️ Organisation de l'EPS</h2>
+            <span class="info-card__toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="info-card__body">
+
+            <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : organisation de l'EPS">
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="organisation-horaires">⏰ Répartition des horaires</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="organisation-programmation">🏅 Programmation par niveau</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="organisation-fonctionnement">📋 Règles de fonctionnement</button>
+            </div>
+
+            <section class="rubrique" id="organisation-horaires">
+              <h4>⏰ La répartition des horaires par niveau de classe</h4>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Niveau de classe</th><th>Horaire hebdomadaire d'EPS</th></tr></thead>
+                  <tbody>
+                    <tr><td>6<sup>ème</sup></td><td><strong>4 heures</strong> par semaine</td></tr>
+                    <tr><td>5<sup>ème</sup></td><td><strong>3 heures</strong> par semaine</td></tr>
+                    <tr><td>4<sup>ème</sup></td><td><strong>3 heures</strong> par semaine</td></tr>
+                    <tr><td>3<sup>ème</sup></td><td><strong>3 heures</strong> par semaine</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4>Où ont lieu les cours ?</h4>
+              <p>
+                Les cours se déroulent principalement <strong>sur le plateau du collège</strong> lors de la
+                première période de l'année (de la rentrée aux vacances de la Toussaint), puis lors de la
+                dernière période (des vacances de Pâques à la fin de l'année). Il se peut cependant que
+                certaines classes aient également des cours sur le plateau en hiver.
+              </p>
+              <p>
+                <strong>En hiver</strong>, nous utilisons les <strong>installations de la ville</strong>, soit
+                deux gymnases : celui du centre-ville et celui situé à côté de Bovo et fils.
+              </p>
+            </section>
+
+            <section class="rubrique" id="organisation-programmation">
+              <h4>🏅 La programmation par niveau</h4>
+              <p>
+                Les activités sur fond <strong>gris foncé</strong> sont celles qui se déroulent dans les
+                <strong>installations de la ville</strong> (les deux gymnases). Les autres ont lieu sur le
+                plateau du collège.
+              </p>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr><th>6<sup>ème</sup></th><th>5<sup>ème</sup></th><th>4<sup>ème</sup></th><th>3<sup>ème</sup></th></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Triathlon athlétique</td>
+                      <td>Handball</td>
+                      <td class="cell-ville">Boxe française</td>
+                      <td class="cell-ville">Boxe française</td>
+                    </tr>
+                    <tr>
+                      <td>Handball</td>
+                      <td>Ultimate</td>
+                      <td>Rugby flag</td>
+                      <td>Rugby flag</td>
+                    </tr>
+                    <tr>
+                      <td>Ultimate</td>
+                      <td>Biathlon</td>
+                      <td class="cell-ville">Badminton</td>
+                      <td class="cell-ville">Badminton</td>
+                    </tr>
+                    <tr>
+                      <td>Course d'orientation</td>
+                      <td class="cell-ville">Badminton</td>
+                      <td>Basket-ball</td>
+                      <td>Basket-ball</td>
+                    </tr>
+                    <tr>
+                      <td class="cell-ville">Badminton</td>
+                      <td class="cell-ville">Tennis de table</td>
+                      <td>Relais vitesse 2x40m</td>
+                      <td>Relais vitesse 3x40m</td>
+                    </tr>
+                    <tr>
+                      <td class="cell-ville">Danse</td>
+                      <td>—</td>
+                      <td>—</td>
+                      <td>Cross training</td>
+                    </tr>
+                    <tr>
+                      <td class="cell-ville">Tennis de table</td>
+                      <td>—</td>
+                      <td>—</td>
+                      <td>—</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="rubrique" id="organisation-fonctionnement">
+              <h4>📋 Les règles de fonctionnement du cours</h4>
+              <p>
+                Les toilettes présentes dans les vestiaires ne doivent être utilisées qu'en cas d'urgence
+                ou à la fin du cours. Il est attendu des élèves qu'ils respectent ces lieux publics. Pour
+                rappel, « chacun au collège porte une part de la responsabilité de l'état des espaces
+                communs (locaux éducatifs, couloirs, toilettes, salles de travail ou de loisirs, cour et
+                accès…) qui doivent être maintenus propres et en ordre, dans l'intérêt de tous. (…) Il est
+                rappelé à chacun que la dégradation volontaire de matériel et le vol constituent des délits
+                aux yeux de la loi » (cf. Article 70 du règlement intérieur). Les enseignants se donnent le
+                droit de fermer temporairement les toilettes si les règles ne sont pas respectées.
+              </p>
+              <p>
+                Les élèves ne doivent pas se rendre seuls aux vestiaires sauf demande particulière de
+                l'enseignant et doivent attendre à l'extérieur afin de ne pas déranger le bon
+                fonctionnement des autres cours.
+              </p>
+              <p>
+                Nous rappelons que les chewing-gums sont interdits (cf. Article 70 du règlement intérieur)
+                et doivent-être jetés avant le début du cours (les trajets en bus font partie du cours).
+                Les punitions associées suivent la même logique que pour les oublis de tenue.
+              </p>
+              <p>
+                Les élèves doivent être attentifs à lacer correctement leurs chaussures avant de pratiquer.
+                Ils sont d'ailleurs obligés de garder leurs chaussures pendant toute la durée de la leçon.
+              </p>
+              <p>
+                Nous vous informons aussi qu'en cas de conditions météorologiques défavorables à la
+                pratique sportive en plein air (pluie, neige, canicule…), une solution de repli sous le
+                préau avec une activité adaptée sera mise en place.
+              </p>
+            </section>
+
+          </div>
+        </details>
+
+        <!-- ==================================================
+             RUBRIQUE 5 — DATES IMPORTANTES DE L'EPS
+             ================================================== -->
+        <details class="info-card" id="dates-importantes">
+          <summary>
+            <h2>📌 Dates importantes de l'EPS</h2>
+            <span class="info-card__toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="info-card__body">
+            <p>Les temps forts de l'année en EPS, à noter dès maintenant dans l'agenda.</p>
+            <!-- MODIFIER ICI CHAQUE ANNEE : dates, intitules, lieux et niveaux concernes.
+                 La couleur de la puce a gauche depend de la classe utilisee :
+                 "calendar-item--date-importante" (orange), "--competition" (corail)
+                 ou "--entrainement" (bleu marine). -->
+            <ul class="calendar-list">
+              <li class="calendar-item calendar-item--date-importante">
+                <span class="calendar-item__date">Jeu. 3 septembre</span>
+                <span class="calendar-item__body">
+                  <span class="calendar-item__title">Journée d'intégration des 6<sup>èmes</sup></span>
+                  <span class="calendar-item__meta">Saint-Nicolas-de-la-Grave — niveau 6<sup>ème</sup></span>
+                </span>
+              </li>
+              <li class="calendar-item calendar-item--date-importante">
+                <span class="calendar-item__date">Mer. 16 septembre</span>
+                <span class="calendar-item__body">
+                  <span class="calendar-item__title">Matinée du sport scolaire</span>
+                  <span class="calendar-item__meta">Niveau 6<sup>ème</sup></span>
+                </span>
+              </li>
+              <li class="calendar-item calendar-item--date-importante">
+                <span class="calendar-item__date">Mar. 6 octobre</span>
+                <span class="calendar-item__body">
+                  <span class="calendar-item__title">Intervention du comité handisport</span>
+                  <span class="calendar-item__meta">Niveau 3<sup>ème</sup></span>
+                </span>
+              </li>
+              <li class="calendar-item calendar-item--competition">
+                <span class="calendar-item__date">Jeu. 15 octobre</span>
+                <span class="calendar-item__body">
+                  <span class="calendar-item__title">Cross solidaire du collège</span>
+                  <span class="calendar-item__meta">Tous les niveaux</span>
+                </span>
+              </li>
+              <li class="calendar-item calendar-item--entrainement">
+                <span class="calendar-item__date">Mer. 4 novembre</span>
+                <span class="calendar-item__body">
+                  <span class="calendar-item__title">Journée de formation Arbitrage</span>
+                  <span class="calendar-item__meta">Élèves de l'AS</span>
+                </span>
+              </li>
+              <li class="calendar-item calendar-item--competition">
+                <span class="calendar-item__date">Mer. 18 novembre</span>
+                <span class="calendar-item__body">
+                  <span class="calendar-item__title">Cross départemental</span>
+                  <span class="calendar-item__meta">Hippodrome de Montauban</span>
+                </span>
+              </li>
             </ul>
           </div>
         </details>
 
-        <!-- REGLEMENT EPS -->
-        <details class="info-card" id="reglement">
-          <summary>
-            <h2>Règlement EPS</h2>
-            <span class="info-card__toggle" aria-hidden="true">+</span>
-          </summary>
-          <div class="info-card__body">
-            <p>
-              <!-- MODIFIER ICI : reprenez ici (ou en lien) votre règlement EPS d'établissement -->
-              Le règlement EPS complète le règlement intérieur du collège. Il précise les règles de
-              vie propres aux cours d'éducation physique et sportive.
-            </p>
-            <div class="table-wrap">
-              <table>
-                <thead>
-                  <tr><th>Règle</th><th>Détail</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>Ponctualité</td><td>Présence sur le lieu de rassemblement à l'heure indiquée.</td></tr>
-                  <tr><td>Tenue</td><td>Tenue de sport obligatoire (voir rubrique dédiée ci-dessous).</td></tr>
-                  <tr><td>Objets de valeur</td><td>À déposer selon la procédure de l'établissement, sous la responsabilité de l'élève.</td></tr>
-                  <tr><td>Sécurité</td><td>Aucun bijou pendant la pratique, cheveux longs attachés.</td></tr>
-                  <tr><td>Absence de matériel</td><td>Participation possible sous une forme adaptée (arbitrage, observation, aide à l'organisation).</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <p><a class="btn btn--outline" href="#">Télécharger le règlement EPS complet (PDF à ajouter)</a></p>
-          </div>
-        </details>
-
-        <!-- FICHE AS (ASSOCIATION SPORTIVE) -->
+        <!-- ==================================================
+             RUBRIQUE 6 — L'ASSOCIATION SPORTIVE (AS)
+             ================================================== -->
         <details class="info-card" id="association-sportive">
           <summary>
-            <h2>Fiche AS (association sportive)</h2>
+            <h2>🏆 L'Association Sportive (AS)</h2>
             <span class="info-card__toggle" aria-hidden="true">+</span>
           </summary>
           <div class="info-card__body">
@@ -152,6 +547,7 @@
               professeurs d'EPS.
             </p>
 
+            <h4>Le fonctionnement de l'AS</h4>
             <!-- MODIFIER CHAQUE ANNEE : jours, activités, enseignants -->
             <div class="table-wrap">
               <table>
@@ -190,70 +586,42 @@
               encadrement par les professeurs d'EPS.
             </p>
 
-            <p><a class="btn btn--outline" href="#">Télécharger la fiche d'inscription AS (à ajouter)</a></p>
-          </div>
-        </details>
-
-        <!-- TENUE EXIGEE -->
-        <details class="info-card" id="tenue">
-          <summary>
-            <h2>Tenue exigée</h2>
-            <span class="info-card__toggle" aria-hidden="true">+</span>
-          </summary>
-          <div class="info-card__body">
-            <p>Pour pratiquer en toute sécurité, la tenue suivante est obligatoire :</p>
-            <ul>
-              <li>Short, jogging ou legging de sport</li>
-              <li>Tee-shirt ou sweat de sport</li>
-              <li>Chaussures de sport fermées et lacées, différentes des chaussures de ville</li>
-              <li>Une bouteille d'eau</li>
-              <li>Cheveux longs attachés, aucun bijou (montre, bracelet, boucles d'oreilles pendantes...)</li>
+            <h4>La fiche d'inscription</h4>
+            <!-- MODIFIER ICI : deposez la fiche d'inscription dans assets/docs/
+                 puis remplacez href="#" par assets/docs/fiche-inscription-as.pdf
+                 et ajoutez l'attribut "download" comme pour les autres documents. -->
+            <ul class="doc-list">
+              <li>
+                <a href="#">
+                  📄 Fiche d'inscription à l'AS
+                  <span class="doc-list__meta">PDF à ajouter</span>
+                </a>
+              </li>
             </ul>
-            <div class="callout callout--info">
-              <h3>À savoir</h3>
-              <p>En cas d'oubli répété de tenue, l'élève peut être signalé aux familles et à la vie scolaire selon les modalités prévues par le règlement intérieur.</p>
-            </div>
+
+            <p><a class="btn btn--outline" href="as-futsal.html">Découvrir l'AS Futsal en détail →</a></p>
           </div>
         </details>
 
-        <!-- MODALITES DE DISPENSE -->
-        <details class="info-card" id="dispense">
-          <summary>
-            <h2>Modalités de dispense</h2>
-            <span class="info-card__toggle" aria-hidden="true">+</span>
-          </summary>
-          <div class="info-card__body">
-            <h3>Dispense ponctuelle</h3>
-            <p>
-              Pour une gêne passagère (petit bobo, fatigue, indisposition...), un mot rédigé et signé
-              par les parents ou le responsable légal suffit. Il doit être présenté au professeur
-              d'EPS en début de séance.
-            </p>
-
-            <h3>Inaptitude de longue durée</h3>
-            <p>
-              Pour une inaptitude de plus de 3 mois, un certificat médical établi par un médecin est
-              obligatoire. Il doit préciser, si possible, les capacités préservées de l'élève afin
-              d'adapter sa participation au cours (arbitrage, observation, tâches d'organisation...).
-            </p>
-
-            <div class="callout callout--neutral">
-              <h3>Mot type de dispense ponctuelle — à recopier et faire signer par la famille</h3>
-              <p style="font-family:var(--font-mono); font-size:0.85rem; background:var(--color-white); padding:1rem; border-radius:8px; border:1px dashed var(--color-border);">
-                Je soussigné(e) [nom du responsable légal], demande à ce que mon enfant [nom, prénom],
-                élève en classe de [classe], soit dispensé(e) de la pratique de l'EPS le [date],
-                pour le motif suivant : [motif].<br><br>
-                Fait à [ville], le [date].<br>
-                Signature :
-              </p>
-            </div>
-
-            <div class="callout callout--success">
-              <h3>Bon à savoir</h3>
-              <p>Même dispensé(e) de pratique, un élève reste tenu d'assister au cours d'EPS, sauf avis contraire de l'infirmerie ou de la vie scolaire.</p>
-            </div>
-          </div>
-        </details>
+        <!-- ==================================================
+             DOCUMENTS A TELECHARGER (rubrique toujours visible,
+             pour que les familles la reperent immediatement)
+             ================================================== -->
+        <h2 id="documents">📎 Documents à télécharger</h2>
+        <ul class="doc-list">
+          <li>
+            <a href="assets/docs/reglement-eps.pdf" download>
+              📄 Règlement d'EPS complet
+              <span class="doc-list__meta">PDF — 3 pages</span>
+            </a>
+          </li>
+          <li>
+            <a href="assets/docs/certificat-medical-eps.pdf" download>
+              📄 Certificat médical d'aptitude partielle ou d'inaptitude totale à l'EPS
+              <span class="doc-list__meta">PDF — à faire remplir par le médecin</span>
+            </a>
+          </li>
+        </ul>
 
       </div>
     </section>
