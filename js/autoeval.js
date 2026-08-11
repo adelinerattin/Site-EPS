@@ -162,7 +162,10 @@ document.addEventListener("DOMContentLoaded", function () {
         var tierIndex = c.tiers.findIndex(function (t) {
           return String(t.points) === selected.value;
         });
-        var libelle = c.critere + " <em>(" + c.role + ")</em>";
+        /* "eleve" = le critere reformule pour etre lu par un collegien
+           (voir AUTOEVAL_DATA dans la page). On retombe sur "critere"
+           si ce champ n'a pas encore ete renseigne. */
+        var libelle = (c.eleve || c.critere) + " <em>(" + c.role + ")</em>";
         if (tierIndex >= 2) {
           forts.push(libelle);
         } else {
@@ -178,18 +181,31 @@ document.addEventListener("DOMContentLoaded", function () {
         formatPoints(totalObtained) + " / " + formatPoints(totalMax) + " points cumulés sur les critères ci-dessus" +
         "</span>";
 
+      /* Petit mot d'encouragement, adapte au score obtenu. */
+      var encouragement;
+      if (noteSur20 >= 16) {
+        encouragement = "🌟 Bravo, tu maîtrises déjà presque tout ! Vise les derniers points ci-dessous.";
+      } else if (noteSur20 >= 12) {
+        encouragement = "👍 Bon travail ! Tu es sur la bonne voie, il te reste quelques points à travailler.";
+      } else if (noteSur20 >= 8) {
+        encouragement = "💪 C'est un bon début. Choisis 1 ou 2 points ci-dessous et entraîne-toi dessus.";
+      } else {
+        encouragement = "🙂 Ne te décourage pas : commence par travailler un seul point à la fois.";
+      }
+      html += '<p class="autoeval-result__encouragement">' + encouragement + "</p>";
+
       html += '<div class="autoeval-feedback">';
       if (forts.length) {
         html += '<div class="autoeval-feedback__block autoeval-feedback__block--fort">';
-        html += "<p><strong>✅ Ce que tu maîtrises déjà</strong></p><ul>";
+        html += "<p><strong>✅ Ce que tu sais déjà faire</strong></p><ul>";
         forts.forEach(function (f) { html += "<li>" + f + "</li>"; });
         html += "</ul></div>";
       }
       if (aTravailler.length) {
         html += '<div class="autoeval-feedback__block autoeval-feedback__block--progres">';
-        html += "<p><strong>🎯 Ce que tu peux encore améliorer</strong></p><ul>";
+        html += "<p><strong>🎯 Ce que tu peux encore travailler</strong></p><ul>";
         aTravailler.forEach(function (f) {
-          html += "<li>" + f.libelle + (f.objectif ? '<span class="autoeval-feedback__goal">Prochaine étape : ' + f.objectif + "</span>" : "") + "</li>";
+          html += "<li>" + f.libelle + (f.objectif ? '<span class="autoeval-feedback__goal">👉 Ton prochain objectif : ' + f.objectif + "</span>" : "") + "</li>";
         });
         html += "</ul></div>";
       }

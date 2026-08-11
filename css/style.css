@@ -858,6 +858,44 @@ a.card:focus-visible {
   font-size: 0.95rem;
 }
 
+/* ------------------------------------------------------------
+   SITUATION REPERE (rubrique "Evaluation")
+   Encadre dedie : chaque point commence par un emoji et les
+   informations chiffrees (durees, formats, distances) sont en gras.
+   ------------------------------------------------------------ */
+.situation-repere {
+  background: var(--color-chalk);
+  border: 1px solid var(--color-border);
+  border-left: 5px solid var(--color-orange);
+  border-radius: var(--radius);
+  padding: var(--space-md) var(--space-md) var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.situation-repere ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.situation-repere > ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.situation-repere > ul > li {
+  margin-bottom: 0.6em;
+  padding-left: 0.1em;
+}
+
+.situation-repere ul ul {
+  margin-top: 0.35em;
+  padding-left: 1.4em;
+}
+
+.situation-repere strong {
+  color: var(--color-navy);
+}
+
 /* ============================================================
    11. QUIZ INTERACTIF
    ============================================================ */
@@ -1055,6 +1093,13 @@ a.card:focus-visible {
   opacity: 0.85;
 }
 
+.autoeval-result__encouragement {
+  margin: var(--space-md) 0 0;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
 /* Retour personnalise affiche sous la note : ce que l'eleve maitrise
    deja et ce qu'il peut encore travailler (voir js/autoeval.js). */
 .autoeval-feedback {
@@ -1245,18 +1290,23 @@ thead th.mastery-excellente {
   color: var(--color-white);
 }
 
-/* Toute la colonne "Maitrise insuffisante" recoit un rouge tres
-   leger, pour la reperer d'un coup d'oeil sans alourdir la lecture.
-   L'en-tete garde sa couleur pleine (voir th.mastery-insuffisante).
-   La classe est posee sur chaque cellule concernee car les rowspan
-   rendent un ciblage par position peu fiable. */
-.eval-grid td.col-insuffisante {
-  background: rgba(214, 69, 69, 0.09);
-}
+/* Chaque colonne de maitrise recoit une teinte tres legere reprenant
+   la couleur de son en-tete, pour se reperer d'un coup d'oeil sans
+   alourdir la lecture. Les en-tetes gardent leur couleur pleine
+   (voir th.mastery-*). Les classes sont posees sur chaque cellule
+   concernee car les rowspan rendent un ciblage par position peu
+   fiable. */
+.eval-grid td.col-insuffisante  { background: rgba(214, 69, 69, 0.10); }
+.eval-grid td.col-fragile       { background: rgba(255, 210, 63, 0.20); }
+.eval-grid td.col-satisfaisante { background: rgba(143, 209, 158, 0.24); }
+.eval-grid td.col-excellente    { background: rgba(46, 125, 79, 0.18); }
 
-.eval-grid tbody tr:nth-child(even) td.col-insuffisante {
-  background: rgba(214, 69, 69, 0.13);
-}
+/* Legere accentuation sur les lignes paires, pour conserver le
+   reperage visuel des lignes malgre la couleur de colonne. */
+.eval-grid tbody tr:nth-child(even) td.col-insuffisante  { background: rgba(214, 69, 69, 0.15); }
+.eval-grid tbody tr:nth-child(even) td.col-fragile       { background: rgba(255, 210, 63, 0.30); }
+.eval-grid tbody tr:nth-child(even) td.col-satisfaisante { background: rgba(143, 209, 158, 0.34); }
+.eval-grid tbody tr:nth-child(even) td.col-excellente    { background: rgba(46, 125, 79, 0.26); }
 
 .eval-grid .role-critere {
   text-align: center;
@@ -1659,6 +1709,61 @@ thead th.mastery-excellente {
 
 .fun-fact__diagram {
   margin-top: var(--space-sm);
+}
+
+/* ------------------------------------------------------------
+   GALERIE DE PHOTOS D'ETIREMENTS (page Culture Sportive)
+   Pour ajouter un etirement : deposez l'image dans
+   assets/etirements/ puis copiez un bloc <figure class="etirement">.
+   ------------------------------------------------------------ */
+.etirement-grid {
+  display: grid;
+  gap: var(--space-sm);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: var(--space-md) 0 var(--space-sm);
+}
+
+@media (min-width: 700px) {
+  .etirement-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.etirement {
+  margin: 0;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-sm);
+  text-align: center;
+}
+
+.etirement img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 0.4em;
+}
+
+.etirement__muscle {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.92rem;
+  color: var(--color-navy);
+}
+
+.etirement__how {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--color-ink-soft);
+  line-height: 1.35;
+}
+
+.credit {
+  font-size: 0.78rem;
+  color: var(--color-ink-soft);
+  font-style: italic;
 }
 
 /* Trois vignettes illustrant un record par une comparaison concrete
