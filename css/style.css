@@ -2519,3 +2519,233 @@ thead th.mastery-excellente {
   font-weight: 700;
   color: var(--color-navy);
 }
+
+/* ============================================================
+   HISTORIQUE LOCAL DES RESULTATS (js/historique.js)
+   ------------------------------------------------------------
+   Bloc affiche sous le resultat d'une auto-evaluation ou d'un
+   quiz. Il liste les essais precedents de l'eleve, conserves
+   uniquement dans son navigateur (aucune donnee n'est envoyee).
+   ============================================================ */
+.historique:empty {
+  display: none;
+}
+
+.historique {
+  margin-top: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-chalk);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.historique__title {
+  margin: 0 0 0.4em;
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--color-navy);
+  font-size: 0.95rem;
+}
+
+.historique__compare,
+.historique__best,
+.historique__vide {
+  margin: 0 0 0.4em;
+  font-size: 0.92rem;
+}
+
+.historique__list {
+  list-style: none;
+  margin: 0 0 var(--space-sm);
+  padding: 0;
+  display: grid;
+  gap: 0.2rem;
+}
+
+.historique__list li {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: 0.3em 0.6em;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+}
+
+.historique__list li:first-child {
+  border-color: var(--color-navy);
+}
+
+.quiz-retry {
+  margin-left: var(--space-sm);
+}
+
+/* ============================================================
+   RECHERCHE SUR LE SITE (js/recherche.js)
+   ------------------------------------------------------------
+   Le bouton "Rechercher" et le panneau de resultats sont crees
+   par le JavaScript : il n'y a rien a ajouter dans le HTML.
+   ============================================================ */
+
+/* Sur mobile, l'en-tete place le menu a gauche et la loupe a
+   droite ; sur grand ecran on revient a un ensemble centre. */
+.site-header__inner {
+  justify-content: space-between;
+}
+
+.search-open {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  border: 2px solid var(--color-navy);
+  background: var(--color-white);
+  color: var(--color-navy);
+  border-radius: 999px;
+  padding: 0.35em 0.85em;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.search-open:hover,
+.search-open:focus-visible {
+  background: var(--color-yellow);
+}
+
+/* Sur les petits ecrans, seule la loupe est affichee. */
+.search-open__label {
+  display: none;
+}
+
+@media (min-width: 860px) {
+  .site-header__inner {
+    justify-content: center;
+  }
+
+  .search-open__label {
+    display: inline;
+  }
+}
+
+/* --- Panneau de recherche ------------------------------------ */
+.search-panel {
+  position: fixed;
+  inset: 0;
+  /* Au-dessus de l'en-tete collant (.site-header, z-index 500). */
+  z-index: 900;
+  background: rgba(10, 31, 68, 0.55);
+  padding: var(--space-md);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+.search-panel[hidden] {
+  display: none;
+}
+
+.search-open-body {
+  overflow: hidden;
+}
+
+.search-panel__box {
+  width: 100%;
+  max-width: 640px;
+  margin-top: 6vh;
+  background: var(--color-white);
+  border: 3px solid var(--color-navy);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  box-shadow: 0 18px 40px rgba(10, 31, 68, 0.3);
+}
+
+.search-panel__head {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.search-panel__input {
+  flex: 1 1 auto;
+  min-width: 0;
+  font: inherit;
+  padding: 0.6em 0.8em;
+  border: 2px solid var(--color-navy);
+  border-radius: var(--radius);
+  background: var(--color-chalk);
+}
+
+.search-panel__close {
+  border: 2px solid var(--color-navy);
+  background: var(--color-white);
+  color: var(--color-navy);
+  border-radius: var(--radius);
+  padding: 0.45em 0.7em;
+  font-weight: 700;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.search-panel__hint,
+.search-panel__empty {
+  margin: var(--space-sm) 0 0;
+  font-size: 0.88rem;
+  color: var(--color-ink-soft);
+}
+
+.search-results {
+  list-style: none;
+  margin: var(--space-sm) 0 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.search-result a {
+  display: block;
+  padding: var(--space-sm);
+  border: 1px solid var(--color-border);
+  border-left: 5px solid var(--color-yellow);
+  border-radius: var(--radius);
+  background: var(--color-chalk);
+  text-decoration: none;
+  color: var(--color-ink);
+}
+
+.search-result a:hover,
+.search-result a:focus-visible {
+  border-left-color: var(--color-navy);
+  background: var(--color-white);
+}
+
+.search-result__page {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-ink-soft);
+}
+
+.search-result__title {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.search-result__snippet {
+  display: block;
+  font-size: 0.88rem;
+  margin-top: 0.2em;
+}
+
+.search-result mark {
+  background: var(--color-yellow);
+  color: inherit;
+  padding: 0 0.15em;
+  border-radius: 3px;
+}

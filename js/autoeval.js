@@ -216,6 +216,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
       resultBox.hidden = false;
       resultBox.innerHTML = html;
+
+      /* Memoire locale : on garde la trace de l'essai pour que
+         l'eleve puisse se comparer a ses tentatives precedentes
+         (voir js/historique.js). */
+      if (window.EPSHistorique) {
+        window.EPSHistorique.ajouter("autoeval", autoevalId, { note: noteSur20, sur: 20 });
+        window.EPSHistorique.afficher(
+          window.EPSHistorique.conteneurApres(resultBox, "autoeval", autoevalId),
+          "autoeval",
+          autoevalId
+        );
+      }
     });
+
+    /* A l'ouverture de la page, on reaffiche les essais deja enregistres. */
+    if (window.EPSHistorique) {
+      window.EPSHistorique.afficher(
+        window.EPSHistorique.conteneurApres(resultBox, "autoeval", autoevalId),
+        "autoeval",
+        autoevalId
+      );
+    }
   }
 });

@@ -19,8 +19,12 @@ Site-EPS/
 ├── css/
 │   └── style.css              Feuille de style unique, commentée par section
 ├── js/
-│   ├── main.js                Menu hamburger + lien de navigation actif
-│   ├── filter.js               Filtre/recherche de la page d'accueil
+│   ├── main.js                Menu hamburger, onglets de rubrique, ouverture par ancre
+│   ├── recherche.js            Recherche sur tout le site (bouton 🔍 de l'en-tête)
+│   ├── historique.js           Mémoire locale des résultats (auto-évaluation + quiz)
+│   ├── autoeval.js             Moteur générique d'auto-évaluation (note sur 20 + retour)
+│   ├── futsal-calendrier.js    Calendrier de l'AS futsal
+│   ├── filter.js               Filtre/recherche de la page d'accueil (non utilisé)
 │   └── quiz.js                 Moteur générique des quiz (score + correction)
 └── assets/                    Dossier prévu pour vos futures images/logos
 ```
@@ -31,8 +35,16 @@ ouvert directement dans un navigateur ou déployé tel quel.
 ## Ce qui est prêt à l'emploi
 
 - Navigation complète, header sticky, menu hamburger sur mobile/tablette.
-- Filtre/recherche sur la page d'accueil (par mot-clé, niveau, activité) pour retrouver
-  rapidement une ressource parmi les 23 activités.
+- **Recherche sur tout le site** : le bouton 🔍 de l'en-tête ouvre un champ qui parcourt
+  toutes les rubriques de toutes les pages et renvoie directement au bon onglet.
+  Aucun index à tenir à jour : il est reconstruit automatiquement à partir des pages
+  (voir `js/recherche.js`, liste `PAGES` à compléter si vous ajoutez une page).
+- **« L'essentiel en 3 points »** en tête de chaque fiche activité : l'objectif, la façon
+  dont l'élève est évalué, et la clé pour progresser.
+- **Historique local des résultats** : chaque score d'auto-évaluation et de quiz est
+  conservé dans le navigateur de l'élève pour qu'il puisse comparer ses essais. Aucune
+  donnée n'est envoyée sur Internet, aucun nom n'est demandé, l'enseignante n'y a pas
+  accès, et l'élève peut tout effacer d'un bouton (voir `js/historique.js`).
 - 23 fiches activité dépliables (une par activité, sur les 4 pages niveau), chacune avec
   ses 7 ou 8 rubriques (attendus, acquisitions, éventuelle évaluation diagnostique,
   règles d'arbitrage, quiz, vidéos, lexique, référentiel).
