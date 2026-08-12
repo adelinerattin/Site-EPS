@@ -117,63 +117,16 @@
           <div class="activity-card__body">
 
             <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : Triathlon athlétique">
-              <button type="button" class="rubrique-tab" role="tab" aria-controls="triathlon-athletique-6e-attendus">🎯 Attendus</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="triathlon-athletique-6e-acquisitions">✅ Acquisitions</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="triathlon-athletique-6e-lexique">📖 Lexique</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="triathlon-athletique-6e-regles">🏳️ Règlement</button>
-              <button type="button" class="rubrique-tab" role="tab" aria-controls="triathlon-athletique-6e-evaluation">📊 Évaluation</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="triathlon-athletique-6e-autoeval">🧮 Auto-évaluation</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="triathlon-athletique-6e-evaluation">📊 Évaluation</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="triathlon-athletique-6e-videos">🎥 Vidéos</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="triathlon-athletique-6e-quiz">🧠 Quiz</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="triathlon-athletique-6e-attendus">🎯 Attendus</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="triathlon-athletique-6e-diagnostic" hidden>📋 Diagnostic</button>
             </div>
-
-            <section class="rubrique" id="triathlon-athletique-6e-attendus">
-              <h4>🎯 Les attendus</h4>
-              <p><strong>À la fin de cette séquence, tu devras être capable de :</strong></p>
-              <p>
-                Enchaîner plusieurs actions motrices afin de produire une performance maximale
-                cumulée en course de vitesse de 30m, triple bond et lancer de vortex. Juger,
-                valider et relever la performance d'un camarade. Savoir s'échauffer en autonomie
-                pour préparer son corps aux épreuves combinées.
-              </p>
-              <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Rôle à jouer</th><th>Lien avec le socle commun</th></tr></thead>
-                  <tbody>
-                    <tr>
-                      <td>L'athlète</td>
-                      <td>
-                        <ul>
-                          <li>Acquérir des techniques spécifiques pour améliorer son efficacité (domaine 1)</li>
-                          <li>Mobiliser différentes ressources (physiologique, biomécanique) pour agir de manière efficiente (domaine 1)</li>
-                        </ul>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>L'échauffé</td>
-                      <td>
-                        <ul>
-                          <li>Connaître et appliquer les différentes étapes d'un échauffement (domaine 4)</li>
-                          <li>Connaître les différents muscles et savoir les étirer (domaine 5)</li>
-                        </ul>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>L'officiel</td>
-                      <td>
-                        <ul>
-                          <li>Assumer les rôles sociaux spécifiques aux différentes APSA (domaine 3)</li>
-                          <li>Comprendre, respecter et faire respecter le règlement (domaine 3)</li>
-                          <li>Utiliser et remplir une fiche de relevé de performances (domaine 2)</li>
-                        </ul>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            
-</section>
 
             <section class="rubrique" id="triathlon-athletique-6e-acquisitions">
               <h4>✅ Acquisitions prioritaires</h4>
@@ -415,6 +368,69 @@
               </ul>
             </section>
 
+            <section class="rubrique" id="triathlon-athletique-6e-autoeval">
+              <h4>🧮 Auto-évaluation</h4>
+              <p>Pour chaque critère, choisis le niveau de maîtrise qui te correspond le mieux. Tu obtiendras une estimation de ta note sur 20.</p>
+              <div class="autoeval" data-autoeval-id="triathlon-athletique-6e">
+                <div class="autoeval-criteria"></div>
+                <button type="button" class="btn btn--primary autoeval-submit">Calculer mon score</button>
+                <div class="autoeval-result" role="status" hidden></div>
+              </div>
+              <script>
+                window.AUTOEVAL_DATA = window.AUTOEVAL_DATA || {};
+                window.AUTOEVAL_DATA['triathlon-athletique-6e'] = [
+                  { role: "L'athlète", critere: "Nombre d'étoiles obtenues à l'issue des 3 épreuves", eleve: "Mes étoiles cumulées sur les 3 épreuves", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "12 étoiles ou moins cumulées sur les 3 épreuves." },
+                    { label: "Maîtrise fragile", points: 2, desc: "Entre 13 et 18 étoiles cumulées." },
+                    { label: "Maîtrise satisfaisante", points: 4, desc: "Entre 19 et 27 étoiles cumulées." },
+                    { label: "Très bonne maîtrise", points: 6, desc: "28 étoiles ou plus cumulées." }
+                  ]},
+                  { role: "L'athlète", critere: "Technique de course", eleve: "Ma technique de course", tiers: [
+                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Je fais un faux départ ou je change de couloir : la course n'est pas valide." },
+                    { label: "Maîtrise fragile", points: 1, desc: "Ma position de départ est mauvaise et je réagis lentement au signal." },
+                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Mon départ est bon mais je ralentis avant la ligne d'arrivée." },
+                    { label: "Très bonne maîtrise", points: 2, desc: "Mon départ est efficace, j'utilise mes bras et je vais à fond jusqu'à l'arrivée." }
+                  ]},
+                  { role: "L'athlète", critere: "Technique de lancer", eleve: "Ma technique de lancer", tiers: [
+                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Mon lancer est invalide (je dépasse la planche ou l'aire de lancer)." },
+                    { label: "Maîtrise fragile", points: 1, desc: "J'enchaîne mal ma course d'élan et mon lancer, je crée peu de vitesse." },
+                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Ma course d'élan crée de la vitesse mais je ralentis un peu au moment de lancer." },
+                    { label: "Très bonne maîtrise", points: 2, desc: "Ma course d'élan transmet toute sa vitesse au vortex, mon lancer est continu et fluide." }
+                  ]},
+                  { role: "L'athlète", critere: "Technique de saut", eleve: "Ma technique de saut", tiers: [
+                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Mon enchaînement n'est pas valide (je mords la planche ou je fais 4 bonds)." },
+                    { label: "Maîtrise fragile", points: 1, desc: "Ma course d'élan est hésitante, mes pieds sont mal posés, je réceptionne sur un pied." },
+                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Ma course d'élan est accélérée, mon enchaînement est maîtrisé, je réceptionne pieds joints." },
+                    { label: "Très bonne maîtrise", points: 2, desc: "Je crée de la vitesse en course d'élan, mes bonds sont grands et équilibrés, réception pieds joints." }
+                  ]},
+                  { role: "L'échauffé", critere: "Qualité de l'échauffement", eleve: "La qualité de mon échauffement", tiers: [
+                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Je ne fais pas d'échauffement." },
+                    { label: "Maîtrise fragile", points: 1, desc: "Mon échauffement est bâclé : rotations ou étirements mal maîtrisés." },
+                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Mon échauffement est continu, progressif et complet." },
+                    { label: "Très bonne maîtrise", points: 2, desc: "Je connais toutes les étapes et je mène l'échauffement de mes camarades." }
+                  ]},
+                  { role: "L'officiel", critere: "Relevé de performances vitesse", eleve: "Relever les performances en course", tiers: [
+                    { label: "Maîtrise insuffisante", points: 0.25, desc: "Plus de 1\"51 d'écart avec le temps réel de l'athlète." },
+                    { label: "Maîtrise fragile", points: 0.5, desc: "Entre 0\"81 et 1\"50 d'écart." },
+                    { label: "Maîtrise satisfaisante", points: 0.75, desc: "Entre 0\"51 et 0\"80 d'écart." },
+                    { label: "Très bonne maîtrise", points: 1, desc: "Moins de 0\"5 d'écart avec le temps réel." }
+                  ]},
+                  { role: "L'officiel", critere: "Écart dans le relevé de performances lancers et sauts", eleve: "Relever avec précision les lancers et les sauts", tiers: [
+                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Plus de 9 étoiles d'écart avec le relevé de l'enseignante." },
+                    { label: "Maîtrise fragile", points: 1, desc: "Entre 3 et 8 étoiles d'écart." },
+                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "1 ou 2 étoiles d'écart." },
+                    { label: "Très bonne maîtrise", points: 2, desc: "Aucun écart avec le relevé de l'enseignante." }
+                  ]},
+                  { role: "L'officiel", critere: "Connaissance du règlement", eleve: "Connaître le règlement", tiers: [
+                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Je ne fais pas le rôle d'observateur, ma fiche n'est pas remplie." },
+                    { label: "Maîtrise fragile", points: 1.5, desc: "Ma fiche est remplie mais je manque d'attention ou je suis mal placé." },
+                    { label: "Maîtrise satisfaisante", points: 2, desc: "Ma fiche est bien remplie, je suis attentif et bien placé." },
+                    { label: "Très bonne maîtrise", points: 3, desc: "Ma fiche est remplie et propre, je connais et j'applique le règlement." }
+                  ]}
+                ];
+              </script>
+            </section>
+
             <section class="rubrique" id="triathlon-athletique-6e-evaluation">
               <h4>📊 Modalités d'évaluation</h4>
 
@@ -534,69 +550,6 @@
               </div>
             </section>
 
-            <section class="rubrique" id="triathlon-athletique-6e-autoeval">
-              <h4>🧮 Auto-évaluation</h4>
-              <p>Pour chaque critère, choisis le niveau de maîtrise qui te correspond le mieux. Tu obtiendras une estimation de ta note sur 20.</p>
-              <div class="autoeval" data-autoeval-id="triathlon-athletique-6e">
-                <div class="autoeval-criteria"></div>
-                <button type="button" class="btn btn--primary autoeval-submit">Calculer mon score</button>
-                <div class="autoeval-result" role="status" hidden></div>
-              </div>
-              <script>
-                window.AUTOEVAL_DATA = window.AUTOEVAL_DATA || {};
-                window.AUTOEVAL_DATA['triathlon-athletique-6e'] = [
-                  { role: "L'athlète", critere: "Nombre d'étoiles obtenues à l'issue des 3 épreuves", eleve: "Mes étoiles cumulées sur les 3 épreuves", tiers: [
-                    { label: "Maîtrise insuffisante", points: 1, desc: "12 étoiles ou moins cumulées sur les 3 épreuves." },
-                    { label: "Maîtrise fragile", points: 2, desc: "Entre 13 et 18 étoiles cumulées." },
-                    { label: "Maîtrise satisfaisante", points: 4, desc: "Entre 19 et 27 étoiles cumulées." },
-                    { label: "Très bonne maîtrise", points: 6, desc: "28 étoiles ou plus cumulées." }
-                  ]},
-                  { role: "L'athlète", critere: "Technique de course", eleve: "Ma technique de course", tiers: [
-                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Je fais un faux départ ou je change de couloir : la course n'est pas valide." },
-                    { label: "Maîtrise fragile", points: 1, desc: "Ma position de départ est mauvaise et je réagis lentement au signal." },
-                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Mon départ est bon mais je ralentis avant la ligne d'arrivée." },
-                    { label: "Très bonne maîtrise", points: 2, desc: "Mon départ est efficace, j'utilise mes bras et je vais à fond jusqu'à l'arrivée." }
-                  ]},
-                  { role: "L'athlète", critere: "Technique de lancer", eleve: "Ma technique de lancer", tiers: [
-                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Mon lancer est invalide (je dépasse la planche ou l'aire de lancer)." },
-                    { label: "Maîtrise fragile", points: 1, desc: "J'enchaîne mal ma course d'élan et mon lancer, je crée peu de vitesse." },
-                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Ma course d'élan crée de la vitesse mais je ralentis un peu au moment de lancer." },
-                    { label: "Très bonne maîtrise", points: 2, desc: "Ma course d'élan transmet toute sa vitesse au vortex, mon lancer est continu et fluide." }
-                  ]},
-                  { role: "L'athlète", critere: "Technique de saut", eleve: "Ma technique de saut", tiers: [
-                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Mon enchaînement n'est pas valide (je mords la planche ou je fais 4 bonds)." },
-                    { label: "Maîtrise fragile", points: 1, desc: "Ma course d'élan est hésitante, mes pieds sont mal posés, je réceptionne sur un pied." },
-                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Ma course d'élan est accélérée, mon enchaînement est maîtrisé, je réceptionne pieds joints." },
-                    { label: "Très bonne maîtrise", points: 2, desc: "Je crée de la vitesse en course d'élan, mes bonds sont grands et équilibrés, réception pieds joints." }
-                  ]},
-                  { role: "L'échauffé", critere: "Qualité de l'échauffement", eleve: "La qualité de mon échauffement", tiers: [
-                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Je ne fais pas d'échauffement." },
-                    { label: "Maîtrise fragile", points: 1, desc: "Mon échauffement est bâclé : rotations ou étirements mal maîtrisés." },
-                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Mon échauffement est continu, progressif et complet." },
-                    { label: "Très bonne maîtrise", points: 2, desc: "Je connais toutes les étapes et je mène l'échauffement de mes camarades." }
-                  ]},
-                  { role: "L'officiel", critere: "Relevé de performances vitesse", eleve: "Relever les performances en course", tiers: [
-                    { label: "Maîtrise insuffisante", points: 0.25, desc: "Plus de 1\"51 d'écart avec le temps réel de l'athlète." },
-                    { label: "Maîtrise fragile", points: 0.5, desc: "Entre 0\"81 et 1\"50 d'écart." },
-                    { label: "Maîtrise satisfaisante", points: 0.75, desc: "Entre 0\"51 et 0\"80 d'écart." },
-                    { label: "Très bonne maîtrise", points: 1, desc: "Moins de 0\"5 d'écart avec le temps réel." }
-                  ]},
-                  { role: "L'officiel", critere: "Écart dans le relevé de performances lancers et sauts", eleve: "Relever avec précision les lancers et les sauts", tiers: [
-                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Plus de 9 étoiles d'écart avec le relevé de l'enseignante." },
-                    { label: "Maîtrise fragile", points: 1, desc: "Entre 3 et 8 étoiles d'écart." },
-                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "1 ou 2 étoiles d'écart." },
-                    { label: "Très bonne maîtrise", points: 2, desc: "Aucun écart avec le relevé de l'enseignante." }
-                  ]},
-                  { role: "L'officiel", critere: "Connaissance du règlement", eleve: "Connaître le règlement", tiers: [
-                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Je ne fais pas le rôle d'observateur, ma fiche n'est pas remplie." },
-                    { label: "Maîtrise fragile", points: 1.5, desc: "Ma fiche est remplie mais je manque d'attention ou je suis mal placé." },
-                    { label: "Maîtrise satisfaisante", points: 2, desc: "Ma fiche est bien remplie, je suis attentif et bien placé." },
-                    { label: "Très bonne maîtrise", points: 3, desc: "Ma fiche est remplie et propre, je connais et j'applique le règlement." }
-                  ]}
-                ];
-              </script>
-            </section>
-
             <section class="rubrique" id="triathlon-athletique-6e-videos">
               <h4>🎥 Vidéos de démonstration</h4>
               <p>Lancer de vortex avec élan :</p>
@@ -634,6 +587,53 @@
               </script>
             </section>
 
+            <section class="rubrique" id="triathlon-athletique-6e-attendus">
+              <h4>🎯 Les attendus</h4>
+              <p><strong>À la fin de cette séquence, tu devras être capable de :</strong></p>
+              <p>
+                Enchaîner plusieurs actions motrices afin de produire une performance maximale
+                cumulée en course de vitesse de 30m, triple bond et lancer de vortex. Juger,
+                valider et relever la performance d'un camarade. Savoir s'échauffer en autonomie
+                pour préparer son corps aux épreuves combinées.
+              </p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Lien avec le socle commun</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td>L'athlète</td>
+                      <td>
+                        <ul>
+                          <li>Acquérir des techniques spécifiques pour améliorer son efficacité (domaine 1)</li>
+                          <li>Mobiliser différentes ressources (physiologique, biomécanique) pour agir de manière efficiente (domaine 1)</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>L'échauffé</td>
+                      <td>
+                        <ul>
+                          <li>Connaître et appliquer les différentes étapes d'un échauffement (domaine 4)</li>
+                          <li>Connaître les différents muscles et savoir les étirer (domaine 5)</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>L'officiel</td>
+                      <td>
+                        <ul>
+                          <li>Assumer les rôles sociaux spécifiques aux différentes APSA (domaine 3)</li>
+                          <li>Comprendre, respecter et faire respecter le règlement (domaine 3)</li>
+                          <li>Utiliser et remplir une fiche de relevé de performances (domaine 2)</li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            
+</section>
+
             <section class="rubrique rubrique--optional" id="triathlon-athletique-6e-diagnostic" hidden>
               <h4>📋 Évaluation diagnostique</h4>
               <p>Un essai chronométré ou mesuré sur chacune des 3 épreuves permet de situer le niveau de départ de chaque élève et de fixer un objectif de progrès sur le cycle.</p>
@@ -653,38 +653,15 @@
           <div class="activity-card__body">
 
             <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : Handball">
-              <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-6e-attendus">🎯 Attendus</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-6e-acquisitions">✅ Acquisitions</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-6e-lexique">📖 Lexique</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-6e-regles">🏳️ Règlement</button>
-              <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-6e-evaluation">📊 Évaluation</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-6e-autoeval">🧮 Auto-évaluation</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-6e-evaluation">📊 Évaluation</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-6e-videos">🎥 Vidéos</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-6e-quiz">🧠 Quiz</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="handball-6e-attendus">🎯 Attendus</button>
             </div>
-
-            <section class="rubrique" id="handball-6e-attendus">
-              <h4>🎯 Les attendus</h4>
-              <p><strong>À la fin de cette séquence, tu devras être capable de :</strong></p>
-              <p>
-                Dans un jeu à effectif réduit, rechercher le gain du match en organisant un projet
-                de jeu qui vise à progresser vers l'avant par des passes pour se retrouver
-                régulièrement en situation de tir favorable face à une équipe qui défend en défense
-                individuelle. Co-arbitrer une rencontre de manière autonome et avec fair-play pour
-                assurer son bon déroulement.
-              </p>
-              <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Rôle à jouer</th><th>Lien avec le socle commun</th></tr></thead>
-                  <tbody>
-                    <tr><td>L'équipe (en attaque et en défense)</td><td>Coopérer et réaliser des projets (domaine 2)</td></tr>
-                    <tr><td>Le joueur (en attaque et en défense)</td><td>Pratiquer des APSA et acquérir des techniques spécifiques pour être plus efficace (domaine 1)</td></tr>
-                    <tr><td>Le co-arbitre</td><td>Faire preuve de responsabilité, respecter les règles de la vie collective, s'engager et prendre des initiatives (domaine 3)</td></tr>
-                  </tbody>
-                </table>
-              </div>
-            
-</section>
 
             <section class="rubrique" id="handball-6e-acquisitions">
               <h4>✅ Acquisitions prioritaires</h4>
@@ -775,6 +752,57 @@
               </ul>
             </section>
 
+            <section class="rubrique" id="handball-6e-autoeval">
+              <h4>🧮 Auto-évaluation</h4>
+              <p>Pour chaque critère, choisis le niveau de maîtrise qui te correspond le mieux. Tu obtiendras une estimation de ta note sur 20.</p>
+              <div class="autoeval" data-autoeval-id="handball-6e">
+                <div class="autoeval-criteria"></div>
+                <button type="button" class="btn btn--primary autoeval-submit">Calculer mon score</button>
+                <div class="autoeval-result" role="status" hidden></div>
+              </div>
+              <script>
+                window.AUTOEVAL_DATA = window.AUTOEVAL_DATA || {};
+                window.AUTOEVAL_DATA['handball-6e'] = [
+                  { role: "L'équipe en attaque", critere: "Fairplay et cohésion", eleve: "Être fair-play et souder mon équipe", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Pas de cohésion dans l'équipe, je ne fais pas d'effort." },
+                    { label: "Maîtrise fragile", points: 2, desc: "La cohésion dépend du résultat du match, je me démobilise facilement." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "Bonne cohésion, je suis positif et je suis le groupe." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "Très bonne cohésion tout le tournoi, je suis un leader positif." }
+                  ]},
+                  { role: "Le joueur en attaque", critere: "NPB — Participation à la progression du ballon", eleve: "Sans le ballon : aider mon équipe à avancer", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Je reste immobile, pas démarqué, pas concerné par le match." },
+                    { label: "Maîtrise fragile", points: 2, desc: "J'essaie de me démarquer en me déplaçant mais pas efficacement." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "Je participe à la progression en me démarquant vers l'avant, avec quelques manquements." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "Je participe à toutes les progressions de ballon et je suis à l'initiative." }
+                  ]},
+                  { role: "Le joueur en attaque", critere: "PB — Manipulation du ballon", eleve: "Avec le ballon : bien le manipuler", tiers: [
+                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Je ne veux pas avoir le ballon." },
+                    { label: "Maîtrise fragile", points: 1, desc: "Ma manipulation du ballon est fragile (mauvaise réception, pas de lancer à bras cassé)." },
+                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Mes dribbles et passes à bras cassé sont maîtrisés, mes tirs pas toujours en situation favorable." },
+                    { label: "Très bonne maîtrise", points: 2, desc: "Ma manipulation du ballon reste propre malgré la pression défensive." }
+                  ]},
+                  { role: "Le joueur en attaque", critere: "PB — Choix (garder/avancer ou fixer/passer)", eleve: "Avec le ballon : choisir entre avancer ou passer", tiers: [
+                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Je ne participe pas aux actions offensives, donc pas de choix à faire." },
+                    { label: "Maîtrise fragile", points: 1, desc: "Mes choix sont mauvais ou influencés par mes partenaires." },
+                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Mes choix sont pertinents mais ma décision est trop hâtive ou trop tardive." },
+                    { label: "Très bonne maîtrise", points: 2, desc: "Mes choix sont pertinents quelle que soit la situation." }
+                  ]},
+                  { role: "Le joueur en défense", critere: "Défense individuelle", eleve: "Défendre sur mon adversaire", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Je ne marque aucun joueur ou je ne défends pas." },
+                    { label: "Maîtrise fragile", points: 2, desc: "Je sais sur qui défendre mais mon temps de réaction est trop long." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "Je suis et colle mon joueur pendant tout le match." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "Ma défense individuelle est assurée, avec de nombreuses interceptions." }
+                  ]},
+                  { role: "Le co-arbitre", critere: "Maîtrise des règles du jeu", eleve: "Connaître et appliquer les règles du jeu", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Je suis absent du match ou j'impose mon autorité et mes décisions." },
+                    { label: "Maîtrise fragile", points: 2, desc: "Ma connaissance du règlement est incomplète et/ou je suis influençable." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "Je connais et je fais appliquer les principales règles." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "J'arbitre avec précision et je fais régner un climat serein." }
+                  ]}
+                ];
+              </script>
+            </section>
+
             <section class="rubrique" id="handball-6e-evaluation">
               <h4>📊 Modalités d'évaluation</h4>
 
@@ -851,57 +879,6 @@
               </div>
             </section>
 
-            <section class="rubrique" id="handball-6e-autoeval">
-              <h4>🧮 Auto-évaluation</h4>
-              <p>Pour chaque critère, choisis le niveau de maîtrise qui te correspond le mieux. Tu obtiendras une estimation de ta note sur 20.</p>
-              <div class="autoeval" data-autoeval-id="handball-6e">
-                <div class="autoeval-criteria"></div>
-                <button type="button" class="btn btn--primary autoeval-submit">Calculer mon score</button>
-                <div class="autoeval-result" role="status" hidden></div>
-              </div>
-              <script>
-                window.AUTOEVAL_DATA = window.AUTOEVAL_DATA || {};
-                window.AUTOEVAL_DATA['handball-6e'] = [
-                  { role: "L'équipe en attaque", critere: "Fairplay et cohésion", eleve: "Être fair-play et souder mon équipe", tiers: [
-                    { label: "Maîtrise insuffisante", points: 1, desc: "Pas de cohésion dans l'équipe, je ne fais pas d'effort." },
-                    { label: "Maîtrise fragile", points: 2, desc: "La cohésion dépend du résultat du match, je me démobilise facilement." },
-                    { label: "Maîtrise satisfaisante", points: 3, desc: "Bonne cohésion, je suis positif et je suis le groupe." },
-                    { label: "Très bonne maîtrise", points: 4, desc: "Très bonne cohésion tout le tournoi, je suis un leader positif." }
-                  ]},
-                  { role: "Le joueur en attaque", critere: "NPB — Participation à la progression du ballon", eleve: "Sans le ballon : aider mon équipe à avancer", tiers: [
-                    { label: "Maîtrise insuffisante", points: 1, desc: "Je reste immobile, pas démarqué, pas concerné par le match." },
-                    { label: "Maîtrise fragile", points: 2, desc: "J'essaie de me démarquer en me déplaçant mais pas efficacement." },
-                    { label: "Maîtrise satisfaisante", points: 3, desc: "Je participe à la progression en me démarquant vers l'avant, avec quelques manquements." },
-                    { label: "Très bonne maîtrise", points: 4, desc: "Je participe à toutes les progressions de ballon et je suis à l'initiative." }
-                  ]},
-                  { role: "Le joueur en attaque", critere: "PB — Manipulation du ballon", eleve: "Avec le ballon : bien le manipuler", tiers: [
-                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Je ne veux pas avoir le ballon." },
-                    { label: "Maîtrise fragile", points: 1, desc: "Ma manipulation du ballon est fragile (mauvaise réception, pas de lancer à bras cassé)." },
-                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Mes dribbles et passes à bras cassé sont maîtrisés, mes tirs pas toujours en situation favorable." },
-                    { label: "Très bonne maîtrise", points: 2, desc: "Ma manipulation du ballon reste propre malgré la pression défensive." }
-                  ]},
-                  { role: "Le joueur en attaque", critere: "PB — Choix (garder/avancer ou fixer/passer)", eleve: "Avec le ballon : choisir entre avancer ou passer", tiers: [
-                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Je ne participe pas aux actions offensives, donc pas de choix à faire." },
-                    { label: "Maîtrise fragile", points: 1, desc: "Mes choix sont mauvais ou influencés par mes partenaires." },
-                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Mes choix sont pertinents mais ma décision est trop hâtive ou trop tardive." },
-                    { label: "Très bonne maîtrise", points: 2, desc: "Mes choix sont pertinents quelle que soit la situation." }
-                  ]},
-                  { role: "Le joueur en défense", critere: "Défense individuelle", eleve: "Défendre sur mon adversaire", tiers: [
-                    { label: "Maîtrise insuffisante", points: 1, desc: "Je ne marque aucun joueur ou je ne défends pas." },
-                    { label: "Maîtrise fragile", points: 2, desc: "Je sais sur qui défendre mais mon temps de réaction est trop long." },
-                    { label: "Maîtrise satisfaisante", points: 3, desc: "Je suis et colle mon joueur pendant tout le match." },
-                    { label: "Très bonne maîtrise", points: 4, desc: "Ma défense individuelle est assurée, avec de nombreuses interceptions." }
-                  ]},
-                  { role: "Le co-arbitre", critere: "Maîtrise des règles du jeu", eleve: "Connaître et appliquer les règles du jeu", tiers: [
-                    { label: "Maîtrise insuffisante", points: 1, desc: "Je suis absent du match ou j'impose mon autorité et mes décisions." },
-                    { label: "Maîtrise fragile", points: 2, desc: "Ma connaissance du règlement est incomplète et/ou je suis influençable." },
-                    { label: "Maîtrise satisfaisante", points: 3, desc: "Je connais et je fais appliquer les principales règles." },
-                    { label: "Très bonne maîtrise", points: 4, desc: "J'arbitre avec précision et je fais régner un climat serein." }
-                  ]}
-                ];
-              </script>
-            </section>
-
             <section class="rubrique" id="handball-6e-videos">
               <h4>🎥 Vidéos de démonstration</h4>
               <ul class="video-list">
@@ -933,6 +910,29 @@
               </script>
             </section>
 
+            <section class="rubrique" id="handball-6e-attendus">
+              <h4>🎯 Les attendus</h4>
+              <p><strong>À la fin de cette séquence, tu devras être capable de :</strong></p>
+              <p>
+                Dans un jeu à effectif réduit, rechercher le gain du match en organisant un projet
+                de jeu qui vise à progresser vers l'avant par des passes pour se retrouver
+                régulièrement en situation de tir favorable face à une équipe qui défend en défense
+                individuelle. Co-arbitrer une rencontre de manière autonome et avec fair-play pour
+                assurer son bon déroulement.
+              </p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Lien avec le socle commun</th></tr></thead>
+                  <tbody>
+                    <tr><td>L'équipe (en attaque et en défense)</td><td>Coopérer et réaliser des projets (domaine 2)</td></tr>
+                    <tr><td>Le joueur (en attaque et en défense)</td><td>Pratiquer des APSA et acquérir des techniques spécifiques pour être plus efficace (domaine 1)</td></tr>
+                    <tr><td>Le co-arbitre</td><td>Faire preuve de responsabilité, respecter les règles de la vie collective, s'engager et prendre des initiatives (domaine 3)</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            
+</section>
+
           </div>
         </details>
 
@@ -947,41 +947,15 @@
           <div class="activity-card__body">
 
             <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : Ultimate">
-              <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-6e-attendus">🎯 Attendus</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-6e-acquisitions">✅ Acquisitions</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-6e-lexique">📖 Lexique</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-6e-regles">🏳️ Règlement</button>
-              <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-6e-evaluation">📊 Évaluation</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-6e-autoeval">🧮 Auto-évaluation</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-6e-evaluation">📊 Évaluation</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-6e-videos">🎥 Vidéos</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-6e-quiz">🧠 Quiz</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="ultimate-6e-attendus">🎯 Attendus</button>
             </div>
-
-            <section class="rubrique" id="ultimate-6e-attendus">
-              <h4>🎯 Les attendus</h4>
-              <p><strong>À la fin de cette séquence, tu devras être capable de :</strong></p>
-              <p>
-                Dans un jeu à effectif réduit, rechercher le gain du match en assurant la
-                progression du disque vers la zone d'en-but adverse dans le cadre d'un projet de
-                jeu simple basé sur des choix de passes et démarquages pertinents, dans le but de
-                conserver le disque et de se retrouver en situation favorable de marquer, face à
-                une défense qui cherche à gêner la progression adverse en s'organisant en défense
-                individuelle, dans le respect du non-contact. Respecter les partenaires, les
-                adversaires et les règles pour s'auto-arbitrer.
-              </p>
-              <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Rôle à jouer</th><th>Lien avec le socle commun</th></tr></thead>
-                  <tbody>
-                    <tr><td>L'équipe (en attaque et en défense)</td><td>Coopérer et réaliser des projets (domaine 2)</td></tr>
-                    <tr><td>Le joueur (en attaque et en défense)</td><td>Pratiquer des APSA et acquérir des techniques spécifiques pour améliorer son efficacité (domaine 1)</td></tr>
-                    <tr><td>L'auto-arbitre</td><td>Faire preuve de responsabilité, respecter les règles de la vie collective, s'engager et prendre des initiatives (domaine 3)</td></tr>
-                    <tr><td>Le joueur fair-play</td><td>Faire preuve de responsabilité, respecter les règles de la vie collective, s'engager et prendre des initiatives (domaine 3)</td></tr>
-                  </tbody>
-                </table>
-              </div>
-            
-</section>
 
             <section class="rubrique" id="ultimate-6e-acquisitions">
               <h4>✅ Acquisitions prioritaires</h4>
@@ -1074,6 +1048,51 @@
               </ul>
             </section>
 
+            <section class="rubrique" id="ultimate-6e-autoeval">
+              <h4>🧮 Auto-évaluation</h4>
+              <p>Pour chaque critère, choisis le niveau de maîtrise qui te correspond le mieux. Tu obtiendras une estimation de ta note sur 20.</p>
+              <div class="autoeval" data-autoeval-id="ultimate-6e">
+                <div class="autoeval-criteria"></div>
+                <button type="button" class="btn btn--primary autoeval-submit">Calculer mon score</button>
+                <div class="autoeval-result" role="status" hidden></div>
+              </div>
+              <script>
+                window.AUTOEVAL_DATA = window.AUTOEVAL_DATA || {};
+                window.AUTOEVAL_DATA['ultimate-6e'] = [
+                  { role: "L'équipe", critere: "Gestion de l'échauffement et cohésion", eleve: "Mener mon échauffement et souder le groupe", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Pas de cohésion, aucune entente dans l'équipe dès l'échauffement." },
+                    { label: "Maîtrise fragile", points: 2, desc: "Cohésion aléatoire selon le match, échauffement peu progressif." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "Bonne cohésion, échauffement pertinent mais manque de continuité." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "Cohésion tout le tournoi, j'encourage et motive mes partenaires." }
+                  ]},
+                  { role: "Le joueur", critere: "Porteur de disque : attitude disque en main", eleve: "Avec le disque : mon attitude et mes choix", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Je panique et me débarrasse du disque très vite, je me déplace disque en main." },
+                    { label: "Maîtrise fragile", points: 3, desc: "Je perds beaucoup de disques, mon pied de pivot n'est pas utilisé." },
+                    { label: "Maîtrise satisfaisante", points: 4.5, desc: "Mon revers et mon pied de pivot sont maîtrisés, quelques déchets en coup droit." },
+                    { label: "Très bonne maîtrise", points: 6, desc: "Je maîtrise tous les coups techniques et les utilise efficacement." }
+                  ]},
+                  { role: "Le joueur", critere: "Non-porteur de disque : démarquage, réceptions", eleve: "Sans le disque : me démarquer et réceptionner", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Je reste statique, peu concerné par l'action." },
+                    { label: "Maîtrise fragile", points: 2, desc: "Je veux me démarquer mais pas efficacement : je gêne mes partenaires." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "Je propose des solutions de passes dans un petit périmètre." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "Je propose des solutions de passes efficaces en me plaçant opportunément." }
+                  ]},
+                  { role: "Le joueur", critere: "Défenseur : marquage, comptage", eleve: "Défendre : marquer mon adversaire et compter", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Je ne suis pas concerné, je ne défends sur personne, je fais des fautes." },
+                    { label: "Maîtrise fragile", points: 2, desc: "J'ai du mal à suivre mon adversaire attitré ou je défends sur plusieurs joueurs." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "Je suis mobile et efficace dans un petit périmètre, je compte mais pas tout le temps." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "Ma défense individuelle est stricte, j'intercepte des passes et je compte." }
+                  ]},
+                  { role: "L'auto-arbitre", critere: "Reconnaître et signaler les fautes", eleve: "Reconnaître et signaler les fautes", tiers: [
+                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Je ne connais pas les règles, je ne signale pas les fautes." },
+                    { label: "Maîtrise fragile", points: 1, desc: "Je reconnais les principales règles mais j'ai du mal à les signaler." },
+                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Je connais et j'applique le règlement : 10 secondes, non-contact, marchés." },
+                    { label: "Très bonne maîtrise", points: 2, desc: "Je reconnais et signale les fautes, je sais les expliquer à mes camarades." }
+                  ]}
+                ];
+              </script>
+            </section>
+
             <section class="rubrique" id="ultimate-6e-evaluation">
               <h4>📊 Modalités d'évaluation</h4>
 
@@ -1141,51 +1160,6 @@
               </div>
             </section>
 
-            <section class="rubrique" id="ultimate-6e-autoeval">
-              <h4>🧮 Auto-évaluation</h4>
-              <p>Pour chaque critère, choisis le niveau de maîtrise qui te correspond le mieux. Tu obtiendras une estimation de ta note sur 20.</p>
-              <div class="autoeval" data-autoeval-id="ultimate-6e">
-                <div class="autoeval-criteria"></div>
-                <button type="button" class="btn btn--primary autoeval-submit">Calculer mon score</button>
-                <div class="autoeval-result" role="status" hidden></div>
-              </div>
-              <script>
-                window.AUTOEVAL_DATA = window.AUTOEVAL_DATA || {};
-                window.AUTOEVAL_DATA['ultimate-6e'] = [
-                  { role: "L'équipe", critere: "Gestion de l'échauffement et cohésion", eleve: "Mener mon échauffement et souder le groupe", tiers: [
-                    { label: "Maîtrise insuffisante", points: 1, desc: "Pas de cohésion, aucune entente dans l'équipe dès l'échauffement." },
-                    { label: "Maîtrise fragile", points: 2, desc: "Cohésion aléatoire selon le match, échauffement peu progressif." },
-                    { label: "Maîtrise satisfaisante", points: 3, desc: "Bonne cohésion, échauffement pertinent mais manque de continuité." },
-                    { label: "Très bonne maîtrise", points: 4, desc: "Cohésion tout le tournoi, j'encourage et motive mes partenaires." }
-                  ]},
-                  { role: "Le joueur", critere: "Porteur de disque : attitude disque en main", eleve: "Avec le disque : mon attitude et mes choix", tiers: [
-                    { label: "Maîtrise insuffisante", points: 1, desc: "Je panique et me débarrasse du disque très vite, je me déplace disque en main." },
-                    { label: "Maîtrise fragile", points: 3, desc: "Je perds beaucoup de disques, mon pied de pivot n'est pas utilisé." },
-                    { label: "Maîtrise satisfaisante", points: 4.5, desc: "Mon revers et mon pied de pivot sont maîtrisés, quelques déchets en coup droit." },
-                    { label: "Très bonne maîtrise", points: 6, desc: "Je maîtrise tous les coups techniques et les utilise efficacement." }
-                  ]},
-                  { role: "Le joueur", critere: "Non-porteur de disque : démarquage, réceptions", eleve: "Sans le disque : me démarquer et réceptionner", tiers: [
-                    { label: "Maîtrise insuffisante", points: 1, desc: "Je reste statique, peu concerné par l'action." },
-                    { label: "Maîtrise fragile", points: 2, desc: "Je veux me démarquer mais pas efficacement : je gêne mes partenaires." },
-                    { label: "Maîtrise satisfaisante", points: 3, desc: "Je propose des solutions de passes dans un petit périmètre." },
-                    { label: "Très bonne maîtrise", points: 4, desc: "Je propose des solutions de passes efficaces en me plaçant opportunément." }
-                  ]},
-                  { role: "Le joueur", critere: "Défenseur : marquage, comptage", eleve: "Défendre : marquer mon adversaire et compter", tiers: [
-                    { label: "Maîtrise insuffisante", points: 1, desc: "Je ne suis pas concerné, je ne défends sur personne, je fais des fautes." },
-                    { label: "Maîtrise fragile", points: 2, desc: "J'ai du mal à suivre mon adversaire attitré ou je défends sur plusieurs joueurs." },
-                    { label: "Maîtrise satisfaisante", points: 3, desc: "Je suis mobile et efficace dans un petit périmètre, je compte mais pas tout le temps." },
-                    { label: "Très bonne maîtrise", points: 4, desc: "Ma défense individuelle est stricte, j'intercepte des passes et je compte." }
-                  ]},
-                  { role: "L'auto-arbitre", critere: "Reconnaître et signaler les fautes", eleve: "Reconnaître et signaler les fautes", tiers: [
-                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Je ne connais pas les règles, je ne signale pas les fautes." },
-                    { label: "Maîtrise fragile", points: 1, desc: "Je reconnais les principales règles mais j'ai du mal à les signaler." },
-                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Je connais et j'applique le règlement : 10 secondes, non-contact, marchés." },
-                    { label: "Très bonne maîtrise", points: 2, desc: "Je reconnais et signale les fautes, je sais les expliquer à mes camarades." }
-                  ]}
-                ];
-              </script>
-            </section>
-
             <section class="rubrique" id="ultimate-6e-videos">
               <h4>🎥 Vidéos de démonstration</h4>
               <ul class="video-list">
@@ -1219,6 +1193,32 @@
               </script>
             </section>
 
+            <section class="rubrique" id="ultimate-6e-attendus">
+              <h4>🎯 Les attendus</h4>
+              <p><strong>À la fin de cette séquence, tu devras être capable de :</strong></p>
+              <p>
+                Dans un jeu à effectif réduit, rechercher le gain du match en assurant la
+                progression du disque vers la zone d'en-but adverse dans le cadre d'un projet de
+                jeu simple basé sur des choix de passes et démarquages pertinents, dans le but de
+                conserver le disque et de se retrouver en situation favorable de marquer, face à
+                une défense qui cherche à gêner la progression adverse en s'organisant en défense
+                individuelle, dans le respect du non-contact. Respecter les partenaires, les
+                adversaires et les règles pour s'auto-arbitrer.
+              </p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Lien avec le socle commun</th></tr></thead>
+                  <tbody>
+                    <tr><td>L'équipe (en attaque et en défense)</td><td>Coopérer et réaliser des projets (domaine 2)</td></tr>
+                    <tr><td>Le joueur (en attaque et en défense)</td><td>Pratiquer des APSA et acquérir des techniques spécifiques pour améliorer son efficacité (domaine 1)</td></tr>
+                    <tr><td>L'auto-arbitre</td><td>Faire preuve de responsabilité, respecter les règles de la vie collective, s'engager et prendre des initiatives (domaine 3)</td></tr>
+                    <tr><td>Le joueur fair-play</td><td>Faire preuve de responsabilité, respecter les règles de la vie collective, s'engager et prendre des initiatives (domaine 3)</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            
+</section>
+
           </div>
         </details>
 
@@ -1233,22 +1233,16 @@
           <div class="activity-card__body">
 
             <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : Course d'orientation">
-              <button type="button" class="rubrique-tab" role="tab" aria-controls="course-orientation-6e-attendus">🎯 Attendus</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="course-orientation-6e-acquisitions">✅ Acquisitions</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="course-orientation-6e-lexique">📖 Lexique</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="course-orientation-6e-regles">🏳️ Règlement</button>
-              <button type="button" class="rubrique-tab" role="tab" aria-controls="course-orientation-6e-evaluation">📊 Évaluation</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="course-orientation-6e-autoeval">🧮 Auto-évaluation</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="course-orientation-6e-evaluation">📊 Évaluation</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="course-orientation-6e-videos">🎥 Vidéos</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="course-orientation-6e-quiz">🧠 Quiz</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="course-orientation-6e-attendus">🎯 Attendus</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="course-orientation-6e-diagnostic" hidden>📋 Diagnostic</button>
             </div>
-
-            <section class="rubrique" id="course-orientation-6e-attendus">
-              <h4>🎯 Les attendus</h4>
-              <p><strong>À la fin de cette séquence, tu devras être capable de :</strong></p>
-              <p>Réaliser un parcours en autonomie à l'aide d'une carte, en gérant son itinéraire et son effort.</p>
-            </section>
 
             <section class="rubrique" id="course-orientation-6e-acquisitions">
               <h4>✅ Acquisitions prioritaires</h4>
@@ -1309,6 +1303,19 @@
               </ul>
             </section>
 
+            <section class="rubrique" id="course-orientation-6e-autoeval">
+              <h4>🧮 Auto-évaluation</h4>
+              <p>Pour chaque critère, choisis le niveau de maîtrise qui te correspond le mieux. Tu obtiendras une estimation de ta note sur 20.</p>
+              <div class="autoeval" data-autoeval-id="course-orientation-6e">
+                <div class="autoeval-criteria"></div>
+                <button type="button" class="btn btn--primary autoeval-submit">Calculer mon score</button>
+                <div class="autoeval-result" role="status" hidden></div>
+              </div>
+              <!-- Pas de grille de points officielle pour cette activité : l'auto-évaluation
+                   affichera un message d'attente tant que window.AUTOEVAL_DATA['course-orientation-6e']
+                   n'est pas rempli (voir le modèle du triathlon athlétique ci-dessus). -->
+            </section>
+
             <section class="rubrique" id="course-orientation-6e-evaluation">
               <h4>📊 Référentiel d'évaluation</h4>
               <div class="table-wrap">
@@ -1322,19 +1329,6 @@
                 </table>
               </div>
               <p class="text-mono">Document d'évaluation détaillé à venir.</p>
-            </section>
-
-            <section class="rubrique" id="course-orientation-6e-autoeval">
-              <h4>🧮 Auto-évaluation</h4>
-              <p>Pour chaque critère, choisis le niveau de maîtrise qui te correspond le mieux. Tu obtiendras une estimation de ta note sur 20.</p>
-              <div class="autoeval" data-autoeval-id="course-orientation-6e">
-                <div class="autoeval-criteria"></div>
-                <button type="button" class="btn btn--primary autoeval-submit">Calculer mon score</button>
-                <div class="autoeval-result" role="status" hidden></div>
-              </div>
-              <!-- Pas de grille de points officielle pour cette activité : l'auto-évaluation
-                   affichera un message d'attente tant que window.AUTOEVAL_DATA['course-orientation-6e']
-                   n'est pas rempli (voir le modèle du triathlon athlétique ci-dessus). -->
             </section>
 
             <section class="rubrique" id="course-orientation-6e-videos">
@@ -1363,6 +1357,12 @@
               </script>
             </section>
 
+            <section class="rubrique" id="course-orientation-6e-attendus">
+              <h4>🎯 Les attendus</h4>
+              <p><strong>À la fin de cette séquence, tu devras être capable de :</strong></p>
+              <p>Réaliser un parcours en autonomie à l'aide d'une carte, en gérant son itinéraire et son effort.</p>
+            </section>
+
             <section class="rubrique rubrique--optional" id="course-orientation-6e-diagnostic" hidden>
               <h4>📋 Évaluation diagnostique</h4>
               <p>Un parcours de reconnaissance simple (lecture de carte, repérage de balises proches) permet d'évaluer le niveau de lecture de carte de chaque élève avant le début du cycle.</p>
@@ -1382,38 +1382,15 @@
           <div class="activity-card__body">
 
             <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : Badminton">
-              <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-6e-attendus">🎯 Attendus</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-6e-acquisitions">✅ Acquisitions</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-6e-lexique">📖 Lexique</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-6e-regles">🏳️ Règlement</button>
-              <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-6e-evaluation">📊 Évaluation</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-6e-autoeval">🧮 Auto-évaluation</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-6e-evaluation">📊 Évaluation</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-6e-videos">🎥 Vidéos</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-6e-quiz">🧠 Quiz</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="badminton-6e-attendus">🎯 Attendus</button>
             </div>
-
-            <section class="rubrique" id="badminton-6e-attendus">
-              <h4>🎯 Les attendus</h4>
-              <p><strong>À la fin de cette séquence, tu devras être capable de :</strong></p>
-              <p>
-                En simple et sur ½ terrain, s'entraîner pour rechercher le gain loyal d'une
-                rencontre en cherchant à mettre en difficulté son adversaire par l'utilisation de
-                frappes variées en longueur. Appliquer le règlement en assurant le comptage des
-                points. Participer à l'installation du matériel.
-              </p>
-              <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Rôle à jouer</th><th>Lien avec le socle commun</th></tr></thead>
-                  <tbody>
-                    <tr><td>Le joueur</td><td>Pratiquer des APSA et acquérir des techniques spécifiques pour être plus efficace (domaine 1)</td></tr>
-                    <tr><td>L'entraîné</td><td>Répéter un geste pour le stabiliser et le rendre plus efficace (domaine 2) / S'engager dans les activités sportives (domaine 3)</td></tr>
-                    <tr><td>L'arbitre</td><td>Faire preuve de responsabilité, respecter les règles de la vie collective, s'engager et prendre des initiatives (domaine 3)</td></tr>
-                    <tr><td>Le matériel</td><td>Faire preuve de responsabilité, respecter les règles de la vie collective, s'engager et prendre des initiatives (domaine 3)</td></tr>
-                  </tbody>
-                </table>
-              </div>
-            
-</section>
 
             <section class="rubrique" id="badminton-6e-acquisitions">
               <h4>✅ Acquisitions prioritaires</h4>
@@ -1502,6 +1479,69 @@
                 <li>Je ne peux toucher le volant qu'une seule fois par échange (pas de jongle possible).</li>
                 <li>Les lignes font partie du terrain : un volant sur la ligne est bon.</li>
               </ul>
+            </section>
+
+            <section class="rubrique" id="badminton-6e-autoeval">
+              <h4>🧮 Auto-évaluation</h4>
+              <p>Pour chaque critère, choisis le niveau de maîtrise qui te correspond le mieux. Tu obtiendras une estimation de ta note sur 20.</p>
+              <div class="autoeval" data-autoeval-id="badminton-6e">
+                <div class="autoeval-criteria"></div>
+                <button type="button" class="btn btn--primary autoeval-submit">Calculer mon score</button>
+                <div class="autoeval-result" role="status" hidden></div>
+              </div>
+              <script>
+                window.AUTOEVAL_DATA = window.AUTOEVAL_DATA || {};
+                window.AUTOEVAL_DATA['badminton-6e'] = [
+                  { role: "Le joueur", critere: "Lire et s'adapter à la trajectoire du volant", eleve: "Lire la trajectoire du volant et m'y adapter", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "J'ai du mal à lire la trajectoire : beaucoup de volants non touchés." },
+                    { label: "Maîtrise fragile", points: 2, desc: "Mon adaptation au volant est aléatoire (ex : dégagé alors qu'il est bas)." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "Je m'adapte bien au volant mais je prends encore quelques volants trop derrière." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "J'anticipe et me déplace efficacement pour frapper de manière équilibrée." }
+                  ]},
+                  { role: "Le joueur", critere: "Position d'attente et placement", eleve: "Ma position d'attente et mon placement", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Ma raquette est basse." },
+                    { label: "Maîtrise fragile", points: 2, desc: "Ma raquette est haute mais irrégulièrement, ma position est aléatoire." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "Ma position d'attente est bonne (raquette devant moi) mais encore trop de face." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "Ma position d'attente est efficace et régulière, dynamique sur l'avant des pieds." }
+                  ]},
+                  { role: "Le joueur", critere: "Service", eleve: "Mon service", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Mon service n'est pas maîtrisé ou pas réglementaire." },
+                    { label: "Maîtrise fragile", points: 2, desc: "Mon service est réglementaire mais encore aléatoire." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "Mon service est réglementaire." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "J'utilise mon service pour mettre mon adversaire en difficulté." }
+                  ]},
+                  { role: "Le joueur", critere: "Utilisation des frappes variées en longueur", eleve: "Varier mes frappes en longueur", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Je fais beaucoup de fautes directes, mes renvois sortent du terrain." },
+                    { label: "Maîtrise fragile", points: 2, desc: "Je joue en continuité mais mes renvois sont centrés au milieu du terrain." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "J'utilise des frappes variées (jeu court/long) sans vraiment tenir compte de mon adversaire." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "Je crée et exploite les espaces libres et les situations favorables de marque." }
+                  ]},
+                  { role: "L'arbitre", critere: "Posture et attitude", eleve: "Ma posture et mon attitude d'arbitre", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Je n'arbitre pas et/ou je perturbe mes camarades." },
+                    { label: "Maîtrise fragile", points: 2, desc: "Je suis le match et compte les points mais j'hésite sur certaines règles." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "Je compte et annonce les points à haute voix." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "Je compte et annonce les points ainsi que le serveur à haute voix." }
+                  ]},
+                  { role: "L'entraîné", critere: "Engagement — nombre de partenaires (partenaire en or)", eleve: "Jouer avec beaucoup de partenaires différents", tiers: [
+                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Je joue avec peu de partenaires (1 ou 2)." },
+                    { label: "Maîtrise fragile", points: 1, desc: "Je joue avec quelques partenaires (3 ou 4) mais le contrat n'est pas atteint." },
+                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Je joue avec au moins 4 partenaires mais le contrat n'est pas toujours atteint." },
+                    { label: "Très bonne maîtrise", points: 2, desc: "Plus de 40 points au partenaire en or." }
+                  ]},
+                  { role: "L'entraîné", critere: "Engagement dans les tâches de répétition", eleve: "M'investir dans les exercices de répétition", tiers: [
+                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Je ne m'investis pas dans le travail de répétition." },
+                    { label: "Maîtrise fragile", points: 1, desc: "Je persévère malgré mes difficultés." },
+                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Je m'engage dans les tâches de répétition." },
+                    { label: "Très bonne maîtrise", points: 2, desc: "Mon engagement est régulier, j'aide et conseille mes camarades." }
+                  ]},
+                  { role: "Le matériel", critere: "Participation à l'installation du matériel", eleve: "Participer à l'installation du matériel", tiers: [
+                    { label: "Maîtrise insuffisante", points: 0, desc: "Je reste longtemps au vestiaire et je sors quand c'est fini." },
+                    { label: "Maîtrise fragile", points: 0.5, desc: "Je participe aléatoirement, ou j'installe un poteau puis je vais m'asseoir." },
+                    { label: "Maîtrise satisfaisante", points: 1, desc: "J'aide à installer tout le matériel." },
+                    { label: "Très bonne maîtrise", points: 2, desc: "J'installe le matériel et j'aide mes camarades en difficulté." }
+                  ]}
+                ];
+              </script>
             </section>
 
             <section class="rubrique" id="badminton-6e-evaluation">
@@ -1606,69 +1646,6 @@
               </div>
             </section>
 
-            <section class="rubrique" id="badminton-6e-autoeval">
-              <h4>🧮 Auto-évaluation</h4>
-              <p>Pour chaque critère, choisis le niveau de maîtrise qui te correspond le mieux. Tu obtiendras une estimation de ta note sur 20.</p>
-              <div class="autoeval" data-autoeval-id="badminton-6e">
-                <div class="autoeval-criteria"></div>
-                <button type="button" class="btn btn--primary autoeval-submit">Calculer mon score</button>
-                <div class="autoeval-result" role="status" hidden></div>
-              </div>
-              <script>
-                window.AUTOEVAL_DATA = window.AUTOEVAL_DATA || {};
-                window.AUTOEVAL_DATA['badminton-6e'] = [
-                  { role: "Le joueur", critere: "Lire et s'adapter à la trajectoire du volant", eleve: "Lire la trajectoire du volant et m'y adapter", tiers: [
-                    { label: "Maîtrise insuffisante", points: 1, desc: "J'ai du mal à lire la trajectoire : beaucoup de volants non touchés." },
-                    { label: "Maîtrise fragile", points: 2, desc: "Mon adaptation au volant est aléatoire (ex : dégagé alors qu'il est bas)." },
-                    { label: "Maîtrise satisfaisante", points: 3, desc: "Je m'adapte bien au volant mais je prends encore quelques volants trop derrière." },
-                    { label: "Très bonne maîtrise", points: 4, desc: "J'anticipe et me déplace efficacement pour frapper de manière équilibrée." }
-                  ]},
-                  { role: "Le joueur", critere: "Position d'attente et placement", eleve: "Ma position d'attente et mon placement", tiers: [
-                    { label: "Maîtrise insuffisante", points: 1, desc: "Ma raquette est basse." },
-                    { label: "Maîtrise fragile", points: 2, desc: "Ma raquette est haute mais irrégulièrement, ma position est aléatoire." },
-                    { label: "Maîtrise satisfaisante", points: 3, desc: "Ma position d'attente est bonne (raquette devant moi) mais encore trop de face." },
-                    { label: "Très bonne maîtrise", points: 4, desc: "Ma position d'attente est efficace et régulière, dynamique sur l'avant des pieds." }
-                  ]},
-                  { role: "Le joueur", critere: "Service", eleve: "Mon service", tiers: [
-                    { label: "Maîtrise insuffisante", points: 1, desc: "Mon service n'est pas maîtrisé ou pas réglementaire." },
-                    { label: "Maîtrise fragile", points: 2, desc: "Mon service est réglementaire mais encore aléatoire." },
-                    { label: "Maîtrise satisfaisante", points: 3, desc: "Mon service est réglementaire." },
-                    { label: "Très bonne maîtrise", points: 4, desc: "J'utilise mon service pour mettre mon adversaire en difficulté." }
-                  ]},
-                  { role: "Le joueur", critere: "Utilisation des frappes variées en longueur", eleve: "Varier mes frappes en longueur", tiers: [
-                    { label: "Maîtrise insuffisante", points: 1, desc: "Je fais beaucoup de fautes directes, mes renvois sortent du terrain." },
-                    { label: "Maîtrise fragile", points: 2, desc: "Je joue en continuité mais mes renvois sont centrés au milieu du terrain." },
-                    { label: "Maîtrise satisfaisante", points: 3, desc: "J'utilise des frappes variées (jeu court/long) sans vraiment tenir compte de mon adversaire." },
-                    { label: "Très bonne maîtrise", points: 4, desc: "Je crée et exploite les espaces libres et les situations favorables de marque." }
-                  ]},
-                  { role: "L'arbitre", critere: "Posture et attitude", eleve: "Ma posture et mon attitude d'arbitre", tiers: [
-                    { label: "Maîtrise insuffisante", points: 1, desc: "Je n'arbitre pas et/ou je perturbe mes camarades." },
-                    { label: "Maîtrise fragile", points: 2, desc: "Je suis le match et compte les points mais j'hésite sur certaines règles." },
-                    { label: "Maîtrise satisfaisante", points: 3, desc: "Je compte et annonce les points à haute voix." },
-                    { label: "Très bonne maîtrise", points: 4, desc: "Je compte et annonce les points ainsi que le serveur à haute voix." }
-                  ]},
-                  { role: "L'entraîné", critere: "Engagement — nombre de partenaires (partenaire en or)", eleve: "Jouer avec beaucoup de partenaires différents", tiers: [
-                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Je joue avec peu de partenaires (1 ou 2)." },
-                    { label: "Maîtrise fragile", points: 1, desc: "Je joue avec quelques partenaires (3 ou 4) mais le contrat n'est pas atteint." },
-                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Je joue avec au moins 4 partenaires mais le contrat n'est pas toujours atteint." },
-                    { label: "Très bonne maîtrise", points: 2, desc: "Plus de 40 points au partenaire en or." }
-                  ]},
-                  { role: "L'entraîné", critere: "Engagement dans les tâches de répétition", eleve: "M'investir dans les exercices de répétition", tiers: [
-                    { label: "Maîtrise insuffisante", points: 0.5, desc: "Je ne m'investis pas dans le travail de répétition." },
-                    { label: "Maîtrise fragile", points: 1, desc: "Je persévère malgré mes difficultés." },
-                    { label: "Maîtrise satisfaisante", points: 1.5, desc: "Je m'engage dans les tâches de répétition." },
-                    { label: "Très bonne maîtrise", points: 2, desc: "Mon engagement est régulier, j'aide et conseille mes camarades." }
-                  ]},
-                  { role: "Le matériel", critere: "Participation à l'installation du matériel", eleve: "Participer à l'installation du matériel", tiers: [
-                    { label: "Maîtrise insuffisante", points: 0, desc: "Je reste longtemps au vestiaire et je sors quand c'est fini." },
-                    { label: "Maîtrise fragile", points: 0.5, desc: "Je participe aléatoirement, ou j'installe un poteau puis je vais m'asseoir." },
-                    { label: "Maîtrise satisfaisante", points: 1, desc: "J'aide à installer tout le matériel." },
-                    { label: "Très bonne maîtrise", points: 2, desc: "J'installe le matériel et j'aide mes camarades en difficulté." }
-                  ]}
-                ];
-              </script>
-            </section>
-
             <section class="rubrique" id="badminton-6e-videos">
               <h4>🎥 Vidéos de démonstration</h4>
               <ul class="video-list">
@@ -1701,6 +1678,29 @@
               </script>
             </section>
 
+            <section class="rubrique" id="badminton-6e-attendus">
+              <h4>🎯 Les attendus</h4>
+              <p><strong>À la fin de cette séquence, tu devras être capable de :</strong></p>
+              <p>
+                En simple et sur ½ terrain, s'entraîner pour rechercher le gain loyal d'une
+                rencontre en cherchant à mettre en difficulté son adversaire par l'utilisation de
+                frappes variées en longueur. Appliquer le règlement en assurant le comptage des
+                points. Participer à l'installation du matériel.
+              </p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Lien avec le socle commun</th></tr></thead>
+                  <tbody>
+                    <tr><td>Le joueur</td><td>Pratiquer des APSA et acquérir des techniques spécifiques pour être plus efficace (domaine 1)</td></tr>
+                    <tr><td>L'entraîné</td><td>Répéter un geste pour le stabiliser et le rendre plus efficace (domaine 2) / S'engager dans les activités sportives (domaine 3)</td></tr>
+                    <tr><td>L'arbitre</td><td>Faire preuve de responsabilité, respecter les règles de la vie collective, s'engager et prendre des initiatives (domaine 3)</td></tr>
+                    <tr><td>Le matériel</td><td>Faire preuve de responsabilité, respecter les règles de la vie collective, s'engager et prendre des initiatives (domaine 3)</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            
+</section>
+
           </div>
         </details>
 
@@ -1722,38 +1722,15 @@
             </p>
 
             <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : Danse">
-              <button type="button" class="rubrique-tab" role="tab" aria-controls="danse-6e-attendus">🎯 Attendus</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="danse-6e-acquisitions">✅ Acquisitions</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="danse-6e-lexique">📖 Lexique</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="danse-6e-regles">🏳️ Règlement</button>
-              <button type="button" class="rubrique-tab" role="tab" aria-controls="danse-6e-evaluation">📊 Évaluation</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="danse-6e-autoeval">🧮 Auto-évaluation</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="danse-6e-evaluation">📊 Évaluation</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="danse-6e-videos">🎥 Vidéos</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="danse-6e-quiz">🧠 Quiz</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="danse-6e-attendus">🎯 Attendus</button>
             </div>
-
-            <section class="rubrique" id="danse-6e-attendus">
-              <h4>🎯 Les attendus</h4>
-              <p><strong>À la fin de cette séquence, tu devras être capable de :</strong></p>
-              <p>
-                Composer et présenter une chorégraphie collective (3 à 5 élèves) structurée par des
-                procédés chorégraphiques identifiés. Enrichir et présenter des formes corporelles
-                originales en jouant sur l'espace, l'amplitude et la fluidité pour servir un projet
-                expressif. Apprécier avec respect une prestation à l'aide de quelques indicateurs
-                simples.
-              </p>
-              <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Rôle à jouer</th><th>Lien avec le socle commun</th></tr></thead>
-                  <tbody>
-                    <tr><td>Le danseur</td><td>Adapter sa motricité à des situations variées (domaine 1)</td></tr>
-                    <tr><td>Le chorégraphe</td><td>S'engager dans les APSA artistiques (domaine 3) / Composer une chorégraphie collective</td></tr>
-                    <tr><td>Le spectateur</td><td>Apprécier avec respect une prestation à l'aide de quelques indicateurs simples / Utiliser les outils numériques (domaine 2)</td></tr>
-                  </tbody>
-                </table>
-              </div>
-            
-</section>
 
             <section class="rubrique" id="danse-6e-acquisitions">
               <h4>✅ Acquisitions prioritaires</h4>
@@ -1832,6 +1809,45 @@
               </ul>
             </section>
 
+            <section class="rubrique" id="danse-6e-autoeval">
+              <h4>🧮 Auto-évaluation</h4>
+              <p>Pour chaque critère, choisis le niveau de maîtrise qui te correspond le mieux. Tu obtiendras une estimation de ta note sur 20.</p>
+              <div class="autoeval" data-autoeval-id="danse-6e">
+                <div class="autoeval-criteria"></div>
+                <button type="button" class="btn btn--primary autoeval-submit">Calculer mon score</button>
+                <div class="autoeval-result" role="status" hidden></div>
+              </div>
+              <script>
+                window.AUTOEVAL_DATA = window.AUTOEVAL_DATA || {};
+                window.AUTOEVAL_DATA['danse-6e'] = [
+                  { role: "Le danseur", critere: "Mémorisation, fluidité, rôle de danseur", eleve: "Mémoriser ma chorégraphie et la danser avec fluidité", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1.25, desc: "Je ne m'investis pas : je rigole ou je parle pendant la représentation." },
+                    { label: "Maîtrise fragile", points: 2.5, desc: "Je m'investis mais de façon timide, je regarde mes pieds, beaucoup de gestes parasites." },
+                    { label: "Maîtrise satisfaisante", points: 3.75, desc: "Je suis concentré et je maîtrise ma chorégraphie, moins de 2 gestes parasites." },
+                    { label: "Maîtrise très satisfaisante", points: 5, desc: "Je suis dans ma bulle, mes mouvements sont fluides, je donne le rythme au groupe." }
+                  ]},
+                  { role: "Le danseur", critere: "Interprétation (espace, amplitude, fluidité)", eleve: "Interpréter ma danse : espace, amplitude, fluidité", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1.25, desc: "Je bouge très peu et j'occupe très peu l'espace disponible." },
+                    { label: "Maîtrise fragile", points: 2.5, desc: "Je répète beaucoup les mêmes gestes, mes mouvements manquent d'amplitude." },
+                    { label: "Maîtrise satisfaisante", points: 3.75, desc: "J'occupe différents espaces de la scène, mes mouvements commencent à être amples." },
+                    { label: "Maîtrise très satisfaisante", points: 5, desc: "J'utilise très bien l'espace, mes mouvements sont amples et intenses." }
+                  ]},
+                  { role: "Le chorégraphe", critere: "Respect du cahier des charges", eleve: "Respecter le cahier des charges", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1.25, desc: "Plus de 4 éléments du cahier des charges manquent dans ma chorégraphie." },
+                    { label: "Maîtrise fragile", points: 2.5, desc: "2 éléments ou plus du cahier des charges manquent." },
+                    { label: "Maîtrise satisfaisante", points: 3.75, desc: "Tous les éléments du cahier des charges sont présents." },
+                    { label: "Maîtrise très satisfaisante", points: 5, desc: "Tous les éléments sont présents, ma chorégraphie est originale et calée avec la musique." }
+                  ]},
+                  { role: "Le spectateur", critere: "Apprécier avec respect une prestation", eleve: "Regarder la prestation des autres avec respect", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1.25, desc: "Je ne respecte pas mes camarades : je parle ou je me moque pendant leur chorégraphie." },
+                    { label: "Maîtrise fragile", points: 2.5, desc: "Je ne suis pas toujours attentif, je n'observe pas avec attention." },
+                    { label: "Maîtrise satisfaisante", points: 3.75, desc: "Je garde le silence et je suis attentif, je repère les éléments présents ou absents." },
+                    { label: "Maîtrise très satisfaisante", points: 5, desc: "Je suis attentif et je fais un retour pertinent sur la prestation observée." }
+                  ]}
+                ];
+              </script>
+            </section>
+
             <section class="rubrique" id="danse-6e-evaluation">
               <h4>📊 Modalités d'évaluation</h4>
               <p class="callout callout--neutral"><strong>Grille reconstituée à partir du document source</strong> (fichier Apple Pages) — à vérifier par l'enseignante. Une « Fiche d'observation spectateurs » complémentaire existe dans le document original mais n'a pas pu être récupérée dans le détail.</p>
@@ -1880,45 +1896,6 @@
               </div>
             </section>
 
-            <section class="rubrique" id="danse-6e-autoeval">
-              <h4>🧮 Auto-évaluation</h4>
-              <p>Pour chaque critère, choisis le niveau de maîtrise qui te correspond le mieux. Tu obtiendras une estimation de ta note sur 20.</p>
-              <div class="autoeval" data-autoeval-id="danse-6e">
-                <div class="autoeval-criteria"></div>
-                <button type="button" class="btn btn--primary autoeval-submit">Calculer mon score</button>
-                <div class="autoeval-result" role="status" hidden></div>
-              </div>
-              <script>
-                window.AUTOEVAL_DATA = window.AUTOEVAL_DATA || {};
-                window.AUTOEVAL_DATA['danse-6e'] = [
-                  { role: "Le danseur", critere: "Mémorisation, fluidité, rôle de danseur", eleve: "Mémoriser ma chorégraphie et la danser avec fluidité", tiers: [
-                    { label: "Maîtrise insuffisante", points: 1.25, desc: "Je ne m'investis pas : je rigole ou je parle pendant la représentation." },
-                    { label: "Maîtrise fragile", points: 2.5, desc: "Je m'investis mais de façon timide, je regarde mes pieds, beaucoup de gestes parasites." },
-                    { label: "Maîtrise satisfaisante", points: 3.75, desc: "Je suis concentré et je maîtrise ma chorégraphie, moins de 2 gestes parasites." },
-                    { label: "Maîtrise très satisfaisante", points: 5, desc: "Je suis dans ma bulle, mes mouvements sont fluides, je donne le rythme au groupe." }
-                  ]},
-                  { role: "Le danseur", critere: "Interprétation (espace, amplitude, fluidité)", eleve: "Interpréter ma danse : espace, amplitude, fluidité", tiers: [
-                    { label: "Maîtrise insuffisante", points: 1.25, desc: "Je bouge très peu et j'occupe très peu l'espace disponible." },
-                    { label: "Maîtrise fragile", points: 2.5, desc: "Je répète beaucoup les mêmes gestes, mes mouvements manquent d'amplitude." },
-                    { label: "Maîtrise satisfaisante", points: 3.75, desc: "J'occupe différents espaces de la scène, mes mouvements commencent à être amples." },
-                    { label: "Maîtrise très satisfaisante", points: 5, desc: "J'utilise très bien l'espace, mes mouvements sont amples et intenses." }
-                  ]},
-                  { role: "Le chorégraphe", critere: "Respect du cahier des charges", eleve: "Respecter le cahier des charges", tiers: [
-                    { label: "Maîtrise insuffisante", points: 1.25, desc: "Plus de 4 éléments du cahier des charges manquent dans ma chorégraphie." },
-                    { label: "Maîtrise fragile", points: 2.5, desc: "2 éléments ou plus du cahier des charges manquent." },
-                    { label: "Maîtrise satisfaisante", points: 3.75, desc: "Tous les éléments du cahier des charges sont présents." },
-                    { label: "Maîtrise très satisfaisante", points: 5, desc: "Tous les éléments sont présents, ma chorégraphie est originale et calée avec la musique." }
-                  ]},
-                  { role: "Le spectateur", critere: "Apprécier avec respect une prestation", eleve: "Regarder la prestation des autres avec respect", tiers: [
-                    { label: "Maîtrise insuffisante", points: 1.25, desc: "Je ne respecte pas mes camarades : je parle ou je me moque pendant leur chorégraphie." },
-                    { label: "Maîtrise fragile", points: 2.5, desc: "Je ne suis pas toujours attentif, je n'observe pas avec attention." },
-                    { label: "Maîtrise satisfaisante", points: 3.75, desc: "Je garde le silence et je suis attentif, je repère les éléments présents ou absents." },
-                    { label: "Maîtrise très satisfaisante", points: 5, desc: "Je suis attentif et je fais un retour pertinent sur la prestation observée." }
-                  ]}
-                ];
-              </script>
-            </section>
-
             <section class="rubrique" id="danse-6e-videos">
               <h4>🎥 Vidéos de démonstration</h4>
               <ul class="video-list">
@@ -1949,6 +1926,29 @@
               </script>
             </section>
 
+            <section class="rubrique" id="danse-6e-attendus">
+              <h4>🎯 Les attendus</h4>
+              <p><strong>À la fin de cette séquence, tu devras être capable de :</strong></p>
+              <p>
+                Composer et présenter une chorégraphie collective (3 à 5 élèves) structurée par des
+                procédés chorégraphiques identifiés. Enrichir et présenter des formes corporelles
+                originales en jouant sur l'espace, l'amplitude et la fluidité pour servir un projet
+                expressif. Apprécier avec respect une prestation à l'aide de quelques indicateurs
+                simples.
+              </p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Lien avec le socle commun</th></tr></thead>
+                  <tbody>
+                    <tr><td>Le danseur</td><td>Adapter sa motricité à des situations variées (domaine 1)</td></tr>
+                    <tr><td>Le chorégraphe</td><td>S'engager dans les APSA artistiques (domaine 3) / Composer une chorégraphie collective</td></tr>
+                    <tr><td>Le spectateur</td><td>Apprécier avec respect une prestation à l'aide de quelques indicateurs simples / Utiliser les outils numériques (domaine 2)</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            
+</section>
+
           </div>
         </details>
 
@@ -1963,37 +1963,15 @@
           <div class="activity-card__body">
 
             <div class="rubrique-tabs" role="tablist" aria-label="Sous-rubriques : Tennis de table">
-              <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-6e-attendus">🎯 Attendus</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-6e-acquisitions">✅ Acquisitions</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-6e-lexique">📖 Lexique</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-6e-regles">🏳️ Règlement</button>
-              <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-6e-evaluation">📊 Évaluation</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-6e-autoeval">🧮 Auto-évaluation</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-6e-evaluation">📊 Évaluation</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-6e-videos">🎥 Vidéos</button>
               <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-6e-quiz">🧠 Quiz</button>
+              <button type="button" class="rubrique-tab" role="tab" aria-controls="tennis-table-6e-attendus">🎯 Attendus</button>
             </div>
-
-            <section class="rubrique" id="tennis-table-6e-attendus">
-              <h4>🎯 Les attendus</h4>
-              <p><strong>À la fin de cette séquence, tu devras être capable de :</strong></p>
-              <p>
-                S'entraîner et rechercher le gain loyal d'une rencontre en assurant la continuité
-                de l'échange en coup droit et en revers et en cherchant à mettre en difficulté son
-                adversaire grâce à une balle placée latéralement ou à son service. Assurer le
-                comptage des points, connaître et appliquer le règlement.
-              </p>
-              <div class="table-wrap">
-                <table>
-                  <thead><tr><th>Rôle à jouer</th><th>Lien avec le socle commun</th></tr></thead>
-                  <tbody>
-                    <tr><td>Le joueur</td><td>Pratiquer des APSA et acquérir des techniques spécifiques pour être plus efficace (domaine 1)</td></tr>
-                    <tr><td>L'entraîné</td><td>Se constituer des outils de travail personnel et mettre en place des stratégies pour comprendre et apprendre (domaine 2) / S'engager dans des situations d'apprentissage (domaine 3)</td></tr>
-                    <tr><td>L'arbitre</td><td>Faire preuve de responsabilité, respecter et faire respecter le règlement (domaine 3)</td></tr>
-                  </tbody>
-                </table>
-              </div>
-            
-</section>
 
             <section class="rubrique" id="tennis-table-6e-acquisitions">
               <h4>✅ Acquisitions prioritaires</h4>
@@ -2077,6 +2055,45 @@
               </ul>
             </section>
 
+            <section class="rubrique" id="tennis-table-6e-autoeval">
+              <h4>🧮 Auto-évaluation</h4>
+              <p>Pour chaque critère, choisis le niveau de maîtrise qui te correspond le mieux. Tu obtiendras une estimation de ta note sur 20.</p>
+              <div class="autoeval" data-autoeval-id="tennis-table-6e">
+                <div class="autoeval-criteria"></div>
+                <button type="button" class="btn btn--primary autoeval-submit">Calculer mon score</button>
+                <div class="autoeval-result" role="status" hidden></div>
+              </div>
+              <script>
+                window.AUTOEVAL_DATA = window.AUTOEVAL_DATA || {};
+                window.AUTOEVAL_DATA['tennis-table-6e'] = [
+                  { role: "Le joueur", critere: "Service réglementaire", eleve: "Faire un service réglementaire", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Je ne sais pas effectuer un service réglementaire." },
+                    { label: "Maîtrise fragile", points: 2, desc: "Mon service est réussi mais de façon aléatoire." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "Mon service est réglementaire (balle lancée puis frappée, 1 rebond dans chaque ½ table)." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "Mon service est réglementaire et je cherche à mettre mon adversaire en difficulté." }
+                  ]},
+                  { role: "Le joueur", critere: "Intentionnalité de jeu", eleve: "Avoir une intention de jeu claire", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1.5, desc: "Je fais plusieurs fautes directes, difficulté à lire la trajectoire de la balle." },
+                    { label: "Maîtrise fragile", points: 3, desc: "Je renvoie les balles sans faute mais sans réelle intention de jeu (au milieu de la table)." },
+                    { label: "Maîtrise satisfaisante", points: 4.5, desc: "Je cherche à mettre mon adversaire en difficulté avec des balles placées latéralement." },
+                    { label: "Très bonne maîtrise", points: 6, desc: "Je mets systématiquement mon adversaire en difficulté grâce à des balles placées et/ou frappées." }
+                  ]},
+                  { role: "L'entraîné", critere: "Investissement dans le jeu du Partenaire en or", eleve: "M'investir dans le jeu du Partenaire en or", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1.5, desc: "Je ne me suis pas investi, j'ai joué avec moins de 3 partenaires en moyenne." },
+                    { label: "Maîtrise fragile", points: 3, desc: "J'ai des difficultés à remplir le contrat avec mes partenaires." },
+                    { label: "Maîtrise satisfaisante", points: 4.5, desc: "Je me suis investi régulièrement, contrat rempli en moyenne à 75%." },
+                    { label: "Très bonne maîtrise", points: 6, desc: "Je mets mes partenaires en réussite, entre 85 et 100% de contrats remplis." }
+                  ]},
+                  { role: "L'arbitre", critere: "Maîtrise du règlement", eleve: "Connaître et appliquer le règlement", tiers: [
+                    { label: "Maîtrise insuffisante", points: 1, desc: "Je ne suis pas concerné par le match et/ou je ne connais pas le règlement." },
+                    { label: "Maîtrise fragile", points: 2, desc: "Je suis attentif mais j'ai du mal à suivre l'évolution du score." },
+                    { label: "Maîtrise satisfaisante", points: 3, desc: "Je suis le match et j'annonce le score à haute voix." },
+                    { label: "Très bonne maîtrise", points: 4, desc: "J'annonce clairement le score à chaque échange et qui sert, je connais bien le règlement." }
+                  ]}
+                ];
+              </script>
+            </section>
+
             <section class="rubrique" id="tennis-table-6e-evaluation">
               <h4>📊 Modalités d'évaluation</h4>
 
@@ -2136,45 +2153,6 @@
               </div>
             </section>
 
-            <section class="rubrique" id="tennis-table-6e-autoeval">
-              <h4>🧮 Auto-évaluation</h4>
-              <p>Pour chaque critère, choisis le niveau de maîtrise qui te correspond le mieux. Tu obtiendras une estimation de ta note sur 20.</p>
-              <div class="autoeval" data-autoeval-id="tennis-table-6e">
-                <div class="autoeval-criteria"></div>
-                <button type="button" class="btn btn--primary autoeval-submit">Calculer mon score</button>
-                <div class="autoeval-result" role="status" hidden></div>
-              </div>
-              <script>
-                window.AUTOEVAL_DATA = window.AUTOEVAL_DATA || {};
-                window.AUTOEVAL_DATA['tennis-table-6e'] = [
-                  { role: "Le joueur", critere: "Service réglementaire", eleve: "Faire un service réglementaire", tiers: [
-                    { label: "Maîtrise insuffisante", points: 1, desc: "Je ne sais pas effectuer un service réglementaire." },
-                    { label: "Maîtrise fragile", points: 2, desc: "Mon service est réussi mais de façon aléatoire." },
-                    { label: "Maîtrise satisfaisante", points: 3, desc: "Mon service est réglementaire (balle lancée puis frappée, 1 rebond dans chaque ½ table)." },
-                    { label: "Très bonne maîtrise", points: 4, desc: "Mon service est réglementaire et je cherche à mettre mon adversaire en difficulté." }
-                  ]},
-                  { role: "Le joueur", critere: "Intentionnalité de jeu", eleve: "Avoir une intention de jeu claire", tiers: [
-                    { label: "Maîtrise insuffisante", points: 1.5, desc: "Je fais plusieurs fautes directes, difficulté à lire la trajectoire de la balle." },
-                    { label: "Maîtrise fragile", points: 3, desc: "Je renvoie les balles sans faute mais sans réelle intention de jeu (au milieu de la table)." },
-                    { label: "Maîtrise satisfaisante", points: 4.5, desc: "Je cherche à mettre mon adversaire en difficulté avec des balles placées latéralement." },
-                    { label: "Très bonne maîtrise", points: 6, desc: "Je mets systématiquement mon adversaire en difficulté grâce à des balles placées et/ou frappées." }
-                  ]},
-                  { role: "L'entraîné", critere: "Investissement dans le jeu du Partenaire en or", eleve: "M'investir dans le jeu du Partenaire en or", tiers: [
-                    { label: "Maîtrise insuffisante", points: 1.5, desc: "Je ne me suis pas investi, j'ai joué avec moins de 3 partenaires en moyenne." },
-                    { label: "Maîtrise fragile", points: 3, desc: "J'ai des difficultés à remplir le contrat avec mes partenaires." },
-                    { label: "Maîtrise satisfaisante", points: 4.5, desc: "Je me suis investi régulièrement, contrat rempli en moyenne à 75%." },
-                    { label: "Très bonne maîtrise", points: 6, desc: "Je mets mes partenaires en réussite, entre 85 et 100% de contrats remplis." }
-                  ]},
-                  { role: "L'arbitre", critere: "Maîtrise du règlement", eleve: "Connaître et appliquer le règlement", tiers: [
-                    { label: "Maîtrise insuffisante", points: 1, desc: "Je ne suis pas concerné par le match et/ou je ne connais pas le règlement." },
-                    { label: "Maîtrise fragile", points: 2, desc: "Je suis attentif mais j'ai du mal à suivre l'évolution du score." },
-                    { label: "Maîtrise satisfaisante", points: 3, desc: "Je suis le match et j'annonce le score à haute voix." },
-                    { label: "Très bonne maîtrise", points: 4, desc: "J'annonce clairement le score à chaque échange et qui sert, je connais bien le règlement." }
-                  ]}
-                ];
-              </script>
-            </section>
-
             <section class="rubrique" id="tennis-table-6e-videos">
               <h4>🎥 Vidéos de démonstration</h4>
               <ul class="video-list">
@@ -2205,6 +2183,28 @@
                 ];
               </script>
             </section>
+
+            <section class="rubrique" id="tennis-table-6e-attendus">
+              <h4>🎯 Les attendus</h4>
+              <p><strong>À la fin de cette séquence, tu devras être capable de :</strong></p>
+              <p>
+                S'entraîner et rechercher le gain loyal d'une rencontre en assurant la continuité
+                de l'échange en coup droit et en revers et en cherchant à mettre en difficulté son
+                adversaire grâce à une balle placée latéralement ou à son service. Assurer le
+                comptage des points, connaître et appliquer le règlement.
+              </p>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Rôle à jouer</th><th>Lien avec le socle commun</th></tr></thead>
+                  <tbody>
+                    <tr><td>Le joueur</td><td>Pratiquer des APSA et acquérir des techniques spécifiques pour être plus efficace (domaine 1)</td></tr>
+                    <tr><td>L'entraîné</td><td>Se constituer des outils de travail personnel et mettre en place des stratégies pour comprendre et apprendre (domaine 2) / S'engager dans des situations d'apprentissage (domaine 3)</td></tr>
+                    <tr><td>L'arbitre</td><td>Faire preuve de responsabilité, respecter et faire respecter le règlement (domaine 3)</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            
+</section>
 
           </div>
         </details>
