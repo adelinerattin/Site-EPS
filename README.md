@@ -46,11 +46,17 @@ ouvert directement dans un navigateur ou déployé tel quel.
   donnée n'est envoyée sur Internet, aucun nom n'est demandé, l'enseignante n'y a pas
   accès, et l'élève peut tout effacer d'un bouton (voir `js/historique.js`).
 - 23 fiches activité dépliables (une par activité, sur les 4 pages niveau), chacune avec
-  ses 7 ou 8 rubriques (attendus, acquisitions, éventuelle évaluation diagnostique,
-  règles d'arbitrage, quiz, vidéos, lexique, référentiel).
-- 23 quiz interactifs fonctionnels (4 questions chacun), avec calcul du score et
-  correction visuelle affichée à la fin. Ce sont des questions d'exemple : relisez-les et
-  adaptez-les à vos propres règles de classe.
+  ses rubriques (acquisitions, lexique, règlement, auto-évaluation, évaluation, quiz,
+  attendus, et éventuellement vidéos de démonstration et évaluation diagnostique).
+- **Rubrique Règlement = vidéo + texte** : la vidéo YouTube se lit directement dans la
+  page (lecteur `youtube-nocookie` intégré, l'élève ne quitte pas le site), et tous les
+  points du règlement sont aussi écrits en dessous pour ceux qui préfèrent lire.
+  L'encart orange « 🏫 Au collège, on adapte » signale les règles officielles que nous
+  modifions (effectif, temps de possession, barème…). Pour changer une vidéo, remplacez
+  l'identifiant qui suit `/embed/` dans le HTML.
+- 23 quiz interactifs, avec calcul du score et correction visuelle affichée à la fin.
+  Les questions des activités à vidéo portent directement sur les points du règlement
+  écrits juste au-dessus.
 - Un mot type de dispense ponctuelle, prêt à être recopié et signé par les familles.
 
 ## Ce qu'il vous reste à personnaliser

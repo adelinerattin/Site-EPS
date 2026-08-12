@@ -2749,3 +2749,41 @@ thead th.mastery-excellente {
   padding: 0 0.15em;
   border-radius: 3px;
 }
+
+/* ============================================================
+   ENCART "AU COLLEGE, ON ADAPTE"
+   ------------------------------------------------------------
+   Place a la fin d'une rubrique Reglement, sous la video et le
+   texte : il signale les regles officielles que nous modifions
+   au college (effectif reduit, temps de possession, bareme...).
+   ============================================================ */
+.regle-college {
+  background: var(--color-cream);
+  border: 2px solid var(--color-orange);
+  border-left-width: 8px;
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  margin: var(--space-md) 0 0;
+}
+
+.regle-college__title {
+  margin: 0 0 0.4em;
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+.regle-college ul {
+  margin-bottom: 0;
+}
+
+.regle-college > p:last-child {
+  margin-bottom: 0;
+}
+
+/* Legende sous une video de reglement. */
+.video-source {
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+  margin: calc(-1 * var(--space-sm)) 0 var(--space-md);
+}
