@@ -2887,3 +2887,102 @@ section[id$="-acquisitions"] > h4 {
   font-style: italic;
   margin-top: 0.2em;
 }
+
+/* ============================================================
+   CAHIER DES CHARGES DE LA DANSE
+   ------------------------------------------------------------
+   Reprend le document "Sur quoi je vais etre evalue(e) en danse"
+   sous forme de 3 cartes (une par role social), avec le nombre
+   de points associe. Les cartes s'empilent sur mobile.
+   ============================================================ */
+.cdc-grid {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: minmax(0, 1fr);
+  margin: var(--space-md) 0;
+}
+
+@media (min-width: 780px) {
+  .cdc-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+  }
+}
+
+.cdc-role {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.cdc-role__action {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  background: var(--color-orange);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-weight: 700;
+  padding: 0.6em 0.8em;
+  border-radius: var(--radius);
+  border: 2px solid var(--color-navy);
+}
+
+.cdc-role__nom {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-green);
+}
+
+.cdc-role__charges {
+  width: 100%;
+  background: var(--color-white);
+  border: 2px solid var(--color-navy);
+  border-radius: var(--radius);
+  padding: var(--space-sm) var(--space-md);
+  flex: 1 1 auto;
+}
+
+.cdc-role__charges > p:first-child {
+  margin: 0 0 0.4em;
+  text-align: center;
+  font-weight: 700;
+  text-decoration: underline;
+  color: var(--color-navy);
+}
+
+.cdc-role__charges ul {
+  margin: 0;
+  padding-left: 1.1em;
+}
+
+.cdc-role__charges li {
+  margin-bottom: 0.35em;
+}
+
+.cdc-role__charges .cdc-alerte {
+  margin: 0.6em 0 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-coral);
+}
+
+.cdc-role__points {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  background: var(--color-coral);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-weight: 800;
+  border: 2px solid var(--color-navy);
+  flex-shrink: 0;
+}
