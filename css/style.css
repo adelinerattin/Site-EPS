@@ -2449,3 +2449,73 @@ thead th.mastery-excellente {
   border: 1px dashed var(--color-border);
   border-radius: var(--radius);
 }
+
+/* ============================================================
+   "L'ESSENTIEL EN 3 POINTS"
+   ------------------------------------------------------------
+   Encart toujours visible, place tout en haut de chaque fiche
+   d'activite (avant la barre d'onglets). Il resume en trois
+   lignes : l'objectif de la sequence, la maniere dont l'eleve
+   est evalue, et la cle pour progresser.
+   Pour l'ajouter a une nouvelle activite, copiez le bloc HTML
+   complet depuis n'importe quelle activite de niveau-6e.html.
+   ============================================================ */
+.essentiel {
+  background: var(--color-white);
+  border: 2px solid var(--color-navy);
+  border-left-width: 8px;
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  margin: 0 0 var(--space-md);
+}
+
+.essentiel__title {
+  margin: 0 0 var(--space-sm);
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 0.95rem;
+  color: var(--color-navy);
+}
+
+.essentiel__list {
+  list-style: none;
+  counter-reset: essentiel;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.essentiel__list > li {
+  counter-increment: essentiel;
+  position: relative;
+  padding-left: 2.4rem;
+  line-height: 1.5;
+}
+
+.essentiel__list > li::before {
+  content: counter(essentiel);
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  width: 1.7rem;
+  height: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-yellow);
+  color: var(--color-navy);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.essentiel__label {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-navy);
+}
