@@ -2856,3 +2856,34 @@ thead th.mastery-excellente {
 .rf-inline > span {
   flex: 1 1 240px;
 }
+
+/* ============================================================
+   RUBRIQUES "ACQUISITIONS PRIORITAIRES"
+   ------------------------------------------------------------
+   On aere le titre : une ligne de blanc separe "Acquisitions
+   prioritaires" du premier role, sur toutes les activites et
+   tous les niveaux.
+   ============================================================ */
+section[id$="-acquisitions"] > h4 {
+  margin-bottom: var(--space-md);
+}
+
+/* Petit schema insere dans une definition du lexique. */
+.lexique figure {
+  margin: 0.5em 0 0;
+}
+
+.lexique figure svg {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-white);
+}
+
+.lexique figcaption {
+  font-size: 0.82rem;
+  font-style: italic;
+  margin-top: 0.2em;
+}
