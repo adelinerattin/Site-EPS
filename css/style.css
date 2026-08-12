@@ -2787,3 +2787,72 @@ thead th.mastery-excellente {
   color: var(--color-ink-soft);
   margin: calc(-1 * var(--space-sm)) 0 var(--space-md);
 }
+
+/* ============================================================
+   RUBRIQUE REGLEMENT DU RUGBY FLAG
+   ------------------------------------------------------------
+   Reprend, dans la page, la mise en forme du document
+   "Les regles du rugby flag" : illustrations d'origine placees
+   a cote ou en dessous du paragraphe qu'elles illustrent.
+   ============================================================ */
+.rf-figure {
+  margin: var(--space-sm) 0 var(--space-md);
+  text-align: center;
+}
+
+.rf-figure img {
+  /* On borne la largeur : les illustrations d'origine sont grandes et
+     ecraseraient le texte si on les laissait s'etaler. */
+  max-width: min(100%, 520px);
+  height: auto;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-white);
+}
+
+.rf-figure figcaption {
+  margin-top: 0.4em;
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+  font-style: italic;
+}
+
+.rf-figure--petite img {
+  max-width: 320px;
+}
+
+/* Deux illustrations cote a cote sur grand ecran, empilees sur mobile. */
+.rf-duo {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: minmax(0, 1fr);
+  align-items: end;
+}
+
+@media (min-width: 640px) {
+  .rf-duo {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Vignette a gauche du texte (but du jeu, ballon tombe). */
+.rf-but,
+.rf-inline {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.rf-but img,
+.rf-inline img {
+  flex: 0 0 auto;
+  width: 110px;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+.rf-but > span,
+.rf-inline > span {
+  flex: 1 1 240px;
+}
