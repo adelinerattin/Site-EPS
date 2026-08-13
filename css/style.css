@@ -2801,9 +2801,9 @@ thead th.mastery-excellente {
 }
 
 .rf-figure img {
-  /* On borne la largeur : les illustrations d'origine sont grandes et
-     ecraseraient le texte si on les laissait s'etaler. */
-  max-width: min(100%, 520px);
+  /* Taille proche de celle du document d'origine, bornee pour ne pas
+     ecraser le texte sur grand ecran. */
+  max-width: min(100%, 380px);
   height: auto;
   border: 2px solid var(--color-border);
   border-radius: var(--radius);
@@ -2817,15 +2817,14 @@ thead th.mastery-excellente {
   font-style: italic;
 }
 
-.rf-figure--petite img {
-  max-width: 320px;
-}
+
 
 /* Deux illustrations cote a cote sur grand ecran, empilees sur mobile. */
 .rf-duo {
   display: grid;
   gap: var(--space-md);
   grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
   align-items: end;
 }
 
@@ -2847,7 +2846,8 @@ thead th.mastery-excellente {
 .rf-but img,
 .rf-inline img {
   flex: 0 0 auto;
-  width: 110px;
+  width: auto;
+  max-width: 100%;
   height: auto;
   border-radius: var(--radius);
 }
@@ -3132,4 +3132,132 @@ section[id$="-acquisitions"] > h4 {
 /* Bouton place a l'interieur d'une definition du lexique. */
 .lexique__lien {
   margin: 0.5em 0 0;
+}
+
+/* ============================================================
+   FICHES BOXE FRANCAISE (referentiel technique + arbitre)
+   ============================================================ */
+
+/* Referentiel technique : un coup par carte, dessin a droite. */
+.boxe-coup {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  background: var(--color-white);
+  border: 2px solid var(--color-navy);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+@media (min-width: 640px) {
+  .boxe-coup {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+}
+
+.boxe-coup__titre {
+  margin: 0 0 0.4em;
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--color-navy);
+  text-decoration: underline;
+}
+
+.boxe-coup ul {
+  margin: 0;
+}
+
+.boxe-coup img {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  margin-inline: auto;
+}
+
+/* Gestuelle de l'arbitre : vignettes legendees. */
+.boxe-gestes {
+  display: grid;
+  gap: var(--space-sm);
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  margin: var(--space-sm) 0 var(--space-md);
+}
+
+.boxe-gestes figure {
+  margin: 0;
+  text-align: center;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-sm);
+}
+
+.boxe-gestes img {
+  width: 100%;
+  max-width: 110px;
+  height: auto;
+}
+
+.boxe-gestes figcaption {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-top: 0.3em;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* Les etapes de l'arbitrage : une carte par moment de l'assaut. */
+.arbitre-etapes {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: minmax(0, 1fr);
+  margin: var(--space-md) 0;
+}
+
+@media (min-width: 760px) {
+  .arbitre-etapes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.arbitre-etape {
+  background: var(--color-white);
+  border: 2px solid var(--color-navy);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+}
+
+.arbitre-etape__titre {
+  margin: 0 0 var(--space-sm);
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 0.9rem;
+  color: var(--color-navy);
+}
+
+.arbitre-etape--avant  { border-color: var(--color-orange); }
+.arbitre-etape--pendant { border-color: #7b4b9c; }
+.arbitre-etape--faute  { border-color: var(--color-red); }
+.arbitre-etape--fin    { border-color: var(--color-green); }
+
+.arbitre-etape ul,
+.arbitre-etape ol {
+  margin-bottom: 0;
+}
+
+/* Commandement a prononcer a voix haute. */
+.cmd {
+  display: inline-block;
+  background: var(--color-chalk);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.05em 0.4em;
+  font-weight: 700;
+  color: var(--color-navy);
+  white-space: nowrap;
 }
