@@ -2971,3 +2971,165 @@ section[id$="-acquisitions"] > h4 {
   color: var(--color-coral);
 }
 
+
+/* ============================================================
+   GALERIE DE VIDEOS DE DEMONSTRATION
+   ------------------------------------------------------------
+   Plusieurs lecteurs YouTube integres, chacun avec son titre.
+   Une colonne sur mobile, deux sur grand ecran.
+   Pour une video verticale (YouTube Short), ajoutez la classe
+   "est-short" sur la <figure>.
+   ============================================================ */
+.video-gallery {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: minmax(0, 1fr);
+  margin: var(--space-md) 0;
+}
+
+@media (min-width: 760px) {
+  .video-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.video-gallery figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.video-gallery figcaption {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 0.4em;
+}
+
+.video-gallery .video-embed {
+  margin-bottom: 0;
+}
+
+/* Video verticale (Short) : on garde le format 9/16 et on la centre. */
+.video-gallery figure.est-short .video-embed {
+  aspect-ratio: 9 / 16;
+  max-width: 300px;
+  margin-inline: auto;
+}
+
+/* ============================================================
+   ECHELLE DE FREQUENCE CARDIAQUE (page Culture Sportive)
+   ------------------------------------------------------------
+   Reprend la fiche "Comprendre ma frequence cardiaque" : une
+   ligne par zone d'effort, avec les coeurs, la plage de bpm et
+   le ressenti correspondant.
+   ============================================================ */
+.fc-echelle {
+  list-style: none;
+  margin: var(--space-sm) 0 var(--space-md);
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.fc-echelle li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-sm);
+  align-items: baseline;
+  padding: 0.45em 0.7em;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-white);
+}
+
+.fc-echelle__coeurs {
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.fc-echelle__bpm {
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+/* Intensites, de la plus faible a la plus forte. */
+.fc-echelle li.fc-0 { background: #f2f2f2; }
+.fc-echelle li.fc-1 { background: #eaf6ee; }
+.fc-echelle li.fc-2 { background: #dff0e4; }
+.fc-echelle li.fc-3 { background: #fff6d6; }
+.fc-echelle li.fc-4 { background: #fde3d8; }
+.fc-echelle li.fc-5 { background: #fbd2cb; }
+
+/* ============================================================
+   TABLEAU DES EFFETS AU TENNIS DE TABLE
+   ------------------------------------------------------------
+   Reprend la fiche "Services avec effet" : une colonne par type
+   de service, avec les photos du document.
+   ============================================================ */
+.effets-tt {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+  font-size: 0.9rem;
+}
+
+.effets-tt th,
+.effets-tt td {
+  border: 1px solid var(--color-navy);
+  padding: var(--space-sm);
+  vertical-align: top;
+  text-align: left;
+}
+
+.effets-tt thead th {
+  text-align: center;
+  font-family: var(--font-display);
+}
+
+.effets-tt th.effet-sans   { background: #fbd2cb; }
+.effets-tt th.effet-coupe  { background: #fff3c4; }
+.effets-tt th.effet-lifte  { background: #d9f0df; }
+
+.effets-tt tbody th {
+  background: var(--color-chalk);
+  font-weight: 700;
+  text-align: center;
+  width: 8rem;
+}
+
+.effets-tt ul {
+  margin: 0;
+  padding-left: 1.05em;
+}
+
+.effets-tt li {
+  margin-bottom: 0.3em;
+}
+
+.effets-tt img {
+  display: block;
+  max-width: 100%;
+  width: 150px;
+  height: auto;
+  margin: 0.5em auto 0;
+  border-radius: var(--radius);
+}
+
+/* Deux photos cote a cote dans une meme cellule. */
+.effets-tt__duo {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.effets-tt__duo img {
+  width: 110px;
+  margin-inline: 0;
+}
+
+/* Bouton place a l'interieur d'une definition du lexique. */
+.lexique__lien {
+  margin: 0.5em 0 0;
+}
