@@ -2991,6 +2991,11 @@ section[id$="-acquisitions"] > h4 {
   .video-gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  /* Une seule video dans la galerie : elle occupe toute la largeur. */
+  .video-gallery:has(figure:only-child) {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .video-gallery figure {
@@ -3260,4 +3265,60 @@ section[id$="-acquisitions"] > h4 {
   font-weight: 700;
   color: var(--color-navy);
   white-space: nowrap;
+}
+
+/* ============================================================
+   BLOCS DE REGLE (rugby flag)
+   ------------------------------------------------------------
+   Une regle = un bloc encadre : le texte d'abord, puis
+   l'illustration centree en dessous. Cela evite que les eleves
+   melangent deux regles differentes.
+   ============================================================ */
+.regle-bloc {
+  background: var(--color-white);
+  border: 2px solid var(--color-border);
+  border-left: 6px solid var(--color-navy);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  margin: 0 0 var(--space-md);
+}
+
+.regle-bloc__titre {
+  margin: 0 0 var(--space-sm);
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+.regle-bloc > ul:last-child,
+.regle-bloc > p:last-child {
+  margin-bottom: 0;
+}
+
+.regle-bloc figure {
+  margin: var(--space-md) 0 0;
+  text-align: center;
+}
+
+.regle-bloc figure img {
+  max-width: min(100%, 420px);
+  height: auto;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-white);
+}
+
+.regle-bloc figcaption {
+  margin-top: 0.4em;
+  font-size: 0.86rem;
+  color: var(--color-ink-soft);
+  font-style: italic;
+}
+
+/* Intitule de sous-role dans les acquisitions (donneur / receveur). */
+.relais-role {
+  margin: var(--space-md) 0 var(--space-sm);
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-navy);
 }
