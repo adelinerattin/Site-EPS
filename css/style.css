@@ -3256,3 +3256,50 @@ section[id$="-acquisitions"] > h4 {
   font-weight: 700;
   color: var(--color-navy);
 }
+
+/* ============================================================
+   VISUEL PHOTO DU HERO (variante utilisee sur niveau-4e.html)
+   ------------------------------------------------------------
+   Remplace l'illustration SVG par une photo. La photo d'origine
+   est panoramique et ses sportifs sont sur sa moitie DROITE :
+   on la recadre donc a droite (object-position) sans jamais la
+   deformer (object-fit: cover conserve les proportions).
+   Pour changer la photo : remplacez assets/hero-sport-4e.jpg.
+   Cette variante ne s'applique qu'aux visuels portant la classe
+   "site-hero__visual--photo" : les autres pages sont inchangees.
+   ============================================================ */
+
+/* Sur mobile, le visuel standard est masque ; la photo, elle,
+   s'affiche sous le contenu du hero. */
+.site-hero__visual.site-hero__visual--photo {
+  display: block;
+  width: 100%;
+  max-width: none;
+}
+
+.site-hero__visual--photo img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: right center;
+  border-radius: var(--radius-lg);
+}
+
+@media (min-width: 640px) {
+  /* La colonne de droite s'elargit pour donner de la presence a la
+     photo, sans reduire la lisibilite du texte a gauche. */
+  .site-hero__inner:has(.site-hero__visual--photo) {
+    grid-template-columns: 1fr 0.85fr;
+    align-items: center;
+  }
+
+  .site-hero__visual.site-hero__visual--photo {
+    justify-self: stretch;
+  }
+
+  /* Format vertical : le cadrage tombe pile sur les trois sportifs. */
+  .site-hero__visual--photo img {
+    aspect-ratio: 4 / 5;
+  }
+}
