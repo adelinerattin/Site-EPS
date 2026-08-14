@@ -3283,7 +3283,8 @@ section[id$="-acquisitions"] > h4 {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: right center;
-  border-radius: var(--radius-lg);
+  /* Pas d'arrondi ni de cadre : le fond de la photo a ete aligne sur la
+     couleur creme du hero, la photo se fond donc dans la page. */
 }
 
 @media (min-width: 640px) {
@@ -3301,5 +3302,50 @@ section[id$="-acquisitions"] > h4 {
   /* Format vertical : le cadrage tombe pile sur les trois sportifs. */
   .site-hero__visual--photo img {
     aspect-ratio: 4 / 5;
+  }
+}
+
+/* ------------------------------------------------------------
+   Titre court du hero (variante utilisee sur niveau-4e.html)
+   "Tes activités" doit tenir sur UNE seule ligne, et "de 4e !"
+   passer en dessous. Sur telephone, le logo passe au-dessus du
+   titre pour lui laisser toute la largeur ; la taille du texte
+   s'adapte pour ne jamais provoquer de coupure.
+   ------------------------------------------------------------ */
+.site-hero__lockup--titre-court {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+/* En colonne, le "flex: 1 1 200px" du titre s'applique a sa HAUTEUR et
+   creuse un vide sous le titre : on le neutralise. */
+.site-hero__lockup--titre-court h1 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.site-hero__lockup--titre-court .hero-title__line1 {
+  white-space: nowrap;
+  font-size: clamp(1.5rem, 8.5vw, 2.6rem);
+}
+
+@media (min-width: 1200px) {
+  /* Le logo ne revient a cote du titre que lorsque la colonne est
+     assez large pour "Tes activites" en pleine taille (verifie : en
+     dessous de ce seuil, le titre debordait de sa colonne). */
+  .site-hero__lockup--titre-court {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-lg);
+  }
+
+  .site-hero__lockup--titre-court h1 {
+    flex: 1 1 200px;
+    width: auto;
+  }
+
+  .site-hero__lockup--titre-court .hero-title__line1 {
+    font-size: inherit;
   }
 }
