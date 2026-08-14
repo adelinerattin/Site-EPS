@@ -61,7 +61,7 @@
             </h1>
           </div>
           <p class="lede">Un espace pour vous aider à devenir un collégien autonome : outils numériques, organisation et personnes ressources.</p>
-          <p><a class="btn btn--primary" href="#ent">Voir mes ressources →</a></p>
+          <p><a class="btn btn--primary" href="#ma-rentree">Voir mes ressources →</a></p>
         </div>
         <div class="site-hero__visual site-hero__visual--photo">
           <img src="assets/hero-sport.jpg"
@@ -74,34 +74,49 @@
     <section class="section">
       <div class="container">
 
-        <!-- Navigation rapide : un clic ouvre directement la rubrique visee.
-             Si vous ajoutez une rubrique plus bas, pensez a ajouter sa puce ici. -->
-        <ul class="quick-nav">
-          <li><a href="#ent">ENT et Pronote</a></li>
-          <li><a href="#mail">Envoyer un mail</a></li>
-          <li><a href="#tuto-video">Tuto vidéo</a></li>
-          <li><a href="#absence-retard">Absence / retard</a></li>
-          <li><a href="#emploi-du-temps">Emploi du temps</a></li>
-          <li><a href="#sac">Faire son sac</a></li>
-          <li><a href="#deplacements">Se déplacer</a></li>
-          <li><a href="#devoirs">Organiser ses devoirs</a></li>
-          <li><a href="#apprendre-lecon">Apprendre une leçon</a></li>
-          <li><a href="#contacts">Contacts utiles</a></li>
-          <li><a href="#documents-rentree">Documents de rentrée</a></li>
+        <!-- Sommaire : cinq portes d'entree, une par grande partie de la page.
+             Les quatre premieres s'adressent aux eleves, la derniere aux familles. -->
+        <ul class="portes">
+          <li><a href="#ma-rentree">
+            <span class="portes__emoji" aria-hidden="true">🚀</span>
+            <span class="portes__titre">Ma rentrée</span>
+            <span class="portes__note">Me connecter, écrire un mail, mes papiers</span>
+          </a></li>
+          <li><a href="#ma-vie-au-college">
+            <span class="portes__emoji" aria-hidden="true">📅</span>
+            <span class="portes__titre">Ma vie au collège</span>
+            <span class="portes__note">Mon sac, mes déplacements, mes absences</span>
+          </a></li>
+          <li><a href="#mes-methodes">
+            <span class="portes__emoji" aria-hidden="true">🧠</span>
+            <span class="portes__titre">Mes méthodes de travail</span>
+            <span class="portes__note">M'organiser, apprendre, réviser</span>
+          </a></li>
+          <li><a href="#qui-fait-quoi">
+            <span class="portes__emoji" aria-hidden="true">🆘</span>
+            <span class="portes__titre">Qui peut m'aider ?</span>
+            <span class="portes__note">À qui je m'adresse, et pour quoi</span>
+          </a></li>
+          <li><a href="#espace-parents">
+            <span class="portes__emoji" aria-hidden="true">👨‍👩‍👧</span>
+            <span class="portes__titre">Espace parents</span>
+            <span class="portes__note">Pronote, absences, rendez-vous</span>
+          </a></li>
         </ul>
 
         <!-- ============================================================
              CHAQUE RUBRIQUE EST UNE FICHE DEPLIABLE (".info-card"),
-             regroupee par thème (".info-group") pour ne pas surcharger
-             la page. Pour ajouter une rubrique : copiez un bloc
-             <details class="info-card"> entier dans le groupe concerné,
-             donnez-lui un id unique, et ajoutez sa puce dans le menu
-             rapide ci-dessus.
+             regroupee par moment de l'annee (".info-group") : la
+             rentree, le quotidien, les methodes de travail, les
+             personnes ressources, puis l'espace parents.
+             Pour ajouter une rubrique : copiez un bloc
+             <details class="info-card"> entier dans le groupe concerne
+             et donnez-lui un id unique.
              ============================================================ -->
 
-        <!-- ================= GROUPE 1 : OUTILS NUMERIQUES ================= -->
-        <div class="info-group">
-          <h2>Mes outils numériques</h2>
+        <div class="info-group" id="ma-rentree">
+          <h2>🚀 Ma rentrée</h2>
+          <p class="info-group__intro">Les quelques démarches à faire une seule fois, en début d'année.</p>
 
           <details class="info-card" id="ent">
             <summary>
@@ -247,74 +262,6 @@
             </div>
           </details>
 
-          <details class="info-card" id="tuto-video">
-            <summary>
-              <h3>Tuto vidéo : prévenir et justifier une absence</h3>
-              <span class="info-card__toggle" aria-hidden="true">+</span>
-            </summary>
-            <div class="info-card__body">
-              <p>Deux tutoriels courts à regarder directement ici, sans quitter le site.</p>
-              <!-- MODIFIER ICI : pour changer une video, remplacez l'identifiant
-                   apres "/embed/" par celui de la nouvelle video YouTube
-                   (la suite de caracteres qui suit "shorts/" dans son adresse). -->
-              <div class="tuto-grid">
-                <figure>
-                  <figcaption>📞 Prévenir d'une absence</figcaption>
-                  <div class="video-short">
-                    <iframe src="https://www.youtube-nocookie.com/embed/0LXWAdzQtBk"
-                            title="Tutoriel : prévenir d'une absence"
-                            loading="lazy"
-                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                  </div>
-                </figure>
-                <figure>
-                  <figcaption>✍️ Justifier une absence</figcaption>
-                  <div class="video-short">
-                    <iframe src="https://www.youtube-nocookie.com/embed/abzFaTy6rjU"
-                            title="Tutoriel : justifier une absence"
-                            loading="lazy"
-                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                  </div>
-                </figure>
-              </div>
-            </div>
-          </details>
-
-          <details class="info-card" id="absence-retard">
-            <summary>
-              <h3>Gérer une absence ou un retard</h3>
-              <span class="info-card__toggle" aria-hidden="true">+</span>
-            </summary>
-            <div class="info-card__body">
-              <h4>En cas d'absence</h4>
-              <ol>
-                <li>Les parents préviennent l'établissement dès que possible (téléphone, Pronote ou mail).</li>
-                <li>À votre retour, présentez le mot d'absence signé par vos parents à la vie scolaire (ou justifiez-la directement sur Pronote).</li>
-                <li>Rattrapez les cours manqués : demandez le travail fait à votre binôme de classe, ou consultez le cahier de texte / l'espace des classes sur l'ENT.</li>
-              </ol>
-
-              <h4>En cas de retard</h4>
-              <ol>
-                <li>Présentez-vous à la vie scolaire avant de rejoindre votre cours.</li>
-                <li>Un billet de retard vous sera remis pour être présenté au professeur.</li>
-                <li>En cas de retards répétés, un mot sera transmis à vos parents.</li>
-              </ol>
-
-              <div class="callout callout--info">
-                <p class="mb-0">Une absence ou un retard doit toujours être justifié. En cas de doute, adressez-vous à la vie scolaire ou à votre professeure principale.</p>
-              </div>
-            </div>
-          </details>
-        </div>
-
-        <hr class="lane-divider">
-
-        <!-- ================= GROUPE 2 : VIE QUOTIDIENNE AU COLLEGE ================= -->
-        <div class="info-group">
-          <h2>Ma vie quotidienne au collège</h2>
-
           <details class="info-card" id="emploi-du-temps">
             <summary>
               <h3>Lire son emploi du temps</h3>
@@ -351,6 +298,32 @@
               </div>
             </div>
           </details>
+
+          <details class="info-card" id="documents-rentree">
+            <summary>
+              <h3>Documents à rendre en début d'année</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <p>Chaque rentrée, quelques documents sont à compléter, signer et rapporter rapidement au collège :</p>
+              <ul>
+                <li>L'attestation d'assurance scolaire (responsabilité civile + individuelle accident).</li>
+                <li>La fiche de renseignements et la carte de collégien, complétées et signées.</li>
+                <li>Le coupon attestant la prise de connaissance du règlement intérieur.</li>
+                <li>Les documents spécifiques aux éventuelles sorties scolaires de début d'année.</li>
+              </ul>
+              <p class="mb-0">
+                <!-- MODIFIER CHAQUE ANNEE : les dates precises changent -->
+                Les dates précises pour rapporter chaque document sont communiquées chaque année par le
+                collège via Pronote, l'ENT et le carnet de correspondance.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <div class="info-group" id="ma-vie-au-college">
+          <h2>📅 Ma vie au collège</h2>
+          <p class="info-group__intro">Le quotidien : ce qu'il faut faire chaque jour, et quoi faire quand ça ne se passe pas comme prévu.</p>
 
           <details class="info-card" id="sac">
             <summary>
@@ -452,92 +425,435 @@
               <p class="mb-0">En cas de doute sur son propre régime de sortie, se renseigner auprès de la vie scolaire.</p>
             </div>
           </details>
-        </div>
 
-        <hr class="lane-divider">
-
-        <!-- ================= GROUPE 3 : TRAVAIL PERSONNEL ================= -->
-        <div class="info-group">
-          <h2>Mon travail personnel</h2>
-
-          <details class="info-card" id="devoirs">
+          <details class="info-card" id="absence-retard">
             <summary>
-              <h3>Organiser ses devoirs</h3>
+              <h3>Gérer une absence ou un retard</h3>
               <span class="info-card__toggle" aria-hidden="true">+</span>
             </summary>
             <div class="info-card__body">
-              <ul>
-                <li>Notez systématiquement vos devoirs dans votre <strong>agenda</strong> dès qu'ils sont donnés.</li>
-                <li>Répartissez vos devoirs sur plusieurs jours plutôt que de tout faire la veille.</li>
-                <li>Faites d'abord les devoirs à rendre le plus tôt, puis les leçons à apprendre.</li>
-                <li>Faites une courte pause entre deux matières pour rester concentré(e).</li>
-              </ul>
+              <h4>En cas d'absence</h4>
+              <ol>
+                <li>Les parents préviennent l'établissement dès que possible (téléphone, Pronote ou mail).</li>
+                <li>À votre retour, présentez le mot d'absence signé par vos parents à la vie scolaire (ou justifiez-la directement sur Pronote).</li>
+                <li>Rattrapez les cours manqués : demandez le travail fait à votre binôme de classe, ou consultez le cahier de texte / l'espace des classes sur l'ENT.</li>
+              </ol>
+
+              <h4>En cas de retard</h4>
+              <ol>
+                <li>Présentez-vous à la vie scolaire avant de rejoindre votre cours.</li>
+                <li>Un billet de retard vous sera remis pour être présenté au professeur.</li>
+                <li>En cas de retards répétés, un mot sera transmis à vos parents.</li>
+              </ol>
 
               <div class="callout callout--info">
-                <p class="mb-0">⚠️ C'est l'agenda qui fait foi pour les devoirs à faire — le créneau « Devoirs faits » de l'emploi du temps vous aide à apprendre à travailler seul(e), progressivement sur l'année.</p>
-              </div>
-
-              <h4>Ce qui est attendu d'un(e) élève de 6e</h4>
-              <ul class="mb-0">
-                <li>Être présent(e) et ponctuel(le).</li>
-                <li>Avoir un comportement respectueux et une attitude positive, en classe et en dehors.</li>
-                <li>Avoir tout son matériel.</li>
-                <li>Avoir fait ses devoirs, appris ses leçons, rattrapé ses absences (grâce aux binômes de classe).</li>
-                <li>Avoir des résultats correspondant à son niveau.</li>
-              </ul>
-            </div>
-          </details>
-
-          <details class="info-card" id="apprendre-lecon">
-            <summary>
-              <h3>Apprendre une leçon (méthode)</h3>
-              <span class="info-card__toggle" aria-hidden="true">+</span>
-            </summary>
-            <div class="info-card__body">
-              <ol>
-                <li><strong>Je relis</strong> ma leçon une première fois en entier, sans rien apprendre par cœur.</li>
-                <li><strong>Je repère</strong> les mots-clés, les définitions et les dates ou formules importantes.</li>
-                <li><strong>Je me teste</strong> : je cache la leçon et j'essaie de la réciter ou de l'écrire de mémoire.</li>
-                <li><strong>Je vérifie</strong> ce que je n'ai pas su, et je le relis une nouvelle fois.</li>
-                <li><strong>Je recommence</strong> le lendemain (la révision espacée est plus efficace qu'une seule longue session).</li>
-              </ol>
-              <div class="callout callout--success">
-                <h4 class="mt-0">Exemple concret</h4>
-                <p class="mb-0">Je lis → je cache → je répète à voix haute → je m'entraîne à écrire les mots nouveaux. Pour vérifier, je peux aussi expliquer ma leçon à quelqu'un en donnant mes propres exemples.</p>
+                <p class="mb-0">Une absence ou un retard doit toujours être justifié. En cas de doute, adressez-vous à la vie scolaire ou à votre professeure principale.</p>
               </div>
             </div>
           </details>
         </div>
 
-        <hr class="lane-divider">
+        <div class="info-group" id="mes-methodes">
+          <h2>🧠 Mes méthodes de travail</h2>
+          <p class="info-group__intro">Dix fiches courtes, travaillées en <strong>Devoirs faits</strong> et à relire dès qu'on en a besoin. Chacune donne le but, les étapes, l'erreur classique et le bon réflexe.</p>
 
-        <!-- ================= GROUPE 4 : BESOIN D'AIDE ================= -->
-        <div class="info-group">
-          <h2>Besoin d'aide ?</h2>
-
-          <details class="info-card" id="contacts">
+          <details class="info-card fiche-methode" id="methode-organiser">
             <summary>
-              <h3>Contacts utiles</h3>
+              <h3>1. J'organise mes devoirs sur la semaine</h3>
               <span class="info-card__toggle" aria-hidden="true">+</span>
             </summary>
             <div class="info-card__body">
+              <p class="methode__but">
+                <span class="methode__etiquette">À quoi ça sert</span>
+                À ne plus jamais découvrir la veille au soir qu'il y a un contrôle demain, et à ne plus tout faire en même temps.
+              </p>
+
+              <h4>Les étapes</h4>
+              <ol class="methode__etapes">
+                <li><strong>Je note tout, tout de suite.</strong> Dès que le devoir est donné, je l'écris dans mon <strong>agenda</strong> : la matière, ce qu'il faut faire, et pour quel jour.</li>
+                <li><strong>Je regarde trois jours devant.</strong> Le soir, je ne regarde pas seulement demain : je regarde aussi après-demain et le jour suivant.</li>
+                <li><strong>Je commence par ce qui est à rendre le plus tôt.</strong> Les exercices à rendre d'abord, les leçons à apprendre ensuite.</li>
+                <li><strong>Je coupe le gros travail en morceaux.</strong> Un exposé ou une lecture, ça se fait en 3 fois 20 minutes réparties sur la semaine, pas en 1 heure la veille.</li>
+                <li><strong>Je barre quand c'est fait.</strong> Ce qui n'est pas barré est encore à faire : mon agenda me dit en un coup d'œil où j'en suis.</li>
+              </ol>
+              <div class="callout callout--neutral">
+                <h4 class="mt-0">Ce qui est attendu d'un(e) élève de 6e</h4>
+                <ul class="mb-0">
+                  <li>Être présent(e) et ponctuel(le).</li>
+                  <li>Avoir un comportement respectueux et une attitude positive, en classe et en dehors.</li>
+                  <li>Avoir tout son matériel.</li>
+                  <li>Avoir fait ses devoirs, appris ses leçons, rattrapé ses absences (grâce aux binômes de classe).</li>
+                  <li>Avoir des résultats correspondant à son niveau.</li>
+                </ul>
+              </div>
+
+              <div class="callout callout--info">
+                <p class="mb-0">⚠️ C'est <strong>l'agenda</strong> qui fait foi pour les devoirs à faire. Le créneau <strong>Devoirs faits</strong> de l'emploi du temps sert justement à apprendre à s'organiser seul(e), progressivement sur l'année.</p>
+              </div>
+
+
+              <div class="callout callout--info">
+                <p class="mb-0">❌ <strong>L'erreur classique :</strong> attendre le dernier soir « parce que ce n'est pas grand-chose ». Trois petites choses le même soir, ça fait une grosse soirée.</p>
+              </div>
+
+              <div class="callout callout--success">
+                <p class="mb-0">✅ <strong>Le bon réflexe :</strong> chaque soir, je me pose 3 questions : <em>qu'est-ce qui est à rendre demain ? qu'est-ce qui arrive après-demain ? qu'est-ce que je peux prendre d'avance ?</em></p>
+              </div>
+            </div>
+          </details>
+
+          <details class="info-card fiche-methode" id="methode-lecon">
+            <summary>
+              <h3>2. J'apprends une leçon</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <p class="methode__but">
+                <span class="methode__etiquette">À quoi ça sert</span>
+                À savoir sa leçon <strong>sans avoir besoin de la relire</strong> — c'est ça, savoir une leçon.
+              </p>
+
+              <h4>Les étapes</h4>
+              <ol class="methode__etapes">
+                <li><strong>Je relis en entier.</strong> Une première lecture calme, sans rien apprendre par cœur : je veux juste comprendre de quoi ça parle.</li>
+                <li><strong>Je repère l'essentiel.</strong> Les <strong>mots-clés</strong>, les définitions, les dates, les formules. Je les surligne ou je les recopie sur une petite fiche.</li>
+                <li><strong>Je me teste.</strong> Je <strong>ferme le cahier</strong> et j'essaie de réciter à voix haute, ou de réécrire de mémoire.</li>
+                <li><strong>Je vérifie et je comble les trous.</strong> J'ouvre le cahier, je regarde ce que je n'ai pas su, et je relis seulement cette partie-là.</li>
+                <li><strong>Je recommence le lendemain.</strong> 5 minutes le lendemain valent mieux que 30 minutes d'un coup : c'est en revenant plusieurs fois qu'on retient durablement.</li>
+              </ol>
+              <div class="callout callout--neutral">
+                <h4 class="mt-0">Concrètement, chez moi</h4>
+                <p class="mb-0">Je lis → je cache → je répète à voix haute → je m'entraîne à écrire les mots nouveaux. Et pour vérifier, j'explique ma leçon à quelqu'un de la maison : si l'autre comprend, c'est que je sais.</p>
+              </div>
+
+
+              <div class="callout callout--info">
+                <p class="mb-0">❌ <strong>L'erreur classique :</strong> relire cinq fois de suite. On a l'impression de savoir parce que le texte devient familier — mais dès qu'on ferme le cahier, tout s'efface.</p>
+              </div>
+
+              <div class="callout callout--success">
+                <p class="mb-0">✅ <strong>Le bon réflexe :</strong> le vrai test, c'est cahier fermé. Si je peux l'expliquer à quelqu'un avec mes propres exemples, c'est appris.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="info-card fiche-methode" id="methode-controle">
+            <summary>
+              <h3>3. Je révise un contrôle : le plan sur 7 jours</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <p class="methode__but">
+                <span class="methode__etiquette">À quoi ça sert</span>
+                À arriver au contrôle sans stress, parce que le travail a déjà été fait — un peu chaque jour.
+              </p>
+
+              <h4>Les étapes</h4>
+              <ol class="methode__etapes">
+                <li><strong>J-7 : je note la date.</strong> Dès que le contrôle est annoncé, je l'écris dans l'agenda et je vérifie <strong>ce qui est demandé</strong> : quelles leçons, quels exercices, quel type de questions.</li>
+                <li><strong>J-5 : je relis et je fabrique ma fiche.</strong> Une seule feuille avec l'essentiel : définitions, dates, formules, schémas.</li>
+                <li><strong>J-3 : je me teste.</strong> Cahier fermé. Je note ce que je n'ai pas su : c'est exactement ça qu'il me reste à travailler.</li>
+                <li><strong>J-2 : je refais les exercices ratés.</strong> Pas ceux que je réussis déjà — seulement ceux qui coincent, et ceux que le professeur a corrigés en classe.</li>
+                <li><strong>J-1 : relecture courte, puis j'arrête.</strong> 15 minutes de relecture de ma fiche, et je me couche tôt. Le sommeil fait partie des révisions : c'est la nuit que la mémoire se range.</li>
+              </ol>
+              <div class="callout callout--neutral">
+                <h4 class="mt-0">Si le contrôle est annoncé pour dans 3 jours</h4>
+                <p class="mb-0">Je garde le même ordre, en resserré : <strong>jour 1</strong> je relis et je fais ma fiche, <strong>jour 2</strong> je me teste et je refais les exercices ratés, <strong>jour 3</strong> relecture rapide.</p>
+              </div>
+
+
+              <div class="callout callout--info">
+                <p class="mb-0">❌ <strong>L'erreur classique :</strong> réviser trois heures la veille au soir. C'est fatigant, stressant, et ça ne rentre pas.</p>
+              </div>
+
+              <div class="callout callout--success">
+                <p class="mb-0">✅ <strong>Le bon réflexe :</strong> cinq fois vingt minutes réparties sur la semaine font retenir bien plus que deux heures d'un coup la veille.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="info-card fiche-methode" id="methode-cahiers">
+            <summary>
+              <h3>4. Je tiens mes cahiers et je prends des notes</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <p class="methode__but">
+                <span class="methode__etiquette">À quoi ça sert</span>
+                À pouvoir réviser à partir de <strong>mes</strong> cahiers — un cours illisible ou incomplet ne sert à rien au moment de réviser.
+              </p>
+
+              <h4>Les étapes</h4>
+              <ol class="methode__etapes">
+                <li><strong>J'écris la date et le titre.</strong> À chaque cours. Sans titre, impossible de retrouver la bonne leçon trois semaines plus tard.</li>
+                <li><strong>Je respecte la mise en page du professeur.</strong> Titres, sous-titres, numéros d'exercices : c'est ce qui permet de s'y retrouver.</li>
+                <li><strong>Je souligne à la règle et je change de couleur pour l'essentiel.</strong> Deux couleurs suffisent : une pour les titres, une pour les mots importants.</li>
+                <li><strong>Je n'écris pas tout.</strong> Je note ce qui est écrit au tableau et ce que le professeur demande de noter — pas chaque phrase prononcée.</li>
+                <li><strong>Je complète le soir même si j'ai un trou.</strong> Je demande à mon binôme de classe ou je regarde le cahier de texte sur l'ENT.</li>
+              </ol>
+
+              <div class="callout callout--info">
+                <p class="mb-0">❌ <strong>L'erreur classique :</strong> recopier au propre plus tard. « Plus tard » n'arrive jamais, et il reste un cahier à moitié vide.</p>
+              </div>
+
+              <div class="callout callout--success">
+                <p class="mb-0">✅ <strong>Le bon réflexe :</strong> un cahier tenu proprement du premier coup, c'est du temps gagné à chaque révision de l'année.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="info-card fiche-methode" id="methode-vocabulaire">
+            <summary>
+              <h3>5. J'apprends du vocabulaire en langue vivante</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <p class="methode__but">
+                <span class="methode__etiquette">À quoi ça sert</span>
+                À retenir des mots durablement, et à pouvoir les <strong>utiliser</strong>, pas seulement les reconnaître.
+              </p>
+
+              <h4>Les étapes</h4>
+              <ol class="methode__etapes">
+                <li><strong>Je lis la liste à voix haute.</strong> En langue, l'oreille aide autant que les yeux. J'écoute la prononciation si elle est disponible sur l'ENT ou dans le manuel.</li>
+                <li><strong>Je cache une colonne.</strong> Français caché, je donne le mot étranger. Puis l'inverse : c'est le sens qui compte, pas l'ordre de la liste.</li>
+                <li><strong>Je fabrique des cartes.</strong> Un petit bout de papier, le mot d'un côté, la traduction de l'autre. Je révise dans le bus, en 3 minutes.</li>
+                <li><strong>Je mets le mot dans une phrase.</strong> Un mot appris seul s'oublie ; un mot dans une phrase reste.</li>
+                <li><strong>Je repasse les mots ratés le lendemain.</strong> Je fais deux tas : ceux que je sais, ceux que je rate. Je ne révise que le deuxième tas.</li>
+              </ol>
+
+              <div class="callout callout--info">
+                <p class="mb-0">❌ <strong>L'erreur classique :</strong> apprendre la liste dans l'ordre. On finit par connaître l'ordre… et pas les mots.</p>
+              </div>
+
+              <div class="callout callout--success">
+                <p class="mb-0">✅ <strong>Le bon réflexe :</strong> 10 mots par jour pendant 5 jours, c'est bien plus efficace que 50 mots la veille.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="info-card fiche-methode" id="methode-memoriser">
+            <summary>
+              <h3>6. Je mémorise une date, une définition, une formule</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <p class="methode__but">
+                <span class="methode__etiquette">À quoi ça sert</span>
+                À faire entrer dans la tête ce qui doit être su <strong>exactement</strong>, mot pour mot.
+              </p>
+
+              <h4>Les étapes</h4>
+              <ol class="methode__etapes">
+                <li><strong>Je découpe.</strong> Je n'apprends pas 15 dates d'un coup : je fais des paquets de 4 ou 5.</li>
+                <li><strong>Je répète à voix haute.</strong> Dire à voix haute fait travailler la mémoire beaucoup plus que lire dans sa tête.</li>
+                <li><strong>Je m'écris un mini-test.</strong> Je note les questions sur une feuille, sans les réponses. Je réponds le lendemain.</li>
+                <li><strong>J'utilise une image ou un moyen mnémotechnique.</strong> Une phrase drôle, un dessin, une couleur : tout ce qui accroche aide à retenir.</li>
+                <li><strong>Je revois à J+1, J+3 puis J+7.</strong> Trois passages courts et espacés : c'est la méthode qui fonctionne le mieux, prouvée par la recherche.</li>
+              </ol>
+
+              <div class="callout callout--info">
+                <p class="mb-0">❌ <strong>L'erreur classique :</strong> tout apprendre la veille en une seule fois. La mémoire a besoin de plusieurs passages <strong>espacés</strong> pour fixer une information.</p>
+              </div>
+
+              <div class="callout callout--success">
+                <p class="mb-0">✅ <strong>Le bon réflexe :</strong> 3 minutes le lendemain, 3 minutes trois jours après, 3 minutes une semaine après : c'est appris pour de bon.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="info-card fiche-methode" id="methode-consigne">
+            <summary>
+              <h3>7. Je comprends la consigne avant de répondre</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <p class="methode__but">
+                <span class="methode__etiquette">À quoi ça sert</span>
+                À ne plus perdre de points sur des questions qu'on savait faire, mais où on a répondu à côté.
+              </p>
+
+              <h4>Les étapes</h4>
+              <ol class="methode__etapes">
+                <li><strong>Je lis la consigne en entier.</strong> Jusqu'au bout, avant de commencer à écrire quoi que ce soit.</li>
+                <li><strong>Je repère le verbe.</strong> <em>Cite</em>, <em>explique</em>, <em>justifie</em>, <em>compare</em>, <em>calcule</em> : ce verbe dit exactement ce qu'on attend.</li>
+                <li><strong>Je compte ce qui est demandé.</strong> « Donne <strong>deux</strong> exemples » : deux, pas un. Une seule réponse = la moitié des points.</li>
+                <li><strong>Je regarde le barème.</strong> Une question sur 5 points n'attend pas une réponse d'une ligne.</li>
+                <li><strong>Je relis la consigne après avoir répondu.</strong> Une dernière fois, pour vérifier que j'ai bien répondu à la question posée.</li>
+              </ol>
+              <div class="callout callout--neutral">
+                <h4 class="mt-0">Les verbes qui reviennent tout le temps</h4>
+                <ul class="mb-0">
+                  <li><strong>Citer / relever</strong> : recopier ce qui est dans le document, sans commentaire.</li>
+                  <li><strong>Expliquer</strong> : dire pourquoi, avec « parce que ».</li>
+                  <li><strong>Justifier</strong> : donner la preuve, en citant le texte ou le calcul.</li>
+                  <li><strong>Comparer</strong> : dire ce qui se ressemble <em>et</em> ce qui diffère.</li>
+                  <li><strong>Décrire</strong> : dire ce qu'on voit, dans l'ordre, sans interpréter.</li>
+                </ul>
+              </div>
+
+
+              <div class="callout callout--info">
+                <p class="mb-0">❌ <strong>L'erreur classique :</strong> commencer à écrire dès qu'on a reconnu le sujet, sans lire la fin de la consigne.</p>
+              </div>
+
+              <div class="callout callout--success">
+                <p class="mb-0">✅ <strong>Le bon réflexe :</strong> les verbes de consigne les plus fréquents se ressemblent d'une matière à l'autre : dès qu'on les connaît, on sait ce qu'on attend de nous.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="info-card fiche-methode" id="methode-relire">
+            <summary>
+              <h3>8. Je me relis et je corrige ma copie</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <p class="methode__but">
+                <span class="methode__etiquette">À quoi ça sert</span>
+                À récupérer les points qu'on perd bêtement : mots oubliés, accords, calcul non terminé.
+              </p>
+
+              <h4>Les étapes</h4>
+              <ol class="methode__etapes">
+                <li><strong>Je garde 5 minutes à la fin.</strong> Toujours. Une copie rendue en avance sans relecture, c'est des points laissés sur la table.</li>
+                <li><strong>Je relis une chose à la fois.</strong> Un passage pour les accords, un passage pour la ponctuation. Tout vérifier en même temps ne marche pas.</li>
+                <li><strong>Je vérifie que chaque question a une réponse.</strong> Une question sautée est le plus gros gâchis de points d'un contrôle.</li>
+                <li><strong>Je relis à voix basse.</strong> L'oreille repère les phrases bancales que l'œil laisse passer.</li>
+                <li><strong>Je regarde la correction quand la copie revient.</strong> Je note l'erreur et sa correction : c'est là qu'on progresse vraiment, pas au moment de la note.</li>
+              </ol>
+
+              <div class="callout callout--info">
+                <p class="mb-0">❌ <strong>L'erreur classique :</strong> rendre sa copie dès qu'on a fini pour être le premier. Personne ne gagne de points en finissant vite.</p>
+              </div>
+
+              <div class="callout callout--success">
+                <p class="mb-0">✅ <strong>Le bon réflexe :</strong> quand la copie revient, je regarde d'abord <strong>les erreurs</strong>, pas la note.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="info-card fiche-methode" id="methode-concentration">
+            <summary>
+              <h3>9. Je me concentre : mon plan de travail</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <p class="methode__but">
+                <span class="methode__etiquette">À quoi ça sert</span>
+                À travailler <strong>moins longtemps</strong> mais mieux, en arrêtant de recommencer dix fois la même page.
+              </p>
+
+              <h4>Les étapes</h4>
+              <ol class="methode__etapes">
+                <li><strong>Je choisis un endroit fixe.</strong> Une table dégagée, une bonne lumière. Pas sur le lit, pas devant la télévision.</li>
+                <li><strong>Je sors seulement ce qui sert.</strong> Le cahier et la trousse de la matière en cours. Le reste reste dans le sac.</li>
+                <li><strong>Je mets le téléphone hors de portée.</strong> Dans une autre pièce, pas retourné sur la table : une seule notification coûte plusieurs minutes de concentration.</li>
+                <li><strong>Je travaille par tranches.</strong> 20 à 25 minutes de travail, puis 5 minutes de vraie pause (boire, bouger) — et je recommence.</li>
+                <li><strong>Je me fixe un objectif précis.</strong> « Je révise le vocabulaire de la leçon 3 » plutôt que « je travaille l'anglais » : on sait quand on a fini.</li>
+              </ol>
+
+              <div class="callout callout--info">
+                <p class="mb-0">❌ <strong>L'erreur classique :</strong> travailler avec le téléphone à côté « juste au cas où ». Le cerveau reste en alerte et retient beaucoup moins.</p>
+              </div>
+
+              <div class="callout callout--success">
+                <p class="mb-0">✅ <strong>Le bon réflexe :</strong> une tranche de 20 minutes vraiment concentrée vaut mieux qu'une heure entrecoupée.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="info-card fiche-methode" id="methode-groupe">
+            <summary>
+              <h3>10. Je travaille à plusieurs (sans perdre mon temps)</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <p class="methode__but">
+                <span class="methode__etiquette">À quoi ça sert</span>
+                À utiliser le groupe pour <strong>apprendre plus vite</strong>, en classe comme en Devoirs faits.
+              </p>
+
+              <h4>Les étapes</h4>
+              <ol class="methode__etapes">
+                <li><strong>Je sais ce qu'on doit produire.</strong> Avant de commencer : qu'est-ce qu'on doit rendre, et pour quand ?</li>
+                <li><strong>On se partage le travail.</strong> Chacun sa partie, et on dit à voix haute qui fait quoi.</li>
+                <li><strong>Je m'explique la leçon à l'autre.</strong> Expliquer, c'est la meilleure façon de vérifier qu'on a compris — celui qui explique apprend autant que celui qui écoute.</li>
+                <li><strong>Je pose mes questions.</strong> Dans un petit groupe, on ose demander ce qu'on n'a pas compris. Personne ne se moque d'une question.</li>
+                <li><strong>On relit ensemble à la fin.</strong> Une relecture croisée repère les oublis que chacun ne voyait plus.</li>
+              </ol>
+
+              <div class="callout callout--info">
+                <p class="mb-0">❌ <strong>L'erreur classique :</strong> recopier le travail d'un camarade. On rend quelque chose, mais on n'a rien appris — et ça se voit au contrôle suivant.</p>
+              </div>
+
+              <div class="callout callout--success">
+                <p class="mb-0">✅ <strong>Le bon réflexe :</strong> si je sais expliquer un exercice à quelqu'un d'autre, c'est que je sais vraiment le faire.</p>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <div class="info-group" id="qui-fait-quoi">
+          <h2>🆘 Qui peut m'aider ?</h2>
+          <details class="info-card" id="contacts">
+            <summary>
+              <h3>À qui je m'adresse, et pour quoi</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <p>Au collège, chaque adulte a un rôle précis. Savoir à qui parler fait gagner beaucoup de temps.</p>
+
               <!-- MODIFIER CHAQUE ANNEE : l'equipe change parfois d'une annee sur l'autre -->
-              <div class="table-wrap">
-                <table>
-                  <thead>
-                    <tr><th>Personne</th><th>Pour quoi faire</th></tr>
-                  </thead>
-                  <tbody>
-                    <tr><td>Professeure principale : Mme Rattin</td><td>Questions générales sur la scolarité, l'orientation, la vie de la classe.</td></tr>
-                    <tr><td>CPE : Mme Topin</td><td>Absences, retards, problèmes de vie scolaire, conflits, téléphone confisqué.</td></tr>
-                    <tr><td>Infirmière : Mme Antier</td><td>Malaise, blessure, questions de santé.</td></tr>
-                    <tr><td>Psychologue de l'Éducation nationale : Mme Vincenot</td><td>Orientation, difficultés personnelles.</td></tr>
-                    <tr><td>Assistante sociale : Mme Basile</td><td>Difficultés familiales ou sociales.</td></tr>
-                    <tr><td>Assistants d'éducation (vie scolaire)</td><td>Carnet de correspondance, mots des parents, objets trouvés, surveillance au quotidien.</td></tr>
-                    <tr><td>Secrétariat : Mme Gobé, Mme Michon</td><td>Cartes de cantine, papiers administratifs.</td></tr>
-                    <tr><td>Cheffe d'établissement : Mme Rosoli</td><td>Questions générales sur le fonctionnement du collège.</td></tr>
-                  </tbody>
-                </table>
+              <div class="contact-grid">
+                <div class="contact-card">
+                  <span class="contact-card__icone" aria-hidden="true">👩‍🏫</span>
+                  <p class="contact-card__role">Professeure principale</p>
+                  <p class="contact-card__nom">Mme Rattin</p>
+                  <p class="contact-card__quand mb-0">Questions générales sur la scolarité, l'organisation, la vie de la classe. C'est le premier interlocuteur en cas de doute.</p>
+                </div>
+                <div class="contact-card">
+                  <span class="contact-card__icone" aria-hidden="true">📋</span>
+                  <p class="contact-card__role">CPE</p>
+                  <p class="contact-card__nom">Mme Topin</p>
+                  <p class="contact-card__quand mb-0">Absences, retards, problèmes de vie scolaire, conflits entre élèves, téléphone confisqué.</p>
+                </div>
+                <div class="contact-card">
+                  <span class="contact-card__icone" aria-hidden="true">🩺</span>
+                  <p class="contact-card__role">Infirmière</p>
+                  <p class="contact-card__nom">Mme Antier</p>
+                  <p class="contact-card__quand mb-0">Malaise, blessure, traitement à prendre, questions de santé.</p>
+                </div>
+                <div class="contact-card">
+                  <span class="contact-card__icone" aria-hidden="true">🧭</span>
+                  <p class="contact-card__role">Psychologue de l'Éducation nationale</p>
+                  <p class="contact-card__nom">Mme Vincenot</p>
+                  <p class="contact-card__quand mb-0">Orientation, choix de parcours, difficultés personnelles.</p>
+                </div>
+                <div class="contact-card">
+                  <span class="contact-card__icone" aria-hidden="true">🤝</span>
+                  <p class="contact-card__role">Assistante sociale</p>
+                  <p class="contact-card__nom">Mme Basile</p>
+                  <p class="contact-card__quand mb-0">Difficultés familiales ou sociales, demandes d'aide (fonds social, restauration).</p>
+                </div>
+                <div class="contact-card">
+                  <span class="contact-card__icone" aria-hidden="true">👀</span>
+                  <p class="contact-card__role">Assistants d'éducation (vie scolaire)</p>
+                  <p class="contact-card__nom">L'équipe de la vie scolaire</p>
+                  <p class="contact-card__quand mb-0">Carnet de correspondance, mots des parents, objets trouvés, surveillance et permanence.</p>
+                </div>
+                <div class="contact-card">
+                  <span class="contact-card__icone" aria-hidden="true">🗂️</span>
+                  <p class="contact-card__role">Secrétariat</p>
+                  <p class="contact-card__nom">Mme Gobé, Mme Michon</p>
+                  <p class="contact-card__quand mb-0">Cartes de cantine et de collégien, papiers administratifs, coordonnées de la famille.</p>
+                </div>
+                <div class="contact-card">
+                  <span class="contact-card__icone" aria-hidden="true">🏫</span>
+                  <p class="contact-card__role">Cheffe d'établissement</p>
+                  <p class="contact-card__nom">Mme Rosoli</p>
+                  <p class="contact-card__quand mb-0">Questions générales sur le fonctionnement du collège.</p>
+                </div>
               </div>
 
               <p>Le collège compte aussi deux structures animées avec les élèves : l'<a href="eps-generale.html#association-sportive">association sportive (AS)</a>, pour le sport en dehors des cours, et le <strong>foyer socio-éducatif (FSE)</strong>, qui anime la vie du collège (clubs, sorties, événements).</p>
@@ -545,31 +861,14 @@
               <div class="callout callout--info">
                 <h4 class="mt-0">Numéros utiles en cas de besoin</h4>
                 <ul class="mb-0">
-                  <li><strong>3018</strong> — numéro national contre le harcèlement (« Non au harcèlement »)</li>
-                  <li><strong>119</strong> — Allô Enfance en Danger</li>
+                  <li><strong>3018</strong> — numéro national contre le harcèlement (« Non au harcèlement »), gratuit et anonyme.</li>
+                  <li><strong>119</strong> — Allô Enfance en Danger, 24h/24.</li>
                 </ul>
               </div>
-            </div>
-          </details>
 
-          <details class="info-card" id="documents-rentree">
-            <summary>
-              <h3>Documents à rendre en début d'année</h3>
-              <span class="info-card__toggle" aria-hidden="true">+</span>
-            </summary>
-            <div class="info-card__body">
-              <p>Chaque rentrée, quelques documents sont à compléter, signer et rapporter rapidement au collège :</p>
-              <ul>
-                <li>L'attestation d'assurance scolaire (responsabilité civile + individuelle accident).</li>
-                <li>La fiche de renseignements et la carte de collégien, complétées et signées.</li>
-                <li>Le coupon attestant la prise de connaissance du règlement intérieur.</li>
-                <li>Les documents spécifiques aux éventuelles sorties scolaires de début d'année.</li>
-              </ul>
-              <p class="mb-0">
-                <!-- MODIFIER CHAQUE ANNEE : les dates precises changent -->
-                Les dates précises pour rapporter chaque document sont communiquées chaque année par le
-                collège via Pronote, l'ENT et le carnet de correspondance.
-              </p>
+              <div class="callout callout--success">
+                <p class="mb-0">✅ <strong>Dans le doute, on va voir la vie scolaire.</strong> Elle oriente vers la bonne personne, et il n'y a jamais de mauvaise question.</p>
+              </div>
             </div>
           </details>
         </div>
@@ -583,6 +882,209 @@
           </ul>
         </div>
 
+        <!-- ============================================================
+             ESPACE PARENTS — volontairement place en fin de page :
+             le site s'adresse d'abord aux eleves. Le bloc est
+             visuellement distinct (classe ".espace-parents") pour
+             qu'un parent le repere immediatement depuis le sommaire.
+             ============================================================ -->
+        <div class="espace-parents" id="espace-parents">
+          <div class="espace-parents__entete">
+            <p class="espace-parents__label">👨‍👩‍👧 Espace parents</p>
+            <p class="espace-parents__intro mb-0">
+              Cette partie s'adresse aux familles. Tout ce qui précède sur cette page est écrit
+              pour les élèves : n'hésitez pas à le parcourir avec votre enfant en début d'année.
+            </p>
+          </div>
+
+          <details class="info-card" id="parents-compte">
+            <summary>
+              <h3>Mon compte parent : première connexion</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <div class="callout callout--info">
+                <p class="mb-0">⚠️ Le <strong>compte parent est différent du compte de votre enfant</strong>. Il donne accès à des fonctions que le compte élève n'a pas : justifier une absence, consulter et télécharger les bulletins, écrire aux professeurs.</p>
+              </div>
+
+              <h4>Les étapes</h4>
+              <ol>
+                <li>Aller sur <a href="https://simone-veil-verdun.mon-ent-occitanie.fr">simone-veil-verdun.mon-ent-occitanie.fr</a> et cliquer sur « Se connecter ».</li>
+                <li>Sélectionner l'espace « Élève ou parent », puis « de l'Académie de Toulouse », puis « Valider ».</li>
+                <li>Sur le portail <strong>EduConnect</strong>, choisir le profil « <strong>Représentant légal</strong> » (et non « Élève »).</li>
+                <li>Se connecter avec l'identifiant EduConnect fourni par le collège, ou activer son compte avec le numéro de téléphone portable communiqué à l'établissement.</li>
+                <li>Une fois dans l'ENT, Pronote est accessible directement, sans nouveau mot de passe.</li>
+              </ol>
+
+              <div class="callout callout--neutral">
+                <h4 class="mt-0">Vous avez plusieurs enfants au collège ?</h4>
+                <p class="mb-0">Un seul compte parent suffit : tous les enfants scolarisés dans un établissement de l'académie apparaissent, et un menu permet de passer de l'un à l'autre.</p>
+              </div>
+
+              <!-- MODIFIER ICI : si le college communique une procedure differente
+                   (identifiants distribues en reunion, FranceConnect...), remplacez
+                   les etapes ci-dessus par la procedure exacte. -->
+              <p class="mb-0">En cas de difficulté de connexion, le <strong>secrétariat</strong> du collège peut réinitialiser un compte.</p>
+            </div>
+          </details>
+
+          <details class="info-card" id="parents-absence">
+            <summary>
+              <h3>Prévenir d'une absence et la justifier</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <p>Deux tutoriels courts, à regarder directement ici sans quitter le site.</p>
+              <!-- MODIFIER ICI : pour changer une video, remplacez l'identifiant
+                   apres "/embed/" par celui de la nouvelle video YouTube
+                   (la suite de caracteres qui suit "shorts/" dans son adresse). -->
+              <div class="tuto-grid">
+                <figure>
+                  <figcaption>📞 Prévenir d'une absence</figcaption>
+                  <div class="video-short">
+                    <iframe src="https://www.youtube-nocookie.com/embed/0LXWAdzQtBk"
+                            title="Tutoriel : prévenir d'une absence"
+                            loading="lazy"
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                  </div>
+                </figure>
+                <figure>
+                  <figcaption>✍️ Justifier une absence</figcaption>
+                  <div class="video-short">
+                    <iframe src="https://www.youtube-nocookie.com/embed/abzFaTy6rjU"
+                            title="Tutoriel : justifier une absence"
+                            loading="lazy"
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                  </div>
+                </figure>
+              </div>
+
+              <h4>Le jour même : prévenir</h4>
+              <ul>
+                <li>Prévenir l'établissement <strong>dès que possible</strong>, le matin de préférence : par téléphone auprès de la vie scolaire, ou via Pronote.</li>
+                <li>Indiquer le motif et la durée prévue de l'absence.</li>
+              </ul>
+
+              <h4>Au retour : justifier</h4>
+              <ul>
+                <li>Soit en saisissant le motif <strong>directement sur Pronote</strong> (voir le tutoriel ci-dessus).</li>
+                <li>Soit en remplissant et signant le <strong>billet d'absence du carnet de correspondance</strong>, que votre enfant présente à la vie scolaire à son retour.</li>
+              </ul>
+
+              <div class="callout callout--info">
+                <p class="mb-0">⚠️ Toute absence doit être justifiée, même d'une seule heure. Une absence non justifiée est signalée aux familles, puis à l'administration si elle se répète.</p>
+              </div>
+
+              <p class="mb-0">Pensez aussi à faire <strong>rattraper les cours manqués</strong> : le cahier de texte est consultable sur l'ENT, et chaque élève a un binôme de classe.</p>
+            </div>
+          </details>
+
+          <details class="info-card" id="parents-suivi">
+            <summary>
+              <h3>Suivre le travail et les résultats de mon enfant</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <p>Depuis le compte parent, quatre rubriques de Pronote répondent à l'essentiel des questions :</p>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr><th>Je veux savoir…</th><th>Je regarde…</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Ce qui a été fait en cours et ce qui est à faire</td><td>Le <strong>cahier de texte</strong> (rubrique « Travail à faire »)</td></tr>
+                    <tr><td>Où en est mon enfant dans chaque matière</td><td>Les <strong>notes et les compétences</strong>, puis le <strong>bulletin</strong> à chaque trimestre</td></tr>
+                    <tr><td>S'il a été absent, en retard, ou s'il y a eu une remarque</td><td>Les <strong>absences</strong> et le <strong>carnet virtuel</strong> (observations, encouragements, sanctions)</td></tr>
+                    <tr><td>Ce que le collège nous communique</td><td>Les <strong>informations et sondages</strong>, et la <strong>messagerie</strong> de l'ENT</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="callout callout--neutral">
+                <h4 class="mt-0">Un conseil</h4>
+                <p class="mb-0">Regarder Pronote <strong>une à deux fois par semaine</strong> avec son enfant suffit largement, et vaut mieux qu'une consultation quotidienne : l'objectif de l'année de 6e est justement que l'élève devienne autonome dans son organisation. C'est l'<strong>agenda</strong> qui reste l'outil de référence pour les devoirs à faire.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="info-card" id="parents-contact">
+            <summary>
+              <h3>Écrire à un professeur, demander un rendez-vous</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <ul>
+                <li><strong>Par la messagerie</strong> de l'ENT ou de Pronote : c'est la voie la plus simple et la plus rapide.</li>
+                <li><strong>Par le carnet de correspondance</strong> : votre enfant fait signer le mot par le professeur concerné.</li>
+                <li><strong>Par téléphone</strong>, auprès du secrétariat ou de la vie scolaire, pour ce qui est urgent.</li>
+              </ul>
+
+              <div class="callout callout--neutral">
+                <h4 class="mt-0">Bon à savoir</h4>
+                <ul class="mb-0">
+                  <li>Les professeurs consultent leur messagerie sur leur temps de travail : comptez <strong>quelques jours</strong> avant une réponse, et n'attendez pas de retour le week-end ou pendant les vacances.</li>
+                  <li>Pour une question qui concerne l'ensemble de la scolarité (comportement général, organisation, orientation), adressez-vous d'abord au <strong>professeur principal</strong>.</li>
+                  <li>Pour tout ce qui touche aux absences, retards et à la vie scolaire, l'interlocuteur est la <strong>CPE</strong>.</li>
+                </ul>
+              </div>
+
+              <p class="mb-0">La liste complète des interlocuteurs se trouve dans la rubrique <a href="#qui-fait-quoi">« Qui fait quoi au collège ? »</a> plus haut.</p>
+            </div>
+          </details>
+
+          <details class="info-card" id="parents-dates">
+            <summary>
+              <h3>Les rendez-vous de l'année</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <!-- MODIFIER CHAQUE ANNEE : remplacez "[a completer]" par les dates
+                   reelles des que le calendrier de l'etablissement est connu. -->
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr><th>Rendez-vous</th><th>Quand</th><th>À quoi ça sert</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Réunion de rentrée des parents de 6e</td><td>[à compléter]</td><td>Rencontrer l'équipe, découvrir l'ENT et Pronote, poser ses questions.</td></tr>
+                    <tr><td>Conseil de classe du 1<sup>er</sup> trimestre</td><td>[à compléter]</td><td>Bilan du trimestre, remise du bulletin.</td></tr>
+                    <tr><td>Rencontre parents – professeurs</td><td>[à compléter]</td><td>Échanger individuellement avec les professeurs de la classe.</td></tr>
+                    <tr><td>Conseil de classe du 2<sup>e</sup> trimestre</td><td>[à compléter]</td><td>Bilan et conseils pour la suite de l'année.</td></tr>
+                    <tr><td>Conseil de classe du 3<sup>e</sup> trimestre</td><td>[à compléter]</td><td>Bilan de l'année et décision de passage.</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="mb-0">Les dates exactes sont communiquées chaque année par le collège via Pronote, l'ENT et le carnet de correspondance.</p>
+            </div>
+          </details>
+
+          <details class="info-card" id="parents-probleme">
+            <summary>
+              <h3>Un problème ? Les réponses les plus fréquentes</h3>
+              <span class="info-card__toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="info-card__body">
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr><th>Votre situation</th><th>Ce qu'il faut faire</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>J'ai perdu mon mot de passe EduConnect</td><td>Utiliser « Identifiant ou mot de passe perdu » sur le portail EduConnect, ou contacter le <strong>secrétariat</strong>.</td></tr>
+                    <tr><td>Mon enfant a perdu ses identifiants</td><td>S'adresser à la <strong>vie scolaire</strong>, qui peut les redonner.</td></tr>
+                    <tr><td>J'ai changé d'adresse, de téléphone ou de mail</td><td>Prévenir le <strong>secrétariat</strong> : c'est ce qui permet d'être joint en cas d'urgence.</td></tr>
+                    <tr><td>Une question sur la cantine ou la carte de self</td><td><strong>Secrétariat</strong> (cartes, régimes, facturation).</td></tr>
+                    <tr><td>Une question sur le transport scolaire</td><td>Le transport ne dépend pas du collège, mais la <strong>vie scolaire</strong> peut vous orienter.</td></tr>
+                    <tr><td>Mon enfant ne va pas bien</td><td>En parler sans attendre : <strong>professeur principal</strong>, <strong>CPE</strong>, <strong>infirmière</strong> ou <strong>assistante sociale</strong> selon la situation.</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="mb-0">En cas de doute sur l'interlocuteur, la <strong>vie scolaire</strong> est toujours un bon point de départ.</p>
+            </div>
+          </details>
+        </div>
       </div>
     </section>
   </main>
