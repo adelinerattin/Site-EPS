@@ -760,18 +760,18 @@ a.card:focus-visible {
   padding: 0;
   display: grid;
   gap: var(--space-sm);
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
 .portes a {
   display: flex;
   flex-direction: column;
-  gap: 0.15rem;
+  gap: 0.1rem;
   height: 100%;
   background: var(--color-white);
   border: 2px solid var(--color-border);
   border-radius: var(--radius);
-  padding: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
   text-decoration: none;
   color: var(--color-navy);
   transition: transform 0.12s ease, border-color 0.12s ease;
@@ -785,45 +785,28 @@ a.card:focus-visible {
 }
 
 .portes__emoji {
-  font-size: 1.6rem;
+  font-size: 1.35rem;
   line-height: 1;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.1rem;
 }
 
 .portes__titre {
+  font-size: 0.98rem;
   font-family: var(--font-display);
   font-weight: 800;
 }
 
 .portes__note {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  line-height: 1.35;
   color: var(--color-ink-soft);
 }
 
-/* La derniere porte (espace parents) occupe toute la largeur et se
-   distingue des quatre portes "eleve" qui la precedent. */
-.portes li:last-child {
-  grid-column: 1 / -1;
-}
-
+/* La derniere porte (espace parents) reste dans la grille, a cote des
+   autres, mais se distingue par son fond creme. */
 .portes li:last-child a {
   background: var(--color-cream);
   border-color: var(--color-navy);
-}
-
-@media (min-width: 640px) {
-  .portes li:last-child a {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    column-gap: var(--space-md);
-    align-items: center;
-  }
-
-  .portes li:last-child .portes__emoji {
-    grid-row: 1 / 3;
-    margin-bottom: 0;
-    font-size: 2rem;
-  }
 }
 
 /* Phrase de presentation sous le titre d'un groupe de rubriques. */
@@ -831,6 +814,8 @@ a.card:focus-visible {
   color: var(--color-ink-soft);
   max-width: 65ch;
   margin-bottom: var(--space-md);
+  text-align: justify;
+  hyphens: auto;
 }
 
 /* ------------------------------------------------------------
@@ -842,9 +827,24 @@ a.card:focus-visible {
 }
 
 .methode__but {
-  background: var(--color-chalk);
+  position: relative;
+  background: linear-gradient(135deg, #fff6e8 0%, var(--color-chalk) 100%);
+  border: 2px solid var(--color-orange);
   border-radius: var(--radius);
-  padding: var(--space-sm) var(--space-md);
+  padding: var(--space-md) var(--space-md) var(--space-md) 4.2rem;
+  font-size: 1.05rem;
+  color: var(--color-ink);
+}
+
+/* Pastille "cible" a gauche de l'encadre. */
+.methode__but::before {
+  content: "🎯";
+  position: absolute;
+  left: var(--space-md);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  line-height: 1;
 }
 
 .methode__etiquette {
@@ -852,14 +852,61 @@ a.card:focus-visible {
   font-family: var(--font-display);
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
   color: var(--color-orange);
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.25rem;
 }
 
 .methode__etapes > li {
   margin-bottom: 0.6rem;
+}
+
+/* Schema illustrant chaque fiche methode. */
+.schema {
+  margin: var(--space-md) 0;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+.schema svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.schema figcaption {
+  margin-top: var(--space-sm);
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+  text-align: center;
+}
+
+/* Filet de separation a l'interieur d'une fiche. */
+.separateur {
+  border: none;
+  border-top: 1px dashed var(--color-border);
+  margin: var(--space-md) 0;
+}
+
+/* Les deux encadres de fin de partie eleve, cote a cote sur grand ecran. */
+.bilan-eleve {
+  display: grid;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+@media (min-width: 900px) {
+  .bilan-eleve {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.bilan-eleve > .callout {
+  margin-bottom: 0;
 }
 
 /* ------------------------------------------------------------
@@ -3574,6 +3621,22 @@ section[id$="-acquisitions"] > h4 {
 @media (min-width: 640px) {
   .site-hero__lockup--l1-longue {
     --hero-l1: clamp(1rem, 4.2vw - 0.6rem, 2.4rem);
+  }
+}
+
+/* Bandeau bleu qui doit tenir sur UNE seule ligne malgre sa longueur
+   ("collégien autonome !", "Comprendre son corps") : la taille est
+   calee sur la place reellement disponible a cote du logo, mesuree
+   de 640 a 1920px. */
+@media (max-width: 639.98px) {
+  .site-hero__lockup--l2-une-ligne {
+    --hero-l2: clamp(1rem, 5.7vw, 2.4rem);
+  }
+}
+
+@media (min-width: 640px) {
+  .site-hero__lockup--l2-une-ligne {
+    --hero-l2: clamp(0.9rem, 2.35vw, 1.85rem);
   }
 }
 
