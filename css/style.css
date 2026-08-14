@@ -3307,19 +3307,21 @@ section[id$="-acquisitions"] > h4 {
 
 /* ------------------------------------------------------------
    Titre court du hero (variante utilisee sur niveau-4e.html)
-   "Tes activités" doit tenir sur UNE seule ligne, et "de 4e !"
-   passer en dessous. Sur telephone, le logo passe au-dessus du
-   titre pour lui laisser toute la largeur ; la taille du texte
-   s'adapte pour ne jamais provoquer de coupure.
+   "Tes activités" tient sur UNE seule ligne et "de 4e !" passe
+   en dessous. Des la tablette, le logo est place A COTE du titre
+   et sa hauteur est calee sur celle du titre complet (ses deux
+   lignes) : voir le calcul commente plus bas.
    ------------------------------------------------------------ */
+
+/* Telephone : le logo passe au-dessus, le titre prend toute la largeur. */
 .site-hero__lockup--titre-court {
   flex-direction: column;
   align-items: flex-start;
   gap: var(--space-md);
 }
 
-/* En colonne, le "flex: 1 1 200px" du titre s'applique a sa HAUTEUR et
-   creuse un vide sous le titre : on le neutralise. */
+/* En colonne, "flex" agit sur la HAUTEUR : on neutralise donc le
+   "flex: 1 1 200px" du titre pour eviter un grand vide sous lui. */
 .site-hero__lockup--titre-court h1 {
   flex: 0 0 auto;
   width: 100%;
@@ -3330,22 +3332,53 @@ section[id$="-acquisitions"] > h4 {
   font-size: clamp(1.5rem, 8.5vw, 2.6rem);
 }
 
-@media (min-width: 1200px) {
-  /* Le logo ne revient a cote du titre que lorsque la colonne est
-     assez large pour "Tes activites" en pleine taille (verifie : en
-     dessous de ce seuil, le titre debordait de sa colonne). */
+@media (min-width: 640px) {
+  /* Tablette (iPad) et au-dela : logo et titre cote a cote. */
   .site-hero__lockup--titre-court {
     flex-direction: row;
-    align-items: flex-start;
-    gap: var(--space-lg);
+    align-items: center;
+    gap: var(--space-md);
   }
 
   .site-hero__lockup--titre-court h1 {
-    flex: 1 1 200px;
+    flex: 1 1 auto;
     width: auto;
+    min-width: 0;
   }
 
+  /* Taille de la 1re ligne : calee pour que "Tes activités" tienne
+     sur une ligne a cote du logo, sans jamais deborder. */
   .site-hero__lockup--titre-court .hero-title__line1 {
-    font-size: inherit;
+    font-size: clamp(1.5rem, 3.9vw, 3rem);
+  }
+
+  /* Hauteur du logo = hauteur du titre entier (ses 2 lignes).
+     Une hauteur en % ne fonctionne pas ici (le parent n'a pas de
+     hauteur fixe), on reconstitue donc la hauteur du titre :
+       ligne 1 : 1,15 (interlignage) x sa taille de police
+       ligne 2 : 1,15 + 0,08 (marges internes) + 0,15 (marge haute)
+                 = 1,38 x la taille de police du h1
+     La largeur suit automatiquement grace au format d'origine
+     (600 x 900) : l'image n'est jamais deformee. */
+  .site-hero__lockup--titre-court .site-hero__logo {
+    height: calc(1.15 * clamp(1.5rem, 3.9vw, 3rem)
+                 + 1.38 * clamp(1.9rem, 5vw, 3rem));
+    width: auto;
+    aspect-ratio: 600 / 900;
+  }
+}
+
+/* ------------------------------------------------------------
+   Hauteur du hero photo : sans reglage, la colonne de texte est
+   plus haute que la photo et laisse un grand vide sous celle-ci.
+   On resserre donc les marges verticales du hero de cette page.
+   ------------------------------------------------------------ */
+.site-hero:has(.site-hero__visual--photo) {
+  padding-bottom: var(--space-lg);
+}
+
+@media (min-width: 640px) {
+  .site-hero:has(.site-hero__visual--photo) {
+    padding: var(--space-lg) 0;
   }
 }
