@@ -884,6 +884,59 @@ a.card:focus-visible {
   text-align: center;
 }
 
+/* ------------------------------------------------------------
+   Captures d'ecran annotees : les numeros sont des reperes poses
+   PAR-DESSUS l'image (positionnes en % via --x et --y), l'image
+   d'origine n'est jamais retouchee.
+   ------------------------------------------------------------ */
+.capture {
+  margin: var(--space-md) 0;
+}
+
+.capture__zone {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.capture__zone img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.capture__num {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(-50%, -50%);
+  width: 1.9em;
+  height: 1.9em;
+  border-radius: 50%;
+  background: var(--color-coral);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(11px, 1.5vw, 15px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 2px var(--color-white);
+}
+
+.capture__num--sm {
+  font-size: clamp(9px, 1.1vw, 12px);
+}
+
+.capture figcaption {
+  margin-top: var(--space-sm);
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+}
+
 /* Filet de separation a l'interieur d'une fiche. */
 .separateur {
   border: none;
@@ -3637,6 +3690,14 @@ section[id$="-acquisitions"] > h4 {
 @media (min-width: 640px) {
   .site-hero__lockup--l2-une-ligne {
     --hero-l2: clamp(0.9rem, 2.35vw, 1.85rem);
+  }
+}
+
+/* Bandeau un peu long ("dépasse-toi !") : sans cela il passe sur
+   2 lignes entre 640 et 1100px. */
+@media (min-width: 640px) {
+  .site-hero__lockup--l2-serre {
+    --hero-l2: clamp(1.4rem, 4vw, 3rem);
   }
 }
 
