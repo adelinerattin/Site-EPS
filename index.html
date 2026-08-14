@@ -49,10 +49,9 @@
          css/style.css, composant ".site-hero"). Seuls le titre (en 2
          lignes : ".hero-title__line1" + ".hero-title__accent"), le
          texte et le lien du bouton changent d'une page a l'autre.
-         L'illustration (assets/hero-illustration.svg) est identique
-         partout : masquee sur telephone (< 640px), affichee a droite
-         du texte et alignee en haut avec le titre a partir de la
-         taille tablette (iPad) et sur ordinateur. La navigation entre
+         La photo (assets/hero-sport.jpg) est identique partout :
+         affichee sous le texte sur telephone, et a droite du texte
+         a partir de la taille tablette (iPad) et sur ordinateur. La navigation entre
          les pages se fait via le menu du haut (en-tete) : pas de
          liens redondants ici.
          ============================================================ -->
@@ -74,8 +73,10 @@
           </p>
           <p><a class="btn btn--primary" href="#decouvrir">Découvrir mes ressources →</a></p>
         </div>
-        <div class="site-hero__visual">
-          <img src="assets/hero-illustration.svg" alt="" width="380" height="522">
+        <div class="site-hero__visual site-hero__visual--photo">
+          <img src="assets/hero-sport.jpg"
+               alt="Trois collégiens en action : course, basket et gainage."
+               width="1400" height="901">
         </div>
       </div>
     </section>

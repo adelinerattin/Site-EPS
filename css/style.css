@@ -3239,15 +3239,15 @@ section[id$="-acquisitions"] > h4 {
 }
 
 /* ============================================================
-   VISUEL PHOTO DU HERO (variante utilisee sur niveau-4e.html)
+   VISUEL PHOTO DU HERO (toutes les pages)
    ------------------------------------------------------------
    Remplace l'illustration SVG par une photo. La photo d'origine
    est panoramique et ses sportifs sont sur sa moitie DROITE :
    on la recadre donc a droite (object-position) sans jamais la
    deformer (object-fit: cover conserve les proportions).
-   Pour changer la photo : remplacez assets/hero-sport-4e.jpg.
-   Cette variante ne s'applique qu'aux visuels portant la classe
-   "site-hero__visual--photo" : les autres pages sont inchangees.
+   Pour changer la photo : remplacez assets/hero-sport.jpg.
+   Cette mise en forme s'applique aux visuels portant la classe
+   "site-hero__visual--photo".
    ============================================================ */
 
 /* Sur mobile, le visuel standard est masque ; la photo, elle,
@@ -3369,31 +3369,31 @@ section[id$="-acquisitions"] > h4 {
 /* ------------------------------------------------------------
    Titres plus longs : la mise en page, le calcul de la hauteur du
    logo et le rapport logo / titre restent EXACTEMENT les memes que
-   sur les autres pages. Seuls deux ajustements de police sont
-   necessaires pour que rien ne soit coupe.
+   sur les autres pages. Seule la taille de police est reduite, afin
+   que rien ne soit coupe dans la place laissee par la photo.
+   Les valeurs ci-dessous ont ete calculees page par page (largeur
+   reellement disponible a cote du logo, de 320 a 1920px).
    ------------------------------------------------------------ */
 
-/* 1re ligne longue ("Bouge, apprends,", "Fonctionnement",
-   "Culture Sportive") : sans cela elle est coupee sur telephone. */
+/* 1re ligne longue : "Bouge, apprends,", "Fonctionnement",
+   "Culture Sportive". */
 @media (max-width: 639.98px) {
   .site-hero__lockup--l1-longue {
     --hero-l1: clamp(1.4rem, 7.4vw, 2.6rem);
   }
 }
 
-/* "Culture Sportive" est aussi un peu trop long pour la place
-   disponible a cote du logo sur les petites tablettes. */
 @media (min-width: 640px) {
-  .site-hero__lockup--l1-longue-tablette {
-    --hero-l1: clamp(1.35rem, 3.4vw, 3rem);
+  .site-hero__lockup--l1-longue {
+    --hero-l1: clamp(1rem, 4.2vw - 0.6rem, 2.4rem);
   }
 }
 
-/* "Jouer, arbitrer, progresser" est trop long pour tenir sur une
-   ligne : reduit un peu, il tient sur 2 lignes a toutes les
-   largeurs (sinon il en occupe 3). */
+/* Bandeau bleu long : "Jouer, arbitrer, progresser". Reduit ainsi,
+   il tient sur 2 lignes a toutes les largeurs (sinon il en occupe
+   3, et le titre devient plus haut que le logo). */
 @media (min-width: 640px) {
   .site-hero__lockup--l2-longue {
-    --hero-l2: clamp(1.5rem, 3.9vw, 3rem);
+    --hero-l2: clamp(1.25rem, 4.2vw - 0.4rem, 2.5rem);
   }
 }
