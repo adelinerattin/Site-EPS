@@ -3349,20 +3349,23 @@ section[id$="-acquisitions"] > h4 {
   /* Taille de la 1re ligne : calee pour que "Tes activités" tienne
      sur une ligne a cote du logo, sans jamais deborder. */
   .site-hero__lockup--titre-court .hero-title__line1 {
-    font-size: clamp(1.5rem, 3.9vw, 3rem);
+    font-size: clamp(1.5rem, 3.6vw, 3rem);
   }
 
-  /* Hauteur du logo = hauteur du titre entier (ses 2 lignes).
-     Une hauteur en % ne fonctionne pas ici (le parent n'a pas de
-     hauteur fixe), on reconstitue donc la hauteur du titre :
+  /* Hauteur du logo : calee sur la hauteur du titre entier (ses 2
+     lignes), puis agrandie de 30 % pour que le logo reste bien
+     lisible. Une hauteur en % ne fonctionne pas ici (le parent n'a
+     pas de hauteur fixe), on reconstitue donc la hauteur du titre :
        ligne 1 : 1,15 (interlignage) x sa taille de police
        ligne 2 : 1,15 + 0,08 (marges internes) + 0,15 (marge haute)
                  = 1,38 x la taille de police du h1
+     Pour un logo plus grand ou plus petit, changez le seul
+     multiplicateur "1.3" ci-dessous.
      La largeur suit automatiquement grace au format d'origine
      (600 x 900) : l'image n'est jamais deformee. */
   .site-hero__lockup--titre-court .site-hero__logo {
-    height: calc(1.15 * clamp(1.5rem, 3.9vw, 3rem)
-                 + 1.38 * clamp(1.9rem, 5vw, 3rem));
+    height: calc(1.3 * (1.15 * clamp(1.5rem, 3.6vw, 3rem)
+                        + 1.38 * clamp(1.9rem, 5vw, 3rem)));
     width: auto;
     aspect-ratio: 600 / 900;
   }
