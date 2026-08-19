@@ -3753,29 +3753,22 @@ section[id$="-acquisitions"] > h4 {
   }
 }
 
-/* Bandeau bleu volontairement coupe en deux lignes ("Comprendre /
-   son corps", "collégien / autonome !") : la coupure est ecrite dans
-   le HTML (<br>), la taille reste celle des autres pages. */
-.hero-title__gros {
-  /* Pas de "display: block" ici : cela ferait occuper toute la largeur
-     au bandeau bleu, qui doit rester ajuste au texte. Le retour a la
-     ligne est deja assure par le <br> qui precede. */
-  font-size: 1.42em;
-}
-
-/* Page "Mon entree en 6e" : la 2e ligne du bandeau ("autonome !") etant
-   nettement plus grande, la taille de base est un peu reduite pour que
-   les deux lignes tiennent dans la colonne. */
-.site-hero__lockup--l2-accent-fort {
-  --hero-l2: clamp(1.3rem, 6.5vw, 1.9rem);
+/* Bandeau bleu qui doit tenir sur UNE seule ligne malgre sa longueur
+   ("collégien autonome !") : la taille est calee sur la place
+   reellement disponible a cote du logo, mesuree de 320 a 1920px. */
+.site-hero__lockup--l2-une-ligne {
+  --hero-l2: clamp(1rem, 5.7vw, 2.4rem);
 }
 
 @media (min-width: 640px) {
-  .site-hero__lockup--l2-accent-fort {
-    --hero-l2: clamp(1.2rem, 3.1vw, 2.35rem);
+  .site-hero__lockup--l2-une-ligne {
+    --hero-l2: clamp(0.9rem, 2.2vw, 1.8rem);
   }
 }
 
+/* Bandeau bleu volontairement coupe en deux lignes ("Comprendre /
+   son corps") : la coupure est ecrite dans le HTML (<br>), la taille
+   reste celle des autres pages. */
 @media (min-width: 640px) {
   .site-hero__lockup--l2-deux-lignes {
     --hero-l2: clamp(1.3rem, 3.5vw, 2.6rem);
