@@ -937,6 +937,84 @@ a.card:focus-visible {
   color: var(--color-ink-soft);
 }
 
+/* ------------------------------------------------------------
+   Plans des installations sportives (page "Fonctionnement de
+   l'EPS"). Les plans sont fournis par Google Maps sous forme
+   d'iframe : aucune cle n'est necessaire, il suffit de changer
+   l'adresse dans l'URL pour changer de lieu. Un lien de secours
+   ouvre l'itineraire dans l'application de cartes du visiteur.
+   ------------------------------------------------------------ */
+.cartes-lieux {
+  display: grid;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+@media (min-width: 860px) {
+  .cartes-lieux {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.carte-lieu {
+  margin: 0;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-top: 5px solid var(--color-orange);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+.carte-lieu__entete {
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.carte-lieu__nom {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+.carte-lieu__adresse {
+  display: block;
+  font-size: 0.95rem;
+}
+
+.carte-lieu__repere {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+}
+
+.carte-lieu__plan {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--color-chalk);
+}
+
+.carte-lieu__plan iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.carte-lieu__lien {
+  margin: var(--space-sm) 0 0;
+}
+
+/* Saut de ligne qui n'existe que sur grand ecran (voir le bloc
+   "MISE EN PAGE ORDINATEUR" en fin de feuille). */
+.saut-ordinateur {
+  display: none;
+}
+
 /* Filet de separation a l'interieur d'une fiche. */
 .separateur {
   border: none;
@@ -3718,5 +3796,99 @@ section[id$="-acquisitions"] > h4 {
 @media (min-width: 640px) {
   .site-hero__lockup--l2-longue {
     --hero-l2: clamp(1.25rem, 4.2vw - 0.4rem, 2.5rem);
+  }
+}
+
+/* ============================================================
+   MISE EN PAGE ORDINATEUR (a partir de 1200px)
+   ------------------------------------------------------------
+   TOUT ce qui suit ne concerne QUE les grands ecrans. Le
+   telephone (moins de 640px) et la tablette (640 a 1199px,
+   iPad et iPad Air compris, en portrait comme en paysage)
+   gardent exactement la mise en page precedente.
+   Pour annuler ces reglages, il suffit de supprimer ce bloc.
+   ============================================================ */
+@media (min-width: 1200px) {
+
+  /* --- 1. Menu : meme bouton deroulant que sur tablette -------
+     Le bandeau horizontal est remplace par le bouton "hamburger",
+     place a gauche ; la recherche reste a droite. */
+  .site-header__inner {
+    justify-content: space-between;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    max-height: 0;
+    overflow: hidden;
+    background: var(--color-chalk);
+    border-bottom: 3px solid var(--color-navy);
+  }
+
+  .main-nav.is-open {
+    max-height: calc(100vh - var(--header-height));
+    overflow-y: auto;
+    box-shadow: 0 12px 20px rgba(10, 31, 68, 0.15);
+  }
+
+  .main-nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    padding: var(--space-sm) var(--space-md) var(--space-md);
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .main-nav__list a {
+    padding: 0.7rem 0.6rem;
+    font-size: 1rem;
+  }
+
+  /* --- 2. Hero : la photo va jusqu'au bord de l'ecran ---------
+     Le texte reste aligne sur le reste de la page ; seule la photo
+     deborde a droite pour combler le vide. La marge negative est
+     calculee a partir de la largeur de l'ecran : le petit
+     depassement du au defilement vertical est rogne par
+     "overflow-x: clip" sur le hero. */
+  .site-hero {
+    overflow-x: clip;
+  }
+
+  /* Le selecteur reprend les deux classes pour passer devant la
+     regle "width: 100 %" definie plus haut : sans cela, la largeur
+     de la colonne empeche la photo de s'etendre. */
+  .site-hero__visual.site-hero__visual--photo {
+    width: auto;
+    margin-right: calc(-1 * ((100vw - var(--max-width)) / 2 + var(--space-md)));
+  }
+
+  .site-hero__visual--photo img {
+    aspect-ratio: auto;
+    height: clamp(480px, 40vw, 620px);
+  }
+
+  /* --- 3. AS futsal : "Jouer, arbitrer," puis "progresser" ----
+     Le bandeau est legerement reduit, sinon "Jouer, arbitrer," ne
+     tient pas sur une ligne et le titre passe sur 3 lignes. */
+  .saut-ordinateur {
+    display: inline;
+  }
+
+  .site-hero__lockup--l2-longue {
+    --hero-l2: clamp(1.5rem, 3.9vw, 2.3rem);
+  }
+
+  /* --- 4. Mon entree en 6e : les deux encadres du haut
+     debordent legerement la colonne de texte pour occuper un peu
+     plus de largeur. */
+  .bilan-eleve {
+    margin-inline: calc(-1 * var(--space-lg));
   }
 }
