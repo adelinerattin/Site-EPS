@@ -3891,4 +3891,25 @@ section[id$="-acquisitions"] > h4 {
   .bilan-eleve {
     margin-inline: calc(-1 * var(--space-lg));
   }
+
+  /* --- 5. Mon entree en 6e : chaque rubrique devient une fiche a
+     onglets (voir "transformerEnOnglets" dans js/main.js). Sur une
+     large fenetre, la barre d'onglets passe a la ligne au lieu de
+     defiler : aucun onglet ne reste cache. Les pages de niveau, elles,
+     gardent leur barre defilante. */
+  .activity-card--rubrique .rubrique-tabs {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+
+  .activity-card--rubrique .info-group__intro,
+  .activity-card--rubrique .espace-parents__intro {
+    margin-bottom: var(--space-md);
+  }
+
+  /* Dans l'espace parents, les onglets se logent directement dans le
+     cadre creme : pas de fiche a deplier ni de titre en double. */
+  .activity-card__body--nu {
+    padding: 0;
+  }
 }
