@@ -3907,9 +3907,8 @@ section[id$="-acquisitions"] > h4 {
     margin-bottom: var(--space-md);
   }
 
-  /* Dans l'espace parents, les onglets se logent directement dans le
-     cadre creme : pas de fiche a deplier ni de titre en double. */
-  .activity-card__body--nu {
-    padding: 0;
+  /* Dans l'espace parents, la fiche occupe tout le cadre creme. */
+  .espace-parents .activity-card--rubrique {
+    margin-bottom: 0;
   }
 }

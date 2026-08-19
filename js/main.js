@@ -151,21 +151,16 @@ function transformerEnOnglets() {
       }
     });
 
-    if (parents) {
-      /* L'espace parents garde son cadre creme et son en-tete : les
-         onglets viennent simplement s'y loger, sans titre en double
-         ni fiche a deplier. */
-      corps.classList.add("activity-card__body--nu");
-      cartes.forEach(function (carte) { carte.remove(); });
-      groupe.appendChild(corps);
-      return;
-    }
-
-    /* Les autres rubriques deviennent une fiche depliable, comme les
-       activites des pages de niveau. */
+    /* Chaque rubrique devient une fiche depliable, comme les activites
+       des pages de niveau. */
     var fiche = document.createElement("details");
     fiche.className = "activity-card activity-card--rubrique";
-    if (groupe.id) fiche.id = groupe.id;
+    if (groupe.id) {
+      /* L'ancre du sommaire doit viser la fiche elle-meme, sinon un clic
+         sur le bouton correspondant ne l'ouvre pas. */
+      fiche.id = groupe.id;
+      if (parents) groupe.removeAttribute("id");
+    }
 
     var resume = document.createElement("summary");
     var h3 = document.createElement("h3");
@@ -179,7 +174,20 @@ function transformerEnOnglets() {
 
     fiche.appendChild(resume);
     fiche.appendChild(corps);
-    groupe.replaceWith(fiche);
+
+    if (parents) {
+      /* L'espace parents garde son cadre creme, mais son en-tete est
+         repris par le titre de la fiche : pas de titre en double, et la
+         rubrique se referme comme les autres. */
+      var presentation = groupe.querySelector(".espace-parents__intro");
+      if (presentation) corps.insertBefore(presentation, corps.firstChild);
+      var entete = groupe.querySelector(".espace-parents__entete");
+      if (entete) entete.remove();
+      cartes.forEach(function (carte) { carte.remove(); });
+      groupe.appendChild(fiche);
+    } else {
+      groupe.replaceWith(fiche);
+    }
   });
 }
 
