@@ -2650,7 +2650,9 @@ thead th.mastery-excellente {
 }
 
 .prog-classes td.act {
-  vertical-align: top;
+  /* "middle" plutot que "top" : les cases fusionnees sur 2 ou 3 lignes
+     (une activite qui traverse des vacances) restent bien centrees. */
+  vertical-align: middle;
   text-align: center;
   padding: var(--space-sm);
   border: 2px solid var(--color-white);
@@ -2688,6 +2690,30 @@ thead th.mastery-excellente {
 .act--cross-training    { background: #e3e4e9; }
 .act--boxe              { background: #f6d6d6; }
 .act--vide              { background: var(--color-chalk); }
+
+/* Les vacances scolaires : une bande claire qui coupe l'annee. */
+.act--vacances {
+  background: repeating-linear-gradient(
+    45deg, #fdf6e6, #fdf6e6 8px, #f8eed7 8px, #f8eed7 16px);
+}
+
+.act--vacances .act__nom {
+  color: var(--color-ink-soft);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.act--vacances .act__ligne {
+  font-weight: 700;
+}
+
+.act__icone {
+  display: block;
+  font-size: 1.1rem;
+  line-height: 1;
+  margin-bottom: 0.15rem;
+}
 
 /* ------------------------------------------------------------
    AS Futsal : deroule d'une seance, fiches de regles, blocs de
