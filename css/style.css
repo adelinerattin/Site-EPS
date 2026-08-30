@@ -1597,6 +1597,15 @@ a.card:focus-visible {
   overflow-x: auto;
   border-radius: var(--radius);
   border: 1px solid var(--color-border);
+  /* Un tableau n'est jamais colle au texte qui le suit. */
+  margin-bottom: var(--space-md);
+}
+
+/* Idem pour une grille de blocs (deux encadres cote a cote, par
+   exemple les deux sortes de coups francs). */
+.info-card__body > .grid,
+.activity-card__body > .grid {
+  margin-bottom: var(--space-md);
 }
 
 table {
@@ -2802,21 +2811,8 @@ thead th.mastery-excellente {
   margin-bottom: var(--space-sm);
 }
 
-.ressource__cadre {
-  position: relative;
-  height: 420px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: var(--color-chalk);
-}
-
-.ressource__cadre iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
+.ressource__bouton {
+  margin: var(--space-md) 0 0;
 }
 
 .ressource__secours {
