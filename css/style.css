@@ -2691,10 +2691,55 @@ thead th.mastery-excellente {
 .act--boxe              { background: #f6d6d6; }
 .act--vide              { background: var(--color-chalk); }
 
-/* Les vacances scolaires : une bande claire qui coupe l'annee. */
+/* Une case coupee en deux dans la hauteur : deux activites qui se
+   partagent a parts egales la meme portion de l'annee (en 3e, le rugby
+   flag puis le basket occupent chacun une ligne et demie). On ne peut
+   pas obtenir de demi-lignes avec des "rowspan" : le navigateur reporte
+   toute la hauteur d'une case fusionnee sur sa derniere ligne. */
+.prog-classes td.act--partage {
+  padding: 0;
+  background: none;
+  border: 0;
+  /* Une hauteur declaree, meme minuscule : sans elle, le "height: 100%"
+     du bloc interieur n'a rien contre quoi se calculer et les deux
+     moities ne remplissent pas la case. La mise en page du tableau
+     etire de toute facon la case a la hauteur reelle des lignes. */
+  height: 1px;
+}
+
+.act-partage {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.act-partage > .act {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-sm);
+  border: 2px solid var(--color-white);
+  border-radius: 6px;
+}
+
+/* Les vacances scolaires : une seule bande grise qui coupe l'annee sur
+   toute la largeur du tableau (colspan 5), ou sur les seules colonnes de
+   6e (colspan 3) quand une activite de 5e ou de 3e se poursuit pendant
+   les vacances. Volontairement en gris : les couleurs sont reservees aux
+   activites sportives. */
 .act--vacances {
-  background: repeating-linear-gradient(
-    45deg, #fdf6e6, #fdf6e6 8px, #f8eed7 8px, #f8eed7 16px);
+  background: #e6e5e2;
+  /* Une bande basse : elle marque une coupure, elle ne represente pas
+     un cycle d'activite. */
+  padding: 0.4rem var(--space-sm);
+}
+
+/* Le nom et les dates sur une seule ligne. */
+.act--vacances .act__nom,
+.act--vacances .act__ligne {
+  display: inline;
+  margin-bottom: 0;
 }
 
 .act--vacances .act__nom {
@@ -2706,13 +2751,7 @@ thead th.mastery-excellente {
 
 .act--vacances .act__ligne {
   font-weight: 700;
-}
-
-.act__icone {
-  display: block;
-  font-size: 1.1rem;
-  line-height: 1;
-  margin-bottom: 0.15rem;
+  margin-left: 0.5rem;
 }
 
 /* ------------------------------------------------------------
