@@ -2631,6 +2631,65 @@ thead th.mastery-excellente {
 }
 
 /* ------------------------------------------------------------
+   Programmation detaillee, classe par classe (page "Fonctionnement
+   de l'EPS"). Une colonne par classe, une ligne par activite, et
+   une couleur de fond par activite : on suit ainsi une meme
+   activite d'une classe a l'autre d'un coup d'oeil.
+   Pour changer une couleur, modifiez la ligne ".act--<activite>".
+   ------------------------------------------------------------ */
+.prog-classes {
+  min-width: 720px;
+}
+
+.prog-classes th {
+  text-align: center;
+  font-size: 1rem;
+  /* "6e2" et non "6E2" : les en-tetes de tableau sont en capitales
+     par defaut, ce qui rendrait l'exposant illisible. */
+  text-transform: none;
+}
+
+.prog-classes td.act {
+  vertical-align: top;
+  text-align: center;
+  padding: var(--space-sm);
+  border: 2px solid var(--color-white);
+  border-radius: 6px;
+}
+
+.act__nom {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--color-navy);
+  font-size: 0.95rem;
+  margin-bottom: 0.15rem;
+}
+
+.act__ligne {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--color-ink-soft);
+  line-height: 1.35;
+}
+
+/* Une couleur par activite. */
+.act--triathlon         { background: #fdf2c9; }
+.act--relais            { background: #fbe3bd; }
+.act--biathlon          { background: #f6d9a8; }
+.act--handball          { background: #f7dee2; }
+.act--ultimate          { background: #d3efec; }
+.act--badminton         { background: #d6e4f7; }
+.act--danse             { background: #eadff5; }
+.act--tennis-table      { background: #d9f0df; }
+.act--course-orientation{ background: #e7e0cd; }
+.act--rugby             { background: #c9e6d3; }
+.act--basket            { background: #fce4cb; }
+.act--cross-training    { background: #e3e4e9; }
+.act--boxe              { background: #f6d6d6; }
+.act--vide              { background: var(--color-chalk); }
+
+/* ------------------------------------------------------------
    AS Futsal : deroule d'une seance, fiches de regles, blocs de
    fautes et planche des gestes d'arbitrage.
    ------------------------------------------------------------ */
