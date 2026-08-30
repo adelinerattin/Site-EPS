@@ -2593,10 +2593,237 @@ thead th.mastery-excellente {
   background: transparent;
 }
 
+/* Tout le contenu des tableaux de l'AS est centre. */
+.as-table th,
+.as-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
 .as-table tr.as-futsal td { background: #e4ecf9; }
 .as-table tr.as-basket td { background: #fdeacf; }
 .as-table tr.as-rugby td { background: #dcf0e2; }
 .as-table tr.as-handball td { background: #f7dee2; }
+.as-table tr.as-multisports td { background: #ece5f7; }
+
+/* Petite pastille "Nouveaute" devant une activite. */
+.as-nouveau {
+  display: inline-block;
+  background: var(--color-orange);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.15em 0.5em;
+  border-radius: 999px;
+  margin-right: 0.35rem;
+}
+
+/* ------------------------------------------------------------
+   AS Futsal : deroule d'une seance, fiches de regles, blocs de
+   fautes et planche des gestes d'arbitrage.
+   ------------------------------------------------------------ */
+.deroule {
+  display: grid;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+@media (min-width: 720px) {
+  .deroule {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.deroule__etape {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  background: var(--color-chalk);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-sm) var(--space-md);
+}
+
+.deroule__num {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fiches de regles : une couleur par idee, pour reperer d'un coup
+   d'oeil de quoi on parle. */
+.regles-grille {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  margin-bottom: var(--space-md);
+}
+
+.regle-fiche {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-top: 5px solid var(--color-navy);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+.regle-fiche__titre {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--color-navy);
+  margin: 0 0 0.4rem;
+}
+
+.regle-fiche--bleu   { border-top-color: var(--color-navy); }
+.regle-fiche--orange { border-top-color: var(--color-orange); }
+.regle-fiche--vert   { border-top-color: var(--color-green); }
+.regle-fiche--rouge  { border-top-color: var(--color-coral); }
+.regle-fiche--violet { border-top-color: #7a5ea8; }
+.regle-fiche--jaune  { border-top-color: var(--color-yellow-dark); }
+
+/* Les deux familles de coups francs. */
+.faute-bloc {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-left: 6px solid var(--color-coral);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+.faute-bloc--direct   { border-left-color: var(--color-coral); }
+.faute-bloc--indirect { border-left-color: var(--color-orange); }
+
+.faute-bloc__titre {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--color-navy);
+  margin: 0 0 0.2rem;
+}
+
+.faute-bloc__sous {
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+  margin: 0 0 var(--space-sm);
+}
+
+/* Planche des gestes d'arbitrage (visuels officiels UNSS). */
+.gestes-grille {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-bottom: var(--space-md);
+}
+
+.geste {
+  margin: 0;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Les planches larges (decompte des 4 secondes, signal de faute
+   cumulee) occupent toute la largeur pour rester lisibles. */
+.geste--large {
+  grid-column: 1 / -1;
+}
+
+.geste--large img {
+  max-height: 320px;
+}
+
+.geste img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  margin-bottom: var(--space-sm);
+}
+
+.geste__nom {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 0.2rem;
+}
+
+.geste__desc {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+}
+
+/* ------------------------------------------------------------
+   Ressources consultables sur place (page web + video), par
+   exemple pour les dispenses ponctuelles sur PRONOTE.
+   ------------------------------------------------------------ */
+.ressource-double {
+  display: grid;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+@media (min-width: 860px) {
+  .ressource-double {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.ressource {
+  margin: 0;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-top: 5px solid var(--color-navy);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+.ressource__titre {
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: var(--space-sm);
+}
+
+.ressource__cadre {
+  position: relative;
+  height: 420px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--color-chalk);
+}
+
+.ressource__cadre iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.ressource__secours {
+  margin: var(--space-sm) 0 0;
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+}
 
 /* Mot-cle surligne facon feutre, pour les informations a ne pas
    manquer dans un paragraphe. */
@@ -2762,6 +2989,63 @@ thead th.mastery-excellente {
 .calendar-item--competition { border-left-color: var(--color-coral); }
 .calendar-item--entrainement { border-left-color: var(--color-navy); }
 .calendar-item--date-importante { border-left-color: var(--color-orange); }
+
+/* ------------------------------------------------------------
+   Code couleur du calendrier de l'AS Futsal : la couleur indique
+   QUI est concerne par la date (et non le type d'evenement).
+   Ces regles passent apres celles ci-dessus, elles l'emportent.
+   ------------------------------------------------------------ */
+.calendar-item--public-filles { border-left-color: var(--color-orange); }
+.calendar-item--public-tous   { border-left-color: var(--color-green); }
+.calendar-item--public-6e5e   { border-left-color: var(--color-navy); }
+.calendar-item--public-4e3e   { border-left-color: #5b9bd5; }
+
+.calendar-item__public {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.12em 0.5em;
+  border-radius: 999px;
+  margin-right: 0.4rem;
+  color: var(--color-white);
+}
+
+.calendar-item__public--filles { background: var(--color-orange); }
+.calendar-item__public--tous   { background: var(--color-green); }
+.calendar-item__public--6e5e   { background: var(--color-navy); }
+.calendar-item__public--4e3e   { background: #2f6ea8; }
+
+/* Legende du code couleur, au-dessus du calendrier. */
+.legende-calendrier {
+  list-style: none;
+  margin: 0 0 var(--space-md);
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem var(--space-md);
+  font-size: 0.9rem;
+}
+
+.legende-calendrier li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.legende-calendrier__pastille {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.legende-calendrier__pastille--filles { background: var(--color-orange); }
+.legende-calendrier__pastille--tous   { background: var(--color-green); }
+.legende-calendrier__pastille--6e5e   { background: var(--color-navy); }
+.legende-calendrier__pastille--4e3e   { background: #5b9bd5; }
 
 .calendar-item__date {
   font-family: var(--font-mono);

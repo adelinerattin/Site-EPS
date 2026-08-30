@@ -89,10 +89,54 @@
             <span class="info-card__toggle" aria-hidden="true">+</span>
           </summary>
           <div class="info-card__body">
-            <!-- MODIFIER ICI : jours et horaires d'entrainement, lieu -->
-            <p><strong>Jours et horaires :</strong> [à compléter]</p>
-            <p><strong>Lieu :</strong> [à compléter]</p>
-            <p>[Présentation courte de l'AS Futsal à compléter — objectifs, public visé, esprit de l'association.]</p>
+            <!-- MODIFIER CHAQUE ANNEE : jours, horaires, lieu et date de reprise -->
+            <div class="table-wrap">
+              <table class="as-table">
+                <thead>
+                  <tr><th>Jour</th><th>Niveaux</th><th>Horaire</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="as-futsal"><td>Lundi</td><td><strong>4<sup>e</sup> / 3<sup>e</sup></strong></td><td>13h – 13h50</td></tr>
+                  <tr class="as-futsal"><td>Mardi</td><td><strong>6<sup>e</sup> / 5<sup>e</sup></strong></td><td>13h – 13h50</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <ul>
+              <li><strong>Lieu :</strong> les <span class="surligne">terrains de handball du plateau EPS</span>.</li>
+              <li><strong>Début de l'AS :</strong> <span class="surligne">lundi 14 septembre</span>.</li>
+              <li><strong>Encadrement :</strong> Mme Rattin.</li>
+            </ul>
+
+            <h4>L'AS Futsal, c'est quoi ?</h4>
+            <p>
+              L'AS Futsal est <strong>ouverte à tous</strong>, <strong>débutants comme confirmés</strong> :
+              aucun niveau n'est demandé pour venir. Le but est simple — <span class="surligne">prendre du
+              plaisir sur le temps du midi</span>, autour de matchs.
+            </p>
+
+            <p><strong>L'organisation est toujours la même :</strong></p>
+            <div class="deroule">
+              <div class="deroule__etape">
+                <span class="deroule__num">1</span>
+                <span class="deroule__texte"><strong>Constitution des équipes</strong> par des capitaines volontaires.</span>
+              </div>
+              <div class="deroule__etape">
+                <span class="deroule__num">2</span>
+                <span class="deroule__texte"><strong>Échauffement en autonomie</strong>, par équipes.</span>
+              </div>
+              <div class="deroule__etape">
+                <span class="deroule__num">3</span>
+                <span class="deroule__texte"><strong>Les matchs</strong>, jusqu'à la fin de la séance.</span>
+              </div>
+            </div>
+
+            <div class="callout callout--success">
+              <p class="mb-0">
+                🤝 <strong>Les valeurs de l'AS :</strong> le <strong>fair-play</strong>, le
+                <strong>bon esprit</strong> et le <strong>plaisir</strong> de jouer ensemble.
+              </p>
+            </div>
           </div>
         </details>
 
@@ -104,26 +148,36 @@
           </summary>
           <div class="info-card__body">
             <p>Les entraînements, compétitions et dates importantes de l'année, triés du plus proche au plus lointain.</p>
+
+            <ul class="legende-calendrier">
+              <li><span class="legende-calendrier__pastille legende-calendrier__pastille--filles"></span> Filles uniquement</li>
+              <li><span class="legende-calendrier__pastille legende-calendrier__pastille--tous"></span> Tous publics</li>
+              <li><span class="legende-calendrier__pastille legende-calendrier__pastille--6e5e"></span> Niveaux 6<sup>e</sup> / 5<sup>e</sup></li>
+              <li><span class="legende-calendrier__pastille legende-calendrier__pastille--4e3e"></span> Niveaux 4<sup>e</sup> / 3<sup>e</sup></li>
+            </ul>
+
             <ul class="calendar-list" id="calendrier-liste"></ul>
             <p class="calendar-empty" id="calendrier-vide">Calendrier à venir.</p>
 
             <!-- COMMENT AJOUTER UN EVENEMENT ?
-                 Modifiez le tableau FUTSAL_CALENDRIER ci-dessous. Chaque
-                 evenement suit ce modele (voir l'exemple en commentaire) :
+                 Modifiez le tableau FUTSAL_CALENDRIER ci-dessous :
 
-                 { date: "2026-09-15", titre: "Entraînement", lieu: "Gymnase du collège", type: "entrainement" }
+                 { date: "2026-09-14", titre: "...", lieu: "...", type: "entrainement", public: "tous" }
 
-                 - date : format AAAA-MM-JJ
-                 - type : "entrainement", "competition" ou "date-importante"
-                 - lieu : facultatif
-                 Le tableau est vide par defaut : la page affichera alors
-                 "Calendrier à venir" a la place de la liste. -->
+                 - date   : format AAAA-MM-JJ
+                 - type   : "entrainement", "competition" ou "date-importante"
+                 - public : "filles" (orange), "tous" (vert), "6e5e" (bleu fonce)
+                            ou "4e3e" (bleu clair) — c'est lui qui donne la couleur
+                 - lieu   : facultatif -->
             <script>
               window.FUTSAL_CALENDRIER = window.FUTSAL_CALENDRIER || [];
               window.FUTSAL_CALENDRIER = window.FUTSAL_CALENDRIER.concat([
-                // Exemple (à décommenter et modifier pour ajouter un vrai événement) :
-                // { date: "2026-09-15", titre: "Entraînement", lieu: "Gymnase du collège", type: "entrainement" },
-                // { date: "2026-11-20", titre: "Plateau UNSS Futsal", lieu: "À définir", type: "competition" },
+                { date: "2026-09-14", titre: "Début des entraînements", lieu: "Terrains de handball du plateau EPS", type: "entrainement", public: "tous" },
+                { date: "2026-10-07", titre: "1er tournoi (beach et herbe)", lieu: "Port Canal, Montauban", type: "competition", public: "filles" },
+                { date: "2026-11-04", titre: "Journée arbitrage futsal", lieu: "Filles et garçons", type: "date-importante", public: "tous" },
+                { date: "2027-01-06", titre: "Journée arbitrage football", lieu: "Filles uniquement", type: "date-importante", public: "filles" },
+                { date: "2027-04-28", titre: "Beach soccer", lieu: "Port Canal, Montauban", type: "competition", public: "filles" },
+                { date: "2027-05-19", titre: "Tournoi final sur herbe", lieu: "Montech", type: "competition", public: "filles" },
               ]);
             </script>
           </div>
@@ -137,61 +191,122 @@
           </summary>
           <div class="info-card__body">
 
-            <p><strong>Terrain et matériel</strong></p>
-            <ul>
-              <li>Terrain de hand-ball (intérieur ou extérieur), 38 à 42 m de long, 18 à 22 m de large.</li>
-              <li>Buts de 3 m sur 2 m.</li>
-              <li>Ballon spécifique futsal de taille 4.</li>
-            </ul>
-
-            <p><strong>Les joueurs</strong></p>
-            <ul>
-              <li>5 joueurs par équipe dont le gardien, jusqu'à 5 remplaçants (10 joueurs maximum par match).</li>
-              <li>Remplacements illimités, dans une zone dédiée près de la ligne médiane.</li>
-              <li>Si une équipe se retrouve à moins de 3 joueurs (2 joueurs + gardien), le match est arrêté et l'adversaire gagne 3-0.</li>
-            </ul>
-
-            <p><strong>Équipement obligatoire</strong></p>
-            <ul>
-              <li>Protège-tibias.</li>
-              <li>Chaussures type tennis/futsal (semelles non marquantes).</li>
-              <li>Maillots, shorts et chaussettes identiques pour tous les joueurs.</li>
-              <li>Bijoux interdits.</li>
-            </ul>
-
-            <p><strong>Le gardien de but</strong></p>
-            <ul>
-              <li>Doit relancer le ballon dans les 4 secondes lorsqu'il est dans sa moitié de terrain.</li>
-              <li>Ne peut toucher le ballon qu'une seule fois par possession dans sa moitié de terrain.</li>
-              <li>Ne peut pas prendre à la main une passe en retrait faite volontairement au pied par un coéquipier (sinon coup franc indirect).</li>
-            </ul>
-
-            <div class="callout callout--info">
-              <h3>Pas de hors-jeu !</h3>
-              <p>Contrairement au football, il n'y a <strong>pas de hors-jeu</strong> en futsal.</p>
+            <p>
+              👀 <strong>Avant de lire quoi que ce soit, regarde cette vidéo :</strong> elle explique
+              l'essentiel du futsal en quelques minutes. Elle se lance directement ici, sans quitter le site.
+            </p>
+            <!-- MODIFIER ICI : pour changer la video, remplacez l'identifiant apres "/embed/"
+                 par celui de la nouvelle video YouTube. -->
+            <div class="video-embed">
+              <iframe src="https://www.youtube-nocookie.com/embed/1RQ7qBDAFAk"
+                      title="Les règles du futsal expliquées en vidéo"
+                      loading="lazy"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
             </div>
 
-            <p><strong>Distances réglementaires</strong></p>
+            <div class="callout callout--info">
+              <p class="mb-0">
+                ⚠️ La vidéo présente le futsal <strong>en général</strong>. Au collège, on joue selon le
+                <strong>règlement UNSS</strong>, résumé ci-dessous : c'est <span class="surligne">celui-ci qui
+                s'applique</span> en AS et en compétition scolaire.
+              </p>
+            </div>
+
+            <h3>⚡ Le futsal en 6 réflexes</h3>
+            <div class="regles-grille">
+              <div class="regle-fiche regle-fiche--bleu">
+                <p class="regle-fiche__titre">👥 5 contre 5</p>
+                <p class="mb-0"><strong>4 joueurs de champ + 1 gardien</strong>, et jusqu'à 5 remplaçants. Les changements sont <strong>illimités</strong> et se font <strong>en cours de jeu</strong>, dans la zone prévue près du milieu.</p>
+              </div>
+              <div class="regle-fiche regle-fiche--orange">
+                <p class="regle-fiche__titre">⏱️ 4 secondes</p>
+                <p class="mb-0">Touche, corner, coup franc, relance du gardien : tu as <span class="surligne">4 secondes</span> pour jouer. L'arbitre compte avec ses doigts. Au-delà : le ballon change de camp.</p>
+              </div>
+              <div class="regle-fiche regle-fiche--vert">
+                <p class="regle-fiche__titre">🦶 Tout se joue au pied</p>
+                <p class="mb-0">La <strong>touche</strong> et le <strong>corner</strong> se jouent <strong>au pied</strong>, ballon arrêté. Seule exception : la <strong>sortie de but</strong>, que le gardien relance <strong>à la main</strong>.</p>
+              </div>
+              <div class="regle-fiche regle-fiche--rouge">
+                <p class="regle-fiche__titre">🚫 Pas de contact</p>
+                <p class="mb-0">Interdit d'aller <strong>au contact</strong> pour prendre le ballon, et <span class="surligne">interdit de tacler</span> — même pour le gardien. On joue le ballon, pas le joueur.</p>
+              </div>
+              <div class="regle-fiche regle-fiche--violet">
+                <p class="regle-fiche__titre">🙌 Pas de hors-jeu</p>
+                <p class="mb-0">Contrairement au football, <strong>il n'y a pas de hors-jeu</strong> en futsal. Tu peux te placer où tu veux, y compris devant le dernier défenseur.</p>
+              </div>
+              <div class="regle-fiche regle-fiche--jaune">
+                <p class="regle-fiche__titre">🥅 Un but de partout</p>
+                <p class="mb-0">Un but peut être marqué de <strong>n'importe quel endroit</strong> du terrain… sauf <strong>directement</strong> sur un coup d'envoi, une touche ou une relance à la main du gardien.</p>
+              </div>
+            </div>
+
+            <h3>🏟️ Le terrain et le ballon</h3>
             <ul>
-              <li><strong>5 mètres</strong> pour les adversaires sur une touche, un corner ou un coup franc.</li>
-              <li><strong>3 mètres</strong> (en dehors du rond central) au coup d'envoi, avec tous les joueurs de l'équipe qui engage dans leur propre moitié de terrain.</li>
+              <li>On joue sur un <strong>terrain de handball</strong> (intérieur ou extérieur) : <strong>38 à 42 m</strong> de long, <strong>18 à 22 m</strong> de large.</li>
+              <li>Les buts mesurent <strong>3 m sur 2 m</strong>.</li>
+              <li>Le ballon est un <strong>ballon de futsal taille 4</strong>, qui rebondit peu. ⛔ Le ballon en feutrine est <strong>interdit</strong>.</li>
             </ul>
 
-            <p><strong>Le délai des 4 secondes</strong></p>
-            <p>Un joueur a 4 secondes pour exécuter une touche, un corner ou un coup franc. Au-delà, coup franc indirect à l'adversaire (ou balle au gardien si c'était un corner).</p>
+            <h3>👕 L'équipement obligatoire</h3>
+            <div class="grid grid--2">
+              <div class="callout callout--success">
+                <p class="mb-0">✅ <strong>Obligatoire :</strong> <span class="surligne">protège-tibias</span>, chaussures type tennis, maillot numéroté, short et chaussettes identiques pour toute l'équipe.</p>
+              </div>
+              <div class="callout callout--info">
+                <p class="mb-0">⛔ <strong>Interdit :</strong> tous les <strong>bijoux</strong> (bagues, colliers, montres, boucles d'oreilles) — ils doivent être retirés avant d'entrer sur le terrain.</p>
+              </div>
+            </div>
+            <p>👐 Le gardien peut porter un <strong>pantalon de survêtement</strong> ; genouillères et coudières lui sont conseillées.</p>
 
-            <p><strong>Durée des matchs</strong></p>
-            <p>La durée varie selon le niveau (collège, lycée) et le nombre de matchs prévus dans la journée.</p>
+            <h3>🧤 Le gardien de but</h3>
+            <ul>
+              <li>Dans sa moitié de terrain, il a <strong>4 secondes</strong> pour relancer.</li>
+              <li>Sur une sortie de but, il relance <span class="surligne">à la main</span> — et il ne peut pas dégager de volée.</li>
+              <li>Il <strong>ne peut pas prendre à la main</strong> une passe faite volontairement au pied par un coéquipier → coup franc indirect.</li>
+              <li>Après avoir donné le ballon, il ne peut pas le <strong>retoucher dans sa moitié de terrain</strong> tant qu'un adversaire ne l'a pas joué.</li>
+              <li>S'il attrape le ballon <strong>à la main hors de sa surface</strong> : coup franc direct pour l'adversaire.</li>
+            </ul>
+
+            <h3>📏 Les distances à connaître</h3>
             <div class="table-wrap">
               <table>
-                <thead><tr><th>Situation</th><th>Durée</th></tr></thead>
+                <thead><tr><th>Situation</th><th>Distance</th></tr></thead>
                 <tbody>
-                  <tr><td>Match unique dans la journée</td><td>2 x 20 minutes (temps non décompté)</td></tr>
-                  <tr><td>Plusieurs matchs dans la journée</td><td>[à ajuster selon le nombre de matchs]</td></tr>
-                  <tr><td>Niveau lycée</td><td>[à ajuster]</td></tr>
+                  <tr><td>Touche, corner, coup franc</td><td><strong>5 mètres</strong> pour les adversaires</td></tr>
+                  <tr><td>Coup d'envoi</td><td><strong>3 mètres</strong> (hors du rond central), chaque équipe dans son camp</td></tr>
+                  <tr><td>Pénalty</td><td><strong>6 mètres</strong> — les autres joueurs à 5 m, derrière le ballon</td></tr>
+                  <tr><td>Coup de pied de pénalité (trop de fautes)</td><td><strong>9 mètres</strong>, sans mur</td></tr>
+                  <tr><td>Balle à terre</td><td><strong>2 mètres</strong> pour les adversaires</td></tr>
                 </tbody>
               </table>
             </div>
+
+            <h3>⏲️ La durée des matchs</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Situation</th><th>Collège</th></tr></thead>
+                <tbody>
+                  <tr><td>Un seul match dans la journée</td><td><strong>2 × 20 minutes</strong> (temps non décompté)</td></tr>
+                  <tr><td>Deux matchs dans la journée</td><td><strong>2 × 12 minutes</strong> (temps non décompté)</td></tr>
+                  <tr><td>Temps de jeu maximum sur une journée</td><td><strong>60 minutes</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="text-mono">Durées du règlement UNSS 2024-2025, championnat collège filles et garçons.</p>
+
+            <h3>🤝 Avant et après le match : le protocole</h3>
+            <p>
+              Chaque match commence <strong>et</strong> se termine par un <span class="surligne">salut des adversaires
+              et des arbitres</span>, au centre du terrain. Ce n'est pas une option : le non-respect du protocole peut
+              être sanctionné.
+            </p>
+
+            <h3>🎯 En cas d'égalité : les tirs au but</h3>
+            <p>
+              <strong>5 tireurs</strong> par équipe, choisis parmi les joueurs de la feuille de match. Si l'égalité
+              persiste, on continue en <strong>mort subite</strong>, en gardant le même ordre de passage.
+            </p>
           </div>
         </details>
 
@@ -202,68 +317,104 @@
             <span class="info-card__toggle" aria-hidden="true">+</span>
           </summary>
           <div class="info-card__body">
+
             <div class="callout callout--info">
-              <h3>Le contact est interdit</h3>
-              <p>Pour prendre le ballon à l'adversaire, le contact est interdit : pas de charge, pas de tacle en duel.</p>
+              <h3 class="mt-0">🚫 La règle d'or : pas de contact</h3>
+              <p class="mb-0">
+                Pour prendre le ballon à l'adversaire, <span class="surligne">le contact est interdit</span> :
+                pas de charge, pas d'appui sur l'adversaire, et <strong>aucun tacle en duel</strong> — gardien compris.
+                On joue <strong>le ballon</strong>, jamais le joueur.
+              </p>
             </div>
 
-            <p><strong>Coup franc direct (CFD)</strong> — exemples de fautes concernées :</p>
-            <ul>
-              <li>Donner ou essayer de donner un coup de pied à l'adversaire.</li>
-              <li>Faire un croche-pied.</li>
-              <li>Charger un adversaire (même de l'épaule).</li>
-              <li>Toucher intentionnellement le ballon de la main.</li>
-              <li>Tacler un adversaire en duel.</li>
-              <li>Tenir un adversaire.</li>
-            </ul>
+            <h3>⚖️ Les deux coups francs</h3>
+            <div class="grid grid--2">
+              <div class="faute-bloc faute-bloc--direct">
+                <p class="faute-bloc__titre">🔴 Coup franc DIRECT</p>
+                <p class="faute-bloc__sous">On peut marquer directement. ⚠️ Il compte comme <strong>faute collective</strong>.</p>
+                <ul class="mb-0">
+                  <li><strong>Tacler</strong> un adversaire en duel</li>
+                  <li><strong>Charger</strong> ou <strong>bousculer</strong> un adversaire (même de l'épaule)</li>
+                  <li>Donner ou essayer de donner un <strong>coup de pied</strong></li>
+                  <li>Faire un <strong>croche-pied</strong>, <strong>sauter</strong> sur un adversaire</li>
+                  <li><strong>Tenir</strong> un adversaire</li>
+                  <li>Toucher <strong>volontairement le ballon de la main</strong></li>
+                  <li><strong>Percuter</strong> un défenseur immobile (passage en force)</li>
+                  <li><strong>Cracher</strong> sur un adversaire</li>
+                </ul>
+              </div>
+              <div class="faute-bloc faute-bloc--indirect">
+                <p class="faute-bloc__titre">🟠 Coup franc INDIRECT</p>
+                <p class="faute-bloc__sous">Un coéquipier doit toucher le ballon avant qu'un but puisse être marqué.</p>
+                <ul class="mb-0">
+                  <li>Jouer de manière <strong>dangereuse</strong></li>
+                  <li>Faire un <strong>mauvais changement</strong> ou changer hors de la zone</li>
+                  <li><strong>Gêner le gardien</strong> quand il relance</li>
+                  <li>Ne pas respecter les <strong>4 secondes</strong></li>
+                  <li>Perdre seul sa <strong>chaussure</strong> ou un <strong>protège-tibia</strong></li>
+                  <li>Faire <strong>obstacle</strong> à un adversaire alors que le ballon n'est pas joué</li>
+                  <li>Pour le gardien : <strong>prendre à la main</strong> une passe en retrait, ou <strong>retoucher</strong> le ballon dans sa moitié de terrain</li>
+                </ul>
+              </div>
+            </div>
 
-            <p><strong>Coup franc indirect (CFI)</strong> — exemples de fautes concernées :</p>
-            <ul>
-              <li>Jouer de manière dangereuse.</li>
-              <li>Effectuer un changement de joueur hors zone, ou avant que le remplacé soit sorti.</li>
-              <li>Gêner volontairement le gardien lors de sa relance.</li>
-              <li>Perdre seul sa chaussure ou un protège-tibia.</li>
-              <li>Ne pas respecter la règle des 4 secondes.</li>
-              <li>Pour le gardien : prendre le ballon à la main sur une passe en retrait, ou le retoucher deux fois de suite dans la même possession.</li>
-            </ul>
+            <div class="callout callout--success">
+              <h3 class="mt-0">👍 La règle de l'avantage</h3>
+              <p class="mb-0">
+                Si une faute est commise mais que l'équipe qui la subit <strong>garde l'avantage</strong>, l'arbitre
+                <strong>laisse jouer</strong> : l'action va à son terme. Il signale la faute au prochain arrêt de jeu,
+                et elle est quand même comptée comme faute collective.
+              </p>
+            </div>
 
-            <p><strong>Fautes collectives</strong></p>
-            <p>Seuls les coups francs directs comptent comme fautes collectives. Au-delà d'un certain nombre de fautes cumulées par équipe dans la période, l'équipe adverse obtient un coup de pied de pénalité à 9 mètres. Le compteur est remis à zéro à la mi-temps.</p>
+            <h3>🔢 Les fautes collectives</h3>
+            <p>
+              Seuls les <strong>coups francs directs</strong> sont comptés comme fautes collectives. À partir d'un
+              certain nombre de fautes dans la même période, l'adversaire obtient un
+              <span class="surligne">coup de pied de pénalité à 9 mètres, sans mur</span>, avec le gardien sur sa ligne.
+              🔄 Le compteur <strong>repart à zéro à la mi-temps</strong>.
+            </p>
             <div class="table-wrap">
               <table>
-                <thead><tr><th>Durée de la période</th><th>Nombre de fautes avant pénalité à 9 m</th></tr></thead>
+                <thead><tr><th>Durée de la période</th><th>Fautes autorisées</th><th>Pénalité à 9 m</th></tr></thead>
                 <tbody>
-                  <tr><td>[à compléter selon le règlement officiel]</td><td>[à compléter]</td></tr>
-                  <tr><td>[à compléter selon le règlement officiel]</td><td>[à compléter]</td></tr>
+                  <tr><td>6 minutes</td><td>2 fautes</td><td>dès la <strong>3<sup>e</sup></strong></td></tr>
+                  <tr><td>8 ou 10 minutes</td><td>3 fautes</td><td>dès la <strong>4<sup>e</sup></strong></td></tr>
+                  <tr><td>12, 13 ou 15 minutes</td><td>4 fautes</td><td>dès la <strong>5<sup>e</sup></strong></td></tr>
+                  <tr><td>17 minutes et plus</td><td>5 fautes</td><td>dès la <strong>6<sup>e</sup></strong></td></tr>
                 </tbody>
               </table>
             </div>
-            <p class="text-mono">Valeurs exactes à reprendre dans le règlement officiel UNSS Futsal (voir « Documents officiels »).</p>
+            <p class="text-mono">Tableau du règlement UNSS 2024-2025 (temps non décompté).</p>
 
-            <p><strong>Les trois sanctions administratives</strong></p>
+            <h3>🟦 Les trois cartons</h3>
             <div class="sanction-cards">
               <div class="sanction-card sanction-card--blanc">
                 <span class="sanction-card__swatch" aria-hidden="true"></span>
-                <h4>Carton blanc</h4>
-                <p>Mise en garde, aucune sanction sportive. Une seule fois par équipe et par match.</p>
-                <p>Exemples : simulation, désapprobation, retrait de maillot.</p>
+                <h4>⬜ Carton blanc</h4>
+                <p><strong>Une mise en garde</strong> : aucun point de pénalité, aucune exclusion.</p>
+                <p class="mb-0">Une <span class="surligne">seule fois par équipe et par match</span> — ensuite, ce sera le carton jaune.</p>
               </div>
               <div class="sanction-card sanction-card--jaune">
                 <span class="sanction-card__swatch" aria-hidden="true"></span>
-                <h4>Carton jaune</h4>
-                <p>Exclusion temporaire de <strong>2 minutes</strong> + <strong>3 points</strong> de pénalité pour l'équipe.</p>
-                <p>Mêmes motifs que le carton blanc en cas de récidive, ou pour avoir fait perdre du temps volontairement.</p>
+                <h4>🟨 Carton jaune</h4>
+                <p><strong>2 minutes</strong> d'exclusion, <span class="surligne">sans remplacement</span> — l'équipe joue à 4.</p>
+                <p class="mb-0"><strong>3 points</strong> de pénalité pour l'équipe. Motifs : antijeu, simulation, contestation, retard de jeu, distance non respectée, maillot retiré.</p>
               </div>
               <div class="sanction-card sanction-card--rouge">
                 <span class="sanction-card__swatch" aria-hidden="true"></span>
-                <h4>Carton rouge</h4>
-                <p>Exclusion <strong>définitive</strong> du joueur pour le match + <strong>4 minutes</strong> d'infériorité numérique + <strong>5 points</strong> de pénalité.</p>
-                <p>Faute grossière, comportement violent, crachat, insulte, ou occasion de but manifeste annulée. Un 2<sup>e</sup> carton jaune dans le même match entraîne aussi un carton rouge.</p>
+                <h4>🟥 Carton rouge</h4>
+                <p><strong>Exclusion définitive</strong> du joueur + <strong>4 minutes</strong> en infériorité numérique.</p>
+                <p class="mb-0"><strong>5 points</strong> de pénalité. Motifs : faute grossière, comportement violent, crachat, insulte, occasion de but annihilée — ou un <strong>2<sup>e</sup> carton jaune</strong> dans le même match.</p>
               </div>
             </div>
-
-            <p><strong>Séance de tirs au but</strong></p>
-            <p>En cas d'égalité en fin de match : 5 tireurs par équipe, puis mort subite si l'égalité persiste.</p>
+            <div class="callout callout--neutral">
+              <p class="mb-0">
+                💡 Les points de pénalité <strong>ne changent pas le score</strong> : ils s'ajoutent au classement de
+                l'équipe. Ils s'appliquent aussi aux personnes <strong>sur le banc</strong> — joueurs, jeune coach,
+                enseignants et accompagnateurs.
+              </p>
+            </div>
           </div>
         </details>
 
@@ -305,137 +456,104 @@
             </figure>
 
             <p><strong>Les gestes d'arbitrage à connaître</strong></p>
-            <p>Voici les signaux essentiels — icônes originales, à titre indicatif (pas de reproduction des visuels du règlement officiel) :</p>
+            <p>
+              Ces gestes sont ceux du <strong>livret officiel « Jeune Arbitre » de l'UNSS</strong> — ce sont
+              exactement ceux que tu devras faire sur un match, et ceux que tu verras faire par les arbitres.
+              Le livret complet est téléchargeable dans la rubrique <a href="#documents">Documents officiels</a>.
+            </p>
 
-            <div class="referee-signs">
-              <div class="referee-sign">
-                <svg viewBox="0 0 60 70" width="60" height="70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Coup d'envoi ou reprise du jeu">
-                  <circle cx="30" cy="16" r="8" fill="#0a1f44" />
-                  <path d="M30 24 L30 46" stroke="#0a1f44" stroke-width="5" stroke-linecap="round" fill="none" />
-                  <path d="M30 46 L20 66 M30 46 L40 66" stroke="#0a1f44" stroke-width="5" stroke-linecap="round" fill="none" />
-                  <path d="M30 28 L20 22" stroke="#0a1f44" stroke-width="4" stroke-linecap="round" fill="none" />
-                  <path d="M30 28 L38 40" stroke="#0a1f44" stroke-width="4" stroke-linecap="round" fill="none" />
-                  <circle cx="17" cy="20" r="3" fill="#e8543f" />
-                </svg>
-                <span class="referee-sign__label">Coup d'envoi / reprise</span>
-              </div>
-
-              <div class="referee-sign">
-                <svg viewBox="0 0 60 70" width="60" height="70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rentrée de touche">
-                  <circle cx="30" cy="16" r="8" fill="#0a1f44" />
-                  <path d="M30 24 L30 46" stroke="#0a1f44" stroke-width="5" stroke-linecap="round" fill="none" />
-                  <path d="M30 46 L20 66 M30 46 L40 66" stroke="#0a1f44" stroke-width="5" stroke-linecap="round" fill="none" />
-                  <path d="M30 28 L50 24" stroke="#0a1f44" stroke-width="4" stroke-linecap="round" fill="none" />
-                  <path d="M30 28 L20 40" stroke="#0a1f44" stroke-width="4" stroke-linecap="round" fill="none" />
-                </svg>
-                <span class="referee-sign__label">Rentrée de touche</span>
-              </div>
-
-              <div class="referee-sign">
-                <svg viewBox="0 0 60 70" width="60" height="70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sortie de but">
-                  <circle cx="30" cy="16" r="8" fill="#0a1f44" />
-                  <path d="M30 24 L30 46" stroke="#0a1f44" stroke-width="5" stroke-linecap="round" fill="none" />
-                  <path d="M30 46 L20 66 M30 46 L40 66" stroke="#0a1f44" stroke-width="5" stroke-linecap="round" fill="none" />
-                  <path d="M30 28 L48 30" stroke="#0a1f44" stroke-width="4" stroke-linecap="round" fill="none" />
-                  <path d="M30 28 L20 40" stroke="#0a1f44" stroke-width="4" stroke-linecap="round" fill="none" />
-                  <rect x="48" y="20" width="10" height="8" fill="none" stroke="#0a1f44" stroke-width="1.5" />
-                </svg>
-                <span class="referee-sign__label">Sortie de but</span>
-              </div>
-
-              <div class="referee-sign">
-                <svg viewBox="0 0 60 70" width="60" height="70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Corner">
-                  <circle cx="30" cy="16" r="8" fill="#0a1f44" />
-                  <path d="M30 24 L30 46" stroke="#0a1f44" stroke-width="5" stroke-linecap="round" fill="none" />
-                  <path d="M30 46 L20 66 M30 46 L40 66" stroke="#0a1f44" stroke-width="5" stroke-linecap="round" fill="none" />
-                  <path d="M30 28 L46 38" stroke="#0a1f44" stroke-width="4" stroke-linecap="round" fill="none" />
-                  <path d="M30 28 L20 40" stroke="#0a1f44" stroke-width="4" stroke-linecap="round" fill="none" />
-                  <line x1="46" y1="15" x2="46" y2="38" stroke="#0a1f44" stroke-width="2" />
-                  <path d="M46 15 L54 19 L46 23 Z" fill="#e8543f" />
-                </svg>
-                <span class="referee-sign__label">Corner</span>
-              </div>
-
-              <div class="referee-sign">
-                <svg viewBox="0 0 60 70" width="60" height="70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Coup franc direct ou pénalty">
-                  <circle cx="30" cy="16" r="8" fill="#0a1f44" />
-                  <path d="M30 24 L30 46" stroke="#0a1f44" stroke-width="5" stroke-linecap="round" fill="none" />
-                  <path d="M30 46 L20 66 M30 46 L40 66" stroke="#0a1f44" stroke-width="5" stroke-linecap="round" fill="none" />
-                  <path d="M30 28 L48 42" stroke="#0a1f44" stroke-width="4" stroke-linecap="round" fill="none" />
-                  <path d="M30 28 L20 40" stroke="#0a1f44" stroke-width="4" stroke-linecap="round" fill="none" />
-                </svg>
-                <span class="referee-sign__label">Coup franc direct / pénalty</span>
-              </div>
-
-              <div class="referee-sign">
-                <svg viewBox="0 0 60 70" width="60" height="70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Coup franc indirect">
-                  <circle cx="30" cy="16" r="8" fill="#0a1f44" />
-                  <path d="M30 24 L30 46" stroke="#0a1f44" stroke-width="5" stroke-linecap="round" fill="none" />
-                  <path d="M30 46 L20 66 M30 46 L40 66" stroke="#0a1f44" stroke-width="5" stroke-linecap="round" fill="none" />
-                  <path d="M30 28 L30 6" stroke="#0a1f44" stroke-width="4" stroke-linecap="round" fill="none" />
-                  <path d="M30 28 L20 40" stroke="#0a1f44" stroke-width="4" stroke-linecap="round" fill="none" />
-                </svg>
-                <span class="referee-sign__label">Coup franc indirect</span>
-              </div>
-
-              <div class="referee-sign">
-                <svg viewBox="0 0 60 70" width="60" height="70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Décompte des 4 secondes">
-                  <circle cx="30" cy="16" r="8" fill="#0a1f44" />
-                  <path d="M30 24 L30 46" stroke="#0a1f44" stroke-width="5" stroke-linecap="round" fill="none" />
-                  <path d="M30 46 L20 66 M30 46 L40 66" stroke="#0a1f44" stroke-width="5" stroke-linecap="round" fill="none" />
-                  <path d="M30 28 L18 14" stroke="#0a1f44" stroke-width="4" stroke-linecap="round" fill="none" />
-                  <path d="M30 28 L38 40" stroke="#0a1f44" stroke-width="4" stroke-linecap="round" fill="none" />
-                  <path d="M18 14 L12 6 M18 14 L15 4 M18 14 L19 4 M18 14 L23 6" stroke="#0a1f44" stroke-width="2" stroke-linecap="round" />
-                </svg>
-                <span class="referee-sign__label">Décompte des 4 secondes</span>
-              </div>
-
-              <div class="referee-sign">
-                <svg viewBox="0 0 60 70" width="60" height="70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avantage">
-                  <circle cx="30" cy="16" r="8" fill="#0a1f44" />
-                  <path d="M30 24 L30 46" stroke="#0a1f44" stroke-width="5" stroke-linecap="round" fill="none" />
-                  <path d="M30 46 L20 66 M30 46 L40 66" stroke="#0a1f44" stroke-width="5" stroke-linecap="round" fill="none" />
-                  <path d="M30 28 L48 26" stroke="#0a1f44" stroke-width="4" stroke-linecap="round" fill="none" />
-                  <path d="M30 34 L46 34" stroke="#0a1f44" stroke-width="4" stroke-linecap="round" fill="none" />
-                </svg>
-                <span class="referee-sign__label">Avantage</span>
-              </div>
-
-              <div class="referee-sign">
-                <svg viewBox="0 0 60 70" width="60" height="70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Temps mort">
-                  <circle cx="30" cy="16" r="8" fill="#0a1f44" />
-                  <path d="M30 24 L30 46" stroke="#0a1f44" stroke-width="5" stroke-linecap="round" fill="none" />
-                  <path d="M30 46 L20 66 M30 46 L40 66" stroke="#0a1f44" stroke-width="5" stroke-linecap="round" fill="none" />
-                  <path d="M30 28 L20 40 M30 28 L40 40" stroke="#0a1f44" stroke-width="4" stroke-linecap="round" fill="none" />
-                  <path d="M40 12 L54 12 M47 12 L47 22" stroke="#e8543f" stroke-width="3" stroke-linecap="round" />
-                </svg>
-                <span class="referee-sign__label">Temps mort</span>
-              </div>
-
-              <div class="referee-sign">
-                <svg viewBox="0 0 60 70" width="60" height="70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mise en garde, carton blanc">
-                  <circle cx="30" cy="16" r="8" fill="#0a1f44" />
-                  <path d="M30 24 L30 46" stroke="#0a1f44" stroke-width="5" stroke-linecap="round" fill="none" />
-                  <path d="M30 46 L20 66 M30 46 L40 66" stroke="#0a1f44" stroke-width="5" stroke-linecap="round" fill="none" />
-                  <path d="M30 28 L18 10" stroke="#0a1f44" stroke-width="4" stroke-linecap="round" fill="none" />
-                  <path d="M30 28 L38 40" stroke="#0a1f44" stroke-width="4" stroke-linecap="round" fill="none" />
-                  <rect x="12" y="0" width="11" height="15" rx="1.5" fill="#ffffff" stroke="#0a1f44" stroke-width="1.5" />
-                </svg>
-                <span class="referee-sign__label">Mise en garde (carton blanc)</span>
-              </div>
-
-              <div class="referee-sign">
-                <svg viewBox="0 0 60 70" width="60" height="70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avertissement, carton jaune ou rouge">
-                  <circle cx="30" cy="16" r="8" fill="#0a1f44" />
-                  <path d="M30 24 L30 46" stroke="#0a1f44" stroke-width="5" stroke-linecap="round" fill="none" />
-                  <path d="M30 46 L20 66 M30 46 L40 66" stroke="#0a1f44" stroke-width="5" stroke-linecap="round" fill="none" />
-                  <path d="M30 28 L18 10" stroke="#0a1f44" stroke-width="4" stroke-linecap="round" fill="none" />
-                  <path d="M30 28 L38 40" stroke="#0a1f44" stroke-width="4" stroke-linecap="round" fill="none" />
-                  <rect x="12" y="0" width="11" height="7.5" fill="#ffd23f" stroke="#0a1f44" stroke-width="1.5" />
-                  <rect x="12" y="7.5" width="11" height="7.5" fill="#e8543f" stroke="#0a1f44" stroke-width="1.5" />
-                </svg>
-                <span class="referee-sign__label">Avertissement (jaune / rouge)</span>
-              </div>
+            <div class="gestes-grille">
+              <figure class="geste">
+                <img src="assets/futsal/geste-touche.png" alt="Geste de l'arbitre pour une rentrée de touche : bras tendu à l'horizontale, deux options" loading="lazy">
+                <figcaption>
+                  <span class="geste__nom">Rentrée de touche</span>
+                  <span class="geste__desc">Bras tendu horizontalement vers le camp de l'équipe qui bénéficie de la touche (deux options).</span>
+                </figcaption>
+              </figure>
+              <figure class="geste">
+                <img src="assets/futsal/geste-sortie-de-but.png" alt="Geste de l'arbitre pour une sortie de but : bras tendu vers le bas, deux options" loading="lazy">
+                <figcaption>
+                  <span class="geste__nom">Sortie de but</span>
+                  <span class="geste__desc">Bras tendu vers le bas, en direction de la surface de réparation.</span>
+                </figcaption>
+              </figure>
+              <figure class="geste">
+                <img src="assets/futsal/geste-corner.png" alt="Geste de l'arbitre pour un corner : bras tendu en diagonale vers le coin du terrain" loading="lazy">
+                <figcaption>
+                  <span class="geste__nom">Corner</span>
+                  <span class="geste__desc">Bras tendu en diagonale vers le coin du terrain concerné.</span>
+                </figcaption>
+              </figure>
+              <figure class="geste">
+                <img src="assets/futsal/geste-coup-franc-direct.png" alt="Geste de l'arbitre pour un coup franc direct ou un pénalty : bras tendu à l'horizontale" loading="lazy">
+                <figcaption>
+                  <span class="geste__nom">Coup franc direct / pénalty</span>
+                  <span class="geste__desc">Bras tendu à l'horizontale vers le camp de l'équipe qui bénéficie du coup franc. Ce geste sert aussi pour le coup de pied de pénalité.</span>
+                </figcaption>
+              </figure>
+              <figure class="geste">
+                <img src="assets/futsal/geste-coup-franc-indirect.png" alt="Geste de l'arbitre pour un coup franc indirect : bras levé à la verticale, main ouverte" loading="lazy">
+                <figcaption>
+                  <span class="geste__nom">Coup franc indirect</span>
+                  <span class="geste__desc">Bras levé à la verticale, main ouverte — et maintenu levé jusqu'à ce qu'un deuxième joueur touche le ballon.</span>
+                </figcaption>
+              </figure>
+              <figure class="geste geste--large">
+                <img src="assets/futsal/geste-quatre-secondes.png" alt="Les cinq étapes du décompte des 4 secondes par l'arbitre" loading="lazy">
+                <figcaption>
+                  <span class="geste__nom">Décompte des 4 secondes</span>
+                  <span class="geste__desc">Le bras se lève doigt par doigt : 1, 2, 3, 4… puis la main ouverte au-dessus de la tête si le délai est dépassé.</span>
+                </figcaption>
+              </figure>
+              <figure class="geste">
+                <img src="assets/futsal/geste-temps-mort.png" alt="Geste de l'arbitre pour un temps mort : les deux mains forment un T" loading="lazy">
+                <figcaption>
+                  <span class="geste__nom">Temps mort</span>
+                  <span class="geste__desc">Les deux mains forment un « T » au-dessus de la tête.</span>
+                </figcaption>
+              </figure>
+              <figure class="geste">
+                <img src="assets/futsal/geste-faute-cumulee.png" alt="Geste de l'arbitre pour annoncer une faute cumulée : main levée, doigts écartés" loading="lazy">
+                <figcaption>
+                  <span class="geste__nom">Faute cumulée</span>
+                  <span class="geste__desc">Main levée, doigts écartés, pour annoncer le nombre de fautes cumulées par l'équipe (ici la cinquième).</span>
+                </figcaption>
+              </figure>
+              <figure class="geste">
+                <img src="assets/futsal/geste-avantage-cfd.png" alt="Geste de l'arbitre pour un avantage après une faute passible d'un coup franc direct" loading="lazy">
+                <figcaption>
+                  <span class="geste__nom">Avantage — coup franc direct</span>
+                  <span class="geste__desc">Les deux bras tendus vers l'avant : le jeu continue, la faute sera comptée au prochain arrêt.</span>
+                </figcaption>
+              </figure>
+              <figure class="geste">
+                <img src="assets/futsal/geste-avantage-cfi.png" alt="Geste de l'arbitre pour un avantage après une faute passible d'un coup franc indirect" loading="lazy">
+                <figcaption>
+                  <span class="geste__nom">Avantage — coup franc indirect</span>
+                  <span class="geste__desc">Un seul bras tendu vers l'avant, main ouverte : le jeu continue.</span>
+                </figcaption>
+              </figure>
+              <figure class="geste geste--large">
+                <img src="assets/futsal/geste-faute-cumulee-signal.png" alt="Les trois étapes du signal de faute cumulée adressé au chronométreur et au troisième arbitre" loading="lazy">
+                <figcaption>
+                  <span class="geste__nom">Signaler la faute cumulée après un avantage</span>
+                  <span class="geste__desc">En trois étapes, vers la table de marque, pour faire comptabiliser la faute une fois le ballon hors du jeu.</span>
+                </figcaption>
+              </figure>
+              <figure class="geste">
+                <img src="assets/futsal/geste-mise-en-garde.png" alt="Geste de l'arbitre pour une mise en garde : carton blanc brandi bras levé" loading="lazy">
+                <figcaption>
+                  <span class="geste__nom">Mise en garde (carton blanc)</span>
+                  <span class="geste__desc">Le carton blanc est brandi bras levé : c'est un avertissement, sans point de pénalité ni exclusion.</span>
+                </figcaption>
+              </figure>
+              <figure class="geste">
+                <img src="assets/futsal/geste-avertissement.png" alt="Gestes de l'arbitre pour un carton jaune (exclusion temporaire) et un carton rouge (exclusion définitive)" loading="lazy">
+                <figcaption>
+                  <span class="geste__nom">Avertissement (carton jaune / rouge)</span>
+                  <span class="geste__desc">Le carton est brandi bras levé, face au joueur concerné : jaune pour l'exclusion temporaire, rouge pour l'exclusion définitive.</span>
+                </figcaption>
+              </figure>
             </div>
 
             <p><strong>Quand siffler / ne pas siffler</strong></p>
@@ -460,7 +578,20 @@
               </div>
             </div>
 
-            <p><strong>Quiz d'entraînement « Jeune arbitre »</strong></p>
+          </div>
+        </details>
+
+        <!-- QUIZ DU JEUNE ARBITRE -->
+        <details class="info-card" id="quiz-arbitre">
+          <summary>
+            <h2>🧠 Quiz d'entraînement « Jeune arbitre »</h2>
+            <span class="info-card__toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="info-card__body">
+            <p>
+              12 questions pour vérifier que tu connais le règlement. Tu peux le refaire autant de fois
+              que tu veux — <strong>tes résultats ne sont visibles que par toi</strong>.
+            </p>
             <div class="quiz" data-quiz-id="jeune-arbitre-futsal">
               <div class="quiz-questions"></div>
               <button type="button" class="btn btn--primary quiz-submit">Valider mes réponses</button>
@@ -493,10 +624,22 @@
             <span class="info-card__toggle" aria-hidden="true">+</span>
           </summary>
           <div class="info-card__body">
-            <!-- MODIFIER ICI : ajoutez les liens de telechargement des documents officiels -->
-            <ul>
-              <li><a href="#">Règlement complet UNSS Futsal (PDF à ajouter)</a></li>
-              <li><a href="#">Livret jeune arbitre / jeune juge (PDF à ajouter)</a></li>
+            <p>Les deux documents de référence de l'UNSS, à consulter ou à télécharger.</p>
+            <!-- MODIFIER CHAQUE ANNEE : remplacez les PDF dans assets/docs/ en
+                 gardant les memes noms de fichier. -->
+            <ul class="doc-list">
+              <li>
+                <a href="assets/docs/unss-futsal-reglement.pdf" download>
+                  📄 Règlement Futsal UNSS
+                  <span class="doc-list__meta">PDF — 17 pages, mise à jour du 1<sup>er</sup> octobre 2024</span>
+                </a>
+              </li>
+              <li>
+                <a href="assets/docs/unss-futsal-livret-jeune-arbitre.pdf" download>
+                  📄 Livret du Jeune Arbitre / Jeune Juge — Futsal
+                  <span class="doc-list__meta">PDF — 16 pages, tous les gestes et les placements</span>
+                </a>
+              </li>
             </ul>
           </div>
         </details>
