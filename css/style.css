@@ -2953,6 +2953,13 @@ thead th.mastery-excellente {
   padding: 0 0.1em;
 }
 
+/* Une date pas encore arretee par l'etablissement. Volontairement discret :
+   c'est l'inverse de ".surligne", il ne faut pas que l'oeil s'y arrete. */
+.a-venir {
+  font-style: italic;
+  color: var(--color-ink-soft);
+}
+
 /* Liste de documents telechargeables (reglement, certificat...) */
 .doc-list {
   list-style: none;
