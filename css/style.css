@@ -1560,10 +1560,11 @@ a.card:focus-visible {
   color: var(--color-ink-soft);
 }
 
-/* Un terrain vu de dessus reste lisible jusqu'a 420 px de large :
-   au-dela il grossit sans rien apporter. */
-.rule-diagram--terrain svg {
-  max-width: 420px;
+/* Un schema au format paysage (legende posee a droite du dessin) :
+   il a besoin de toute la largeur disponible, pas du plafond etroit
+   reserve aux schemas en hauteur. */
+.rule-diagram--large svg {
+  max-width: 100%;
 }
 
 /* Deux schemas a comparer : cote a cote sur grand ecran, empiles sur
@@ -1731,6 +1732,140 @@ thead th.mastery-excellente {
   text-align: center;
   font-weight: 700;
   background: #e8e6e0;
+}
+
+/* La ligne des archetypes (« Les solistes », « Les tacticiens »...) :
+   centree et en gras, c'est le repere qui nomme chaque niveau d'un
+   coup d'oeil. Seules les colonnes de niveau sont visees : les cellules
+   fusionnees "role" et "critere" gardent leur mise en forme. */
+.eval-grid tr.archetypes td.col-insuffisante,
+.eval-grid tr.archetypes td.col-fragile,
+.eval-grid tr.archetypes td.col-satisfaisante,
+.eval-grid tr.archetypes td.col-excellente {
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+/* ------------------------------------------------------------
+   Etapes d'une sequence d'apprentissage : chaque etape repond
+   toujours aux trois memes questions, dans le meme ordre et avec
+   la meme couleur (on joue / pourquoi / tu apprends). L'eleve
+   repere ainsi l'information qu'il cherche sans tout relire.
+   ------------------------------------------------------------ */
+.etapes {
+  display: grid;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+@media (min-width: 1000px) {
+  .etapes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.etape {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-top: 4px solid var(--color-yellow);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+}
+
+.etape__entete {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: var(--space-sm);
+}
+
+.etape__num {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.etape__titre {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--color-navy);
+}
+
+.etape__ligne {
+  margin: 0 0 0.7rem;
+  padding-left: 0.75rem;
+  border-left: 3px solid;
+}
+
+.etape__ligne:last-child {
+  margin-bottom: 0;
+}
+
+.etape__ligne ul {
+  margin: 0.2rem 0 0;
+  padding-left: 1.1em;
+}
+
+.etape__cle {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.15rem;
+}
+
+.etape__ligne--joue { border-color: var(--color-navy); }
+.etape__ligne--joue .etape__cle { color: var(--color-navy); }
+.etape__ligne--pourquoi { border-color: var(--color-orange); }
+.etape__ligne--pourquoi .etape__cle { color: var(--color-orange); }
+.etape__ligne--apprends { border-color: var(--color-green); }
+.etape__ligne--apprends .etape__cle { color: var(--color-green); }
+
+/* ------------------------------------------------------------
+   Titre de bloc numerote : decoupe une rubrique longue en
+   parties clairement separees, pour qu'on puisse la parcourir
+   au lieu de la lire d'un bout a l'autre.
+   ------------------------------------------------------------ */
+.bloc-titre {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: var(--space-lg) 0 var(--space-sm);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--color-navy);
+}
+
+.bloc-titre:first-child {
+  margin-top: 0;
+}
+
+.bloc-titre__num {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--color-yellow);
+  color: var(--color-navy);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ============================================================
