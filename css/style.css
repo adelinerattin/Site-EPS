@@ -1560,6 +1560,34 @@ a.card:focus-visible {
   color: var(--color-ink-soft);
 }
 
+/* Un terrain vu de dessus reste lisible jusqu'a 420 px de large :
+   au-dela il grossit sans rien apporter. */
+.rule-diagram--terrain svg {
+  max-width: 420px;
+}
+
+/* Deux schemas a comparer : cote a cote sur grand ecran, empiles sur
+   telephone (badminton 3e, les zones de mesentente). */
+.schemas-duo {
+  display: grid;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.schemas-duo .rule-diagram {
+  margin-bottom: 0;
+}
+
+.schemas-duo svg {
+  max-width: 420px;
+}
+
+@media (min-width: 900px) {
+  .schemas-duo {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 /* ============================================================
    12. ALERTES / ENCARTS
    ============================================================ */
