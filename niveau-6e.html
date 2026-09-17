@@ -94,7 +94,7 @@
             repérable par le commentaire "LIEN VIDEO A AJOUTER". Une vidéo
             déjà disponible peut être intégrée directement avec
             <div class="video-embed"><video controls src="assets/videos/....mp4"></video></div>
-            (voir le triathlon athlétique pour un exemple).
+            apres avoir depose le fichier dans assets/videos/.
           - Pour les quiz : modifiez le tableau QUIZ_DATA['...'] situé
             juste avant la fermeture de chaque bloc d'activité (entre 5 et
             10 questions par activité, calibrées pour des élèves de 11 à
@@ -480,7 +480,7 @@
 
               <p><strong>Grille d'évaluation — Triathlon athlétique 6e</strong></p>
               <div class="table-wrap">
-                <table class="eval-grid">
+                <table class="eval-grid eval-grid--centre">
                   <thead>
                     <tr><th>Rôle à jouer</th><th>Critère</th><th class="mastery-insuffisante">Maîtrise insuffisante</th><th class="mastery-fragile">Maîtrise fragile</th><th class="mastery-satisfaisante">Maîtrise satisfaisante</th><th class="mastery-excellente">Très bonne maîtrise</th></tr>
                   </thead>
@@ -558,20 +558,20 @@
 
               <p><strong>Seuils de performance par épreuve</strong></p>
               <div class="table-wrap">
-                <table class="eval-grid">
+                <table class="eval-grid eval-grid--centre">
                   <thead><tr><th></th><th class="mastery-insuffisante">Maîtrise insuffisante</th><th class="mastery-fragile">Maîtrise fragile</th><th class="mastery-satisfaisante">Maîtrise satisfaisante</th><th class="mastery-excellente">Très bonne maîtrise</th></tr></thead>
                   <tbody>
                     <tr>
                       <td class="role-critere">Lancer de vortex<br><span class="text-mono">(1 plot tous les 2 m)</span></td>
-                      <td class="col-insuffisante">3 étoiles ou moins</td><td class="col-fragile">Entre 4 et 8 étoiles</td><td class="col-satisfaisante">Entre 9 et 14 étoiles</td><td class="col-excellente">15 étoiles ou moins</td>
+                      <td class="col-insuffisante">3 étoiles ou moins</td><td class="col-fragile">Entre 4 et 8 étoiles</td><td class="col-satisfaisante">Entre 9 et 14 étoiles</td><td class="col-excellente">15 étoiles ou plus</td>
                     </tr>
                     <tr>
                       <td class="role-critere">Triple bond<br><span class="text-mono">(1 plot tous les mètres)</span></td>
-                      <td class="col-insuffisante">3 étoiles ou moins</td><td class="col-fragile">4 ou 5 étoiles</td><td class="col-satisfaisante">6 ou 7 étoiles</td><td class="col-excellente">8 étoiles ou moins</td>
+                      <td class="col-insuffisante">3 étoiles ou moins</td><td class="col-fragile">4 ou 5 étoiles</td><td class="col-satisfaisante">6 ou 7 étoiles</td><td class="col-excellente">8 étoiles ou plus</td>
                     </tr>
                     <tr>
                       <td class="role-critere" rowspan="5">Vitesse</td>
-                      <td class="col-insuffisante">6"70</td><td class="col-fragile">Entre 5"91 et 6"69</td><td class="col-satisfaisante">Entre 5"21 et 5"90</td><td class="col-excellente">Moins de 5"20</td>
+                      <td class="col-insuffisante">6"70 ou plus</td><td class="col-fragile">Entre 5"91 et 6"69</td><td class="col-satisfaisante">Entre 5"21 et 5"90</td><td class="col-excellente">Moins de 5"20</td>
                     </tr>
                     <tr><td class="bandeau-filles" colspan="4">Filles</td></tr>
                     <tr>
@@ -587,7 +587,7 @@
 
               <p><strong>Du nombre d'étoiles cumulées à la maîtrise</strong></p>
               <div class="table-wrap">
-                <table class="eval-grid">
+                <table class="eval-grid eval-grid--centre">
                   <thead><tr><th></th><th class="mastery-insuffisante">Maîtrise insuffisante</th><th class="mastery-fragile">Maîtrise fragile</th><th class="mastery-satisfaisante">Maîtrise satisfaisante</th><th class="mastery-excellente">Très bonne maîtrise</th></tr></thead>
                   <tbody>
                     <tr><td>Nombre d'étoiles cumulées</td><td class="col-insuffisante">12 étoiles ou moins</td><td class="col-fragile">Entre 13 et 18 étoiles</td><td class="col-satisfaisante">Entre 19 et 27 étoiles</td><td class="col-excellente">28 étoiles ou plus</td></tr>
@@ -639,29 +639,32 @@
                 </figure>
                 <figure>
                   <figcaption>🦘 Le triple bond</figcaption>
-                  <div class="video-embed video-embed--placeholder">
-                    <p>🔗 <strong>Lien à ajouter.</strong> Remplacez ce bloc par le lecteur,
-                       sur le modèle des vidéos voisines.</p>
-                  </div>
-                  <ul class="video-points">
-                    <li><strong>Pose ton pied sur la planche d'appel</strong> sans piétiner ni ralentir juste avant : la course d'élan doit rester régulière.</li>
-                    <li><strong>Trois bonds, pas quatre</strong>, et des bonds équilibrés plutôt qu'un premier très grand suivi de deux petits.</li>
-                    <li><strong>Réception pieds joints</strong> : une réception sur un seul pied fait perdre des points.</li>
-                  </ul>
-                </figure>
-                <figure>
-                  <figcaption>⚡ La course de vitesse</figcaption>
                   <div class="video-embed">
-                    <iframe src="https://www.youtube-nocookie.com/embed/8AYIsrMcVPY"
-                            title="La course de vitesse"
+                    <iframe src="https://www.youtube-nocookie.com/embed/oDUfArjBQlY"
+                            title="Le triple bond"
                             loading="lazy"
                             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                   </div>
                   <ul class="video-points">
-                    <li><strong>Position de départ</strong> : pieds décalés (jamais sur la même ligne), buste légèrement penché en avant.</li>
-                    <li><strong>Sers-toi de tes bras</strong> : ils se balancent d'avant en arrière, pas en travers du corps. Plus ils sont rapides, plus tes jambes le sont.</li>
-                    <li><strong>Cours à fond jusqu'après la ligne</strong> : ralentir avant l'arrivée est ce qui coûte le plus de temps.</li>
+                    <li><strong>Pousse à fond sur ta jambe d'appui</strong> et monte le genou opposé haut et vers l'avant. On cherche à <span class="surligne">avancer loin</span>, pas à sauter haut.</li>
+                    <li><strong>Sers-toi de tes bras</strong> : ils accompagnent chaque bond, te gardent en équilibre et te donnent du rythme.</li>
+                    <li><strong>Garde le même rythme sur les trois bonds</strong>, buste droit et regard loin devant. Dès que ton pied touche le sol, il repart : pas de temps d'arrêt entre les bonds.</li>
+                  </ul>
+                </figure>
+                <figure>
+                  <figcaption>⏱️ Vitesse : être starter et chronométreur</figcaption>
+                  <div class="video-embed">
+                    <iframe src="https://www.youtube-nocookie.com/embed/8AYIsrMcVPY"
+                            title="Vitesse : être starter et chronométreur"
+                            loading="lazy"
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                  </div>
+                  <ul class="video-points">
+                    <li><strong>Le starter annonce toujours les mêmes mots :</strong> « À vos marques… Prêts… » puis le signal. Il attend que <span class="surligne">tout le monde soit immobile</span> avant de donner le départ.</li>
+                    <li><strong>Le chronométreur déclenche au signal du starter</strong>, pas au moment où il voit le coureur bouger. Place-toi bien pour voir le geste du starter.</li>
+                    <li><strong>Tu arrêtes le chrono quand le buste franchit la ligne</strong> — pas la tête, pas le pied. Puis tu annonces le temps à voix haute et tu le notes tout de suite sur la fiche.</li>
                   </ul>
                 </figure>
               </div>

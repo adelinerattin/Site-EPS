@@ -3914,6 +3914,15 @@ section[id$="-acquisitions"] > h4 {
   counter-reset: point-video;
 }
 
+/* Toutes les donnees centrees dans les cellules. Reserve aux tableaux
+   de donnees courtes (seuils, baremes) : sur des descripteurs longs, le
+   texte centre se lit nettement moins bien qu'aligne a gauche. */
+.eval-grid--centre th,
+.eval-grid--centre td {
+  text-align: center;
+  vertical-align: middle;
+}
+
 /* ------------------------------------------------------------
    Seuils de performance du triathlon : la ligne "Vitesse" est
    coupee en deux par des bandeaux Filles / Garcons qui traversent
