@@ -3866,6 +3866,88 @@ section[id$="-acquisitions"] > h4 {
   margin-bottom: 0;
 }
 
+/* Les 3 points a retenir places sous une video : volontairement courts,
+   pour que l'eleve sache quoi regarder avant de lancer la lecture. */
+.video-points {
+  list-style: none;
+  margin: 0.6rem 0 0;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-chalk);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-yellow);
+  border-radius: var(--radius);
+  font-size: 0.92rem;
+}
+
+.video-points li {
+  padding-left: 1.4em;
+  position: relative;
+  margin-bottom: 0.35rem;
+}
+
+.video-points li:last-child {
+  margin-bottom: 0;
+}
+
+/* Le numero remplace la puce : on compte 1, 2, 3 sans <ol>, dont la
+   numerotation se decalerait sous la bordure coloree. */
+.video-points li::before {
+  counter-increment: point-video;
+  content: counter(point-video);
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  width: 1.05em;
+  height: 1.05em;
+  border-radius: 50%;
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-points {
+  counter-reset: point-video;
+}
+
+/* ------------------------------------------------------------
+   Seuils de performance du triathlon : la ligne "Vitesse" est
+   coupee en deux par des bandeaux Filles / Garcons qui traversent
+   toute la largeur du tableau.
+   ------------------------------------------------------------ */
+.eval-grid td.bandeau-filles,
+.eval-grid td.bandeau-garcons,
+.eval-grid tbody tr:nth-child(even) td.bandeau-filles,
+.eval-grid tbody tr:nth-child(even) td.bandeau-garcons {
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+.eval-grid td.bandeau-filles,
+.eval-grid tbody tr:nth-child(even) td.bandeau-filles {
+  background: #f0b9ef;
+}
+
+.eval-grid td.bandeau-garcons,
+.eval-grid tbody tr:nth-child(even) td.bandeau-garcons {
+  background: #b9e6f8;
+}
+
+/* La ligne des etoiles vaut pour les filles comme pour les garcons :
+   le gris neutre le signale. */
+.eval-grid td.ligne-etoiles,
+.eval-grid tbody tr:nth-child(even) td.ligne-etoiles {
+  background: #e3e1dc;
+  text-align: center;
+  font-weight: 700;
+}
+
 /* Video verticale (Short) : on garde le format 9/16 et on la centre. */
 .video-gallery figure.est-short .video-embed {
   aspect-ratio: 9 / 16;
