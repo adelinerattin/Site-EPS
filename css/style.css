@@ -3157,6 +3157,32 @@ thead th.mastery-excellente {
   background: var(--color-chalk);
 }
 
+/* ------------------------------------------------------------
+   Grille « Je fais le point sur mon cahier » : trois colonnes
+   etroites a cocher (oui / un peu / non). Les cases sont vides a
+   dessein, la grille se remplit sur une version imprimee.
+   ------------------------------------------------------------ */
+.grille-tenue {
+  min-width: 420px;
+}
+
+.grille-tenue th:nth-child(n+2),
+.grille-tenue td:nth-child(n+3) {
+  width: 2.2em;
+  text-align: center;
+}
+
+.grille-tenue thead th:first-child {
+  text-align: left;
+}
+
+.grille-tenue__groupe {
+  vertical-align: middle;
+  font-weight: 700;
+  color: var(--color-navy);
+  background: var(--color-chalk);
+}
+
 .doc-list {
   list-style: none;
   margin: 0 0 var(--space-md);
