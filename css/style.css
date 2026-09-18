@@ -3124,6 +3124,39 @@ thead th.mastery-excellente {
 }
 
 /* Liste de documents telechargeables (reglement, certificat...) */
+/* ------------------------------------------------------------
+   Les 5 regles d'or de l'agenda (methode CPPMV) : une grande
+   initiale dans la colonne de gauche, le nom de la regle a cote,
+   puis son explication. L'initiale porte le moyen mnemotechnique,
+   elle doit se voir de loin.
+   ------------------------------------------------------------ */
+.cppmv td {
+  vertical-align: middle;
+}
+
+.cppmv__lettre,
+.cppmv tr:nth-child(even) .cppmv__lettre {
+  width: 1px;                 /* la colonne se reduit a son contenu */
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: var(--color-white);
+  background: var(--color-navy);
+  padding: 0.3em 0.55em;
+}
+
+.cppmv__nom,
+.cppmv tr:nth-child(even) .cppmv__nom {
+  width: 1px;
+  white-space: nowrap;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.88rem;
+  color: var(--color-navy);
+  background: var(--color-chalk);
+}
+
 .doc-list {
   list-style: none;
   margin: 0 0 var(--space-md);
